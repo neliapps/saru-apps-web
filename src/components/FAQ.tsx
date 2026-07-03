@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "¿Puedo probar antes de pagar?",
     answer:
-      "Sí, ofrecemos un período de prueba gratuito para que puedas explorar todas las funcionalidades, diseñar tu app y ver cómo funciona antes de comprometerte con un plan.",
+      "Sí, podés crear tu cuenta gratis, diseñar tu app completa y ver una preview de cómo se vería. Solo te cobramos cuando decidas publicarla.",
   },
 ];
 
