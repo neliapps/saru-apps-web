@@ -72,7 +72,7 @@ export function Hero() {
             className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <a
-              href="#"
+              href="https://app.saruapps.com/register"
               className="group relative inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-gray-950/25"
             >
               <span className="relative z-10">Crear mi app gratis</span>

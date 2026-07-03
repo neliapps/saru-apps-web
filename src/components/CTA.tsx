@@ -51,7 +51,7 @@ export function CTA() {
 
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="#"
+                  href="https://app.saruapps.com/register"
                   className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-950 text-base font-medium rounded-full hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10"
                 >
                   Crear mi app gratis
