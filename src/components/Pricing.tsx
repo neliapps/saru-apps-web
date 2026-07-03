@@ -169,7 +169,7 @@ export function Pricing() {
                     </h3>
                     <p
                       className={`text-sm mt-1 ${
-                        plan.highlighted ? "text-gray-400" : "text-gray-500"
+                        plan.highlighted ? "text-white/70" : "text-gray-500"
                       }`}
                     >
                       {plan.description}
@@ -190,7 +190,7 @@ export function Pricing() {
                         <div className="flex items-baseline gap-1">
                           <span
                             className={`text-sm ${
-                              plan.highlighted ? "text-gray-400" : "text-gray-500"
+                              plan.highlighted ? "text-white/70" : "text-gray-500"
                             }`}
                           >
                             {plan.currency}
@@ -204,7 +204,7 @@ export function Pricing() {
                           </span>
                           <span
                             className={`text-sm ${
-                              plan.highlighted ? "text-gray-400" : "text-gray-500"
+                              plan.highlighted ? "text-white/70" : "text-gray-500"
                             }`}
                           >
                             /mes
@@ -213,7 +213,7 @@ export function Pricing() {
                         {isAnnual && (
                           <p
                             className={`text-xs mt-1 ${
-                              plan.highlighted ? "text-gray-500" : "text-gray-400"
+                              plan.highlighted ? "text-white/60" : "text-gray-400"
                             }`}
                           >
                             Facturado anualmente (USD {displayPrice! * 12}/año)
@@ -245,7 +245,7 @@ export function Pricing() {
                         />
                         <span
                           className={`text-sm ${
-                            plan.highlighted ? "text-gray-300" : "text-gray-600"
+                            plan.highlighted ? "text-white/80" : "text-gray-600"
                           }`}
                         >
                           {feature}

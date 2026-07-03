@@ -310,15 +310,15 @@ export function HowItWorks() {
 
       <div className="relative max-w-[1280px] mx-auto px-6">
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-24">
-          <span className="text-sm text-gray-500 uppercase tracking-widest font-medium">
+          <span className="text-sm text-white/60 uppercase tracking-widest font-medium">
             Cómo funciona
           </span>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight">
+          <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight text-white">
             De tu tienda a una app
             <br />
             en 4 simples pasos
           </h2>
-          <p className="mt-6 text-lg text-gray-400">
+          <p className="mt-6 text-lg text-white/70">
             No necesitás experiencia técnica. Nuestro proceso está diseñado para
             que puedas lanzar tu app en tiempo récord.
           </p>
@@ -346,7 +346,7 @@ export function HowItWorks() {
                 <h3 className="text-lg font-bold font-display mb-2">
                   {step.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-5">
+                <p className="text-white/70 text-sm leading-relaxed mb-5">
                   {step.description}
                 </p>
 

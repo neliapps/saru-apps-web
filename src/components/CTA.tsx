@@ -44,7 +44,7 @@ export function CTA() {
               <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-white">
                 Lanzá tu app hoy
               </h2>
-              <p className="mt-6 text-lg text-gray-400 max-w-lg mx-auto">
+              <p className="mt-6 text-lg text-white/70 max-w-lg mx-auto">
                 Unite a las marcas que ya están vendiendo desde su propia app
                 móvil. Empezá gratis, sin tarjeta de crédito.
               </p>
@@ -71,7 +71,7 @@ export function CTA() {
                 </a>
                 <a
                   href="#"
-                  className="inline-flex items-center gap-2 px-8 py-4 text-gray-400 text-base font-medium rounded-full border border-white/10 hover:border-white/20 hover:text-white transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-8 py-4 text-white/70 text-base font-medium rounded-full border border-white/20 hover:border-white/40 hover:text-white transition-all duration-300"
                 >
                   Agendar una demo
                 </a>

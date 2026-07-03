@@ -37,7 +37,7 @@ export function Footer() {
               height={115}
               className="h-9 w-auto"
             />
-            <p className="mt-4 text-sm text-gray-500 max-w-xs leading-relaxed">
+            <p className="mt-4 text-sm text-white/60 max-w-xs leading-relaxed">
               La plataforma para crear apps móviles para tiendas Tiendanube. Sin
               código, sin complicaciones.
             </p>
@@ -53,7 +53,7 @@ export function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300"
+                      className="text-sm text-white/60 hover:text-white transition-colors duration-300"
                     >
                       {link.label}
                     </a>
@@ -65,13 +65,13 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 gap-4">
-          <p className="text-xs text-gray-600">
+          <p className="text-xs text-white/50">
             © {new Date().getFullYear()} Saru Apps. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-6">
             <a
               href="#"
-              className="text-gray-600 hover:text-gray-400 transition-colors"
+              className="text-white/50 hover:text-white transition-colors"
               aria-label="Instagram"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -80,7 +80,7 @@ export function Footer() {
             </a>
             <a
               href="#"
-              className="text-gray-600 hover:text-gray-400 transition-colors"
+              className="text-white/50 hover:text-white transition-colors"
               aria-label="LinkedIn"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -89,7 +89,7 @@ export function Footer() {
             </a>
             <a
               href="#"
-              className="text-gray-600 hover:text-gray-400 transition-colors"
+              className="text-white/50 hover:text-white transition-colors"
               aria-label="Twitter"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
