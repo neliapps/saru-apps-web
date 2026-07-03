@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-display: "Satoshi", sans-serif;
+  --font-body: "General Sans", sans-serif;
+  --color-accent: #6366f1;
+  --color-accent-light: #818cf8;
+  --color-accent-dark: #4f46e5;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://cdn.fontshare.com/wf/GKVLCDUZXQVFFAH6BDRNKWI4SWGCJCJF/IFHXGQSIWU6C2KA726XGXEWJMPVPNL7Z/ZOMWXOFXCBHQC77QIZCAYJXUXMXSXHTZ.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://cdn.fontshare.com/wf/GKVLCDUZXQVFFAH6BDRNKWI4SWGCJCJF/W33EFGXCZXRV2YZDMIFN7XDPFHMDH6F7/ZOMWXOFXCBHQC77QIZCAYJXUXMXSXHTZ.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://cdn.fontshare.com/wf/GKVLCDUZXQVFFAH6BDRNKWI4SWGCJCJF/2ILMAPW7C4UULEZWWP4PQYBIWMJV3B5N/ZOMWXOFXCBHQC77QIZCAYJXUXMXSXHTZ.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("https://cdn.fontshare.com/wf/OXBCADNNPFYMTFP7LB6LMBLJJMCFAPWM/R2KSSRVOHG2MFMQACXFUIMXFZF7BKHQT/ZOMWXOFXCBHQC77QIZCAYJXUXMXSXHTZ.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("https://cdn.fontshare.com/wf/OXBCADNNPFYMTFP7LB6LMBLJJMCFAPWM/TXXP4ALG5HRZXQLJXUETQZP77CPKJSHN/ZOMWXOFXCBHQC77QIZCAYJXUXMXSXHTZ.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #171717;
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3;
+}
