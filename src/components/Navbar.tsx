@@ -60,13 +60,13 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="#"
+              href="https://app.saruapps.com/login"
               className="text-[15px] font-medium text-gray-600 hover:text-gray-950 transition-colors duration-300 px-4 py-2"
             >
               Iniciar sesión
             </a>
             <a
-              href="#"
+              href="https://app.saruapps.com/register"
               className="text-[15px] font-medium text-white bg-gray-950 hover:bg-gray-800 px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-gray-950/20"
             >
               Comenzar gratis
@@ -105,13 +105,13 @@ export function Navbar() {
               ))}
               <div className="flex flex-col gap-3 mt-8">
                 <a
-                  href="#"
+                  href="https://app.saruapps.com/login"
                   className="text-center text-base font-medium text-gray-600 py-3"
                 >
                   Iniciar sesión
                 </a>
                 <a
-                  href="#"
+                  href="https://app.saruapps.com/register"
                   className="text-center text-base font-medium text-white bg-gray-950 py-3.5 rounded-full"
                 >
                   Comenzar gratis

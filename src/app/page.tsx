@@ -5,6 +5,7 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { Pricing } from "@/components/Pricing";
 import { FAQ } from "@/components/FAQ";
 import { CTA } from "@/components/CTA";
+import { InlineCTA } from "@/components/InlineCTA";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -13,7 +14,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Features />
+      <InlineCTA text="Todo lo que necesitás para vender desde tu app. Sin código, sin complicaciones." />
       <HowItWorks />
+      <InlineCTA text="Tu app lista en minutos. Solo pagás cuando decidís publicarla." />
       <Pricing />
       <FAQ />
       <CTA />

@@ -224,7 +224,7 @@ export function Pricing() {
                   </div>
 
                   <a
-                    href={plan.href || "#"}
+                    href={plan.href || "https://app.saruapps.com/register"}
                     {...(plan.href ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     className={`block text-center py-3 rounded-full text-sm font-medium transition-all duration-300 mb-8 ${
                       plan.highlighted

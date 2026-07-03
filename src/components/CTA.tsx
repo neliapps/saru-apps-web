@@ -70,7 +70,9 @@ export function CTA() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://calendly.com/saruapps/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-8 py-4 text-white/70 text-base font-medium rounded-full border border-white/20 hover:border-white/40 hover:text-white transition-all duration-300"
                 >
                   Agendar una demo
