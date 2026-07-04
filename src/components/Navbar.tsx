@@ -30,8 +30,8 @@ export function Navbar() {
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-white/80 backdrop-blur-2xl border-b border-gray-200/60 shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
-            : "bg-transparent"
+            ? "bg-white border-b border-gray-200 shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+            : "bg-white"
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-6 h-[72px] flex items-center justify-between">
