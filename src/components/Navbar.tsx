@@ -35,7 +35,7 @@ export function Navbar() {
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-6 h-[72px] flex items-center justify-between">
-          <a href="#" className="flex items-center">
+          <a href="/" className="flex items-center">
             <Image
               src="/logo.png"
               alt="Saru Apps"
