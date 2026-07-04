@@ -30,13 +30,15 @@ export function Footer() {
       <div className="max-w-[1280px] mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8 pb-16 border-b border-white/10">
           <div className="col-span-2">
-            <Image
-              src="/logo-white.png"
-              alt="Saru Apps"
-              width={500}
-              height={115}
-              className="h-9 w-auto"
-            />
+            <a href="/">
+              <Image
+                src="/logo-white.png"
+                alt="Saru Apps"
+                width={500}
+                height={115}
+                className="h-9 w-auto"
+              />
+            </a>
             <p className="mt-4 text-sm text-white/60 max-w-xs leading-relaxed">
               La plataforma para crear apps móviles para tiendas Tiendanube. Sin
               código, sin complicaciones.
