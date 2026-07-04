@@ -7,17 +7,6 @@ const footerLinks = {
     { label: "Integraciones", href: "#" },
     { label: "Changelog", href: "#" },
   ],
-  Recursos: [
-    { label: "Blog", href: "#" },
-    { label: "Guías", href: "#" },
-    { label: "Centro de ayuda", href: "#" },
-    { label: "API Docs", href: "#" },
-  ],
-  Empresa: [
-    { label: "Sobre nosotros", href: "#" },
-    { label: "Contacto", href: "#" },
-    { label: "Partners", href: "#" },
-  ],
   Legal: [
     { label: "Privacidad", href: "/privacidad" },
     { label: "Términos", href: "/terminos" },
