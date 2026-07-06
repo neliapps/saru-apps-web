@@ -7,6 +7,9 @@ const footerLinks = {
     { label: "Integraciones", href: "#" },
     { label: "Changelog", href: "#" },
   ],
+  Recursos: [
+    { label: "Guia de la plataforma", href: "/guia" },
+  ],
   Legal: [
     { label: "Privacidad", href: "/privacidad" },
     { label: "Términos", href: "/terminos" },
