@@ -18,7 +18,7 @@ const plans = [
       "Página de instalación compartible",
       "Soporte por email",
     ],
-    cta: "Comenzar gratis",
+    cta: "Registrate gratis",
     highlighted: false,
   },
   {
@@ -36,7 +36,7 @@ const plans = [
       "Notificaciones push (5.000/mes)",
       "Soporte por chat",
     ],
-    cta: "Comenzar gratis",
+    cta: "Registrate gratis",
     highlighted: true,
   },
   {
@@ -54,7 +54,7 @@ const plans = [
       "Multidioma",
       "Soporte por videollamada",
     ],
-    cta: "Comenzar gratis",
+    cta: "Registrate gratis",
     highlighted: false,
   },
   {

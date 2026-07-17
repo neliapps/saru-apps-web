@@ -45,8 +45,8 @@ export function CTA() {
                 Lanzá tu app hoy
               </h2>
               <p className="mt-6 text-lg text-white/70 max-w-lg mx-auto">
-                Unite a las marcas que ya están vendiendo desde su propia app
-                móvil. Empezá gratis, sin tarjeta de crédito.
+                Creá la app de tu tienda Tiendanube en minutos. Empezá
+                gratis, sin tarjeta de crédito.
               </p>
 
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
