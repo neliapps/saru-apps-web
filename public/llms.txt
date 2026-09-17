@@ -1,0 +1,74 @@
+# Saru Apps
+
+> Plataforma SaaS para crear apps móviles para tiendas Tiendanube. Sin código, sin complicaciones.
+
+## Qué es Saru Apps
+
+Saru Apps es una plataforma no-code que permite a comerciantes con tiendas en Tiendanube crear, personalizar y publicar aplicaciones móviles (PWA y nativas iOS/Android) sin necesidad de programar.
+
+La plataforma se compone de:
+
+- **Panel de administración (Dashboard):** donde el comerciante configura y gestiona su app.
+- **Backend API:** maneja la lógica de negocio, sincronización con Tiendanube, notificaciones push y generación de la PWA.
+- **App móvil nativa (React Native):** app real publicada en App Store y Google Play con la marca del comerciante (white-label).
+
+## Funcionalidades principales
+
+### Editor Drag & Drop
+Editor visual para diseñar cada pantalla de la app arrastrando componentes: banners, grillas de productos, carruseles, timers, videos, categorías y más. Sin escribir código.
+
+### App Nativa iOS & Android
+La app se publica en App Store y Google Play. Es una app nativa real (React Native), no un webview empaquetado. Rendimiento superior, animaciones fluidas y acceso a funcionalidades del dispositivo.
+
+### Notificaciones Push
+Envío de notificaciones push segmentadas: ofertas flash, carritos abandonados, nuevos productos, campañas programadas. Hasta 7x más engagement que el email.
+
+### Programa de Fidelización
+Sistema de puntos y recompensas. Los clientes acumulan puntos con cada compra y los canjean por descuentos, envío gratis o productos exclusivos.
+
+### Sincronización con Tiendanube
+Productos, stock, precios, categorías y pedidos se sincronizan automáticamente con la tienda Tiendanube en tiempo real vía webhooks. Los pedidos desde la app aparecen directo en el panel de Tiendanube. Usa el checkout nativo de Tiendanube.
+
+### Analytics
+Métricas en tiempo real: usuarios activos, tasa de conversión, ingresos por canal, productos más vistos, efectividad de push y comportamiento de compra.
+
+## Planes y precios
+
+| Plan | Precio | Incluye |
+|------|--------|---------|
+| Starter | USD $49/mes | PWA instalable, editor drag & drop, sync productos, 1.000 push/mes, soporte email |
+| Growth | USD $149/mes | Todo Starter + app nativa en stores, editor avanzado, carrito abandonado, fidelización, cupones, 5.000 push/mes, soporte chat |
+| Scale | USD $349/mes | Todo Growth + 20.000 push/mes, push segmentados, campañas, inicio personalizado, multidioma, soporte videollamada |
+| Enterprise | Personalizado | Todo Scale + push ilimitados, API dedicada, integraciones custom, account manager, SLA |
+
+Facturación anual con 20% de descuento. Se puede crear cuenta gratis, diseñar la app y ver preview. El cobro comienza al publicar.
+
+Costos adicionales externos: Apple Developer Program (USD $99/año) y Google Play Console (USD $25, pago único).
+
+## Sectores
+
+Saru Apps se adapta a múltiples industrias de ecommerce:
+
+- Moda e Indumentaria
+- Accesorios y Joyería
+- Belleza y Cosmética
+- Deportes y Fitness
+- Hogar y Decoración
+- Alimentos y Bebidas
+- Electrónica y Tecnología
+- Mascotas
+
+## Programa de Partners
+
+Programa para agencias de ecommerce, freelancers, consultores e implementadores de Tiendanube. Comisiones recurrentes mensuales por cada cliente referido activo, soporte dedicado y material de ventas.
+
+## Integración exclusiva con Tiendanube
+
+Saru Apps está diseñado exclusivamente para tiendas Tiendanube. La conexión es instantánea: se instala desde el panel de Tiendanube, se autorizan los permisos vía OAuth y los productos se importan automáticamente. Los cambios en la tienda se reflejan en la app en tiempo real.
+
+## Contacto
+
+- Web: https://saruapps.com
+- App: https://app.saruapps.com
+- Email: hola@saruapps.com
+- Demo: https://calendly.com/saruapps/30min

@@ -1,11 +1,9 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { Features } from "@/components/Features";
+import { FeaturesPreview } from "@/components/FeaturesPreview";
 import { HowItWorks } from "@/components/HowItWorks";
-import { Pricing } from "@/components/Pricing";
-import { FAQ } from "@/components/FAQ";
+import { PricingPreview } from "@/components/PricingPreview";
 import { CTA } from "@/components/CTA";
-import { InlineCTA } from "@/components/InlineCTA";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -13,12 +11,9 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <Features />
-      <InlineCTA text="Todo lo que necesitás para vender desde tu app. Sin código, sin complicaciones." />
+      <FeaturesPreview />
       <HowItWorks />
-      <InlineCTA text="Tu app lista en minutos. Solo pagás cuando decidís publicarla." />
-      <Pricing />
-      <FAQ />
+      <PricingPreview />
       <CTA />
       <Footer />
     </>

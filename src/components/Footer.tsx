@@ -2,9 +2,22 @@ import Image from "next/image";
 
 const footerLinks = {
   Producto: [
-    { label: "Funcionalidades", href: "#funcionalidades" },
-    { label: "Precios", href: "#precios" },
-    { label: "Guia de la plataforma", href: "/guia" },
+    { label: "Editor Drag & Drop", href: "/producto/editor" },
+    { label: "App Nativa", href: "/producto/app-nativa" },
+    { label: "Notificaciones Push", href: "/producto/notificaciones-push" },
+    { label: "Fidelización", href: "/producto/fidelizacion" },
+    { label: "Sincronización", href: "/producto/sincronizacion" },
+    { label: "Analytics", href: "/producto/analytics" },
+  ],
+  Empresa: [
+    { label: "Precios", href: "/precios" },
+    { label: "Sectores", href: "/sectores" },
+    { label: "Partners", href: "/partners" },
+  ],
+  Recursos: [
+    { label: "Guía de la plataforma", href: "/guia" },
+    { label: "Preguntas frecuentes", href: "/faq" },
+    { label: "Blog", href: "/blog" },
   ],
   Legal: [
     { label: "Privacidad", href: "/privacidad" },
@@ -56,7 +69,8 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 gap-4">
           <p className="text-xs text-white/50">
-            © {new Date().getFullYear()} Saru Apps. Todos los derechos reservados.
+            © {new Date().getFullYear()} Saru Apps. Todos los derechos
+            reservados.
           </p>
         </div>
       </div>
