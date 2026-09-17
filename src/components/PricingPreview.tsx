@@ -38,7 +38,7 @@ export function PricingPreview() {
     <section className="py-32 bg-gray-50">
       <div className="max-w-[1280px] mx-auto px-6">
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-sm text-gray-400 uppercase tracking-widest font-medium">
+          <span className="text-sm text-gray-500 uppercase tracking-widest font-medium">
             Precios
           </span>
           <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight text-gray-950">

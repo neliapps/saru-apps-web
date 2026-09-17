@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { AnimatedSection } from "./AnimatedSection";
+import { Rocket } from "lucide-react";
 
 export function CTA() {
   return (
@@ -28,18 +28,9 @@ export function CTA() {
             </div>
 
             <div className="relative text-center max-w-2xl mx-auto">
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.6,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-8"
-              >
-                <span className="text-3xl">🚀</span>
-              </motion.div>
+              <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-8">
+                <Rocket className="w-7 h-7 text-white" />
+              </div>
 
               <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-white">
                 Lanzá tu app hoy

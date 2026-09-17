@@ -203,14 +203,14 @@ function FeatureVisual({ type }: { type: string }) {
         <div className="flex flex-col items-center gap-1">
           <motion.div
             animate={{ x: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
+            transition={{ duration: 1.5, repeat: 3 }}
           >
             <span className="text-gray-300 text-lg">→</span>
           </motion.div>
           <span className="text-[9px] text-gray-400">Sync</span>
           <motion.div
             animate={{ x: [0, -8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}
+            transition={{ duration: 1.5, repeat: 3, delay: 0.5 }}
           >
             <span className="text-gray-300 text-lg">←</span>
           </motion.div>
@@ -265,7 +265,7 @@ export function Features() {
     <section id="funcionalidades" className="py-32 bg-white">
       <div className="max-w-[1280px] mx-auto px-6">
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-20">
-          <span className="text-sm text-gray-400 uppercase tracking-widest font-medium">
+          <span className="text-sm text-gray-500 uppercase tracking-widest font-medium">
             Funcionalidades
           </span>
           <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight text-gray-950">

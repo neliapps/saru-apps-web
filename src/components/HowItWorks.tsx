@@ -65,7 +65,7 @@ function StepScene({ index }: { index: number }) {
                 key={item}
                 initial={{ opacity: 0.3 }}
                 animate={{ opacity: [0.3, 0.8, 0.3] }}
-                transition={{ duration: 2, repeat: Infinity, delay: i * 0.4 }}
+                transition={{ duration: 2, repeat: 3, delay: i * 0.4 }}
                 className="rounded-md bg-white/[0.04] border border-white/[0.06] p-1.5 text-center"
               >
                 <span className="text-[7px] text-white/40">{item}</span>
@@ -75,12 +75,12 @@ function StepScene({ index }: { index: number }) {
           {/* Connect button */}
           <motion.div
             animate={{ boxShadow: ["0 0 0px rgba(74,222,128,0)", "0 0 12px rgba(74,222,128,0.15)", "0 0 0px rgba(74,222,128,0)"] }}
-            transition={{ duration: 2.5, repeat: Infinity }}
+            transition={{ duration: 2.5, repeat: 3 }}
             className="rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-400/20 p-1.5 flex items-center justify-center gap-1.5"
           >
             <motion.div
               animate={{ rotate: [0, 360] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 3, repeat: 3, ease: "linear" }}
             >
               <svg className="w-3 h-3 text-green-400/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                 <path d="M21 12a9 9 0 11-6.219-8.56" />
@@ -110,7 +110,7 @@ function StepScene({ index }: { index: number }) {
               <motion.div
                 key={comp.name}
                 animate={comp.active ? { x: [0, 3, 0] } : {}}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                transition={{ duration: 2, repeat: 3, ease: "easeInOut" }}
                 className={`rounded px-1.5 py-1 text-[8px] flex items-center gap-1 cursor-grab ${
                   comp.active
                     ? "bg-white/10 text-white/70 border border-white/10"
@@ -142,7 +142,7 @@ function StepScene({ index }: { index: number }) {
                 <div className="px-1 pb-1 space-y-0.5">
                   <motion.div
                     animate={{ opacity: [0.3, 0.6, 0.3] }}
-                    transition={{ duration: 3, repeat: Infinity }}
+                    transition={{ duration: 3, repeat: 3 }}
                     className="h-5 rounded-[3px] bg-gradient-to-r from-indigo-500/20 to-purple-500/20"
                   />
                   <div className="grid grid-cols-2 gap-[2px]">
@@ -176,7 +176,7 @@ function StepScene({ index }: { index: number }) {
                 key={stat.label}
                 initial={{ opacity: 0.5 }}
                 animate={{ opacity: [0.5, 1, 0.5] }}
-                transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}
+                transition={{ duration: 3, repeat: 3, delay: i * 0.5 }}
                 className="rounded-lg bg-white/[0.03] border border-white/[0.06] px-2 py-1.5"
               >
                 <div className="flex justify-between items-center">
@@ -204,7 +204,7 @@ function StepScene({ index }: { index: number }) {
                 {/* Push notification overlay */}
                 <motion.div
                   animate={{ y: ["-100%", "0%"] }}
-                  transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 3, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ duration: 1.5, repeat: 3, repeatDelay: 3, ease: [0.16, 1, 0.3, 1] }}
                   className="absolute top-1 left-0.5 right-0.5"
                 >
                   <div className="bg-white/[0.12] backdrop-blur-md rounded-[4px] p-1 border border-white/10">
@@ -246,7 +246,7 @@ function StepScene({ index }: { index: number }) {
             key={item.store}
             initial={{ opacity: 0.6 }}
             animate={{ opacity: [0.6, 1, 0.6] }}
-            transition={{ duration: 3, repeat: Infinity, delay: i * 0.8 }}
+            transition={{ duration: 3, repeat: 3, delay: i * 0.8 }}
             className="rounded-lg bg-white/[0.04] border border-white/[0.06] p-2 flex items-center gap-2"
           >
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-white/10 to-white/[0.03] border border-white/[0.08] flex items-center justify-center shrink-0">
@@ -259,7 +259,7 @@ function StepScene({ index }: { index: number }) {
             <div className="flex items-center gap-1">
               <motion.div
                 animate={{ scale: [1, 1.3, 1] }}
-                transition={{ duration: 2, repeat: Infinity, delay: i * 0.5 }}
+                transition={{ duration: 2, repeat: 3, delay: i * 0.5 }}
                 className="w-1.5 h-1.5 rounded-full bg-green-400/60"
               />
               <span className="text-[7px] text-green-400/60 font-medium">{item.status}</span>

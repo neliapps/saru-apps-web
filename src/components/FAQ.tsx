@@ -98,7 +98,7 @@ export function FAQ() {
       <div className="max-w-[1280px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           <AnimatedSection className="lg:col-span-4">
-            <span className="text-sm text-gray-400 uppercase tracking-widest font-medium">
+            <span className="text-sm text-gray-500 uppercase tracking-widest font-medium">
               FAQ
             </span>
             <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold tracking-tight text-gray-950">

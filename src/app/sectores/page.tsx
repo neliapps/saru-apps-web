@@ -6,7 +6,16 @@ import {
   Heart,
   Bell,
   ArrowRight,
+  Shirt,
+  Gem,
+  Sparkles,
+  Dumbbell,
+  Home,
+  UtensilsCrossed,
+  Laptop,
+  PawPrint,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 export const metadata = {
   title: "Sectores — Saru Apps",
@@ -14,51 +23,51 @@ export const metadata = {
     "No importa que vendas, Saru Apps se adapta a tu negocio. Descubri como marcas de cada sector usan una app movil para vender mas en Tiendanube.",
 };
 
-const sectors = [
+const sectors: { icon: LucideIcon; name: string; description: string }[] = [
   {
-    emoji: "\uD83D\uDC57",
+    icon: Shirt,
     name: "Moda e Indumentaria",
     description:
       "Lookbooks, drops exclusivos y notificaciones de nueva temporada para tus clientes mas fieles.",
   },
   {
-    emoji: "\uD83D\uDC8E",
+    icon: Gem,
     name: "Accesorios y Joyeria",
     description:
       "Catalogo visual premium y programa de puntos para compras recurrentes.",
   },
   {
-    emoji: "\u2728",
+    icon: Sparkles,
     name: "Belleza y Cosmetica",
     description:
       "Rutinas personalizadas, reposicion automatica y ofertas flash directo al celular.",
   },
   {
-    emoji: "\uD83C\uDFC3",
+    icon: Dumbbell,
     name: "Deportes y Fitness",
     description:
       "Lanzamientos de edicion limitada y comunidad activa con notificaciones push.",
   },
   {
-    emoji: "\uD83C\uDFE0",
+    icon: Home,
     name: "Hogar y Decoracion",
     description:
       "Inspiracion visual, colecciones por ambiente y recordatorios de restock.",
   },
   {
-    emoji: "\uD83C\uDF77",
+    icon: UtensilsCrossed,
     name: "Alimentos y Bebidas",
     description:
       "Pedidos recurrentes, suscripciones y promociones por temporada.",
   },
   {
-    emoji: "\uD83D\uDCF1",
+    icon: Laptop,
     name: "Electronica",
     description:
       "Comparativas de productos, alertas de precio y soporte post-venta.",
   },
   {
-    emoji: "\uD83D\uDC3E",
+    icon: PawPrint,
     name: "Mascotas",
     description:
       "Recordatorios de compra, suscripciones de alimento y tips de cuidado.",
@@ -115,9 +124,9 @@ export default function Sectores() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {sectors.map((sector, i) => (
                 <AnimatedSection key={sector.name} delay={i * 0.06}>
-                  <div className="group bg-white rounded-2xl border border-gray-100 p-6 hover:border-gray-200 hover:shadow-lg transition-all duration-300 h-full">
-                    <div className="w-14 h-14 rounded-2xl bg-gray-50 flex items-center justify-center mb-5">
-                      <span className="text-2xl">{sector.emoji}</span>
+                  <div className="group bg-white rounded-2xl border border-gray-100 p-6 hover:border-gray-200 hover:shadow-lg transition-all duration-300 h-full cursor-pointer">
+                    <div className="w-14 h-14 rounded-2xl bg-gray-100 flex items-center justify-center mb-5">
+                      <sector.icon className="w-6 h-6 text-gray-700" />
                     </div>
                     <h3 className="text-base font-semibold text-gray-950 mb-2">
                       {sector.name}
@@ -125,7 +134,7 @@ export default function Sectores() {
                     <p className="text-sm text-gray-500 leading-relaxed mb-4">
                       {sector.description}
                     </p>
-                    <span className="inline-flex items-center gap-1 text-sm font-medium text-gray-400 group-hover:text-gray-950 transition-colors duration-300">
+                    <span className="inline-flex items-center gap-1 text-sm font-medium text-gray-500 group-hover:text-gray-950 transition-colors duration-300 cursor-pointer">
                       Conocer mas
                       <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                     </span>

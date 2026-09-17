@@ -61,7 +61,7 @@ export function FeaturesPreview() {
     <section className="py-32 bg-white">
       <div className="max-w-[1280px] mx-auto px-6">
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-20">
-          <span className="text-sm text-gray-400 uppercase tracking-widest font-medium">
+          <span className="text-sm text-gray-500 uppercase tracking-widest font-medium">
             Producto
           </span>
           <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight text-gray-950">
@@ -93,7 +93,7 @@ export function FeaturesPreview() {
                 <p className="text-sm text-gray-500 leading-relaxed mb-4">
                   {feature.description}
                 </p>
-                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-400 group-hover:text-gray-950 transition-colors duration-300">
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-500 group-hover:text-gray-950 transition-colors duration-300">
                   Conocer más
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>

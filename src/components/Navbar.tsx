@@ -269,7 +269,7 @@ export function Navbar() {
                       >
                         {item.label}
                         <ChevronDown
-                          className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${
+                          className={`w-5 h-5 text-gray-500 transition-transform duration-200 ${
                             mobileExpanded === item.label ? "rotate-180" : ""
                           }`}
                         />
@@ -291,12 +291,12 @@ export function Navbar() {
                                   onClick={() => setMobileOpen(false)}
                                   className="flex items-center gap-3 py-2.5 px-2 rounded-lg hover:bg-gray-50"
                                 >
-                                  <sub.icon className="w-4 h-4 text-gray-400 shrink-0" />
+                                  <sub.icon className="w-4 h-4 text-gray-500 shrink-0" />
                                   <div>
                                     <span className="text-[15px] text-gray-700 font-medium">
                                       {sub.label}
                                     </span>
-                                    <p className="text-xs text-gray-400">
+                                    <p className="text-xs text-gray-500">
                                       {sub.description}
                                     </p>
                                   </div>

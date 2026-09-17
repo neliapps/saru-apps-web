@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Smartphone, Bell } from "lucide-react";
 
 export function Hero() {
   return (
@@ -14,7 +15,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.4, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           >
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 text-gray-600 text-[13px] font-medium border border-gray-200/60 mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
@@ -26,7 +27,7 @@ export function Hero() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.5, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.08] tracking-[-0.03em] font-bold text-gray-950"
           >
             Tu tienda Tiendanube,
@@ -46,7 +47,7 @@ export function Hero() {
                   strokeLinecap="round"
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: 1 }}
-                  transition={{ duration: 1.2, delay: 1, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 />
               </svg>
             </span>
@@ -56,7 +57,7 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.5, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
             className="mt-6 md:mt-8 text-base md:text-lg text-gray-500 max-w-xl mx-auto leading-relaxed"
           >
             Creá tu app móvil sin escribir una línea de código. Editor drag &
@@ -68,7 +69,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.5, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
             className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <a
@@ -107,7 +108,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.5, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="mt-16 md:mt-20 relative max-w-5xl mx-auto"
         >
           {/* Browser frame */}
@@ -233,11 +234,11 @@ export function Hero() {
                   {/* Floating elements */}
                   <motion.div
                     animate={{ y: [0, -8, 0] }}
-                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                    transition={{ duration: 3, repeat: 3, ease: "easeInOut" }}
                     className="absolute right-4 lg:right-12 top-6 bg-white rounded-xl shadow-lg shadow-gray-200/80 border border-gray-100 p-3 hidden md:flex items-center gap-2.5 z-20"
                   >
-                    <div className="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center text-sm">
-                      📱
+                    <div className="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center">
+                      <Smartphone className="w-4 h-4 text-green-600" />
                     </div>
                     <div>
                       <p className="text-[11px] font-semibold text-gray-900">
@@ -251,14 +252,14 @@ export function Hero() {
                     animate={{ y: [0, 8, 0] }}
                     transition={{
                       duration: 4,
-                      repeat: Infinity,
+                      repeat: 3,
                       ease: "easeInOut",
                       delay: 1,
                     }}
                     className="absolute left-4 lg:left-12 bottom-12 bg-white rounded-xl shadow-lg shadow-gray-200/80 border border-gray-100 p-3 hidden md:flex items-center gap-2.5 z-20"
                   >
-                    <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-sm">
-                      🔔
+                    <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center">
+                      <Bell className="w-4 h-4 text-blue-600" />
                     </div>
                     <div>
                       <p className="text-[11px] font-semibold text-gray-900">

@@ -346,7 +346,7 @@ export function PreciosContent() {
       <section className="pb-16">
         <div className="max-w-[1280px] mx-auto px-6">
           <AnimatedSection className="text-center max-w-2xl mx-auto">
-            <span className="text-sm text-gray-400 uppercase tracking-widest font-medium">
+            <span className="text-sm text-gray-500 uppercase tracking-widest font-medium">
               Precios
             </span>
             <h1 className="mt-4 font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-950">
@@ -604,7 +604,7 @@ export function PreciosContent() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-[1280px] mx-auto px-6">
           <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-sm text-gray-400 uppercase tracking-widest font-medium">
+            <span className="text-sm text-gray-500 uppercase tracking-widest font-medium">
               Comparación
             </span>
             <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold tracking-tight text-gray-950">
@@ -690,7 +690,7 @@ export function PreciosContent() {
         <div className="max-w-[1280px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
             <AnimatedSection className="lg:col-span-4">
-              <span className="text-sm text-gray-400 uppercase tracking-widest font-medium">
+              <span className="text-sm text-gray-500 uppercase tracking-widest font-medium">
                 FAQ
               </span>
               <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold tracking-tight text-gray-950">
