@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { CookieBanner } from "@/components/CookieBanner";
 import "./globals.css";
 
@@ -37,6 +38,18 @@ export default function RootLayout({
       <body>
         {children}
         <CookieBanner />
+        <Script id="brevo-conversations" strategy="afterInteractive">{`
+          (function(d, w, c) {
+            w.BrevoConversationsID = '6a59f1d9f62a55a5c908887c';
+            w[c] = w[c] || function() {
+              (w[c].q = w[c].q || []).push(arguments);
+            };
+            var s = d.createElement('script');
+            s.async = true;
+            s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+            if (d.head) d.head.appendChild(s);
+          })(document, window, 'BrevoConversations');
+        `}</Script>
       </body>
     </html>
   );
