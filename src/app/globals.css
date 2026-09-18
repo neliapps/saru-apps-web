@@ -83,6 +83,18 @@ body {
   background: #a3a3a3;
 }
 
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
