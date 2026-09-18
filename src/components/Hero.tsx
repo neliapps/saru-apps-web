@@ -76,7 +76,7 @@ export function Hero() {
               href="https://app.saruapps.com/register"
               className="group relative inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-gray-950/25"
             >
-              <span className="relative z-10">Crear mi app gratis</span>
+              <span className="relative z-10">Empezar gratis</span>
               <svg
                 className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                 fill="none"

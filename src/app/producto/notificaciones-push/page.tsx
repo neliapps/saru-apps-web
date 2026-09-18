@@ -388,7 +388,7 @@ export default function NotificacionesPushPage() {
                     href="https://app.saruapps.com/register"
                     className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-950 text-base font-medium rounded-full hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10"
                   >
-                    Crear mi app gratis
+                    Empezar gratis
                     <svg
                       className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                       fill="none"

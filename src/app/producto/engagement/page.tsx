@@ -157,7 +157,7 @@ export default function EngagementPage() {
                   href="https://app.saruapps.com/register"
                   className="group relative inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-gray-950/25"
                 >
-                  <span className="relative z-10">Crear mi app gratis</span>
+                  <span className="relative z-10">Empezar gratis</span>
                   <ArrowRight className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                   <div className="absolute inset-0 bg-gradient-to-r from-gray-800 to-gray-950 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </a>
@@ -308,7 +308,7 @@ export default function EngagementPage() {
                     href="https://app.saruapps.com/register"
                     className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-950 text-base font-medium rounded-full hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10"
                   >
-                    Crear mi app gratis
+                    Empezar gratis
                     <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </a>
                   <a

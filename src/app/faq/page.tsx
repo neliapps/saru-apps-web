@@ -52,7 +52,7 @@ export default function FAQPage() {
                 href="https://app.saruapps.com/register"
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-full transition-all duration-300 hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-950/25"
               >
-                Crear mi app gratis
+                Empezar gratis
               </a>
               <a
                 href="https://calendly.com/saruapps/30min"
