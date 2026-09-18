@@ -33,6 +33,11 @@ export default function Page() {
         permisos que la app solicita (productos, pedidos, clientes, etc.) y
         haces clic en <strong>Aceptar</strong>.
       </p>
+      <img
+        src="/guia/tiendanube-permisos.png"
+        alt="Pantalla de permisos de Tiendanube para instalar Saru Apps"
+        className="rounded-xl border border-gray-200 my-6 w-full"
+      />
 
       <h3>Paso 3 — Crear cuenta</h3>
       <p>
@@ -53,6 +58,11 @@ export default function Page() {
         cuenta — Iniciar sesion&quot; para vincular tu tienda a tu cuenta
         existente.
       </p>
+      <img
+        src="/guia/confirm-signup.png"
+        alt="Pantalla de confirmacion de cuenta de Saru Apps"
+        className="rounded-xl border border-gray-200 my-6 w-full max-w-lg mx-auto"
+      />
 
       <h3>Paso 4 — Cuenta creada + sincronizacion automatica</h3>
       <p>Al aceptar los terminos, todo sucede automaticamente:</p>
@@ -68,29 +78,6 @@ export default function Page() {
         <li>Se envia un email de bienvenida con link para crear contrasena</li>
         <li>Se te redirige al panel de administracion dentro de Tiendanube</li>
       </ol>
-
-      <h3>Paso 5 — Panel de administracion (dentro de Tiendanube)</h3>
-      <p>
-        Vas a ver Saru Apps embebido dentro del admin de Tiendanube. Desde ahi
-        podes:
-      </p>
-      <ul>
-        <li>Ver el estado de sincronizacion</li>
-        <li>Personalizar la app</li>
-        <li>Navegar al dashboard completo de Saru Apps</li>
-      </ul>
-
-      <h3>Resultado</h3>
-      <ul>
-        <li>Cuenta creada</li>
-        <li>Tienda de Tiendanube conectada</li>
-        <li>App creada con tu logo, colores y productos</li>
-        <li>Webhooks configurados (sincronizacion en tiempo real)</li>
-        <li>
-          Solo necesitas crear tu contrasena via email para acceder al dashboard
-          web
-        </li>
-      </ul>
 
       {/* ─── Camino 2 ─── */}
       <h2>Camino 2: Desde la web de Saru Apps (registro directo)</h2>
@@ -129,6 +116,11 @@ export default function Page() {
         Hace clic en <strong>&quot;Conectar Tiendanube&quot;</strong> para
         continuar.
       </p>
+      <img
+        src="/guia/onboarding-conectar.png"
+        alt="Pantalla de onboarding de Saru Apps para conectar Tiendanube"
+        className="rounded-xl border border-gray-200 my-6 w-full"
+      />
 
       <h3>Paso 3 — Autorizar en Tiendanube</h3>
       <p>Al hacer clic en &quot;Conectar Tiendanube&quot;:</p>
@@ -137,52 +129,6 @@ export default function Page() {
         <li>Aceptas los permisos (productos, pedidos, clientes, etc.)</li>
         <li>Tiendanube te redirige de vuelta a Saru Apps</li>
       </ol>
-
-      <h3>Paso 4 — Sincronizacion automatica</h3>
-      <p>
-        Volves al onboarding y ves el progreso en tiempo real. Todo es
-        automatico — solo esperas unos 30 segundos:
-      </p>
-      <ol>
-        <li>
-          <strong>Sincronizando productos</strong> — se importan todos tus
-          productos con nombre, precio, imagenes, variantes y stock
-        </li>
-        <li>
-          <strong>Importando diseno de tu tienda</strong> — se detecta tu logo,
-          colores e idioma
-        </li>
-        <li>
-          <strong>Preparando tu app</strong> — se crea la estructura de tu app
-          con los datos importados
-        </li>
-      </ol>
-
-      <h3>Paso 5 — App lista</h3>
-      <p>Cuando la sincronizacion termina, vas a ver:</p>
-      <ul>
-        <li>
-          Un preview de tu app en un celular (con tu logo, productos y colores)
-        </li>
-        <li>Opcion para personalizar el nombre de la app y el color primario</li>
-        <li>
-          Boton <strong>&quot;Ir al panel&quot;</strong> para acceder al
-          dashboard
-        </li>
-      </ul>
-
-      <h3>Paso 6 — Dashboard</h3>
-      <p>
-        Llegas al dashboard completo de Saru Apps donde podes:
-      </p>
-      <ul>
-        <li>Editar el diseno (paginas, bloques)</li>
-        <li>Configurar opciones (carrito, perfil, notificaciones)</li>
-        <li>Ver productos sincronizados</li>
-        <li>Publicar la app</li>
-        <li>Gestionar notificaciones push</li>
-        <li>Ver analitica</li>
-      </ul>
 
       {/* ─── Que se sincroniza ─── */}
       <h2>Que se sincroniza</h2>
