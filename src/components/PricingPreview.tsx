@@ -7,28 +7,28 @@ const plans = [
   {
     name: "Starter",
     price: 49,
-    description: "Web App (PWA) instalable",
-    features: ["Editor drag & drop", "Sync con Tiendanube", "1.000 push/mes"],
+    description: "Lanzá tu app mobile",
+    features: ["App nativa iOS & Android", "Editor drag & drop", "1.000 push/mes"],
   },
   {
     name: "Growth",
     price: 149,
-    description: "App nativa en App Store y Google Play",
+    description: "Herramientas para vender más",
     features: [
       "Todo lo de Starter",
-      "Publicación en stores",
-      "Fidelización y cupones",
+      "Carrito abandonado y back in stock",
+      "White label",
     ],
     highlighted: true,
   },
   {
     name: "Scale",
     price: 349,
-    description: "Máximo rendimiento y personalización",
+    description: "Marketing avanzado y exclusividad",
     features: [
       "Todo lo de Growth",
-      "20.000 push segmentados",
-      "Multidioma",
+      "50.000 push segmentados",
+      "Drops y productos exclusivos",
     ],
   },
 ];

@@ -36,10 +36,10 @@ Métricas en tiempo real: usuarios activos, tasa de conversión, ingresos por ca
 
 | Plan | Precio | Incluye |
 |------|--------|---------|
-| Starter | USD $49/mes | PWA instalable, editor drag & drop, sync productos, 1.000 push/mes, soporte email |
-| Growth | USD $149/mes | Todo Starter + app nativa en stores, editor avanzado, carrito abandonado, fidelización, cupones, 5.000 push/mes, soporte chat |
-| Scale | USD $349/mes | Todo Growth + 20.000 push/mes, push segmentados, campañas, inicio personalizado, multidioma, soporte videollamada |
-| Enterprise | Personalizado | Todo Scale + push ilimitados, API dedicada, integraciones custom, account manager, SLA |
+| Starter | USD $49/mes | App nativa iOS & Android, editor drag & drop, sync productos, 1.000 push/mes, buscador, wishlist, cuenta cliente, seguimiento de pedidos, carrito con cupones, 1 página personalizada, soporte email |
+| Growth | USD $149/mes | Todo Starter + 10.000 push/mes, carrito abandonado, back in stock, bienvenida automática, repetir pedido, badges de producto, bajo stock, quick add, historial visitados, white label, 3 páginas personalizadas |
+| Scale | USD $349/mes | Todo Growth + 50.000 push/mes, push segmentado, descuento en favoritos, drops exclusivos, productos exclusivos, cross-sell, barra envío gratis, diseños programados, rich push, B2B, multiidioma, deep linking, páginas ilimitadas |
+| Enterprise | Personalizado | Todo Scale + push ilimitado, chat en la app, QR code banner desktop, API dedicada, account manager exclusivo, SLA garantizado, integraciones custom |
 
 Facturación anual con 20% de descuento. Se puede crear cuenta gratis, diseñar la app y ver preview. El cobro comienza al publicar.
 
