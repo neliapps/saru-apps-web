@@ -40,7 +40,7 @@ const metrics = [
     icon: DollarSign,
     title: "Ingresos por canal",
     description:
-      "Cuanto factura tu app vs. tu web. Ve el revenue generado por push notifications, loyalty y trafico organico.",
+      "Cuanto factura tu app vs. tu web. Ve el revenue generado por push notifications, engagement y trafico organico.",
   },
   {
     icon: Eye,

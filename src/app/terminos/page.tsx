@@ -31,14 +31,13 @@ export default function Terminos() {
             <p>
               Saru Apps es una plataforma SaaS que permite a comercios con
               tiendas en Tiendanube crear, personalizar y publicar aplicaciones
-              móviles (PWA y nativas) sin necesidad de programar. El Servicio
-              incluye:
+              móviles nativas (iOS y Android) sin necesidad de programar. El
+              Servicio incluye:
             </p>
             <ul>
               <li>Editor visual drag & drop para diseñar la app</li>
               <li>Sincronización automática de productos con Tiendanube</li>
               <li>Envío de notificaciones push</li>
-              <li>Generación de Web App (PWA) instalable</li>
               <li>
                 Publicación en App Store y Google Play (según el plan
                 contratado)
@@ -57,26 +56,32 @@ export default function Terminos() {
             <p>Saru Apps ofrece los siguientes planes de suscripción:</p>
             <ul>
               <li>
-                <strong>Starter (USD $49/mes):</strong> Web App (PWA) instalable,
-                editor drag & drop, sincronización de productos, 1.000
-                notificaciones push/mes.
+                <strong>Starter (USD $49/mes):</strong> App nativa iOS &
+                Android, editor drag & drop, sincronización de productos,
+                1.000 notificaciones push/mes, buscador, wishlist, cuenta
+                cliente, seguimiento de pedidos, categorías, carrito con
+                cupones, 1 página personalizada, banner de instalación, vista
+                previa, soporte por email.
               </li>
               <li>
                 <strong>Growth (USD $149/mes):</strong> Todo lo de Starter más
-                publicación en App Store y Google Play, editor avanzado,
-                notificaciones de carrito abandonado, programa de fidelización,
-                5.000 notificaciones push/mes.
+                10.000 notificaciones push/mes, carrito abandonado, back in
+                stock, bienvenida automática, repetir pedido, badges de
+                producto, indicador de bajo stock, quick add to cart, white
+                label, 3 páginas personalizadas.
               </li>
               <li>
                 <strong>Scale (USD $349/mes):</strong> Todo lo de Growth más
-                20.000 notificaciones push/mes, notificaciones segmentadas,
-                campañas de marketing, inicio personalizado, multidioma.
+                50.000 notificaciones push/mes, push segmentado, descuento en
+                favoritos, drops exclusivos, productos exclusivos, cross-sell,
+                barra de envío gratis, diseños programados, rich push, B2B,
+                multiidioma, deep linking, páginas personalizadas ilimitadas.
               </li>
               <li>
                 <strong>Enterprise (personalizado):</strong> Todo lo de Scale
-                más notificaciones push ilimitadas, migración asistida, diseño
-                personalizado, API dedicada, account manager dedicado, SLA
-                garantizado.
+                más notificaciones push ilimitadas, chat en app, QR code banner
+                desktop, API dedicada, account manager exclusivo, SLA
+                garantizado, integraciones custom.
               </li>
             </ul>
             <p>

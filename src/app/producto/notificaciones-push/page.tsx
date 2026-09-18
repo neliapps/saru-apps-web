@@ -85,12 +85,12 @@ const volumeByPlan = [
   },
   {
     plan: "Growth",
-    volume: "5,000 / mes",
+    volume: "10.000 / mes",
     highlighted: true,
   },
   {
     plan: "Scale",
-    volume: "20,000 / mes",
+    volume: "50.000 / mes",
     highlighted: false,
   },
   {

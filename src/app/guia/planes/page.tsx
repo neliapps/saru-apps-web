@@ -23,34 +23,40 @@ export default function Page() {
               <td><strong>Starter</strong></td>
               <td>USD $49/mes</td>
               <td>
-                Web App (PWA) instalable, editor drag &amp; drop, sincronizacion
-                de productos con Tiendanube, notificaciones push (1.000/mes),
-                pagina de instalacion compartible
+                App nativa iOS &amp; Android, editor drag &amp; drop, sync de
+                productos, 1.000 push/mes, buscador, wishlist, cuenta cliente,
+                seguimiento de pedidos, categorias, carrito con cupones, 1
+                pagina personalizada, banner de instalacion, vista previa,
+                soporte email
               </td>
             </tr>
             <tr>
               <td><strong>Growth</strong></td>
               <td>USD $149/mes</td>
               <td>
-                Todo lo de Starter + app nativa en App Store y Google Play,
-                editor avanzado, notificaciones de carrito abandonado, cupones
-                exclusivos, push (5.000/mes)
+                Todo lo de Starter + 10.000 push/mes, carrito abandonado, back
+                in stock, bienvenida automatica, repetir pedido, badges, bajo
+                stock, quick add, historial de visitados, white label, 3
+                paginas personalizadas
               </td>
             </tr>
             <tr>
               <td><strong>Scale</strong></td>
               <td>USD $349/mes</td>
               <td>
-                Todo lo de Growth + push (20.000/mes), push segmentado, campanas
-                de marketing, inicio personalizado, drops exclusivos, multidioma
+                Todo lo de Growth + 50.000 push/mes, push segmentado, descuento
+                favoritos, drops exclusivos, productos exclusivos, cross-sell,
+                barra envio gratis, disenos programados, rich push, B2B,
+                multiidioma, deep linking, paginas ilimitadas
               </td>
             </tr>
             <tr>
               <td><strong>Enterprise</strong></td>
               <td>Personalizado</td>
               <td>
-                Todo lo de Scale + push ilimitado, API dedicada, integraciones
-                custom, account manager dedicado, SLA garantizado
+                Todo lo de Scale + push ilimitado, chat en app, QR code banner,
+                API dedicada, account manager exclusivo, SLA garantizado,
+                integraciones custom
               </td>
             </tr>
           </tbody>
@@ -60,21 +66,28 @@ export default function Page() {
       <h2>Que incluye cada plan</h2>
       <ul>
         <li>
-          <strong>Starter:</strong> PWA instalable, editor basico, sync de
-          productos, 1k push/mes
+          <strong>Starter:</strong> App nativa iOS &amp; Android, editor drag
+          &amp; drop, sync de productos, 1.000 push/mes, buscador, wishlist,
+          cuenta cliente, seguimiento de pedidos, categorias, carrito con
+          cupones, 1 pagina personalizada, banner de instalacion, vista previa,
+          soporte email
         </li>
         <li>
-          <strong>Growth+:</strong> App nativa (iOS/Android), editor avanzado,
-          secciones custom, paginas custom, carrito abandonado, programa de
-          fidelizacion, cupones exclusivos
+          <strong>Growth:</strong> Todo Starter + 10.000 push/mes, carrito
+          abandonado, back in stock, bienvenida automatica, repetir pedido,
+          badges, bajo stock, quick add, historial de visitados, white label, 3
+          paginas personalizadas
         </li>
         <li>
-          <strong>Scale+:</strong> Push segmentado, campanas de marketing, home
-          personalizado, drops exclusivos, multidioma (espanol + portugues)
+          <strong>Scale:</strong> Todo Growth + 50.000 push/mes, push
+          segmentado, descuento favoritos, drops exclusivos, productos
+          exclusivos, cross-sell, barra envio gratis, disenos programados, rich
+          push, B2B, multiidioma, deep linking, paginas ilimitadas
         </li>
         <li>
-          <strong>Enterprise:</strong> Push ilimitado, API dedicada, account
-          manager, SLA
+          <strong>Enterprise:</strong> Todo Scale + push ilimitado, chat en app,
+          QR code banner, API dedicada, account manager exclusivo, SLA
+          garantizado, integraciones custom
         </li>
       </ul>
     </GuiaArticleLayout>

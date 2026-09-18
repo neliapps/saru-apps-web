@@ -195,7 +195,7 @@ const pricingFaqs = [
   {
     question: "¿Qué plan me conviene?",
     answer:
-      "Starter es ideal si querés empezar con una Web App (PWA). Growth es para marcas que quieren publicar en App Store y Google Play con push y fidelización. Scale es para marcas en expansión que necesitan push segmentados, campañas y multidioma. Enterprise es para grandes marcas con necesidades específicas. Si tenés dudas, agendá una demo y te asesoramos.",
+      "Starter es ideal para lanzar tu app nativa con las funcionalidades esenciales. Growth es para marcas que quieren herramientas de venta avanzadas como carrito abandonado, back in stock y white label. Scale es para marcas en expansión que necesitan push segmentados, drops exclusivos y multiidioma. Enterprise es para grandes marcas con necesidades específicas. Si tenés dudas, agendá una demo y te asesoramos.",
   },
   {
     question: "¿Qué pasa si cancelo mi suscripción?",

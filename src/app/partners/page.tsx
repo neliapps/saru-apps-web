@@ -89,7 +89,7 @@ const audiences = [
     icon: Megaphone,
     title: "Agencias de marketing digital",
     description:
-      "Da un canal de comunicacion directa a tus clientes con push notifications y programa de fidelizacion.",
+      "Da un canal de comunicacion directa a tus clientes con push notifications y herramientas de engagement.",
   },
 ];
 

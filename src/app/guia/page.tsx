@@ -51,7 +51,7 @@ const articles = [
   {
     slug: "publicar",
     title: "Publicar la app",
-    description: "Publica tu PWA o app nativa en App Store y Google Play.",
+    description: "Publica tu app nativa en App Store y Google Play.",
   },
   {
     slug: "panel",

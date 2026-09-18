@@ -35,10 +35,10 @@ const features = [
   },
   {
     icon: Heart,
-    title: "Programa de Fidelización",
+    title: "Engagement y Ventas",
     description:
-      "Creá un programa de puntos y recompensas. Tus clientes acumulan puntos con cada compra y los canjean por descuentos exclusivos.",
-    visual: "loyalty",
+      "Carrito abandonado, back in stock, drops exclusivos, badges de producto y más herramientas para convertir y retener clientes.",
+    visual: "engagement",
   },
   {
     icon: ShoppingBag,
@@ -155,36 +155,22 @@ function FeatureVisual({ type }: { type: string }) {
     );
   }
 
-  if (type === "loyalty") {
+  if (type === "engagement") {
     return (
-      <div className="bg-gradient-to-br from-gray-950 to-gray-800 rounded-xl p-4 text-white">
-        <div className="flex justify-between items-start mb-4">
-          <div>
-            <p className="text-[10px] opacity-60 uppercase tracking-wider">
-              Programa de puntos
-            </p>
-            <p className="text-xl font-bold mt-1">2,450 pts</p>
+      <div className="space-y-2">
+        {[
+          { label: "Carrito abandonado", badge: "Automático", color: "bg-orange-50 text-orange-700" },
+          { label: "Back in stock", badge: "Push", color: "bg-blue-50 text-blue-700" },
+          { label: "Drops exclusivos", badge: "Cuenta regresiva", color: "bg-purple-50 text-purple-700" },
+        ].map((item) => (
+          <div
+            key={item.label}
+            className="bg-white rounded-lg p-3 border border-gray-100 flex items-center justify-between"
+          >
+            <span className="text-[11px] font-medium text-gray-900">{item.label}</span>
+            <span className={`text-[9px] font-medium px-2 py-0.5 rounded-full ${item.color}`}>{item.badge}</span>
           </div>
-          <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-            <Heart className="w-4 h-4" />
-          </div>
-        </div>
-        <div className="w-full bg-white/10 rounded-full h-1.5 mb-2">
-          <div className="bg-white rounded-full h-1.5 w-3/4" />
-        </div>
-        <p className="text-[10px] opacity-60">
-          550 pts más para tu próxima recompensa
-        </p>
-        <div className="grid grid-cols-3 gap-2 mt-4">
-          {["10% OFF", "Envío free", "Gift"].map((reward) => (
-            <div
-              key={reward}
-              className="bg-white/10 rounded-lg p-2 text-center"
-            >
-              <p className="text-[10px] font-medium">{reward}</p>
-            </div>
-          ))}
-        </div>
+        ))}
       </div>
     );
   }

@@ -55,9 +55,9 @@ const navItems: NavItem[] = [
         icon: Bell,
       },
       {
-        label: "Fidelización",
-        description: "Programa de puntos y recompensas",
-        href: "/producto/fidelizacion",
+        label: "Engagement y Ventas",
+        description: "Herramientas para convertir y retener",
+        href: "/producto/engagement",
         icon: Heart,
       },
       {

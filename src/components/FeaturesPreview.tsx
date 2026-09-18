@@ -35,10 +35,10 @@ const features = [
   },
   {
     icon: Heart,
-    title: "Programa de Fidelización",
+    title: "Engagement y Ventas",
     description:
-      "Puntos y recompensas que incentivan la recompra.",
-    href: "/producto/fidelizacion",
+      "Carrito abandonado, drops exclusivos, badges y más herramientas de conversión.",
+    href: "/producto/engagement",
   },
   {
     icon: ShoppingBag,

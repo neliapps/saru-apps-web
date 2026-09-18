@@ -4,12 +4,12 @@
 
 ## Qué es Saru Apps
 
-Saru Apps es una plataforma no-code que permite a comerciantes con tiendas en Tiendanube crear, personalizar y publicar aplicaciones móviles (PWA y nativas iOS/Android) sin necesidad de programar.
+Saru Apps es una plataforma no-code que permite a comerciantes con tiendas en Tiendanube crear, personalizar y publicar aplicaciones móviles nativas (iOS y Android) sin necesidad de programar.
 
 La plataforma se compone de:
 
 - **Panel de administración (Dashboard):** donde el comerciante configura y gestiona su app.
-- **Backend API:** maneja la lógica de negocio, sincronización con Tiendanube, notificaciones push y generación de la PWA.
+- **Backend API:** maneja la lógica de negocio, sincronización con Tiendanube, notificaciones push y generación de la app.
 - **App móvil nativa (React Native):** app real publicada en App Store y Google Play con la marca del comerciante (white-label).
 
 ## Funcionalidades principales
@@ -23,8 +23,8 @@ La app se publica en App Store y Google Play. Es una app nativa real (React Nati
 ### Notificaciones Push
 Envío de notificaciones push segmentadas: ofertas flash, carritos abandonados, nuevos productos, campañas programadas. Hasta 7x más engagement que el email.
 
-### Programa de Fidelización
-Sistema de puntos y recompensas. Los clientes acumulan puntos con cada compra y los canjean por descuentos, envío gratis o productos exclusivos.
+### Engagement y Ventas
+Herramientas de conversión y retención: notificaciones de carrito abandonado, alertas de back in stock, bienvenida automática, repetir pedido con un tap, badges de producto, indicador de bajo stock, quick add to cart, drops exclusivos con cuenta regresiva y productos exclusivos de la app.
 
 ### Sincronización con Tiendanube
 Productos, stock, precios, categorías y pedidos se sincronizan automáticamente con la tienda Tiendanube en tiempo real vía webhooks. Los pedidos desde la app aparecen directo en el panel de Tiendanube. Usa el checkout nativo de Tiendanube.

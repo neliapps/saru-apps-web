@@ -22,7 +22,7 @@ const steps = [
     number: "03",
     title: "Activá engagement",
     description:
-      "Configurá notificaciones push, programa de puntos y cupones exclusivos para la app. Convertí compradores ocasionales en clientes recurrentes.",
+      "Configurá notificaciones push, carrito abandonado, drops exclusivos y herramientas de engagement. Convertí compradores ocasionales en clientes recurrentes.",
     detail: "Aumentá tus ventas +35%",
   },
   {

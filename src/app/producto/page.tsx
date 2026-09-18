@@ -14,7 +14,7 @@ import {
 export const metadata = {
   title: "Producto — Saru Apps",
   description:
-    "Conoce todas las herramientas de Saru Apps: editor drag & drop, app nativa iOS y Android, notificaciones push, fidelizacion, sincronizacion con Tiendanube y analytics en tiempo real.",
+    "Conoce todas las herramientas de Saru Apps: editor drag & drop, app nativa iOS y Android, notificaciones push, engagement y ventas, sincronizacion con Tiendanube y analytics en tiempo real.",
 };
 
 const features = [
@@ -41,10 +41,10 @@ const features = [
   },
   {
     icon: Heart,
-    title: "Fidelizacion",
+    title: "Engagement y Ventas",
     description:
-      "Programa de puntos y recompensas para convertir compradores en clientes recurrentes.",
-    href: "/producto/fidelizacion",
+      "Carrito abandonado, back in stock, drops exclusivos, badges y herramientas de conversion.",
+    href: "/producto/engagement",
   },
   {
     icon: ShoppingBag,
@@ -79,7 +79,7 @@ const steps = [
     number: "03",
     title: "Activa engagement",
     description:
-      "Configura push, fidelizacion y cupones exclusivos para la app.",
+      "Configura push, engagement y herramientas de conversion para la app.",
   },
   {
     number: "04",

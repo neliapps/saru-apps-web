@@ -30,20 +30,16 @@ export default function Page() {
       <h2>Limites por plan</h2>
       <ul>
         <li><strong>Starter:</strong> 1.000 push/mes</li>
-        <li><strong>Growth:</strong> 5.000 push/mes</li>
-        <li><strong>Scale:</strong> 20.000 push/mes</li>
+        <li><strong>Growth:</strong> 10.000 push/mes</li>
+        <li><strong>Scale:</strong> 50.000 push/mes</li>
         <li><strong>Enterprise:</strong> ilimitado</li>
       </ul>
 
       <h2>Como llegan las notificaciones</h2>
       <ul>
         <li>
-          <strong>PWA (Web):</strong> via Web Push API (funciona en Chrome, Edge,
-          Firefox en Android y desktop)
-        </li>
-        <li>
-          <strong>App nativa (iOS/Android):</strong> via Firebase Cloud Messaging
-          (FCM)
+          Las notificaciones se envian via Firebase Cloud Messaging (FCM) a
+          todos los dispositivos iOS y Android con la app instalada
         </li>
         <li>
           Al tocar la notificacion, el cliente es dirigido al contenido relevante

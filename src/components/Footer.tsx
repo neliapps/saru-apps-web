@@ -5,7 +5,7 @@ const footerLinks = {
     { label: "Editor Drag & Drop", href: "/producto/editor" },
     { label: "App Nativa", href: "/producto/app-nativa" },
     { label: "Notificaciones Push", href: "/producto/notificaciones-push" },
-    { label: "Fidelización", href: "/producto/fidelizacion" },
+    { label: "Engagement y Ventas", href: "/producto/engagement" },
     { label: "Sincronización", href: "/producto/sincronizacion" },
     { label: "Analytics", href: "/producto/analytics" },
   ],

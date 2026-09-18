@@ -10,8 +10,8 @@ export default function Page() {
       <h1>Que es Saru Apps</h1>
       <p>
         Saru Apps es una plataforma SaaS que permite a comerciantes de
-        Tiendanube crear, personalizar y publicar aplicaciones moviles (PWA y
-        nativas iOS/Android) sin programar. La plataforma tiene tres componentes
+        Tiendanube crear, personalizar y publicar aplicaciones moviles nativas
+        (iOS y Android) sin programar. La plataforma tiene tres componentes
         principales:
       </p>
       <ol>
@@ -21,7 +21,7 @@ export default function Page() {
         </li>
         <li>
           <strong>Backend API</strong> — maneja la logica de negocio,
-          sincronizacion, notificaciones y generacion de la PWA
+          sincronizacion, notificaciones y generacion de la app
         </li>
         <li>
           <strong>App movil nativa</strong> (React Native) — app para publicar

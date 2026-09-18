@@ -6,14 +6,14 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Saru Apps — Crea la app móvil de tu tienda Tiendanube",
   description:
-    "Transforma tu tienda Tiendanube en una app móvil sin escribir código. Editor drag & drop, notificaciones push, y herramientas de fidelización para aumentar tus ventas recurrentes.",
+    "Transforma tu tienda Tiendanube en una app móvil nativa sin escribir código. Editor drag & drop, notificaciones push y herramientas de engagement para aumentar tus ventas recurrentes.",
   keywords: [
     "app móvil",
     "tiendanube",
     "ecommerce",
     "mobile app builder",
     "drag and drop",
-    "fidelización",
+    "engagement",
   ],
   icons: {
     icon: "/favicon.png",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Saru Apps — Crea la app móvil de tu tienda Tiendanube",
     description:
-      "Transforma tu tienda Tiendanube en una app móvil sin escribir código.",
+      "Transforma tu tienda Tiendanube en una app móvil nativa sin escribir código.",
     type: "website",
     locale: "es_AR",
   },

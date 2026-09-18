@@ -11,14 +11,6 @@ export default function Page() {
 
       <h2>Generales</h2>
 
-      <p><strong>Que es una PWA?</strong></p>
-      <p>
-        Una Progressive Web App (PWA) es una app que funciona desde el navegador
-        pero se puede instalar en la pantalla de inicio del celular como si
-        fuera una app nativa. No requiere descarga desde App Store o Google
-        Play.
-      </p>
-
       <p><strong>Necesito saber programar?</strong></p>
       <p>
         No. Todo se configura desde el panel de Saru Apps con un editor visual
@@ -55,8 +47,9 @@ export default function Page() {
 
       <p><strong>Cuanto tarda en publicarse mi app?</strong></p>
       <p>
-        La PWA se publica al instante. Para app nativa, el proceso de revision
-        en App Store puede tardar 3-7 dias y en Google Play unas horas.
+        El proceso de revision en App Store puede tardar 3-7 dias y en Google
+        Play unas horas. Saru Apps se encarga de todo el proceso tecnico de
+        compilacion y publicacion.
       </p>
 
       <p><strong>Puedo despublicar mi app?</strong></p>
@@ -68,17 +61,17 @@ export default function Page() {
         <strong>Que necesito para publicar en App Store y Google Play?</strong>
       </p>
       <p>
-        Necesitas el plan Growth o superior, una cuenta de Apple Developer
-        ($99/ano) y una cuenta de Google Play Developer ($25 una vez). Nosotros
-        nos encargamos de compilar y subir la app a tus cuentas.
+        Necesitas cualquier plan activo de Saru Apps, una cuenta de Apple
+        Developer ($99/ano) y una cuenta de Google Play Developer ($25 una vez).
+        Nosotros nos encargamos de compilar y subir la app a tus cuentas.
       </p>
 
       <h2>Notificaciones</h2>
 
       <p><strong>Como reciben las notificaciones mis clientes?</strong></p>
       <p>
-        Los clientes que instalen tu app (PWA o nativa) reciben notificaciones
-        push automaticamente cuando las envias desde el panel.
+        Los clientes que descarguen tu app nativa reciben notificaciones push
+        automaticamente cuando las envias desde el panel.
       </p>
 
       <p><strong>Puedo programar notificaciones?</strong></p>

@@ -61,7 +61,7 @@ export function Hero() {
             className="mt-6 md:mt-8 text-base md:text-lg text-gray-500 max-w-xl mx-auto leading-relaxed"
           >
             Creá tu app móvil sin escribir una línea de código. Editor drag &
-            drop, notificaciones push y herramientas de fidelización para
+            drop, notificaciones push y herramientas de engagement para
             aumentar tus ventas recurrentes.
           </motion.p>
 
@@ -156,7 +156,7 @@ export function Hero() {
                     <div className="px-3 py-1.5 text-[10px] text-gray-400 uppercase tracking-wider">
                       Engagement
                     </div>
-                    {["Push Notifications", "Loyalty", "Cupones"].map((item) => (
+                    {["Push Notifications", "Engagement", "Drops"].map((item) => (
                       <div
                         key={item}
                         className="px-3 py-2 rounded-lg text-[13px] text-gray-500"

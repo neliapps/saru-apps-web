@@ -26,24 +26,9 @@ export default function Page() {
         </li>
       </ol>
 
-      <h2>PWA (Plan Starter y superiores)</h2>
+      <h2>Publicar en App Store y Google Play</h2>
       <p>
-        Al publicar, se genera una URL unica que el comerciante puede compartir
-        con sus clientes. Los clientes pueden:
-      </p>
-      <ul>
-        <li>Abrir la app desde el navegador</li>
-        <li>Instalarla en la pantalla de inicio (como una app nativa)</li>
-        <li>Recibir notificaciones push</li>
-      </ul>
-      <p>
-        Tambien se genera una pagina de instalacion con instrucciones paso a
-        paso para instalar la app, que el comerciante puede compartir por
-        WhatsApp, email, redes sociales o QR en la tienda fisica.
-      </p>
-
-      <h2>App nativa (Plan Growth y superiores)</h2>
-      <p>
+        Todos los planes de Saru Apps incluyen app nativa para iOS y Android.
         Para publicar en App Store y Google Play, el comerciante necesita:
       </p>
       <ol>
@@ -63,13 +48,17 @@ export default function Page() {
           comerciante
         </li>
       </ol>
-      <p>La app nativa incluye todas las funcionalidades de la PWA mas:</p>
+      <p>Una vez publicada, tus clientes podran:</p>
       <ul>
-        <li>Presencia en las tiendas de aplicaciones</li>
-        <li>Notificaciones push nativas (mas confiables)</li>
-        <li>Icono en la pantalla de inicio</li>
-        <li>Mejor rendimiento y experiencia de usuario</li>
+        <li>Descargar la app desde App Store y Google Play</li>
+        <li>Recibir notificaciones push nativas</li>
+        <li>Tener el icono de tu tienda en la pantalla de inicio</li>
+        <li>Disfrutar de una experiencia de compra rapida y fluida</li>
       </ul>
+      <p>
+        El proceso de revision en App Store puede tardar 3-7 dias y en Google
+        Play unas horas. Saru Apps se encarga de todo el proceso tecnico.
+      </p>
     </GuiaArticleLayout>
   );
 }

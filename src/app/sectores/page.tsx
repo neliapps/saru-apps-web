@@ -34,7 +34,7 @@ const sectors: { icon: LucideIcon; name: string; description: string }[] = [
     icon: Gem,
     name: "Accesorios y Joyeria",
     description:
-      "Catalogo visual premium y programa de puntos para compras recurrentes.",
+      "Catalogo visual premium y herramientas de engagement para compras recurrentes.",
   },
   {
     icon: Sparkles,
@@ -85,7 +85,7 @@ const benefits = [
     icon: Heart,
     title: "Mayor fidelizacion",
     description:
-      "Programa de puntos y recompensas que incentivan la recompra y aumentan el lifetime value de cada cliente.",
+      "Herramientas de engagement que incentivan la recompra y aumentan el lifetime value de cada cliente.",
   },
   {
     icon: Bell,
