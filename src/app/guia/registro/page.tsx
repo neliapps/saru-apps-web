@@ -28,8 +28,8 @@ export default function Page() {
         </li>
         <li>
           <strong>Plan recomendado:</strong> Basado en las respuestas, el sistema
-          recomienda el plan ideal. Si el comerciante quiere app nativa, el
-          minimo recomendado es Growth
+          recomienda el plan ideal. Todos los planes incluyen app nativa para
+          iOS y Android
         </li>
         <li>
           <strong>Conectar Tiendanube:</strong> Vincula su tienda de Tiendanube
