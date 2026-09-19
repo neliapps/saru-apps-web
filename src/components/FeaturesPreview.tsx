@@ -59,41 +59,36 @@ const features = [
 export function FeaturesPreview() {
   return (
     <section className="py-32 bg-white">
-      <div className="max-w-[1280px] mx-auto px-6">
-        <AnimatedSection className="text-center max-w-2xl mx-auto mb-20">
-          <span className="text-sm text-gray-500 uppercase tracking-widest font-medium">
-            Producto
-          </span>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight text-gray-950">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <AnimatedSection className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="font-display text-[53px] md:text-[70px] lg:text-[80px] font-bold text-black tracking-[-2.44px] md:tracking-[-3.5px] leading-[1]">
             Todo lo que necesitás
             <br />
             para vender desde tu app
           </h2>
-          <p className="mt-6 text-lg text-gray-500">
+          <p className="mt-6 text-[15px] text-[#5e5e5e]">
             Herramientas poderosas para crear, personalizar y hacer crecer tu
             canal de ventas móvil.
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {features.map((feature, i) => (
             <AnimatedSection key={feature.title} delay={i * 0.08}>
               <a
                 href={feature.href}
-                className="group relative h-full bg-white rounded-2xl border border-gray-100 p-6 hover:border-gray-200 hover:shadow-xl hover:shadow-gray-100/80 transition-all duration-500 block"
+                className="group relative h-full bg-white rounded-[22px] border border-[#d2d2d7] p-6 hover:border-[#171717] transition-colors duration-300 block cursor-pointer"
               >
                 <div className="mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-gray-950 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                    <feature.icon className="w-5 h-5 text-white" />
-                  </div>
+                  <feature.icon className="w-6 h-6 text-[#171717]" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-950 mb-2 font-display">
+                <h3 className="text-[21px] font-bold text-[#000000] font-display tracking-[-0.63px] mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-gray-500 leading-relaxed mb-4">
+                <p className="text-[15px] text-[#5e5e5e] leading-relaxed mb-4">
                   {feature.description}
                 </p>
-                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-500 group-hover:text-gray-950 transition-colors duration-300">
+                <span className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#3b82f6] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   Conocer más
                   <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
@@ -105,7 +100,7 @@ export function FeaturesPreview() {
         <AnimatedSection delay={0.3} className="text-center mt-16">
           <a
             href="/producto"
-            className="inline-flex items-center gap-2 px-7 py-3.5 text-gray-600 text-[15px] font-medium rounded-full border border-gray-200 hover:border-gray-300 hover:text-gray-900 transition-all duration-300"
+            className="inline-flex items-center gap-2 text-[15px] font-medium text-[#3b82f6] hover:underline transition-all duration-300"
           >
             Ver todas las funcionalidades
             <ArrowRight className="w-4 h-4" />

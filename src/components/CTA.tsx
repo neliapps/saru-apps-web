@@ -1,74 +1,36 @@
 "use client";
 
 import { AnimatedSection } from "./AnimatedSection";
-import { Rocket } from "lucide-react";
 
 export function CTA() {
   return (
-    <section className="py-32 bg-white">
-      <div className="max-w-[1280px] mx-auto px-6">
+    <section className="py-20 bg-white">
+      <div className="max-w-[1200px] mx-auto px-6">
         <AnimatedSection>
-          <div className="relative overflow-hidden rounded-3xl bg-gray-950 px-8 py-20 md:px-20 md:py-28">
-            {/* Background effects */}
-            <div className="absolute inset-0">
-              <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/[0.03] rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
-              <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/[0.02] rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
-            </div>
+          <div className="text-center max-w-2xl mx-auto">
+            <h2 className="font-display text-[53px] md:text-[70px] font-bold text-black tracking-tight leading-[1]">
+              Lanzá tu app hoy
+            </h2>
+            <p className="mt-6 text-[17px] md:text-[19px] text-[#5e5e5e] max-w-lg mx-auto leading-relaxed">
+              Creá la app de tu tienda Tiendanube en minutos. Empezá gratis, sin
+              tarjeta de crédito.
+            </p>
 
-            {/* Grid pattern */}
-            <div className="absolute inset-0 opacity-[0.03]">
-              <div
-                className="h-full w-full"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)",
-                  backgroundSize: "40px 40px",
-                }}
-              />
-            </div>
-
-            <div className="relative text-center max-w-2xl mx-auto">
-              <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-8">
-                <Rocket className="w-7 h-7 text-white" />
-              </div>
-
-              <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-white">
-                Lanzá tu app hoy
-              </h2>
-              <p className="mt-6 text-lg text-white/70 max-w-lg mx-auto">
-                Creá la app de tu tienda Tiendanube en minutos. Empezá
-                gratis, sin tarjeta de crédito.
-              </p>
-
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a
-                  href="https://app.saruapps.com/register"
-                  className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-950 text-base font-medium rounded-full hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10"
-                >
-                  Empezar gratis
-                  <svg
-                    className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
-                </a>
-                <a
-                  href="https://calendly.com/saruapps/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 text-white/70 text-base font-medium rounded-full border border-white/20 hover:border-white/40 hover:text-white transition-all duration-300"
-                >
-                  Agendar una demo
-                </a>
-              </div>
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="https://app.saruapps.com/register"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#3b82f6] text-white text-[15px] font-medium rounded-full transition-opacity duration-300 hover:opacity-90"
+              >
+                Empezar gratis
+              </a>
+              <a
+                href="https://calendly.com/saruapps/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 text-[#171717] text-[15px] font-medium rounded-full border border-[#171717] transition-opacity duration-300 hover:opacity-70"
+              >
+                Agendar una demo
+              </a>
             </div>
           </div>
         </AnimatedSection>
