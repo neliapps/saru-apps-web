@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Menu,
   X,
@@ -38,19 +38,19 @@ const navItems: NavItem[] = [
     dropdown: [
       {
         label: "Editor Drag & Drop",
-        description: "Diseña cada pantalla de tu app sin codigo",
+        description: "Diseñá cada pantalla de tu app sin código",
         href: "/producto/editor",
         icon: MousePointerClick,
       },
       {
         label: "App Nativa iOS & Android",
-        description: "Publica en App Store y Google Play",
+        description: "Publicá en App Store y Google Play",
         href: "/producto/app-nativa",
         icon: Smartphone,
       },
       {
         label: "Notificaciones Push",
-        description: "Envia mensajes directos a tus clientes",
+        description: "Enviá mensajes directos a tus clientes",
         href: "/producto/notificaciones-push",
         icon: Bell,
       },
@@ -61,14 +61,14 @@ const navItems: NavItem[] = [
         icon: Heart,
       },
       {
-        label: "Sincronizacion Tiendanube",
+        label: "Sincronización Tiendanube",
         description: "Productos y pedidos siempre actualizados",
         href: "/producto/sincronizacion",
         icon: ShoppingBag,
       },
       {
         label: "Analytics",
-        description: "Metricas en tiempo real de tu app",
+        description: "Métricas en tiempo real de tu app",
         href: "/producto/analytics",
         icon: BarChart3,
       },
@@ -81,20 +81,20 @@ const navItems: NavItem[] = [
     href: "#",
     dropdown: [
       {
-        label: "Guia de la plataforma",
+        label: "Guía de la plataforma",
         description: "Todo sobre Saru Apps paso a paso",
         href: "/guia",
         icon: BookOpen,
       },
       {
         label: "Preguntas frecuentes",
-        description: "Respuestas a las dudas mas comunes",
+        description: "Respuestas a las dudas más comunes",
         href: "/faq",
         icon: HelpCircle,
       },
       {
         label: "Blog",
-        description: "Articulos, guias y novedades",
+        description: "Artículos, guías y novedades",
         href: "/blog",
         icon: FileText,
       },
@@ -128,11 +128,13 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 bg-white transition-[border-color] duration-300 ${
-          scrolled ? "border-b border-[#d2d2d7]" : "border-b border-transparent"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          scrolled
+            ? "bg-white border-b border-gray-200 shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+            : "bg-white"
         }`}
       >
-        <div className="max-w-[1200px] mx-auto px-6 h-[72px] flex items-center justify-between">
+        <div className="max-w-[1280px] mx-auto px-6 h-[72px] flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="flex items-center shrink-0">
             <Image
@@ -140,13 +142,13 @@ export function Navbar() {
               alt="Saru Apps"
               width={500}
               height={115}
-              className="h-8 w-auto"
+              className="h-9 w-auto"
               priority
             />
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-0.5">
             {navItems.map((item) => (
               <div
                 key={item.label}
@@ -157,14 +159,14 @@ export function Navbar() {
                 onMouseLeave={() => item.dropdown && handleMouseLeave()}
               >
                 <a
-                  href={item.href}
+                  href={item.dropdown ? item.href : item.href}
                   onClick={(e) => {
                     if (item.href === "#") e.preventDefault();
                   }}
-                  className={`flex items-center gap-1 text-[15px] font-normal transition-colors duration-200 ${
+                  className={`flex items-center gap-1 px-4 py-2 text-[15px] font-medium transition-colors duration-200 rounded-lg ${
                     activeDropdown === item.label
-                      ? "text-[#171717]"
-                      : "text-[#5e5e5e] hover:text-[#171717]"
+                      ? "text-gray-950 bg-gray-50"
+                      : "text-gray-600 hover:text-gray-950 hover:bg-gray-50"
                   }`}
                 >
                   {item.label}
@@ -181,24 +183,26 @@ export function Navbar() {
                 <AnimatePresence>
                   {item.dropdown && activeDropdown === item.label && (
                     <motion.div
-                      initial={{ opacity: 0, y: 8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 8 }}
+                      initial={{ opacity: 0, y: 8, scale: 0.98 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 8, scale: 0.98 }}
                       transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[320px] bg-white rounded-lg border border-[#171717] p-2 z-50"
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[340px] bg-white rounded-2xl border border-gray-200 shadow-xl shadow-gray-200/50 p-2 z-50"
                     >
                       {item.dropdown.map((sub) => (
                         <a
                           key={sub.href}
                           href={sub.href}
-                          className="flex items-start gap-3 px-3 py-3 rounded-md hover:bg-[#f5f5f5] transition-colors duration-200 group"
+                          className="flex items-start gap-3 px-3 py-3 rounded-xl hover:bg-gray-50 transition-colors duration-200 group"
                         >
-                          <sub.icon className="w-[18px] h-[18px] text-[#171717] shrink-0 mt-0.5" />
+                          <div className="w-9 h-9 rounded-lg bg-gray-100 group-hover:bg-gray-950 flex items-center justify-center shrink-0 transition-colors duration-300">
+                            <sub.icon className="w-[18px] h-[18px] text-gray-500 group-hover:text-white transition-colors duration-300" />
+                          </div>
                           <div>
-                            <p className="text-[14px] font-medium text-[#171717]">
+                            <p className="text-sm font-medium text-gray-900">
                               {sub.label}
                             </p>
-                            <p className="text-[12px] text-[#5e5e5e] mt-0.5">
+                            <p className="text-xs text-gray-500 mt-0.5">
                               {sub.description}
                             </p>
                           </div>
@@ -212,18 +216,18 @@ export function Navbar() {
           </nav>
 
           {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-3">
             <a
               href="https://calendly.com/saruapps/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[15px] font-normal text-[#5e5e5e] hover:text-[#171717] transition-colors duration-200"
+              className="text-[15px] font-medium text-gray-600 hover:text-gray-950 transition-colors duration-300 px-4 py-2"
             >
               Agendar demo
             </a>
             <a
               href="https://app.saruapps.com/register"
-              className="text-[15px] font-medium text-white bg-[#3b82f6] hover:bg-[#2563eb] px-5 py-2.5 rounded-full transition-colors duration-200"
+              className="text-[15px] font-medium text-white bg-gray-950 hover:bg-gray-800 px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-gray-950/20"
             >
               Comenzar gratis
             </a>
@@ -232,7 +236,7 @@ export function Navbar() {
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-[#171717]"
+            className="lg:hidden p-2 text-gray-900"
             aria-label="Menu"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -244,10 +248,10 @@ export function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="fixed inset-0 z-40 bg-white pt-[72px] overflow-y-auto"
           >
             <nav className="flex flex-col px-6 py-6 gap-1">
@@ -261,11 +265,11 @@ export function Navbar() {
                             mobileExpanded === item.label ? null : item.label
                           )
                         }
-                        className="w-full flex items-center justify-between text-[17px] font-normal text-[#171717] py-3 border-b border-[#d2d2d7]"
+                        className="w-full flex items-center justify-between text-lg font-medium text-gray-900 py-3 border-b border-gray-100"
                       >
                         {item.label}
                         <ChevronDown
-                          className={`w-5 h-5 text-[#5e5e5e] transition-transform duration-200 ${
+                          className={`w-5 h-5 text-gray-500 transition-transform duration-200 ${
                             mobileExpanded === item.label ? "rotate-180" : ""
                           }`}
                         />
@@ -276,23 +280,23 @@ export function Navbar() {
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.25 }}
+                            transition={{ duration: 0.3 }}
                             className="overflow-hidden"
                           >
-                            <div className="py-2 pl-2 space-y-1">
+                            <div className="py-2 pl-2 space-y-0.5">
                               {item.dropdown.map((sub) => (
                                 <a
                                   key={sub.href}
                                   href={sub.href}
                                   onClick={() => setMobileOpen(false)}
-                                  className="flex items-center gap-3 py-2.5 px-2 rounded-md"
+                                  className="flex items-center gap-3 py-2.5 px-2 rounded-lg hover:bg-gray-50"
                                 >
-                                  <sub.icon className="w-4 h-4 text-[#171717] shrink-0" />
+                                  <sub.icon className="w-4 h-4 text-gray-500 shrink-0" />
                                   <div>
-                                    <span className="text-[15px] text-[#171717] font-medium">
+                                    <span className="text-[15px] text-gray-700 font-medium">
                                       {sub.label}
                                     </span>
-                                    <p className="text-[12px] text-[#5e5e5e]">
+                                    <p className="text-xs text-gray-500">
                                       {sub.description}
                                     </p>
                                   </div>
@@ -307,25 +311,25 @@ export function Navbar() {
                     <a
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className="block text-[17px] font-normal text-[#171717] py-3 border-b border-[#d2d2d7]"
+                      className="block text-lg font-medium text-gray-900 py-3 border-b border-gray-100"
                     >
                       {item.label}
                     </a>
                   )}
                 </div>
               ))}
-              <div className="flex flex-col gap-3 mt-8">
+              <div className="flex flex-col gap-3 mt-6">
                 <a
                   href="https://calendly.com/saruapps/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-center text-[15px] font-normal text-[#5e5e5e] py-3"
+                  className="text-center text-base font-medium text-gray-600 py-3"
                 >
                   Agendar demo
                 </a>
                 <a
                   href="https://app.saruapps.com/register"
-                  className="text-center text-[15px] font-medium text-white bg-[#3b82f6] py-3.5 rounded-full"
+                  className="text-center text-base font-medium text-white bg-gray-950 py-3.5 rounded-full"
                 >
                   Comenzar gratis
                 </a>
