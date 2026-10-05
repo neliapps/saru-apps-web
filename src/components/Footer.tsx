@@ -44,6 +44,31 @@ export function Footer() {
               La plataforma para crear apps móviles para tiendas Tiendanube. Sin
               código, sin complicaciones.
             </p>
+            <div className="mt-6">
+              <h4 className="text-sm font-semibold text-white mb-3">
+                Contacto
+              </h4>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="mailto:hola@saruapps.com"
+                    className="text-sm text-white/60 hover:text-white transition-colors duration-300"
+                  >
+                    hola@saruapps.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://wa.me/5492804976213"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-white/60 hover:text-white transition-colors duration-300"
+                  >
+                    +54 9280 497 6213
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {Object.entries(footerLinks).map(([category, links]) => (
