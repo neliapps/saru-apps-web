@@ -16,7 +16,7 @@ const features = [
     icon: MousePointerClick,
     title: "Editor Drag & Drop",
     description:
-      "Diseñá cada pantalla arrastrando componentes. Sin código, sin límites.",
+      "Dos modos: replicá el diseño de tu tienda actual o creá una experiencia renovada desde cero. Arrastrá componentes, personalizá cada pantalla. Sin código, sin límites.",
     href: "/producto/editor",
   },
   {

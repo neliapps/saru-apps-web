@@ -49,8 +49,12 @@ const jsonLd = {
       },
       "featureList": [
         "App nativa para iOS y Android publicada en App Store y Google Play (incluida en todos los planes)",
+        "Dos modos de diseño: Modo Web (replica automáticamente el diseño de tu tienda) y Modo Pro (experiencia y diseño renovado como canal independiente)",
         "Editor visual drag & drop para personalizar cada pantalla de la app",
         "Sincronización automática de productos, stock, precios y pedidos con Tiendanube",
+        "Integración nativa con PagoNube: todos los medios de pago heredados sin configuración adicional",
+        "Integración nativa con EnvíoNube: métodos de envío, cálculo de costos y puntos de retiro heredados automáticamente",
+        "Integración con MarketingNube para campañas automatizadas y segmentación",
         "Notificaciones push segmentadas (hasta 50.000/mes)",
         "Recuperación de carrito abandonado con notificaciones automáticas",
         "Notificación de back in stock",

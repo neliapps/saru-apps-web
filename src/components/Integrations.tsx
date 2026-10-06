@@ -17,6 +17,26 @@ const integrations = [
     glowColor: "bg-blue-500/5",
   },
   {
+    name: "PagoNube",
+    description:
+      "Todos los medios de pago de tu Tiendanube disponibles en la app desde el primer día. Sin configuración adicional.",
+    icon: "/tiendanube-icon.svg",
+    features: ["Medios de pago heredados", "Checkout nativo", "Cupones de descuento", "Pagos seguros"],
+    color: "from-green-500/10 to-emerald-500/10",
+    borderColor: "group-hover:border-green-200",
+    glowColor: "bg-green-500/5",
+  },
+  {
+    name: "EnvíoNube",
+    description:
+      "Los métodos de envío de tu tienda funcionan automáticamente en tu app. Sin configurar nada extra.",
+    icon: "/tiendanube-icon.svg",
+    features: ["Métodos de envío heredados", "Cálculo de costos automático", "Seguimiento de envíos", "Puntos de retiro"],
+    color: "from-cyan-500/10 to-teal-500/10",
+    borderColor: "group-hover:border-cyan-200",
+    glowColor: "bg-cyan-500/5",
+  },
+  {
     name: "MarketingNube",
     description:
       "Potenciá tus campañas de marketing con la integración nativa de MarketingNube.",
