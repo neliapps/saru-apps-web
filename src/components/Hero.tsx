@@ -3,6 +3,7 @@
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { Smartphone, Bell, TrendingUp, Zap, ShoppingCart, Star } from "lucide-react";
 import { useRef } from "react";
+import { useDictionary } from "@/i18n/DictionaryProvider";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -14,6 +15,8 @@ const products = [
 ];
 
 function MockupScene() {
+  const { dict } = useDictionary();
+  const t = dict.hero;
   const containerRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -243,8 +246,8 @@ function MockupScene() {
                     <Smartphone className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <p className="text-[12px] font-semibold text-gray-900">App publicada</p>
-                    <p className="text-[10px] text-gray-500">Hace 2 min</p>
+                    <p className="text-[12px] font-semibold text-gray-900">{t.mockupPublished}</p>
+                    <p className="text-[10px] text-gray-500">{t.mockupPublishedTime}</p>
                   </div>
                 </motion.div>
 
@@ -309,7 +312,7 @@ function MockupScene() {
                     ))}
                   </div>
                   <span className="text-[11px] font-semibold text-gray-900">4.9</span>
-                  <span className="text-[10px] text-gray-500">en App Store</span>
+                  <span className="text-[10px] text-gray-500">{t.mockupRatingLabel}</span>
                 </motion.div>
               </div>
 
@@ -412,6 +415,9 @@ function MockupScene() {
 }
 
 export function Hero() {
+  const { dict } = useDictionary();
+  const t = dict.hero;
+
   return (
     <section className="relative overflow-hidden">
       {/* Background */}
@@ -437,7 +443,7 @@ export function Hero() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-sm text-gray-600 text-[13px] font-medium border border-gray-200/60 mb-8 shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-              Exclusivo para Tiendanube
+              {t.badge}
             </span>
           </motion.div>
 
@@ -448,10 +454,10 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.15, ease }}
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.08] tracking-[-0.03em] font-bold text-gray-950"
           >
-            Tu tienda Tiendanube,
+            {t.titleLine1}
             <br />
             <span className="relative inline-block">
-              ahora en una app
+              {t.titleAccent}
               <svg
                 className="absolute -bottom-1 md:-bottom-2 left-0 w-full h-3"
                 viewBox="0 0 300 12"
@@ -478,9 +484,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.25, ease }}
             className="mt-6 md:mt-8 text-base md:text-lg text-gray-500 max-w-xl mx-auto leading-relaxed"
           >
-            Creá tu app móvil sin escribir una línea de código. Editor drag &
-            drop, notificaciones push y herramientas de engagement para
-            aumentar tus ventas recurrentes.
+            {t.subtitle}
           </motion.p>
 
           {/* CTAs */}
@@ -494,7 +498,7 @@ export function Hero() {
               href="https://app.saruapps.com/register"
               className="group relative inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-gray-950/25"
             >
-              <span className="relative z-10">Empezar gratis</span>
+              <span className="relative z-10">{t.ctaPrimary}</span>
               <svg
                 className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                 fill="none"
@@ -512,7 +516,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-7 py-3.5 text-gray-600 text-[15px] font-medium rounded-full border border-gray-200 bg-white/80 backdrop-blur-sm hover:border-gray-300 hover:text-gray-900 transition-all duration-300"
             >
-              Ver cómo funciona
+              {t.ctaSecondary}
             </a>
           </motion.div>
         </div>

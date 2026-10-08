@@ -1,37 +1,43 @@
-import Image from "next/image";
+"use client";
 
-const footerLinks = {
-  Producto: [
-    { label: "Editor Drag & Drop", href: "/producto/editor" },
-    { label: "App Nativa", href: "/producto/app-nativa" },
-    { label: "Notificaciones Push", href: "/producto/notificaciones-push" },
-    { label: "Engagement y Ventas", href: "/producto/engagement" },
-    { label: "Sincronización", href: "/producto/sincronizacion" },
-    { label: "Analytics", href: "/producto/analytics" },
-  ],
-  Empresa: [
-    { label: "Precios", href: "/precios" },
-    { label: "Sectores", href: "/sectores" },
-    { label: "Partners", href: "/partners" },
-  ],
-  Recursos: [
-    { label: "Guía de la plataforma", href: "/guia" },
-    { label: "Preguntas frecuentes", href: "/faq" },
-    { label: "Blog", href: "/blog" },
-  ],
-  Legal: [
-    { label: "Privacidad", href: "/privacidad" },
-    { label: "Términos", href: "/terminos" },
-  ],
-};
+import Image from "next/image";
+import { useDictionary } from "@/i18n/DictionaryProvider";
 
 export function Footer() {
+  const { dict, localePath } = useDictionary();
+  const t = dict.footer;
+
+  const footerLinks = {
+    [t.producto]: [
+      { label: t.editor, href: localePath("/producto/editor") },
+      { label: t.appNativa, href: localePath("/producto/app-nativa") },
+      { label: t.push, href: localePath("/producto/notificaciones-push") },
+      { label: t.engagement, href: localePath("/producto/engagement") },
+      { label: t.sincronizacion, href: localePath("/producto/sincronizacion") },
+      { label: t.analytics, href: localePath("/producto/analytics") },
+    ],
+    [t.empresa]: [
+      { label: t.precios, href: localePath("/precios") },
+      { label: t.sectores, href: localePath("/sectores") },
+      { label: t.partners, href: localePath("/partners") },
+    ],
+    [t.recursos]: [
+      { label: t.guia, href: localePath("/guia") },
+      { label: t.faq, href: localePath("/faq") },
+      { label: t.blog, href: localePath("/blog") },
+    ],
+    [t.legal]: [
+      { label: t.privacidad, href: localePath("/privacidad") },
+      { label: t.terminos, href: localePath("/terminos") },
+    ],
+  };
+
   return (
     <footer className="bg-gray-950 text-white pt-20 pb-8">
       <div className="max-w-[1280px] mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8 pb-16 border-b border-white/10">
           <div className="col-span-2">
-            <a href="/">
+            <a href={localePath("/")}>
               <Image
                 src="/logo-white.png"
                 alt="Saru Apps"
@@ -41,12 +47,11 @@ export function Footer() {
               />
             </a>
             <p className="mt-4 text-sm text-white/60 max-w-xs leading-relaxed">
-              La plataforma para crear apps móviles para tiendas Tiendanube. Sin
-              código, sin complicaciones.
+              {t.description}
             </p>
             <div className="mt-6">
               <h4 className="text-sm font-semibold text-white mb-3">
-                Contacto
+                {t.contacto}
               </h4>
               <ul className="space-y-2">
                 <li>
@@ -94,8 +99,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 gap-4">
           <p className="text-xs text-white/50">
-            &copy; {new Date().getFullYear()} Saru Apps. Todos los derechos
-            reservados.
+            &copy; {new Date().getFullYear()} {t.copyright}
           </p>
           <div className="flex items-center gap-4">
             <a href="https://www.instagram.com/saruapps/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white/50 hover:text-white transition-colors duration-300">

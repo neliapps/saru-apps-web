@@ -2,8 +2,12 @@
 
 import { AnimatedSection } from "./AnimatedSection";
 import { Rocket } from "lucide-react";
+import { useDictionary } from "@/i18n/DictionaryProvider";
 
 export function CTA() {
+  const { dict } = useDictionary();
+  const t = dict.cta;
+
   return (
     <section className="py-32 bg-white">
       <div className="max-w-[1280px] mx-auto px-6">
@@ -33,11 +37,10 @@ export function CTA() {
               </div>
 
               <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-white">
-                Lanzá tu app hoy
+                {t.title} {t.titleAccent}
               </h2>
               <p className="mt-6 text-lg text-white/70 max-w-lg mx-auto">
-                Creá la app de tu tienda Tiendanube en minutos. Empezá
-                gratis, sin tarjeta de crédito.
+                {t.subtitle}
               </p>
 
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -45,7 +48,7 @@ export function CTA() {
                   href="https://app.saruapps.com/register"
                   className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-950 text-base font-medium rounded-full hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10"
                 >
-                  Empezar gratis
+                  {t.ctaPrimary}
                   <svg
                     className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                     fill="none"
@@ -66,7 +69,7 @@ export function CTA() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-8 py-4 text-white/70 text-base font-medium rounded-full border border-white/20 hover:border-white/40 hover:text-white transition-all duration-300"
                 >
-                  Agendar una demo
+                  {t.ctaSecondary}
                 </a>
               </div>
             </div>

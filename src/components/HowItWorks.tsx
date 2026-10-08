@@ -3,39 +3,20 @@
 import { motion } from "framer-motion";
 import { AnimatedSection } from "./AnimatedSection";
 import { Star } from "lucide-react";
+import { useDictionary } from "@/i18n/DictionaryProvider";
 
 const ease: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
-const steps = [
-  {
-    number: "01",
-    title: "Conect\u00e1 tu Tiendanube",
-    description:
-      "Instal\u00e1 Saru Apps desde el panel de Tiendanube. En un clic, tus productos, categor\u00edas y configuraci\u00f3n se importan autom\u00e1ticamente.",
-    detail: "Integraci\u00f3n en 30 segundos",
-  },
-  {
-    number: "02",
-    title: "Dise\u00f1\u00e1 tu app",
-    description:
-      "Us\u00e1 nuestro editor visual para personalizar cada pantalla. Arrastr\u00e1 componentes, eleg\u00ed colores, tipograf\u00edas y arm\u00e1 la experiencia ideal para tus clientes.",
-    detail: "Sin necesidad de c\u00f3digo",
-  },
-  {
-    number: "03",
-    title: "Activ\u00e1 engagement",
-    description:
-      "Configur\u00e1 notificaciones push, carrito abandonado, drops exclusivos y herramientas de engagement. Convert\u00ed compradores ocasionales en clientes recurrentes.",
-    detail: "Aument\u00e1 tus ventas +35%",
-  },
-  {
-    number: "04",
-    title: "Public\u00e1 y crec\u00e9",
-    description:
-      "Nosotros nos encargamos de publicar tu app en App Store y Google Play. Vos enfocate en vender, nosotros en la tecnolog\u00eda.",
-    detail: "iOS & Android",
-  },
-];
+function useSteps() {
+  const { dict } = useDictionary();
+  const t = dict.howItWorks;
+  return [
+    { number: "01", title: t.step1Title, description: t.step1Desc, detail: t.step1Detail },
+    { number: "02", title: t.step2Title, description: t.step2Desc, detail: t.step2Detail },
+    { number: "03", title: t.step3Title, description: t.step3Desc, detail: t.step3Detail },
+    { number: "04", title: t.step4Title, description: t.step4Desc, detail: t.step4Detail },
+  ];
+}
 
 const stepColors = [
   {
@@ -75,6 +56,8 @@ const stepColors = [
 /* ─── Step Scene Illustrations ─────────────────────────────── */
 
 function StepScene({ index }: { index: number }) {
+  const { dict } = useDictionary();
+
   if (index === 0) {
     return (
       <div className="rounded-xl border border-white/[0.08] bg-white/[0.03] p-4 mb-6 overflow-hidden relative">
@@ -146,7 +129,7 @@ function StepScene({ index }: { index: number }) {
               <path d="M21 12a9 9 0 11-6.219-8.56" />
             </svg>
           </motion.div>
-          <span className="text-[9px] text-green-400 font-semibold">Sincronizando...</span>
+          <span className="text-[9px] text-green-400 font-semibold">{dict.howItWorks.sincronizando}</span>
         </motion.div>
       </div>
     );
@@ -380,6 +363,10 @@ function StepScene({ index }: { index: number }) {
 /* ─── Main Component ─────────────────────────────────────── */
 
 export function HowItWorks() {
+  const { dict } = useDictionary();
+  const t = dict.howItWorks;
+  const steps = useSteps();
+
   return (
     <section
       id="como-funciona"
@@ -430,16 +417,15 @@ export function HowItWorks() {
       <div className="relative max-w-[1280px] mx-auto px-6">
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-24">
           <span className="text-sm text-white/60 uppercase tracking-widest font-medium">
-            C\u00f3mo funciona
+            {t.label}
           </span>
           <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight text-white">
-            De tu tienda a una app
+            {t.title}
             <br />
-            en 4 simples pasos
+            {t.titleLine2}
           </h2>
           <p className="mt-6 text-lg text-white/70">
-            No necesit\u00e1s experiencia t\u00e9cnica. Nuestro proceso est\u00e1 dise\u00f1ado para
-            que puedas lanzar tu app en tiempo r\u00e9cord.
+            {t.subtitle}
           </p>
         </AnimatedSection>
 

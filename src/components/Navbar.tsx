@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Menu,
@@ -17,6 +18,8 @@ import {
   FileText,
 } from "lucide-react";
 import Image from "next/image";
+import { useDictionary } from "@/i18n/DictionaryProvider";
+import { defaultLocale } from "@/i18n/config";
 
 type DropdownItem = {
   label: string;
@@ -31,79 +34,11 @@ type NavItem = {
   dropdown?: DropdownItem[];
 };
 
-const navItems: NavItem[] = [
-  {
-    label: "Producto",
-    href: "/producto",
-    dropdown: [
-      {
-        label: "Editor Drag & Drop",
-        description: "Diseñá cada pantalla de tu app sin código",
-        href: "/producto/editor",
-        icon: MousePointerClick,
-      },
-      {
-        label: "App Nativa iOS & Android",
-        description: "Publicá en App Store y Google Play",
-        href: "/producto/app-nativa",
-        icon: Smartphone,
-      },
-      {
-        label: "Notificaciones Push",
-        description: "Enviá mensajes directos a tus clientes",
-        href: "/producto/notificaciones-push",
-        icon: Bell,
-      },
-      {
-        label: "Engagement y Ventas",
-        description: "Herramientas para convertir y retener",
-        href: "/producto/engagement",
-        icon: Heart,
-      },
-      {
-        label: "Sincronización Tiendanube",
-        description: "Productos y pedidos siempre actualizados",
-        href: "/producto/sincronizacion",
-        icon: ShoppingBag,
-      },
-      {
-        label: "Analytics",
-        description: "Métricas en tiempo real de tu app",
-        href: "/producto/analytics",
-        icon: BarChart3,
-      },
-    ],
-  },
-  { label: "Sectores", href: "/sectores" },
-  { label: "Precios", href: "/precios" },
-  {
-    label: "Recursos",
-    href: "#",
-    dropdown: [
-      {
-        label: "Guía de la plataforma",
-        description: "Todo sobre Saru Apps paso a paso",
-        href: "/guia",
-        icon: BookOpen,
-      },
-      {
-        label: "Preguntas frecuentes",
-        description: "Respuestas a las dudas más comunes",
-        href: "/faq",
-        icon: HelpCircle,
-      },
-      {
-        label: "Blog",
-        description: "Artículos, guías y novedades",
-        href: "/blog",
-        icon: FileText,
-      },
-    ],
-  },
-  { label: "Partners", href: "/partners" },
-];
-
 export function Navbar() {
+  const { dict, locale, localePath } = useDictionary();
+  const t = dict.navbar;
+  const pathname = usePathname();
+
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -125,6 +60,41 @@ export function Navbar() {
     timeoutRef.current = setTimeout(() => setActiveDropdown(null), 150);
   };
 
+  // Build switch-locale URL
+  const targetLocale = locale === "es" ? "pt" : "es";
+  const pathWithoutLocale = pathname.replace(/^\/(es|pt)/, "") || "/";
+  const switchUrl =
+    targetLocale === defaultLocale
+      ? pathWithoutLocale
+      : `/${targetLocale}${pathWithoutLocale}`;
+
+  const navItems: NavItem[] = [
+    {
+      label: t.producto,
+      href: localePath("/producto"),
+      dropdown: [
+        { label: t.editor, description: t.editorDesc, href: localePath("/producto/editor"), icon: MousePointerClick },
+        { label: t.appNativa, description: t.appNativaDesc, href: localePath("/producto/app-nativa"), icon: Smartphone },
+        { label: t.push, description: t.pushDesc, href: localePath("/producto/notificaciones-push"), icon: Bell },
+        { label: t.engagement, description: t.engagementDesc, href: localePath("/producto/engagement"), icon: Heart },
+        { label: t.sincronizacion, description: t.sincronizacionDesc, href: localePath("/producto/sincronizacion"), icon: ShoppingBag },
+        { label: t.analytics, description: t.analyticsDesc, href: localePath("/producto/analytics"), icon: BarChart3 },
+      ],
+    },
+    { label: t.sectores, href: localePath("/sectores") },
+    { label: t.precios, href: localePath("/precios") },
+    {
+      label: t.recursos,
+      href: "#",
+      dropdown: [
+        { label: t.guia, description: t.guiaDesc, href: localePath("/guia"), icon: BookOpen },
+        { label: t.faq, description: t.faqDesc, href: localePath("/faq"), icon: HelpCircle },
+        { label: t.blog, description: t.blogDesc, href: localePath("/blog"), icon: FileText },
+      ],
+    },
+    { label: t.partners, href: localePath("/partners") },
+  ];
+
   return (
     <>
       <header
@@ -135,8 +105,7 @@ export function Navbar() {
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-6 h-[72px] flex items-center justify-between">
-          {/* Logo */}
-          <a href="/" className="flex items-center shrink-0">
+          <a href={localePath("/")} className="flex items-center shrink-0">
             <Image
               src="/logo.png"
               alt="Saru Apps"
@@ -159,7 +128,7 @@ export function Navbar() {
                 onMouseLeave={() => item.dropdown && handleMouseLeave()}
               >
                 <a
-                  href={item.dropdown ? item.href : item.href}
+                  href={item.href}
                   onClick={(e) => {
                     if (item.href === "#") e.preventDefault();
                   }}
@@ -179,7 +148,6 @@ export function Navbar() {
                   )}
                 </a>
 
-                {/* Desktop Dropdown */}
                 <AnimatePresence>
                   {item.dropdown && activeDropdown === item.label && (
                     <motion.div
@@ -218,18 +186,24 @@ export function Navbar() {
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-3">
             <a
+              href={switchUrl}
+              className="text-[13px] font-medium text-gray-500 hover:text-gray-950 transition-colors duration-300 px-2 py-1 rounded border border-gray-200"
+            >
+              {locale === "es" ? "PT" : "ES"}
+            </a>
+            <a
               href="https://calendly.com/saruapps/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[15px] font-medium text-gray-600 hover:text-gray-950 transition-colors duration-300 px-4 py-2"
             >
-              Agendar demo
+              {t.agendarDemo}
             </a>
             <a
               href="https://app.saruapps.com/register"
               className="text-[15px] font-medium text-white bg-gray-950 hover:bg-gray-800 px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-gray-950/20"
             >
-              Comenzar gratis
+              {t.comenzarGratis}
             </a>
           </div>
 
@@ -320,18 +294,24 @@ export function Navbar() {
               ))}
               <div className="flex flex-col gap-3 mt-6">
                 <a
+                  href={switchUrl}
+                  className="text-center text-base font-medium text-gray-500 py-2 border border-gray-200 rounded-lg"
+                >
+                  {locale === "es" ? "Português (BR)" : "Español"}
+                </a>
+                <a
                   href="https://calendly.com/saruapps/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-center text-base font-medium text-gray-600 py-3"
                 >
-                  Agendar demo
+                  {t.agendarDemo}
                 </a>
                 <a
                   href="https://app.saruapps.com/register"
                   className="text-center text-base font-medium text-white bg-gray-950 py-3.5 rounded-full"
                 >
-                  Comenzar gratis
+                  {t.comenzarGratis}
                 </a>
               </div>
             </nav>

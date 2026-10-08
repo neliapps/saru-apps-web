@@ -2,9 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useDictionary } from "@/i18n/DictionaryProvider";
 
 export function CookieBanner() {
   const [visible, setVisible] = useState(false);
+  const { dict, localePath } = useDictionary();
+  const t = dict.cookie;
 
   useEffect(() => {
     const consent = localStorage.getItem("cookie-consent");
@@ -33,14 +36,12 @@ export function CookieBanner() {
         >
           <div className="max-w-4xl mx-auto bg-gray-950 text-white rounded-2xl p-5 md:p-6 shadow-2xl border border-white/10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <p className="text-sm text-white/80 flex-1">
-              Usamos cookies esenciales para el funcionamiento del sitio y
-              cookies analíticas para mejorar tu experiencia. Podés leer más en
-              nuestra{" "}
+              {t.text}{" "}
               <a
-                href="/privacidad"
+                href={localePath("/privacidad")}
                 className="underline underline-offset-4 text-white hover:text-white/70 transition-colors"
               >
-                Política de Privacidad
+                {t.policy}
               </a>
               .
             </p>
@@ -49,13 +50,13 @@ export function CookieBanner() {
                 onClick={reject}
                 className="px-5 py-2 text-sm font-medium text-white/70 border border-white/20 rounded-full hover:border-white/40 hover:text-white transition-all duration-300"
               >
-                Rechazar
+                {t.reject}
               </button>
               <button
                 onClick={accept}
                 className="px-5 py-2 text-sm font-medium bg-white text-gray-950 rounded-full hover:bg-gray-100 transition-all duration-300"
               >
-                Aceptar
+                {t.accept}
               </button>
             </div>
           </div>
