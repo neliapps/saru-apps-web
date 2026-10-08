@@ -56,8 +56,8 @@ export default async function LocaleLayout({
       <body>
         <DictionaryProvider dictionary={dict} locale={locale as Locale}>
           {children}
+          <CookieBanner />
         </DictionaryProvider>
-        <CookieBanner />
         <Script id="brevo-conversations" strategy="afterInteractive">{`
           (function(d, w, c) {
             w.BrevoConversationsID = '6a59f1d9f62a55a5c908887c';
