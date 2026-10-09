@@ -192,16 +192,8 @@ export function Navbar() {
               {locale === "es" ? "PT" : "ES"}
             </a>
             <a
-              href="https://calendly.com/saruapps/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[15px] font-medium text-gray-600 hover:text-gray-950 transition-colors duration-300 px-4 py-2"
-            >
-              {t.agendarDemo}
-            </a>
-            <a
               href="https://app.saruapps.com/login"
-              className="text-[15px] font-medium text-gray-600 hover:text-gray-950 transition-colors duration-300 px-4 py-2"
+              className="text-[15px] font-medium text-gray-600 hover:text-gray-950 px-5 py-2.5 rounded-lg border border-gray-200 hover:border-gray-300 transition-all duration-300"
             >
               {t.iniciarSesion}
             </a>
@@ -306,16 +298,8 @@ export function Navbar() {
                   {locale === "es" ? "Português (BR)" : "Español"}
                 </a>
                 <a
-                  href="https://calendly.com/saruapps/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-center text-base font-medium text-gray-600 py-3"
-                >
-                  {t.agendarDemo}
-                </a>
-                <a
                   href="https://app.saruapps.com/login"
-                  className="text-center text-base font-medium text-gray-900 py-3 border-b border-gray-100"
+                  className="text-center text-base font-medium text-gray-900 py-3 rounded-lg border border-gray-200"
                 >
                   {t.iniciarSesion}
                 </a>

@@ -69,7 +69,7 @@ function MockupScene() {
         <div
           className="absolute -inset-[1px] rounded-2xl opacity-50"
           style={{
-            background: "conic-gradient(from var(--angle, 0deg), #e2e8f0 0%, #6366f1 15%, #ec4899 30%, #6366f1 45%, #e2e8f0 60%, #e2e8f0 100%)",
+            background: "conic-gradient(from var(--angle, 0deg), #e2e8f0 0%, #2F6BFF 15%, #ec4899 30%, #2F6BFF 45%, #e2e8f0 60%, #e2e8f0 100%)",
             animation: "spin 8s linear infinite",
           }}
         />
@@ -357,7 +357,7 @@ function MockupScene() {
                 >
                   <p className="text-xs font-bold text-gray-900 mb-3">Estilo</p>
                   <div className="flex gap-2 mb-4">
-                    {["#0a0a0a", "#6366f1", "#ec4899", "#f59e0b", "#10b981"].map((color, i) => (
+                    {["#0a0a0a", "#2F6BFF", "#ec4899", "#f59e0b", "#10b981"].map((color, i) => (
                       <motion.div
                         key={color}
                         initial={{ scale: 0 }}
@@ -466,7 +466,7 @@ export function Hero() {
               >
                 <motion.path
                   d="M2 8C50 3 100 2 150 4C200 6 250 3 298 7"
-                  stroke="#6366f1"
+                  stroke="#2F6BFF"
                   strokeWidth="3"
                   strokeLinecap="round"
                   initial={{ pathLength: 0 }}

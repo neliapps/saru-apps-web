@@ -3,9 +3,9 @@
 @theme inline {
   --font-display: "Satoshi", sans-serif;
   --font-body: "General Sans", sans-serif;
-  --color-accent: #6366f1;
-  --color-accent-light: #818cf8;
-  --color-accent-dark: #4f46e5;
+  --color-accent: #2F6BFF;
+  --color-accent-light: #6B9AFF;
+  --color-accent-dark: #1A4FCC;
 }
 
 @font-face {

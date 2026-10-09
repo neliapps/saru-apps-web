@@ -252,7 +252,7 @@ export default function EditorPage() {
                         Estilo
                       </p>
                       <div className="flex gap-1.5 mb-4">
-                        {["#0a0a0a", "#6366f1", "#ec4899", "#f59e0b", "#10b981"].map(
+                        {["#0a0a0a", "#2F6BFF", "#ec4899", "#f59e0b", "#10b981"].map(
                           (color) => (
                             <div
                               key={color}
