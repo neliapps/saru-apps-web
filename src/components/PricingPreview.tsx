@@ -63,7 +63,7 @@ export function PricingPreview() {
               >
                 {plan.highlighted && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="bg-white text-gray-950 text-xs font-bold px-4 py-1 rounded-full">
+                    <span className="bg-white text-gray-950 text-xs font-bold px-4 py-1 rounded-lg">
                       Más popular
                     </span>
                   </div>
@@ -134,7 +134,7 @@ export function PricingPreview() {
         <AnimatedSection delay={0.3} className="text-center mt-12">
           <a
             href="/precios"
-            className="inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-full transition-all duration-300 hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-950/25"
+            className="inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-950/25"
           >
             Ver todos los planes y comparar
             <ArrowRight className="w-4 h-4" />

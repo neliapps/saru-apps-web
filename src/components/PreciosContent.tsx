@@ -309,7 +309,7 @@ export function PreciosContent() {
               />
               <button
                 onClick={() => setIsAnnual(false)}
-                className={`relative z-10 px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
+                className={`relative z-10 px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${
                   !isAnnual ? "text-white" : "text-gray-500 hover:text-gray-700"
                 }`}
               >
@@ -317,13 +317,13 @@ export function PreciosContent() {
               </button>
               <button
                 onClick={() => setIsAnnual(true)}
-                className={`relative z-10 px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 flex items-center gap-2 ${
+                className={`relative z-10 px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-300 flex items-center gap-2 ${
                   isAnnual ? "text-white" : "text-gray-500 hover:text-gray-700"
                 }`}
               >
                 Anual
                 <span
-                  className={`text-[11px] font-bold px-2 py-0.5 rounded-full transition-all duration-300 ${
+                  className={`text-[11px] font-bold px-2 py-0.5 rounded-lg transition-all duration-300 ${
                     isAnnual
                       ? "bg-green-400 text-gray-950"
                       : "bg-green-100 text-green-700"
@@ -360,7 +360,7 @@ export function PreciosContent() {
                   >
                     {plan.highlighted && (
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                        <span className="bg-white text-gray-950 text-xs font-bold px-4 py-1 rounded-full shadow-sm">
+                        <span className="bg-white text-gray-950 text-xs font-bold px-4 py-1 rounded-lg shadow-sm">
                           Más popular
                         </span>
                       </div>
@@ -444,7 +444,7 @@ export function PreciosContent() {
                       {...(plan.name === "Enterprise"
                         ? { target: "_blank", rel: "noopener noreferrer" }
                         : {})}
-                      className={`block text-center py-3 rounded-full text-sm font-medium transition-all duration-300 mb-8 ${
+                      className={`block text-center py-3 rounded-lg text-sm font-medium transition-all duration-300 mb-8 ${
                         plan.highlighted
                           ? "bg-white text-gray-950 hover:bg-gray-100"
                           : "bg-gray-950 text-white hover:bg-gray-800"
@@ -700,7 +700,7 @@ export function PreciosContent() {
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <a
                     href="https://app.saruapps.com/register"
-                    className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-950 text-base font-medium rounded-full hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10"
+                    className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-950 text-base font-medium rounded-lg hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10"
                   >
                     Empezar gratis
                     <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -709,7 +709,7 @@ export function PreciosContent() {
                     href="https://calendly.com/saruapps/30min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-4 text-white/70 text-base font-medium rounded-full border border-white/20 hover:border-white/40 hover:text-white transition-all duration-300"
+                    className="inline-flex items-center gap-2 px-8 py-4 text-white/70 text-base font-medium rounded-lg border border-white/20 hover:border-white/40 hover:text-white transition-all duration-300"
                   >
                     Agendar una demo
                   </a>

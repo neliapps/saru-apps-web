@@ -14,7 +14,7 @@ export function InlineCTA({
           <p className="text-lg text-gray-600 mb-6">{text}</p>
           <a
             href="https://app.saruapps.com/register"
-            className="inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-full transition-all duration-300 hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-950/25"
+            className="inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-950/25"
           >
             Empezar gratis
             <svg

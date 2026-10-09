@@ -121,7 +121,7 @@ export function Pricing() {
             />
             <button
               onClick={() => setIsAnnual(false)}
-              className={`relative z-10 px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
+              className={`relative z-10 px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-300 ${
                 !isAnnual ? "text-white" : "text-gray-500 hover:text-gray-700"
               }`}
             >
@@ -129,13 +129,13 @@ export function Pricing() {
             </button>
             <button
               onClick={() => setIsAnnual(true)}
-              className={`relative z-10 px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 flex items-center gap-2 ${
+              className={`relative z-10 px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-300 flex items-center gap-2 ${
                 isAnnual ? "text-white" : "text-gray-500 hover:text-gray-700"
               }`}
             >
               Anual
               <span
-                className={`text-[11px] font-bold px-2 py-0.5 rounded-full transition-all duration-300 ${
+                className={`text-[11px] font-bold px-2 py-0.5 rounded-lg transition-all duration-300 ${
                   isAnnual
                     ? "bg-green-400 text-gray-950"
                     : "bg-green-100 text-green-700"
@@ -167,7 +167,7 @@ export function Pricing() {
                 >
                   {plan.highlighted && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <span className="bg-white text-gray-950 text-xs font-bold px-4 py-1 rounded-full">
+                      <span className="bg-white text-gray-950 text-xs font-bold px-4 py-1 rounded-lg">
                         Más popular
                       </span>
                     </div>
@@ -240,7 +240,7 @@ export function Pricing() {
                   <a
                     href={plan.href || "https://app.saruapps.com/register"}
                     {...(plan.href ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    className={`block text-center py-3 rounded-full text-sm font-medium transition-all duration-300 mb-8 ${
+                    className={`block text-center py-3 rounded-lg text-sm font-medium transition-all duration-300 mb-8 ${
                       plan.highlighted
                         ? "bg-white text-gray-950 hover:bg-gray-100"
                         : "bg-gray-950 text-white hover:bg-gray-800"

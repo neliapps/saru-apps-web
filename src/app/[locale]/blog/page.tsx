@@ -41,7 +41,7 @@ export default function Blog() {
         <section className="pt-32 pb-24 bg-white">
           <div className="max-w-[1280px] mx-auto px-6">
             <AnimatedSection className="text-center max-w-3xl mx-auto">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 text-gray-600 text-[13px] font-medium">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-[13px] font-medium">
                 Blog
               </span>
               <h1 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-950">
@@ -125,7 +125,7 @@ export default function Blog() {
                   />
                   <button
                     type="submit"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-full transition-all duration-300 hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-950/25"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-950/25"
                   >
                     Suscribirme
                   </button>

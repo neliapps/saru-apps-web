@@ -207,7 +207,7 @@ export function Navbar() {
             </a>
             <a
               href="https://app.saruapps.com/register"
-              className="text-[15px] font-medium text-white bg-gray-950 hover:bg-gray-800 px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-gray-950/20"
+              className="text-[15px] font-medium text-white bg-gray-950 hover:bg-gray-800 px-5 py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-gray-950/20"
             >
               {t.comenzarGratis}
             </a>
@@ -321,7 +321,7 @@ export function Navbar() {
                 </a>
                 <a
                   href="https://app.saruapps.com/register"
-                  className="text-center text-base font-medium text-white bg-gray-950 py-3.5 rounded-full"
+                  className="text-center text-base font-medium text-white bg-gray-950 py-3.5 rounded-lg"
                 >
                   {t.comenzarGratis}
                 </a>

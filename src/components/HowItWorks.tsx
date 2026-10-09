@@ -473,7 +473,7 @@ export function HowItWorks() {
                   <StepScene index={i} />
 
                   {/* Detail badge with gradient background and pulsing dot */}
-                  <span className={`inline-flex items-center gap-1.5 text-xs font-medium text-white/70 ${colors.badgeBg} rounded-full px-3 py-1.5 border border-white/[0.06]`}>
+                  <span className={`inline-flex items-center gap-1.5 text-xs font-medium text-white/70 ${colors.badgeBg} rounded-lg px-3 py-1.5 border border-white/[0.06]`}>
                     <motion.span
                       animate={{ scale: [1, 1.5, 1], opacity: [0.8, 1, 0.8] }}
                       transition={{ duration: 2, repeat: Infinity }}

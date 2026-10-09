@@ -100,7 +100,7 @@ export default function ProductoPage() {
         <div className="relative max-w-[1280px] mx-auto px-6 pt-40 pb-24 md:pt-48 md:pb-32">
           <div className="text-center max-w-3xl mx-auto">
             <AnimatedSection>
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 text-gray-600 text-[13px] font-medium border border-gray-200/60 mb-8">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-[13px] font-medium border border-gray-200/60 mb-8">
                 Producto
               </span>
             </AnimatedSection>
@@ -246,7 +246,7 @@ export default function ProductoPage() {
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <a
                     href="https://app.saruapps.com/register"
-                    className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-950 text-base font-medium rounded-full hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10"
+                    className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-950 text-base font-medium rounded-lg hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10"
                   >
                     Empezar gratis
                     <svg
@@ -267,7 +267,7 @@ export default function ProductoPage() {
                     href="https://calendly.com/saruapps/30min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-4 text-white/70 text-base font-medium rounded-full border border-white/20 hover:border-white/40 hover:text-white transition-all duration-300"
+                    className="inline-flex items-center gap-2 px-8 py-4 text-white/70 text-base font-medium rounded-lg border border-white/20 hover:border-white/40 hover:text-white transition-all duration-300"
                   >
                     Agendar una demo
                   </a>

@@ -94,7 +94,7 @@ export default function AnalyticsPage() {
         <div className="relative max-w-[1280px] mx-auto px-6 pt-40 pb-24 md:pt-48 md:pb-32">
           <div className="text-center max-w-3xl mx-auto">
             <AnimatedSection>
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 text-gray-600 text-[13px] font-medium border border-gray-200/60 mb-8">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-[13px] font-medium border border-gray-200/60 mb-8">
                 <BarChart3 className="w-3.5 h-3.5" />
                 Producto
               </span>
@@ -120,7 +120,7 @@ export default function AnalyticsPage() {
               <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
                   href="https://app.saruapps.com/register"
-                  className="group relative inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-gray-950/25"
+                  className="group relative inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-gray-950/25"
                 >
                   <span className="relative z-10">Empezar gratis</span>
                   <ArrowRight className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -130,7 +130,7 @@ export default function AnalyticsPage() {
                   href="https://calendly.com/saruapps/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 text-gray-600 text-[15px] font-medium rounded-full border border-gray-200 hover:border-gray-300 hover:text-gray-900 transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 text-gray-600 text-[15px] font-medium rounded-lg border border-gray-200 hover:border-gray-300 hover:text-gray-900 transition-all duration-300"
                 >
                   Ver como funciona
                 </a>
@@ -450,7 +450,7 @@ export default function AnalyticsPage() {
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <a
                     href="https://app.saruapps.com/register"
-                    className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-950 text-base font-medium rounded-full hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10"
+                    className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-950 text-base font-medium rounded-lg hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10"
                   >
                     Empezar gratis
                     <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -459,7 +459,7 @@ export default function AnalyticsPage() {
                     href="https://calendly.com/saruapps/30min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-4 text-white/70 text-base font-medium rounded-full border border-white/20 hover:border-white/40 hover:text-white transition-all duration-300"
+                    className="inline-flex items-center gap-2 px-8 py-4 text-white/70 text-base font-medium rounded-lg border border-white/20 hover:border-white/40 hover:text-white transition-all duration-300"
                   >
                     Agendar una demo
                   </a>

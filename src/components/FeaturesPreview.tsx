@@ -72,7 +72,7 @@ export function FeaturesPreview() {
         <AnimatedSection delay={0.3} className="text-center mt-16">
           <a
             href={localePath("/producto")}
-            className="inline-flex items-center gap-2 px-7 py-3.5 text-gray-600 text-[15px] font-medium rounded-full border border-gray-200 hover:border-gray-300 hover:text-gray-900 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-7 py-3.5 text-gray-600 text-[15px] font-medium rounded-lg border border-gray-200 hover:border-gray-300 hover:text-gray-900 transition-all duration-300"
           >
             {t.verTodas}
             <ArrowRight className="w-4 h-4" />

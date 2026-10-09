@@ -347,7 +347,7 @@ function EngagementVisual() {
                 {item.label}
               </span>
             </div>
-            <span className="text-[9px] font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 border border-gray-200/60">
+            <span className="text-[9px] font-medium px-2 py-0.5 rounded-lg bg-gray-100 text-gray-500 border border-gray-200/60">
               {item.badge}
             </span>
           </div>
@@ -595,7 +595,7 @@ export function Features() {
       <div className="relative max-w-[1280px] mx-auto px-6">
         {/* Section header */}
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-20">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/70 backdrop-blur-sm text-gray-500 text-sm uppercase tracking-widest font-medium border border-gray-200/60 shadow-sm">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-white/70 backdrop-blur-sm text-gray-500 text-sm uppercase tracking-widest font-medium border border-gray-200/60 shadow-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-gray-400" />
             Funcionalidades
           </span>

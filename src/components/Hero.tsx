@@ -207,7 +207,7 @@ function MockupScene() {
                             <div className="aspect-square rounded-xl overflow-hidden bg-gray-100 relative">
                               <img src={product.img} alt={product.name} className="w-full h-full object-cover" />
                               {i === 0 && (
-                                <span className="absolute top-1 left-1 bg-red-500 text-white text-[6px] font-bold px-1.5 py-0.5 rounded-full">-40%</span>
+                                <span className="absolute top-1 left-1 bg-red-500 text-white text-[6px] font-bold px-1.5 py-0.5 rounded-lg">-40%</span>
                               )}
                             </div>
                             <p className="text-[9px] text-gray-700 font-medium truncate">{product.name}</p>
@@ -441,7 +441,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1, ease }}
           >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-sm text-gray-600 text-[13px] font-medium border border-gray-200/60 mb-8 shadow-sm">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-white/80 backdrop-blur-sm text-gray-600 text-[13px] font-medium border border-gray-200/60 mb-8 shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
               {t.badge}
             </span>
@@ -496,7 +496,7 @@ export function Hero() {
           >
             <a
               href="https://app.saruapps.com/register"
-              className="group relative inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-full overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-gray-950/25"
+              className="group relative inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-gray-950/25"
             >
               <span className="relative z-10">{t.ctaPrimary}</span>
               <svg
@@ -514,7 +514,7 @@ export function Hero() {
               href="https://calendly.com/saruapps/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-3.5 text-gray-600 text-[15px] font-medium rounded-full border border-gray-200 bg-white/80 backdrop-blur-sm hover:border-gray-300 hover:text-gray-900 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-7 py-3.5 text-gray-600 text-[15px] font-medium rounded-lg border border-gray-200 bg-white/80 backdrop-blur-sm hover:border-gray-300 hover:text-gray-900 transition-all duration-300"
             >
               {t.ctaSecondary}
             </a>

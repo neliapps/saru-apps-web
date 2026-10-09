@@ -38,7 +38,7 @@ export function Integrations() {
 
       <div className="relative max-w-[1280px] mx-auto px-6">
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/70 backdrop-blur-sm text-gray-600 text-[13px] font-medium border border-gray-200/60 mb-6">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-white/70 backdrop-blur-sm text-gray-600 text-[13px] font-medium border border-gray-200/60 mb-6">
             {t.label}
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-gray-950">

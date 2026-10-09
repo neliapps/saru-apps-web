@@ -104,7 +104,7 @@ export default function Sectores() {
         <section className="pt-32 pb-24 bg-white">
           <div className="max-w-[1280px] mx-auto px-6">
             <AnimatedSection className="text-center max-w-3xl mx-auto">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 text-gray-600 text-[13px] font-medium">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-[13px] font-medium">
                 Sectores
               </span>
               <h1 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-950">
@@ -210,7 +210,7 @@ export default function Sectores() {
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <a
                     href="https://app.saruapps.com/register"
-                    className="inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-full transition-all duration-300 hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-950/25"
+                    className="inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-950/25"
                   >
                     Empezar gratis
                   </a>
@@ -218,7 +218,7 @@ export default function Sectores() {
                     href="https://calendly.com/saruapps/30min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-7 py-3.5 text-gray-600 text-[15px] font-medium rounded-full border border-gray-200 hover:border-gray-300 hover:text-gray-900 transition-all duration-300"
+                    className="inline-flex items-center gap-2 px-7 py-3.5 text-gray-600 text-[15px] font-medium rounded-lg border border-gray-200 hover:border-gray-300 hover:text-gray-900 transition-all duration-300"
                   >
                     Agendar una demo
                   </a>
