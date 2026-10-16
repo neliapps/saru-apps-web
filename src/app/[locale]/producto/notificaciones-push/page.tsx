@@ -80,7 +80,7 @@ const notificationTypes = [
 const volumeByPlan = [
   {
     plan: "Starter",
-    volume: "1,000 / mes",
+    volume: "1.000 / mes",
     highlighted: false,
   },
   {

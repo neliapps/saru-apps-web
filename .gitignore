@@ -5,3 +5,9 @@ dist
 .env
 .env.*
 !.env.example
+
+# OS / build artifacts
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+.claude/settings.local.json

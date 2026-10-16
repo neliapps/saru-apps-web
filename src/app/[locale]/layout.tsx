@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Inter } from "next/font/google";
 import { CookieBanner } from "@/components/CookieBanner";
 import { DictionaryProvider } from "@/i18n/DictionaryProvider";
 import { getDictionary } from "@/i18n/getDictionary";
 import { locales } from "@/i18n/config";
 import type { Locale } from "@/i18n/config";
 import "../globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export async function generateMetadata({
   params,
@@ -52,7 +60,7 @@ export default async function LocaleLayout({
   const dict = await getDictionary(locale as Locale);
 
   return (
-    <html lang={locale === "pt" ? "pt-BR" : "es"}>
+    <html lang={locale === "pt" ? "pt-BR" : "es"} className={inter.variable}>
       <body>
         <DictionaryProvider dictionary={dict} locale={locale as Locale}>
           {children}

@@ -97,7 +97,7 @@ const categories = [
       },
       {
         q: "¿Puedo enviar cupones exclusivos para la app?",
-        a: "Sí. Podés crear cupones que solo funcionan dentro de la app para incentivar las descargas y compras desde el canal móvil. Disponible desde el plan Growth.",
+        a: "Sí. Podés crear cupones que solo funcionan dentro de la app para incentivar las descargas y compras desde el canal móvil.",
       },
       {
         q: "¿Soporta múltiples idiomas?",
@@ -149,7 +149,7 @@ const categories = [
       },
       {
         q: "¿Qué tipo de soporte ofrecen?",
-        a: "Ofrecemos soporte por email en todos los planes. El plan Growth incluye soporte por chat, y el plan Scale incluye soporte por videollamada. Enterprise tiene un account manager dedicado.",
+        a: "Ofrecemos soporte por email en todos los planes. El plan Enterprise suma un account manager dedicado.",
       },
       {
         q: "¿Cómo puedo promocionar mi app para que mis clientes la descarguen?",
