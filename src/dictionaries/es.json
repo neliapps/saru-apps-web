@@ -147,5 +147,86 @@
     "policy": "Política de Privacidad",
     "reject": "Rechazar",
     "accept": "Aceptar"
+  },
+  "mockups": {
+    "storeName": "tu tienda",
+    "season": "Otoño · Invierno",
+    "newCollection": "Nueva colección",
+    "seeNow": "Ver ahora",
+    "chips": [
+      "Todo",
+      "Camisas",
+      "Camperas",
+      "Jeans"
+    ],
+    "products": [
+      {
+        "name": "Camisa rayada",
+        "price": "$ 32.900",
+        "img": "camisa-rayada.png"
+      },
+      {
+        "name": "Campera de jean",
+        "price": "$ 74.500",
+        "img": "campera-jean.png"
+      },
+      {
+        "name": "Camisa celeste",
+        "price": "$ 34.900",
+        "img": "camisa-celeste.png"
+      },
+      {
+        "name": "Sweater trenzado",
+        "price": "$ 54.900",
+        "img": "modelo-sweater.png"
+      }
+    ],
+    "webMenu": [
+      "Inicio",
+      "Hombre",
+      "Mujer",
+      "Ofertas",
+      "Contacto"
+    ],
+    "lowStock": "Quedan 2 en tu talle",
+    "addToCart": "Agregar al carrito",
+    "cart": "Carrito",
+    "freeShipping": "Te faltan $ 8.100 para el envío gratis",
+    "checkout": "Finalizar compra",
+    "total": "Total",
+    "lockDate": "Jueves 12 de octubre",
+    "now": "ahora",
+    "minAgo": "hace 5 min",
+    "push1Title": "Tu carrito te espera",
+    "push1Body": "1 producto esperando. Terminá tu compra hoy.",
+    "push2Title": "¡Volvió!",
+    "push2Body": "La campera de jean está otra vez en stock.",
+    "push3Title": "Drop exclusivo en 2 h",
+    "push3Body": "Solo para quienes tienen la app.",
+    "components": "Componentes",
+    "blocks": [
+      "Banner",
+      "Productos",
+      "Categorías",
+      "Cuenta regresiva"
+    ],
+    "dropHere": "Soltá acá",
+    "get": "Obtener",
+    "shopping": "Compras",
+    "stockSynced": "Stock sincronizado",
+    "units": "unidades",
+    "salesFromApp": "Ventas desde la app",
+    "thisWeek": "Esta semana",
+    "days": [
+      "L",
+      "M",
+      "M",
+      "J",
+      "V",
+      "S",
+      "D"
+    ],
+    "abandonedCart": "Carrito abandonado",
+    "published": "Publicada"
   }
 }

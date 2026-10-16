@@ -100,7 +100,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Navbar />
+      <Navbar variant="dark" />
       <Hero />
       <FeaturesPreview />
       <HowItWorks />

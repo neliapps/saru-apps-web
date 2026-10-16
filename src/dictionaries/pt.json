@@ -147,5 +147,86 @@
     "policy": "Política de Privacidade",
     "reject": "Rejeitar",
     "accept": "Aceitar"
+  },
+  "mockups": {
+    "storeName": "sua loja",
+    "season": "Outono · Inverno",
+    "newCollection": "Nova coleção",
+    "seeNow": "Ver agora",
+    "chips": [
+      "Tudo",
+      "Camisas",
+      "Jaquetas",
+      "Jeans"
+    ],
+    "products": [
+      {
+        "name": "Camisa listrada",
+        "price": "R$ 189,90",
+        "img": "camisa-rayada.png"
+      },
+      {
+        "name": "Jaqueta jeans",
+        "price": "R$ 349,90",
+        "img": "campera-jean.png"
+      },
+      {
+        "name": "Camisa azul-clara",
+        "price": "R$ 199,90",
+        "img": "camisa-celeste.png"
+      },
+      {
+        "name": "Suéter trançado",
+        "price": "R$ 279,90",
+        "img": "modelo-sweater.png"
+      }
+    ],
+    "webMenu": [
+      "Início",
+      "Masculino",
+      "Feminino",
+      "Ofertas",
+      "Contato"
+    ],
+    "lowStock": "Restam 2 no seu tamanho",
+    "addToCart": "Adicionar ao carrinho",
+    "cart": "Carrinho",
+    "freeShipping": "Faltam R$ 41 para o frete grátis",
+    "checkout": "Finalizar compra",
+    "total": "Total",
+    "lockDate": "Quinta-feira, 12 de outubro",
+    "now": "agora",
+    "minAgo": "há 5 min",
+    "push1Title": "Seu carrinho está esperando",
+    "push1Body": "1 produto esperando. Finalize sua compra hoje.",
+    "push2Title": "Voltou!",
+    "push2Body": "A jaqueta jeans está de volta ao estoque.",
+    "push3Title": "Drop exclusivo em 2 h",
+    "push3Body": "Só para quem tem o app.",
+    "components": "Componentes",
+    "blocks": [
+      "Banner",
+      "Produtos",
+      "Categorias",
+      "Contagem regressiva"
+    ],
+    "dropHere": "Solte aqui",
+    "get": "Obter",
+    "shopping": "Compras",
+    "stockSynced": "Estoque sincronizado",
+    "units": "unidades",
+    "salesFromApp": "Vendas pelo app",
+    "thisWeek": "Esta semana",
+    "days": [
+      "S",
+      "T",
+      "Q",
+      "Q",
+      "S",
+      "S",
+      "D"
+    ],
+    "abandonedCart": "Carrinho abandonado",
+    "published": "Publicado"
   }
 }

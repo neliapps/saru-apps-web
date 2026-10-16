@@ -3,9 +3,21 @@
 @theme inline {
   --font-display: var(--font-inter), "Inter", system-ui, sans-serif;
   --font-body: var(--font-inter), "Inter", system-ui, sans-serif;
+
+  --color-ink: #0A0A0A;
+  --color-paper: #FFFFFF;
+  --color-paper-2: #F4F5F8;
+
   --color-accent: #2F6BFF;
-  --color-accent-light: #6B9AFF;
-  --color-accent-dark: #1A4FCC;
+  --color-accent-dark: #0B46D8;
+  --color-accent-light: #A8C3FF;
+
+  --color-line-dark: rgb(255 255 255 / 0.14);
+  --color-line-light: rgb(0 0 0 / 0.12);
+  --color-card-dark: rgb(255 255 255 / 0.05);
+  --color-card-dark-border: rgb(255 255 255 / 0.12);
+  --color-card-light: #F4F4F5;
+  --color-card-light-border: rgb(0 0 0 / 0.06);
 }
 
 html {
@@ -20,8 +32,103 @@ body {
 }
 
 ::selection {
-  background-color: #171717;
+  background-color: #2F6BFF;
   color: #ffffff;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* ─── Design system: sections, accent, glow, grain ─── */
+
+.accent {
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+.section-dark {
+  position: relative;
+  background: #0a0a0a;
+  color: #fff;
+}
+
+.section-light {
+  position: relative;
+  background: radial-gradient(120% 90% at 50% 0%, #ffffff 0%, #f4f5f8 100%);
+  color: #0a0a0a;
+}
+
+.glow {
+  position: absolute;
+  width: 720px;
+  height: 720px;
+  border-radius: 50%;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 45% 45%, rgb(47 107 255 / 0.95), transparent 62%),
+    radial-gradient(circle at 60% 60%, rgb(11 70 216 / 0.8), transparent 60%);
+  filter: blur(110px);
+  opacity: 0.4;
+}
+
+.section-light .glow {
+  opacity: 0.25;
+  background: radial-gradient(circle at 50% 50%, rgb(140 175 255 / 0.7), transparent 62%);
+}
+
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+.section-light.grain::after {
+  opacity: 0.12;
+  mix-blend-mode: multiply;
+}
+
+/* Hand-drawn underline that draws itself on hover (paths use pathLength="1") */
+.scribble path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .scribble path,
+.group:focus-visible .scribble path {
+  stroke-dashoffset: 0;
+}
+
+/* Sticker with tape */
+.sticker {
+  position: relative;
+  display: inline-block;
+  padding: 0.45em 0.9em;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.1;
+  box-shadow: 0 10px 30px -12px rgb(0 0 0 / 0.45);
+}
+.sticker::before {
+  content: "";
+  position: absolute;
+  top: -0.55em;
+  left: 50%;
+  width: 2.6em;
+  height: 0.9em;
+  transform: translateX(-50%) rotate(-6deg);
+  background: rgb(236 233 224 / 0.82);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.12);
 }
 
 ::-webkit-scrollbar {
@@ -31,11 +138,11 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #d4d4d4;
+  background: #0a0a0a;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a3a3a3;
+  background: #2f6bff;
 }
 
 @property --angle {

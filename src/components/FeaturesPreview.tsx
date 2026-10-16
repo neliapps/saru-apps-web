@@ -1,83 +1,160 @@
 "use client";
 
-import { AnimatedSection } from "./AnimatedSection";
-import {
-  MousePointerClick,
-  Smartphone,
-  Bell,
-  Heart,
-  ShoppingBag,
-  BarChart3,
-  ArrowRight,
-} from "lucide-react";
+import { useEffect, useRef, useState, type ComponentType } from "react";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import { useDictionary } from "@/i18n/DictionaryProvider";
+import { ArrowLink, Label, ease } from "./home/primitives";
+import {
+  AnalyticsScreen,
+  EditorScreen,
+  LockScreen,
+  PhoneFrame,
+  ProductScreen,
+  ScaledPhone,
+  StoreScreen,
+  SyncScreen,
+} from "./home/phone";
+
+type Feature = {
+  title: string;
+  description: string;
+  href: string;
+  Screen: ComponentType;
+  dark?: boolean;
+};
+
+function FeatureRow({
+  feature,
+  index,
+  active,
+  onActive,
+}: {
+  feature: Feature;
+  index: number;
+  active: boolean;
+  onActive: (i: number) => void;
+}) {
+  const { dict } = useDictionary();
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { margin: "-48% 0px -48% 0px" });
+
+  useEffect(() => {
+    if (inView) onActive(index);
+  }, [inView, index, onActive]);
+
+  return (
+    <div ref={ref} className="relative border-t border-line-light py-14 lg:flex lg:min-h-[58vh] lg:flex-col lg:justify-center lg:py-20">
+      <motion.span
+        className="absolute -top-px left-0 h-[3px] w-full origin-left bg-accent"
+        initial={false}
+        animate={{ scaleX: active ? 1 : 0 }}
+        transition={{ duration: 0.6, ease }}
+        aria-hidden="true"
+      />
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.5, ease }}
+      >
+        <p className={`text-[16px] font-bold italic tabular-nums transition-colors duration-500 ${active ? "text-accent-dark" : ""}`}>
+          {String(index + 1).padStart(2, "0")}
+        </p>
+        <h3 className="mt-3 font-display text-[clamp(26px,2.8vw,40px)] font-bold leading-[1.05] tracking-[-0.035em]">
+          {feature.title}
+        </h3>
+        <p className="mt-5 max-w-md text-[17px] leading-[1.6]">{feature.description}</p>
+        <div className="mt-4">
+          <ArrowLink href={feature.href}>{dict.features.conocerMas}</ArrowLink>
+        </div>
+      </motion.div>
+
+      {/* Mobile: the phone sits in the row, cropped with a fade */}
+      <div
+        className="mt-10 flex justify-center lg:hidden"
+        style={{ maskImage: "linear-gradient(to bottom, #000 70%, transparent)", WebkitMaskImage: "linear-gradient(to bottom, #000 70%, transparent)" }}
+        aria-hidden="true"
+      >
+        <div className="h-[340px] overflow-hidden">
+          <ScaledPhone scale={0.8} dark={feature.dark}>
+            <feature.Screen />
+          </ScaledPhone>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function FeaturesPreview() {
   const { dict, localePath } = useDictionary();
   const t = dict.features;
+  const [active, setActive] = useState(0);
 
-  const features = [
-    { icon: MousePointerClick, title: t.editor, description: t.editorDesc, href: localePath("/producto/editor") },
-    { icon: Smartphone, title: t.appNativa, description: t.appNativaDesc, href: localePath("/producto/app-nativa") },
-    { icon: Bell, title: t.push, description: t.pushDesc, href: localePath("/producto/notificaciones-push") },
-    { icon: Heart, title: t.engagement, description: t.engagementDesc, href: localePath("/producto/engagement") },
-    { icon: ShoppingBag, title: t.sincronizacion, description: t.sincronizacionDesc, href: localePath("/producto/sincronizacion") },
-    { icon: BarChart3, title: t.analytics, description: t.analyticsDesc, href: localePath("/producto/analytics") },
+  const features: Feature[] = [
+    { title: t.editor, description: t.editorDesc, href: localePath("/producto/editor"), Screen: EditorScreen },
+    { title: t.appNativa, description: t.appNativaDesc, href: localePath("/producto/app-nativa"), Screen: StoreScreen },
+    { title: t.push, description: t.pushDesc, href: localePath("/producto/notificaciones-push"), Screen: LockScreen, dark: true },
+    { title: t.engagement, description: t.engagementDesc, href: localePath("/producto/engagement"), Screen: ProductScreen },
+    { title: t.sincronizacion, description: t.sincronizacionDesc, href: localePath("/producto/sincronizacion"), Screen: SyncScreen },
+    { title: t.analytics, description: t.analyticsDesc, href: localePath("/producto/analytics"), Screen: AnalyticsScreen },
   ];
+  const current = features[active];
 
   return (
-    <section className="py-32 bg-white">
-      <div className="max-w-[1280px] mx-auto px-6">
-        <AnimatedSection className="text-center max-w-2xl mx-auto mb-20">
-          <span className="text-sm text-gray-500 uppercase tracking-widest font-medium">
-            {t.label}
-          </span>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight text-gray-950">
-            {t.title}
-            <br />
-            {t.titleLine2}
-          </h2>
-          <p className="mt-6 text-lg text-gray-500">
+    <section className="section-light grain overflow-x-clip">
+      <div className="relative mx-auto max-w-[1280px] px-6 pt-28 md:pt-40">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, ease }}
+          className="grid gap-6 lg:grid-cols-12"
+        >
+          <div className="lg:col-span-9">
+            <Label>{t.label}</Label>
+            <h2 className="mt-4 font-display text-[clamp(34px,4.4vw,64px)] font-bold leading-[1.04] tracking-[-0.04em]">
+              {t.title} <em className="italic">{t.titleLine2}</em>
+            </h2>
+          </div>
+          <p className="max-w-md self-end text-[clamp(17px,1.4vw,20px)] italic leading-[1.5] lg:col-span-5 lg:col-start-8">
             {t.subtitle}
           </p>
-        </AnimatedSection>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, i) => (
-            <AnimatedSection key={feature.title} delay={i * 0.08}>
-              <a
-                href={feature.href}
-                className="group relative h-full bg-white rounded-2xl border border-gray-100 p-6 hover:border-gray-200 hover:shadow-xl hover:shadow-gray-100/80 transition-all duration-500 block"
-              >
-                <div className="mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-gray-950 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                    <feature.icon className="w-5 h-5 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-gray-950 mb-2 font-display">
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-gray-500 leading-relaxed mb-4">
-                  {feature.description}
-                </p>
-                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-500 group-hover:text-gray-950 transition-colors duration-300">
-                  {t.conocerMas}
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-                </span>
-              </a>
-            </AnimatedSection>
-          ))}
+        <div className="mt-16 grid lg:mt-24 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-7">
+            {features.map((f, i) => (
+              <FeatureRow key={f.title} feature={f} index={i} active={i === active} onActive={setActive} />
+            ))}
+          </div>
+
+          {/* Desktop: sticky phone, the screen follows the row you are reading */}
+          <div className="hidden lg:col-span-5 lg:block">
+            <div className="sticky top-[72px] flex h-[calc(100vh-72px)] items-center justify-center" aria-hidden="true">
+              <div className="glow left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+              <div className="relative">
+                <PhoneFrame dark={current.dark}>
+                  <AnimatePresence mode="popLayout" initial={false}>
+                    <motion.div
+                      key={active}
+                      className="absolute inset-0"
+                      initial={{ opacity: 0, y: 40 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -40 }}
+                      transition={{ duration: 0.45, ease }}
+                    >
+                      <current.Screen />
+                    </motion.div>
+                  </AnimatePresence>
+                </PhoneFrame>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <AnimatedSection delay={0.3} className="text-center mt-16">
-          <a
-            href={localePath("/producto")}
-            className="inline-flex items-center gap-2 px-7 py-3.5 text-gray-600 text-[15px] font-medium rounded-lg border border-gray-200 hover:border-gray-300 hover:text-gray-900 transition-all duration-300"
-          >
-            {t.verTodas}
-            <ArrowRight className="w-4 h-4" />
-          </a>
-        </AnimatedSection>
+        <div className="border-t border-line-light py-14 md:py-20">
+          <ArrowLink href={localePath("/producto")}>{t.verTodas}</ArrowLink>
+        </div>
       </div>
     </section>
   );

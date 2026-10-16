@@ -34,7 +34,8 @@ type NavItem = {
   dropdown?: DropdownItem[];
 };
 
-export function Navbar() {
+export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {}) {
+  const dark = variant === "dark";
   const { dict, locale, localePath } = useDictionary();
   const t = dict.navbar;
   const pathname = usePathname();
@@ -99,15 +100,19 @@ export function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "bg-white border-b border-gray-200 shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
-            : "bg-white"
+          dark
+            ? scrolled
+              ? "bg-ink/80 backdrop-blur-xl border-b border-line-dark"
+              : "bg-ink"
+            : scrolled
+              ? "bg-white border-b border-gray-200 shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+              : "bg-white"
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-6 h-[72px] flex items-center justify-between">
           <a href={localePath("/")} className="flex items-center shrink-0">
             <Image
-              src="/logo.png"
+              src={dark ? "/logo-white.png" : "/logo.png"}
               alt="Saru Apps"
               width={500}
               height={115}
@@ -133,9 +138,13 @@ export function Navbar() {
                     if (item.href === "#") e.preventDefault();
                   }}
                   className={`flex items-center gap-1 px-4 py-2 text-[15px] font-medium transition-colors duration-200 rounded-lg ${
-                    activeDropdown === item.label
-                      ? "text-gray-950 bg-gray-50"
-                      : "text-gray-600 hover:text-gray-950 hover:bg-gray-50"
+                    dark
+                      ? activeDropdown === item.label
+                        ? "text-white bg-white/10"
+                        : "text-white hover:bg-white/10"
+                      : activeDropdown === item.label
+                        ? "text-gray-950 bg-gray-50"
+                        : "text-gray-600 hover:text-gray-950 hover:bg-gray-50"
                   }`}
                 >
                   {item.label}
@@ -187,19 +196,25 @@ export function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <a
               href={switchUrl}
-              className="text-[13px] font-medium text-gray-500 hover:text-gray-950 transition-colors duration-300 px-2 py-1 rounded border border-gray-200"
+              className={`text-[13px] font-medium transition-colors duration-300 px-2 py-1 rounded border ${
+                dark ? "text-white border-line-dark hover:border-white/40" : "text-gray-500 hover:text-gray-950 border-gray-200"
+              }`}
             >
               {locale === "es" ? "PT" : "ES"}
             </a>
             <a
               href="https://app.saruapps.com/login"
-              className="text-[15px] font-medium text-gray-600 hover:text-gray-950 px-5 py-2.5 rounded-lg border border-gray-200 hover:border-gray-300 transition-all duration-300"
+              className={`text-[15px] font-medium px-5 py-2.5 rounded-lg border transition-all duration-300 ${
+                dark ? "text-white border-line-dark hover:border-white/40" : "text-gray-600 hover:text-gray-950 border-gray-200 hover:border-gray-300"
+              }`}
             >
               {t.iniciarSesion}
             </a>
             <a
               href="https://app.saruapps.com/register"
-              className="text-[15px] font-medium text-white bg-gray-950 hover:bg-gray-800 px-5 py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-gray-950/20"
+              className={`text-[15px] font-medium px-5 py-2.5 rounded-lg transition-all duration-300 ${
+                dark ? "text-ink bg-white hover:bg-white/90" : "text-white bg-gray-950 hover:bg-gray-800 hover:shadow-lg hover:shadow-gray-950/20"
+              }`}
             >
               {t.comenzarGratis}
             </a>
@@ -208,7 +223,7 @@ export function Navbar() {
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-gray-900"
+            className={`lg:hidden p-2 ${dark ? "text-white" : "text-gray-900"}`}
             aria-label="Menu"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
