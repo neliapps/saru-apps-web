@@ -28,34 +28,25 @@ export function CookieBanner() {
     <AnimatePresence>
       {visible && (
         <motion.div
-          initial={{ y: 100, opacity: 0 }}
+          initial={{ y: 24, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 100, opacity: 0 }}
+          exit={{ y: 24, opacity: 0 }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6"
+          className="fixed bottom-0 left-0 z-50 w-full p-4 sm:max-w-[420px] md:p-6"
         >
-          <div className="max-w-4xl mx-auto bg-gray-950 text-white rounded-2xl p-5 md:p-6 shadow-2xl border border-white/10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <p className="text-sm text-white/80 flex-1">
+          <div className="rounded-[20px] border border-card-light-border bg-white p-5 text-ink shadow-[0_24px_60px_-20px_rgba(0,0,0,0.45)]">
+            <p className="text-[14px] leading-[1.5]">
               {t.text}{" "}
-              <a
-                href={localePath("/privacidad")}
-                className="underline underline-offset-4 text-white hover:text-white/70 transition-colors"
-              >
+              <a href={localePath("/privacidad")} className="font-semibold underline decoration-accent decoration-2 underline-offset-4">
                 {t.policy}
               </a>
               .
             </p>
-            <div className="flex gap-3 shrink-0">
-              <button
-                onClick={reject}
-                className="px-5 py-2 text-sm font-medium text-white/70 border border-white/20 rounded-lg hover:border-white/40 hover:text-white transition-all duration-300"
-              >
+            <div className="mt-4 flex items-center justify-end gap-2">
+              <button onClick={reject} className="min-h-[40px] px-4 text-[14px] font-medium hover:underline underline-offset-4">
                 {t.reject}
               </button>
-              <button
-                onClick={accept}
-                className="px-5 py-2 text-sm font-medium bg-white text-gray-950 rounded-lg hover:bg-gray-100 transition-all duration-300"
-              >
+              <button onClick={accept} className="min-h-[40px] rounded-lg bg-ink px-5 text-[14px] font-semibold text-white hover:bg-ink/85">
                 {t.accept}
               </button>
             </div>

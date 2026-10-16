@@ -1,41 +1,20 @@
 import { GuiaArticleLayout } from "@/components/GuiaArticleLayout";
+import { registroContent } from "@/content/guia/registro";
+import { toLocale } from "@/i18n/config";
 
-export const metadata = {
-  title: "Registro y onboarding — Guia Saru Apps",
-};
+type Props = { params: Promise<{ locale: string }> };
 
-export default function Page() {
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  return registroContent[toLocale(locale)].metadata;
+}
+
+export default async function Page({ params }: Props) {
+  const locale = toLocale((await params).locale);
+
   return (
-    <GuiaArticleLayout currentSlug="registro">
-      <h1>Registro y onboarding</h1>
-
-      <h2>Paso 1: Crear cuenta</h2>
-      <p>
-        El comerciante se registra en{" "}
-        <strong>app.saruapps.com/register</strong> con email, nombre y
-        contrasena. Despues del registro, se redirige al wizard de onboarding.
-      </p>
-
-      <h2>Paso 2: Onboarding (4 pasos)</h2>
-      <ol>
-        <li>
-          <strong>Tu negocio:</strong> Pais, facturacion mensual, pedidos por
-          mes, y si quiere publicar en App Store/Google Play
-        </li>
-        <li>
-          <strong>Objetivos:</strong> Que busca con la app (mas ventas,
-          fidelizar, push, presencia en stores, campanas, imagen de marca)
-        </li>
-        <li>
-          <strong>Plan recomendado:</strong> Basado en las respuestas, el sistema
-          recomienda el plan ideal. Todos los planes incluyen app nativa para
-          iOS y Android
-        </li>
-        <li>
-          <strong>Conectar Tiendanube:</strong> Vincula su tienda de Tiendanube
-          para sincronizar productos automaticamente
-        </li>
-      </ol>
+    <GuiaArticleLayout currentSlug="registro" locale={locale}>
+      {registroContent[locale].body}
     </GuiaArticleLayout>
   );
 }

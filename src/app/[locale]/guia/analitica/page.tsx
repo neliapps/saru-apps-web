@@ -1,27 +1,20 @@
 import { GuiaArticleLayout } from "@/components/GuiaArticleLayout";
+import { analiticaContent } from "@/content/guia/analitica";
+import { toLocale } from "@/i18n/config";
 
-export const metadata = {
-  title: "Analitica — Guia Saru Apps",
-};
+type Props = { params: Promise<{ locale: string }> };
 
-export default function Page() {
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  return analiticaContent[toLocale(locale)].metadata;
+}
+
+export default async function Page({ params }: Props) {
+  const locale = toLocale((await params).locale);
+
   return (
-    <GuiaArticleLayout currentSlug="analitica">
-      <h1>Analitica</h1>
-      <p>El dashboard de analitica muestra:</p>
-      <ul>
-        <li><strong>Visitas:</strong> paginas vistas en la app</li>
-        <li>
-          <strong>Productos mas vistos:</strong> ranking de productos por visitas
-        </li>
-        <li>
-          <strong>Busquedas:</strong> que buscan los clientes en la app
-        </li>
-        <li>
-          <strong>Eventos:</strong> agregar al carrito, ver producto, buscar
-        </li>
-        <li><strong>Periodo:</strong> filtro por rango de fechas</li>
-      </ul>
+    <GuiaArticleLayout currentSlug="analitica" locale={locale}>
+      {analiticaContent[locale].body}
     </GuiaArticleLayout>
   );
 }

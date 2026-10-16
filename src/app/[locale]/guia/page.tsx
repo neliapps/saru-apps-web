@@ -1,115 +1,58 @@
+import { ArrowRight } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { guiaContent } from "@/content/guia";
+import { localePath, toLocale } from "@/i18n/config";
 
-export const metadata = {
-  title: "Guia de la Plataforma — Saru Apps",
-  description:
-    "Todo lo que necesitas saber sobre Saru Apps: como funciona, planes, editor, notificaciones push, publicacion y mas.",
-};
+type Props = { params: Promise<{ locale: string }> };
 
-const articles = [
-  {
-    slug: "que-es",
-    title: "Que es Saru Apps",
-    description: "Conoce la plataforma, sus componentes y como funciona.",
-  },
-  {
-    slug: "planes",
-    title: "Planes y precios",
-    description: "Compara los planes Starter, Growth, Scale y Enterprise.",
-  },
-  {
-    slug: "registro",
-    title: "Registro y onboarding",
-    description: "Como crear tu cuenta y completar el proceso de configuracion inicial.",
-  },
-  {
-    slug: "tiendanube",
-    title: "Conectar Tiendanube",
-    description: "Vincula tu tienda para sincronizar productos automaticamente.",
-  },
-  {
-    slug: "configurar",
-    title: "Configurar la app",
-    description: "Define el nombre, logo y colores de tu app.",
-  },
-  {
-    slug: "editor",
-    title: "Editor de contenido",
-    description: "Usa el editor drag & drop para disenar las paginas de tu app.",
-  },
-  {
-    slug: "productos",
-    title: "Productos",
-    description: "Gestiona y visualiza los productos sincronizados desde Tiendanube.",
-  },
-  {
-    slug: "notificaciones",
-    title: "Notificaciones push",
-    description: "Envia mensajes directos a los clientes que tienen tu app instalada.",
-  },
-  {
-    slug: "publicar",
-    title: "Publicar la app",
-    description: "Publica tu app nativa en App Store y Google Play.",
-  },
-  {
-    slug: "panel",
-    title: "Panel en Tiendanube",
-    description: "Accede a Saru Apps desde el panel de administracion de Tiendanube.",
-  },
-  {
-    slug: "analitica",
-    title: "Analitica",
-    description: "Mide visitas, productos mas vistos, busquedas y eventos.",
-  },
-  {
-    slug: "app-nativa",
-    title: "App nativa",
-    description: "Detalles de la app React Native: pantallas, checkout y theming.",
-  },
-  {
-    slug: "seguridad",
-    title: "Seguridad y privacidad",
-    description: "Autenticacion, proteccion de datos y cumplimiento GDPR.",
-  },
-  {
-    slug: "faq",
-    title: "Preguntas frecuentes",
-    description: "Respuestas a las preguntas mas comunes sobre la plataforma.",
-  },
-];
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  return guiaContent[toLocale(locale)].metadata;
+}
 
-export default function Guia() {
+export default async function Guia({ params }: Props) {
+  const locale = toLocale((await params).locale);
+  const t = guiaContent[locale];
+
   return (
     <>
       <Navbar />
-      <main className="pt-32 pb-20">
-        <div className="max-w-4xl mx-auto px-6">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-950 mb-4">
-            Guia de la Plataforma
-          </h1>
-          <p className="text-lg text-gray-500 mb-12 max-w-2xl">
-            Todo lo que necesitas saber para crear, personalizar y publicar la
-            app movil de tu tienda Tiendanube con Saru Apps.
-          </p>
+      <main className="bg-white pb-24 pt-[120px] text-ink md:pt-[136px]">
+        <div className="mx-auto max-w-[1200px] px-6">
+          <header className="max-w-[720px]">
+            <h1 className="font-display text-[clamp(32px,3.6vw,44px)] font-extrabold leading-[1.1] tracking-[-0.035em]">
+              {t.title}
+            </h1>
+            <p className="mt-5 text-[19px] leading-[1.6]">
+              {t.subtitle}
+            </p>
+          </header>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {articles.map((article) => (
-              <a
-                key={article.slug}
-                href={`/guia/${article.slug}`}
-                className="group p-6 rounded-2xl border border-gray-100 bg-white hover:border-gray-200 hover:shadow-sm transition-all duration-200"
-              >
-                <h2 className="text-base font-semibold text-gray-950 group-hover:text-gray-700 transition-colors mb-1.5">
-                  {article.title}
-                </h2>
-                <p className="text-sm text-gray-500 leading-relaxed">
-                  {article.description}
-                </p>
-              </a>
+          <ul className="mt-14 grid border-t border-line-light md:grid-cols-2 md:gap-x-16">
+            {t.articles.map((article) => (
+              <li key={article.slug} className="border-b border-line-light">
+                <a
+                  href={localePath(locale, `/guia/${article.slug}`)}
+                  className="group flex items-start justify-between gap-6 py-6"
+                >
+                  <div>
+                    <h2 className="text-[19px] font-semibold leading-[1.35] tracking-[-0.01em] decoration-accent decoration-2 underline-offset-4 group-hover:underline">
+                      {article.title}
+                    </h2>
+                    <p className="mt-1.5 text-[16px] leading-[1.6]">
+                      {article.description}
+                    </p>
+                  </div>
+                  <ArrowRight
+                    className="mt-1 h-5 w-5 shrink-0 transition-transform duration-200 group-hover:translate-x-1"
+                    strokeWidth={1.75}
+                    aria-hidden="true"
+                  />
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </main>
       <Footer />

@@ -1,7 +1,5 @@
-import { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { AnimatedSection } from "@/components/AnimatedSection";
 import {
   BarChart3,
   Users,
@@ -13,332 +11,188 @@ import {
   Target,
   Search,
   Route,
-  ArrowRight,
   ArrowUpRight,
 } from "lucide-react";
+import { AnalyticsScreen } from "@/components/home/phone";
+import { Reveal, SectionHead } from "@/components/site/blocks";
+import { HeroPhone, ModuloCTA, ModuloHero } from "@/components/site/producto-modulos";
+import { productoAnalyticsContent } from "@/content/producto-analytics";
+import { toLocale } from "@/i18n/config";
 
-export const metadata: Metadata = {
-  title: "Analytics — Saru Apps",
-  description:
-    "Medi el rendimiento de tu app en tiempo real. Usuarios activos, conversiones, ingresos por push y mas metricas clave para tomar decisiones.",
-};
+const metricIcons = [Users, TrendingUp, DollarSign, Eye, Bell, ShoppingCart];
+const impactIcons = [Target, Search, Route];
 
-const metrics = [
-  {
-    icon: Users,
-    title: "Usuarios activos",
-    description:
-      "Cuantos usuarios usan tu app diaria, semanal y mensualmente. Identifica tendencias de crecimiento y retencion.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Tasa de conversion",
-    description:
-      "Que porcentaje de visitas se convierten en compras. Compara con tu web y medi el impacto real de la app.",
-  },
-  {
-    icon: DollarSign,
-    title: "Ingresos por canal",
-    description:
-      "Cuanto factura tu app vs. tu web. Ve el revenue generado por push notifications, engagement y trafico organico.",
-  },
-  {
-    icon: Eye,
-    title: "Productos mas vistos",
-    description:
-      "Cuales son los productos que mas ven tus usuarios en la app. Optimiza tu catalogo con datos reales.",
-  },
-  {
-    icon: Bell,
-    title: "Efectividad de push",
-    description:
-      "Tasa de apertura, clics y conversiones de cada notificacion push. Medi que mensajes funcionan mejor.",
-  },
-  {
-    icon: ShoppingCart,
-    title: "Comportamiento de compra",
-    description:
-      "Frecuencia de compra, ticket promedio, productos por pedido y patron de recompra de tus clientes.",
-  },
+const revenueBars = [
+  { app: 35, web: 25 },
+  { app: 45, web: 30 },
+  { app: 30, web: 28 },
+  { app: 55, web: 32 },
+  { app: 50, web: 25 },
+  { app: 65, web: 35 },
+  { app: 40, web: 30 },
+  { app: 70, web: 28 },
+  { app: 60, web: 33 },
+  { app: 55, web: 27 },
+  { app: 75, web: 35 },
+  { app: 80, web: 30 },
+  { app: 65, web: 28 },
+  { app: 90, web: 38 },
 ];
 
-const impactItems = [
-  {
-    icon: Target,
-    title: "Optimiza tus campanas push",
-    description:
-      "Analiza que horarios, mensajes y segmentos generan mejores resultados. Ajusta tus campanas en base a datos concretos, no suposiciones.",
-  },
-  {
-    icon: Search,
-    title: "Identifica tus productos estrella",
-    description:
-      "Descubri cuales son los productos mas vistos, mas agregados al carrito y mas comprados dentro de la app. Impulsa lo que funciona.",
-  },
-  {
-    icon: Route,
-    title: "Entende el recorrido del usuario",
-    description:
-      "Visualiza como navegan tus clientes dentro de la app. Desde la home hasta el checkout, identifica donde se pierden y donde convierten.",
-  },
-];
+const panel = "rounded-[20px] border border-card-dark-border bg-card-dark";
 
-export default function AnalyticsPage() {
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  return productoAnalyticsContent[toLocale(locale)].metadata;
+}
+
+export default async function AnalyticsPage({ params }: Props) {
+  const locale = toLocale((await params).locale);
+  const t = productoAnalyticsContent[locale];
+  const d = t.dashboard;
+  const metrics = t.metrics.items.map((item, i) => ({ ...item, icon: metricIcons[i] }));
+  const impactItems = t.impact.items.map((item, i) => ({ ...item, icon: impactIcons[i] }));
+
   return (
     <>
-      <Navbar />
+      <Navbar variant="dark" />
 
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(120,119,198,0.08),transparent)]" />
-        <div className="relative max-w-[1280px] mx-auto px-6 pt-40 pb-24 md:pt-48 md:pb-32">
-          <div className="text-center max-w-3xl mx-auto">
-            <AnimatedSection>
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-[13px] font-medium border border-gray-200/60 mb-8">
-                <BarChart3 className="w-3.5 h-3.5" />
-                Producto
-              </span>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.1}>
-              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl leading-[1.08] tracking-[-0.03em] font-bold text-gray-950">
-                Decisiones basadas
-                <br />
-                en datos reales
-              </h1>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.2}>
-              <p className="mt-6 md:mt-8 text-base md:text-lg text-gray-500 max-w-xl mx-auto leading-relaxed">
-                Medi el rendimiento de tu app en tiempo real. Usuarios
-                activos, conversiones, ingresos y mas metricas clave para
-                tomar mejores decisiones de negocio.
-              </p>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.3}>
-              <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a
-                  href="https://app.saruapps.com/register"
-                  className="group relative inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-gray-950/25"
-                >
-                  <span className="relative z-10">Empezar gratis</span>
-                  <ArrowRight className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-gray-800 to-gray-950 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </a>
-                <a
-                  href="https://calendly.com/saruapps/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 text-gray-600 text-[15px] font-medium rounded-lg border border-gray-200 hover:border-gray-300 hover:text-gray-900 transition-all duration-300"
-                >
-                  Ver como funciona
-                </a>
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
+      <ModuloHero
+        label={t.hero.label}
+        title={t.hero.title}
+        accent={t.hero.accent}
+        subtitle={t.hero.subtitle}
+        primary={{ label: t.hero.primary, href: "https://app.saruapps.com/register" }}
+        secondary={{ label: t.hero.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
+      >
+        <HeroPhone tilt={-3}>
+          <AnalyticsScreen />
+        </HeroPhone>
+      </ModuloHero>
 
       {/* Key metrics */}
-      <section className="py-32 bg-white">
-        <div className="max-w-[1280px] mx-auto px-6">
-          <AnimatedSection className="text-center max-w-2xl mx-auto mb-20">
-            <span className="text-sm text-gray-400 uppercase tracking-widest font-medium">
-              Metricas clave
-            </span>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight text-gray-950">
-              Todo lo que necesitas
-              <br />
-              medir, en un solo lugar
-            </h2>
-            <p className="mt-6 text-lg text-gray-500">
-              Metricas claras, accionables y en tiempo real para entender como
-              rinde tu app y donde mejorar.
-            </p>
-          </AnimatedSection>
+      <section className="section-light grain py-28 md:py-40">
+        <div className="relative mx-auto max-w-[1280px] px-6">
+          <SectionHead
+            label={t.metrics.label}
+            title={t.metrics.title}
+            italic={t.metrics.italic}
+            subtitle={t.metrics.subtitle}
+          />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mt-16 border-b border-line-light md:mt-24">
             {metrics.map((metric, i) => (
-              <AnimatedSection key={metric.title} delay={i * 0.08}>
-                <div className="group relative h-full bg-white rounded-2xl border border-gray-100 p-6 hover:border-gray-200 hover:shadow-xl hover:shadow-gray-100/80 transition-all duration-500">
-                  <div className="mb-5">
-                    <div className="w-10 h-10 rounded-xl bg-gray-950 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                      <metric.icon className="w-5 h-5 text-white" />
-                    </div>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-950 mb-2 font-display">
+              <Reveal key={metric.title} delay={(i % 3) * 0.07}>
+                <div className="grid gap-4 border-t border-line-light py-10 md:grid-cols-12 md:items-baseline md:gap-12">
+                  <h3 className="font-display text-[clamp(30px,3.6vw,52px)] font-extrabold leading-[1] tracking-[-0.045em] md:col-span-7">
                     {metric.title}
                   </h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">
-                    {metric.description}
-                  </p>
+                  <p className="max-w-md text-[17px] leading-[1.6] md:col-span-5">{metric.description}</p>
                 </div>
-              </AnimatedSection>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* Dashboard preview */}
-      <section className="py-32 bg-gray-950 text-white relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-white/[0.02] rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-white/[0.015] rounded-full blur-3xl" />
-        </div>
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div
-            className="h-full w-full"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
-              backgroundSize: "60px 60px",
-            }}
+      <section className="section-dark grain overflow-x-clip py-28 md:py-40">
+        <div className="glow left-1/2 top-[45%] -translate-x-1/2" aria-hidden="true" />
+        <div className="relative mx-auto max-w-[1280px] px-6">
+          <SectionHead
+            label={d.label}
+            title={d.title}
+            subtitle={d.subtitle}
+            align="center"
           />
-        </div>
-
-        <div className="relative max-w-[1280px] mx-auto px-6">
-          <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-sm text-white/60 uppercase tracking-widest font-medium">
-              Dashboard
-            </span>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight text-white">
-              Tu panel de analytics
-            </h2>
-            <p className="mt-6 text-lg text-white/70">
-              Un dashboard completo con todas las metricas de tu app,
-              actualizado en tiempo real.
-            </p>
-          </AnimatedSection>
 
           {/* Dashboard mockup */}
-          <AnimatedSection delay={0.15}>
-            <div className="max-w-5xl mx-auto rounded-2xl border border-white/10 bg-white/[0.03] p-4 md:p-6">
+          <Reveal delay={0.07} className="mt-16 md:mt-24">
+            <div className="mx-auto max-w-5xl rounded-[28px] border border-card-dark-border bg-card-dark p-4 shadow-[inset_0_1px_0_rgba(255,255,255,.18)] backdrop-blur-xl md:p-6">
               {/* Top nav bar */}
-              <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/[0.06]">
+              <div className="mb-6 flex items-center justify-between border-b border-line-dark pb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-7 h-7 rounded-lg bg-white/10 flex items-center justify-center">
-                    <BarChart3 className="w-4 h-4 text-white/60" />
-                  </div>
-                  <span className="text-sm font-semibold text-white/80">Analytics</span>
+                  <BarChart3 className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />
+                  <span className="text-[15px] font-semibold">{d.appTitle}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[11px] text-white/40 hidden sm:inline">Periodo:</span>
-                  <div className="px-3 py-1 rounded-md bg-white/[0.06] border border-white/[0.08] text-[11px] text-white/60">
-                    Ultimos 30 dias
+                  <span className="hidden text-[12px] font-medium sm:inline">{d.periodLabel}</span>
+                  <div className="rounded-lg border border-line-dark px-3 py-1 text-[12px] font-semibold">
+                    {d.period}
                   </div>
                 </div>
               </div>
 
               {/* Stats row */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-                {[
-                  { label: "Usuarios activos", value: "3,847", change: "+18%", up: true },
-                  { label: "Conversion", value: "4.2%", change: "+0.8%", up: true },
-                  { label: "Ingresos app", value: "$142,500", change: "+32%", up: true },
-                  { label: "Ticket promedio", value: "$8,420", change: "+5%", up: true },
-                ].map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="rounded-xl bg-white/[0.04] border border-white/[0.06] p-4"
-                  >
-                    <p className="text-[10px] text-white/40 uppercase tracking-wider font-medium">
-                      {stat.label}
-                    </p>
-                    <p className="text-xl md:text-2xl font-bold font-display text-white mt-1">
+              <div className="mb-4 grid grid-cols-2 gap-3 md:grid-cols-4">
+                {d.stats.map((stat) => (
+                  <div key={stat.label} className={`${panel} p-4`}>
+                    <p className="text-[12px] font-semibold">{stat.label}</p>
+                    <p className="mt-1 font-display text-[clamp(20px,2.2vw,30px)] font-extrabold tracking-[-0.04em]">
                       {stat.value}
                     </p>
-                    <div className="flex items-center gap-1 mt-1">
-                      <ArrowUpRight className="w-3 h-3 text-green-400/80" />
-                      <span className="text-[11px] text-green-400/80 font-medium">
-                        {stat.change}
-                      </span>
-                      <span className="text-[10px] text-white/30">vs mes anterior</span>
+                    <div className="mt-1 flex flex-wrap items-center gap-1">
+                      <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2} aria-hidden="true" />
+                      <span className="text-[12px] font-bold">{stat.change}</span>
+                      <span className="text-[11px]">{d.vsPrevious}</span>
                     </div>
                   </div>
                 ))}
               </div>
 
               {/* Charts area */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
                 {/* Main chart */}
-                <div className="md:col-span-2 rounded-xl bg-white/[0.04] border border-white/[0.06] p-5">
-                  <div className="flex justify-between items-center mb-4">
-                    <p className="text-xs font-semibold text-white/80">Ingresos por dia</p>
+                <div className={`${panel} p-5 md:col-span-2`}>
+                  <div className="mb-4 flex items-center justify-between">
+                    <p className="text-[13px] font-semibold">{d.revenueTitle}</p>
                     <div className="flex items-center gap-3">
                       <div className="flex items-center gap-1.5">
-                        <div className="w-2 h-2 rounded-full bg-white" />
-                        <span className="text-[10px] text-white/40">App</span>
+                        <span className="h-2 w-2 rounded-full bg-white" aria-hidden="true" />
+                        <span className="text-[11px] font-medium">{d.legendApp}</span>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <div className="w-2 h-2 rounded-full bg-white/30" />
-                        <span className="text-[10px] text-white/40">Web</span>
+                        <span className="h-2 w-2 rounded-full bg-white/30" aria-hidden="true" />
+                        <span className="text-[11px] font-medium">{d.legendWeb}</span>
                       </div>
                     </div>
                   </div>
                   {/* Bar chart */}
-                  <div className="flex items-end gap-[3px] md:gap-1 h-32 md:h-40">
-                    {[
-                      { app: 35, web: 25 },
-                      { app: 45, web: 30 },
-                      { app: 30, web: 28 },
-                      { app: 55, web: 32 },
-                      { app: 50, web: 25 },
-                      { app: 65, web: 35 },
-                      { app: 40, web: 30 },
-                      { app: 70, web: 28 },
-                      { app: 60, web: 33 },
-                      { app: 55, web: 27 },
-                      { app: 75, web: 35 },
-                      { app: 80, web: 30 },
-                      { app: 65, web: 28 },
-                      { app: 90, web: 38 },
-                    ].map((bar, i) => (
-                      <div key={i} className="flex-1 flex flex-col items-center gap-[2px]">
+                  <div className="flex h-32 items-end gap-[3px] md:h-40 md:gap-1" aria-hidden="true">
+                    {revenueBars.map((bar, i) => (
+                      <div key={i} className="flex h-full flex-1 flex-col justify-end gap-[2px]">
                         <div
-                          className="w-full rounded-sm bg-white/90"
-                          style={{ height: `${bar.app}%` }}
+                          className={`w-full rounded-[3px] ${i === revenueBars.length - 1 ? "bg-accent" : "bg-white"}`}
+                          style={{ height: `${bar.app * 0.62}%` }}
                         />
-                        <div
-                          className="w-full rounded-sm bg-white/20"
-                          style={{ height: `${bar.web}%` }}
-                        />
+                        <div className="w-full rounded-[3px] bg-white/25" style={{ height: `${bar.web * 0.62}%` }} />
                       </div>
                     ))}
                   </div>
-                  <div className="flex justify-between mt-2">
-                    <span className="text-[9px] text-white/25">1 Sep</span>
-                    <span className="text-[9px] text-white/25">7 Sep</span>
-                    <span className="text-[9px] text-white/25">14 Sep</span>
+                  <div className="mt-2 flex justify-between text-[10px] font-medium">
+                    {d.dates.map((date) => (
+                      <span key={date}>{date}</span>
+                    ))}
                   </div>
                 </div>
 
                 {/* Side panels */}
                 <div className="space-y-4">
                   {/* Top products */}
-                  <div className="rounded-xl bg-white/[0.04] border border-white/[0.06] p-4">
-                    <p className="text-xs font-semibold text-white/80 mb-3">
-                      Productos top
-                    </p>
+                  <div className={`${panel} p-4`}>
+                    <p className="mb-3 text-[13px] font-semibold">{d.topProductsTitle}</p>
                     <div className="space-y-2.5">
-                      {[
-                        { name: "Blazer Oversize", views: "847", pct: 85 },
-                        { name: "Campera Puffer", views: "623", pct: 65 },
-                        { name: "Hoodie Essential", views: "412", pct: 45 },
-                        { name: "Jean Relaxed", views: "298", pct: 30 },
-                      ].map((product, i) => (
+                      {d.topProducts.map((product) => (
                         <div key={product.name}>
-                          <div className="flex justify-between items-center mb-1">
-                            <span className="text-[11px] text-white/60">{product.name}</span>
-                            <span className="text-[10px] text-white/40">
-                              {product.views} vistas
-                            </span>
+                          <div className="mb-1 flex items-center justify-between">
+                            <span className="text-[12px] font-medium">{product.name}</span>
+                            <span className="text-[11px]">{product.views} {d.views}</span>
                           </div>
-                          <div className="w-full bg-white/[0.06] rounded-full h-1">
-                            <div
-                              className="bg-white/60 rounded-full h-1"
-                              style={{ width: `${product.pct}%` }}
-                            />
+                          <div className="h-1 w-full rounded-full bg-white/10" aria-hidden="true">
+                            <div className="h-1 rounded-full bg-white" style={{ width: `${product.pct}%` }} />
                           </div>
                         </div>
                       ))}
@@ -346,25 +200,13 @@ export default function AnalyticsPage() {
                   </div>
 
                   {/* Push effectiveness */}
-                  <div className="rounded-xl bg-white/[0.04] border border-white/[0.06] p-4">
-                    <p className="text-xs font-semibold text-white/80 mb-3">
-                      Push notifications
-                    </p>
+                  <div className={`${panel} p-4`}>
+                    <p className="mb-3 text-[13px] font-semibold">{d.pushTitle}</p>
                     <div className="grid grid-cols-2 gap-2">
-                      {[
-                        { label: "Enviados", value: "12,430" },
-                        { label: "Apertura", value: "38%" },
-                        { label: "Clics", value: "2,841" },
-                        { label: "Ventas", value: "$24.8k" },
-                      ].map((stat) => (
-                        <div
-                          key={stat.label}
-                          className="rounded-lg bg-white/[0.04] p-2 text-center"
-                        >
-                          <p className="text-sm font-bold text-white/80 font-display">
-                            {stat.value}
-                          </p>
-                          <p className="text-[9px] text-white/30 mt-0.5">{stat.label}</p>
+                      {d.pushStats.map((stat) => (
+                        <div key={stat.label} className="rounded-[12px] border border-line-dark p-2 text-center">
+                          <p className="font-display text-[15px] font-extrabold tracking-[-0.02em]">{stat.value}</p>
+                          <p className="mt-0.5 text-[10px] font-medium">{stat.label}</p>
                         </div>
                       ))}
                     </div>
@@ -372,103 +214,44 @@ export default function AnalyticsPage() {
                 </div>
               </div>
             </div>
-          </AnimatedSection>
+          </Reveal>
         </div>
       </section>
 
       {/* Impact section */}
-      <section className="py-32 bg-white">
-        <div className="max-w-[1280px] mx-auto px-6">
-          <AnimatedSection className="text-center max-w-2xl mx-auto mb-20">
-            <span className="text-sm text-gray-400 uppercase tracking-widest font-medium">
-              Impacto
-            </span>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight text-gray-950">
-              Medi el impacto
-              <br />
-              de cada accion
-            </h2>
-            <p className="mt-6 text-lg text-gray-500">
-              Cada decision informada con datos reales. Deja de adivinar y
-              empeza a optimizar con metricas concretas.
-            </p>
-          </AnimatedSection>
+      <section className="section-light grain py-28 md:py-40">
+        <div className="relative mx-auto max-w-[1280px] px-6">
+          <SectionHead
+            label={t.impact.label}
+            title={t.impact.title}
+            italic={t.impact.italic}
+            subtitle={t.impact.subtitle}
+          />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="mt-16 border-b border-line-light md:mt-24">
             {impactItems.map((item, i) => (
-              <AnimatedSection key={item.title} delay={i * 0.1}>
-                <div className="h-full">
-                  <div className="w-14 h-14 rounded-2xl bg-gray-950 flex items-center justify-center mb-6">
-                    <item.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-950 mb-3 font-display">
+              <Reveal key={item.title} delay={i * 0.07}>
+                <div className="grid gap-4 border-t border-line-light py-10 md:grid-cols-12 md:items-start md:gap-12">
+                  <h3 className="flex items-center gap-4 font-display text-[clamp(22px,2vw,30px)] font-bold leading-[1.15] tracking-[-0.03em] md:col-span-5">
+                    <item.icon className="h-7 w-7 shrink-0" strokeWidth={1.75} aria-hidden="true" />
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">
-                    {item.description}
-                  </p>
+                  <p className="max-w-xl text-[17px] leading-[1.6] md:col-span-7">{item.description}</p>
                 </div>
-              </AnimatedSection>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-32 bg-white">
-        <div className="max-w-[1280px] mx-auto px-6">
-          <AnimatedSection>
-            <div className="relative overflow-hidden rounded-3xl bg-gray-950 px-8 py-20 md:px-20 md:py-28">
-              <div className="absolute inset-0">
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/[0.03] rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
-                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/[0.02] rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
-              </div>
-              <div className="absolute inset-0 opacity-[0.03]">
-                <div
-                  className="h-full w-full"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)",
-                    backgroundSize: "40px 40px",
-                  }}
-                />
-              </div>
-
-              <div className="relative text-center max-w-2xl mx-auto">
-                <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-8">
-                  <BarChart3 className="w-8 h-8 text-white" />
-                </div>
-                <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-white">
-                  Empeza a medir
-                  <br />
-                  lo que importa
-                </h2>
-                <p className="mt-6 text-lg text-white/70 max-w-lg mx-auto">
-                  Crea tu app y accede a metricas en tiempo real desde el
-                  primer dia. Datos claros para decisiones inteligentes.
-                </p>
-                <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <a
-                    href="https://app.saruapps.com/register"
-                    className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-950 text-base font-medium rounded-lg hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10"
-                  >
-                    Empezar gratis
-                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </a>
-                  <a
-                    href="https://calendly.com/saruapps/30min"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-4 text-white/70 text-base font-medium rounded-lg border border-white/20 hover:border-white/40 hover:text-white transition-all duration-300"
-                  >
-                    Agendar una demo
-                  </a>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      <ModuloCTA
+        title={t.cta.title}
+        accent={t.cta.accent}
+        subtitle={t.cta.subtitle}
+        primary={{ label: t.cta.primary, href: "https://app.saruapps.com/register" }}
+        secondary={{ label: t.cta.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
+      />
 
       <Footer />
     </>

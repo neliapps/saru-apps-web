@@ -1,30 +1,20 @@
 import { GuiaArticleLayout } from "@/components/GuiaArticleLayout";
+import { productosContent } from "@/content/guia/productos";
+import { toLocale } from "@/i18n/config";
 
-export const metadata = {
-  title: "Productos — Guia Saru Apps",
-};
+type Props = { params: Promise<{ locale: string }> };
 
-export default function Page() {
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  return productosContent[toLocale(locale)].metadata;
+}
+
+export default async function Page({ params }: Props) {
+  const locale = toLocale((await params).locale);
+
   return (
-    <GuiaArticleLayout currentSlug="productos">
-      <h1>Productos</h1>
-      <p>
-        La seccion de productos muestra todos los productos sincronizados desde
-        Tiendanube:
-      </p>
-      <ul>
-        <li>Lista con imagenes, precios y stock</li>
-        <li>Busqueda y filtro por categoria</li>
-        <li>
-          Boton &quot;Sincronizar&quot; para forzar una sincronizacion manual
-        </li>
-        <li>
-          Los productos son de solo lectura (se gestionan desde Tiendanube)
-        </li>
-        <li>
-          Los productos inactivos en Tiendanube no aparecen en la app
-        </li>
-      </ul>
+    <GuiaArticleLayout currentSlug="productos" locale={locale}>
+      {productosContent[locale].body}
     </GuiaArticleLayout>
   );
 }

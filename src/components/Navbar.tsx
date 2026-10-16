@@ -25,7 +25,7 @@ type DropdownItem = {
   label: string;
   description: string;
   href: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
 };
 
 type NavItem = {
@@ -105,7 +105,7 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
               ? "bg-ink/80 backdrop-blur-xl border-b border-line-dark"
               : "bg-ink"
             : scrolled
-              ? "bg-white border-b border-gray-200 shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+              ? "bg-white/85 backdrop-blur-xl border-b border-line-light"
               : "bg-white"
         }`}
       >
@@ -143,8 +143,8 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
                         ? "text-white bg-white/10"
                         : "text-white hover:bg-white/10"
                       : activeDropdown === item.label
-                        ? "text-gray-950 bg-gray-50"
-                        : "text-gray-600 hover:text-gray-950 hover:bg-gray-50"
+                        ? "text-ink bg-card-light"
+                        : "text-ink hover:bg-card-light"
                   }`}
                 >
                   {item.label}
@@ -164,22 +164,20 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 8, scale: 0.98 }}
                       transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[340px] bg-white rounded-2xl border border-gray-200 shadow-xl shadow-gray-200/50 p-2 z-50"
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[340px] bg-white text-ink rounded-[20px] border border-card-light-border shadow-[0_24px_60px_-20px_rgba(0,0,0,0.35)] p-2 z-50"
                     >
                       {item.dropdown.map((sub) => (
                         <a
                           key={sub.href}
                           href={sub.href}
-                          className="flex items-start gap-3 px-3 py-3 rounded-xl hover:bg-gray-50 transition-colors duration-200 group"
+                          className="flex items-start gap-3 px-3 py-3 rounded-[14px] hover:bg-card-light transition-colors duration-200 group"
                         >
-                          <div className="w-9 h-9 rounded-lg bg-gray-100 group-hover:bg-gray-950 flex items-center justify-center shrink-0 transition-colors duration-300">
-                            <sub.icon className="w-[18px] h-[18px] text-gray-500 group-hover:text-white transition-colors duration-300" />
-                          </div>
+                          <sub.icon className="w-5 h-5 mt-0.5 shrink-0 transition-colors duration-300 group-hover:text-accent" strokeWidth={1.75} />
                           <div>
-                            <p className="text-sm font-medium text-gray-900">
+                            <p className="text-[14px] font-semibold">
                               {sub.label}
                             </p>
-                            <p className="text-xs text-gray-500 mt-0.5">
+                            <p className="text-[13px] mt-0.5">
                               {sub.description}
                             </p>
                           </div>
@@ -197,7 +195,7 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
             <a
               href={switchUrl}
               className={`text-[13px] font-medium transition-colors duration-300 px-2 py-1 rounded border ${
-                dark ? "text-white border-line-dark hover:border-white/40" : "text-gray-500 hover:text-gray-950 border-gray-200"
+                dark ? "text-white border-line-dark hover:border-white/40" : "text-ink border-line-light hover:border-ink/40"
               }`}
             >
               {locale === "es" ? "PT" : "ES"}
@@ -205,7 +203,7 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
             <a
               href="https://app.saruapps.com/login"
               className={`text-[15px] font-medium px-5 py-2.5 rounded-lg border transition-all duration-300 ${
-                dark ? "text-white border-line-dark hover:border-white/40" : "text-gray-600 hover:text-gray-950 border-gray-200 hover:border-gray-300"
+                dark ? "text-white border-line-dark hover:border-white/40" : "text-ink border-line-light hover:border-ink/40"
               }`}
             >
               {t.iniciarSesion}
@@ -213,7 +211,7 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
             <a
               href="https://app.saruapps.com/register"
               className={`text-[15px] font-medium px-5 py-2.5 rounded-lg transition-all duration-300 ${
-                dark ? "text-ink bg-white hover:bg-white/90" : "text-white bg-gray-950 hover:bg-gray-800 hover:shadow-lg hover:shadow-gray-950/20"
+                dark ? "text-ink bg-white hover:bg-white/90" : "text-white bg-ink hover:bg-ink/85"
               }`}
             >
               {t.comenzarGratis}
@@ -223,7 +221,7 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className={`lg:hidden p-2 ${dark ? "text-white" : "text-gray-900"}`}
+            className={`lg:hidden p-2 ${dark ? "text-white" : "text-ink"}`}
             aria-label="Menu"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -239,7 +237,7 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-40 bg-white pt-[72px] overflow-y-auto"
+            className="fixed inset-0 z-40 bg-white text-ink pt-[72px] overflow-y-auto"
           >
             <nav className="flex flex-col px-6 py-6 gap-1">
               {navItems.map((item) => (
@@ -252,11 +250,11 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
                             mobileExpanded === item.label ? null : item.label
                           )
                         }
-                        className="w-full flex items-center justify-between text-lg font-medium text-gray-900 py-3 border-b border-gray-100"
+                        className="w-full flex items-center justify-between text-lg font-semibold py-3 border-b border-line-light"
                       >
                         {item.label}
                         <ChevronDown
-                          className={`w-5 h-5 text-gray-500 transition-transform duration-200 ${
+                          className={`w-5 h-5 transition-transform duration-200 ${
                             mobileExpanded === item.label ? "rotate-180" : ""
                           }`}
                         />
@@ -276,14 +274,14 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
                                   key={sub.href}
                                   href={sub.href}
                                   onClick={() => setMobileOpen(false)}
-                                  className="flex items-center gap-3 py-2.5 px-2 rounded-lg hover:bg-gray-50"
+                                  className="flex items-center gap-3 py-2.5 px-2 rounded-lg hover:bg-card-light"
                                 >
-                                  <sub.icon className="w-4 h-4 text-gray-500 shrink-0" />
+                                  <sub.icon className="w-5 h-5 shrink-0" strokeWidth={1.75} />
                                   <div>
-                                    <span className="text-[15px] text-gray-700 font-medium">
+                                    <span className="text-[15px] font-semibold">
                                       {sub.label}
                                     </span>
-                                    <p className="text-xs text-gray-500">
+                                    <p className="text-[13px]">
                                       {sub.description}
                                     </p>
                                   </div>
@@ -298,7 +296,7 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
                     <a
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className="block text-lg font-medium text-gray-900 py-3 border-b border-gray-100"
+                      className="block text-lg font-semibold py-3 border-b border-line-light"
                     >
                       {item.label}
                     </a>
@@ -308,19 +306,19 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
               <div className="flex flex-col gap-3 mt-6">
                 <a
                   href={switchUrl}
-                  className="text-center text-base font-medium text-gray-500 py-2 border border-gray-200 rounded-lg"
+                  className="text-center text-base font-medium py-2 border border-line-light rounded-lg"
                 >
                   {locale === "es" ? "Português (BR)" : "Español"}
                 </a>
                 <a
                   href="https://app.saruapps.com/login"
-                  className="text-center text-base font-medium text-gray-900 py-3 rounded-lg border border-gray-200"
+                  className="text-center text-base font-medium py-3 rounded-lg border border-line-light"
                 >
                   {t.iniciarSesion}
                 </a>
                 <a
                   href="https://app.saruapps.com/register"
-                  className="text-center text-base font-medium text-white bg-gray-950 py-3.5 rounded-lg"
+                  className="text-center text-base font-semibold text-white bg-ink py-3.5 rounded-lg"
                 >
                   {t.comenzarGratis}
                 </a>

@@ -1,422 +1,170 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { AnimatedSection } from "@/components/AnimatedSection";
-import {
-  Bell,
-  Zap,
-  ShoppingCart,
-  Sparkles,
-  Calendar,
-  Users,
-  ArrowLeft,
-  Check,
-} from "lucide-react";
+import { Zap, ShoppingCart, Sparkles, Calendar, Users, Check } from "lucide-react";
+import { LockScreen, PushCard } from "@/components/home/phone";
+import { ArrowLink, Label } from "@/components/home/primitives";
+import { Reveal, SectionHead } from "@/components/site/blocks";
+import { HeroPhone, ModuloCTA, ModuloHero } from "@/components/site/producto-modulos";
+import { productoPushContent } from "@/content/producto-push";
+import { localePath, toLocale } from "@/i18n/config";
 
-export const metadata = {
-  title: "Notificaciones Push — Saru Apps",
-  description:
-    "Envia notificaciones push a tus clientes desde tu app. Ofertas, carritos abandonados, nuevos productos y campanas programadas. Hasta 7x mas engagement que el email.",
-};
+const typeIcons = [Zap, ShoppingCart, Sparkles, Calendar, Users];
 
-const notificationTypes = [
-  {
-    icon: Zap,
-    title: "Ofertas y promociones flash",
-    description:
-      "Lanza ofertas relampago y llega al celular de tus clientes al instante. Ideal para liquidaciones y fechas especiales.",
-    example: {
-      title: "Oferta flash!",
-      body: "50% en toda la tienda. Solo por 24 horas.",
-      time: "Ahora",
-    },
-  },
-  {
-    icon: ShoppingCart,
-    title: "Carrito abandonado",
-    description:
-      "Notificaciones automaticas cuando un cliente deja productos en el carrito. Recupera ventas que de otra forma se perderian.",
-    example: {
-      title: "Olvidaste algo",
-      body: "Tu carrito te espera con envio gratis.",
-      time: "2h",
-    },
-    tag: "Automatico",
-  },
-  {
-    icon: Sparkles,
-    title: "Nuevos productos / colecciones",
-    description:
-      "Notifica a tus clientes cada vez que agregas productos nuevos o lanzas una coleccion. Genera trafico instantaneo.",
-    example: {
-      title: "Nueva coleccion",
-      body: "Llego lo nuevo de temporada. Se la primera en verlo.",
-      time: "5h",
-    },
-  },
-  {
-    icon: Calendar,
-    title: "Campanas programadas",
-    description:
-      "Programa tus notificaciones para el dia y la hora ideal. Planea con anticipacion tus campanas de marketing.",
-    example: {
-      title: "Hot Sale empieza manana",
-      body: "Descuentos de hasta 60%. Activa las alertas.",
-      time: "Programado",
-    },
-  },
-  {
-    icon: Users,
-    title: "Segmentacion por comportamiento",
-    description:
-      "Envia notificaciones a segmentos especificos: compradores frecuentes, inactivos, por ubicacion o por historial.",
-    example: {
-      title: "Exclusivo para VIPs",
-      body: "Acceso anticipado a la nueva coleccion.",
-      time: "Segmentado",
-    },
-  },
-];
+type Props = { params: Promise<{ locale: string }> };
 
-const volumeByPlan = [
-  {
-    plan: "Starter",
-    volume: "1.000 / mes",
-    highlighted: false,
-  },
-  {
-    plan: "Growth",
-    volume: "10.000 / mes",
-    highlighted: true,
-  },
-  {
-    plan: "Scale",
-    volume: "50.000 / mes",
-    highlighted: false,
-  },
-  {
-    plan: "Enterprise",
-    volume: "Ilimitadas",
-    highlighted: false,
-  },
-];
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  return productoPushContent[toLocale(locale)].metadata;
+}
 
-export default function NotificacionesPushPage() {
+export default async function NotificacionesPushPage({ params }: Props) {
+  const locale = toLocale((await params).locale);
+  const t = productoPushContent[locale];
+  const notificationTypes = t.types.items.map((item, i) => ({ ...item, icon: typeIcons[i] }));
+
   return (
     <>
-      <Navbar />
+      <Navbar variant="dark" />
 
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(120,119,198,0.08),transparent)]" />
-        <div className="relative max-w-[1280px] mx-auto px-6 pt-40 pb-24 md:pt-48 md:pb-32">
-          <div className="text-center max-w-3xl mx-auto">
-            <AnimatedSection>
-              <a
-                href="/producto"
-                className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-600 transition-colors duration-200 mb-6"
-              >
-                <ArrowLeft className="w-3.5 h-3.5" />
-                Producto
-              </a>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.05}>
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-[13px] font-medium border border-gray-200/60 mb-8">
-                <Bell className="w-3.5 h-3.5" />
-                Notificaciones Push
-              </span>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.1}>
-              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl leading-[1.08] tracking-[-0.03em] font-bold text-gray-950">
-                Llega directo al celular
-                <br />
-                de tus clientes
-              </h1>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.2}>
-              <p className="mt-6 md:mt-8 text-base md:text-lg text-gray-500 max-w-xl mx-auto leading-relaxed">
-                Las notificaciones push aparecen en la pantalla de bloqueo de
-                tus clientes. Sin filtros de spam, sin algoritmos. Comunicacion
-                directa con tu audiencia.
-              </p>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
+      <ModuloHero
+        back={{ label: t.back, href: localePath(locale, "/producto") }}
+        label={t.hero.label}
+        title={t.hero.title}
+        accent={t.hero.accent}
+        subtitle={t.hero.subtitle}
+      >
+        <HeroPhone dark tilt={3}>
+          <LockScreen />
+        </HeroPhone>
+      </ModuloHero>
 
       {/* Types of Notifications */}
-      <section className="py-24 bg-white">
-        <div className="max-w-[1280px] mx-auto px-6">
-          <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-sm text-gray-400 uppercase tracking-widest font-medium">
-              Tipos de notificacion
-            </span>
-            <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold tracking-tight text-gray-950">
-              Un mensaje para cada momento
-            </h2>
-            <p className="mt-4 text-lg text-gray-500">
-              Desde ofertas instantaneas hasta flujos automaticos. Cada
-              notificacion puede impulsar una venta.
-            </p>
-          </AnimatedSection>
+      <section className="section-light grain py-28 md:py-40">
+        <div className="relative mx-auto max-w-[1280px] px-6">
+          <SectionHead
+            label={t.types.label}
+            title={t.types.title}
+            subtitle={t.types.subtitle}
+          />
 
-          <div className="space-y-6">
+          <div className="mt-16 border-b border-line-light md:mt-24">
             {notificationTypes.map((type, i) => (
-              <AnimatedSection key={type.title} delay={i * 0.08}>
-                <div className="bg-white rounded-2xl border border-gray-100 p-6 md:p-8 hover:border-gray-200 hover:shadow-lg hover:shadow-gray-100/80 transition-all duration-500">
-                  <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-10 items-center">
-                    {/* Content */}
-                    <div className="lg:col-span-3">
-                      <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-gray-950 flex items-center justify-center shrink-0">
-                          <type.icon className="w-5 h-5 text-white" />
-                        </div>
-                        <div>
-                          <div className="flex items-center gap-2 mb-1.5">
-                            <h3 className="text-lg font-bold text-gray-950 font-display">
-                              {type.title}
-                            </h3>
-                            {type.tag && (
-                              <span className="inline-flex items-center px-2.5 py-0.5 rounded-lg bg-green-50 text-green-700 text-[11px] font-medium">
-                                {type.tag}
-                              </span>
-                            )}
-                          </div>
-                          <p className="text-sm text-gray-500 leading-relaxed">
-                            {type.description}
-                          </p>
-                        </div>
-                      </div>
+              <Reveal key={type.title} delay={i * 0.07}>
+                <div className="grid items-center gap-8 border-t border-line-light py-10 md:py-12 lg:grid-cols-12 lg:gap-12">
+                  <div className="flex items-start gap-5 lg:col-span-7">
+                    <type.icon className="mt-1 h-7 w-7 shrink-0" strokeWidth={1.75} aria-hidden="true" />
+                    <div>
+                      <h3 className="font-display text-[clamp(22px,2vw,30px)] font-bold leading-[1.15] tracking-[-0.03em]">
+                        {type.title}
+                      </h3>
+                      {type.tag && (
+                        <p className="mt-2 flex items-center gap-2 text-[15px] font-semibold">
+                          <Check className="h-4 w-4" strokeWidth={2} aria-hidden="true" />
+                          {type.tag}
+                        </p>
+                      )}
+                      <p className="mt-3 max-w-xl text-[17px] leading-[1.6]">{type.description}</p>
                     </div>
+                  </div>
 
-                    {/* Notification Preview */}
-                    <div className="lg:col-span-2">
-                      <div className="bg-gray-50 rounded-xl p-4 border border-gray-100">
-                        <div className="flex items-start gap-3">
-                          <div className="w-8 h-8 rounded-lg bg-gray-950 flex items-center justify-center shrink-0">
-                            <span className="text-white text-[10px] font-bold">
-                              S
-                            </span>
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <div className="flex justify-between items-start">
-                              <p className="text-[12px] font-semibold text-gray-900">
-                                {type.example.title}
-                              </p>
-                              <span className="text-[10px] text-gray-400 shrink-0 ml-2">
-                                {type.example.time}
-                              </span>
-                            </div>
-                            <p className="text-[11px] text-gray-500 mt-0.5">
-                              {type.example.body}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                  {/* Notification Preview */}
+                  <div className="lg:col-span-5">
+                    <div className="mx-auto max-w-[360px] rounded-[28px] bg-ink p-3 lg:mr-0">
+                      <PushCard
+                        title={type.example.title}
+                        body={type.example.body}
+                        time={type.example.time}
+                        animated={false}
+                      />
                     </div>
                   </div>
                 </div>
-              </AnimatedSection>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* Stats Section (dark bg) */}
-      <section className="py-32 bg-gray-950 text-white relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-white/[0.02] rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-white/[0.015] rounded-full blur-3xl" />
-        </div>
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div
-            className="h-full w-full"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
-              backgroundSize: "60px 60px",
-            }}
-          />
-        </div>
+      <section className="section-dark grain overflow-x-clip py-28 md:py-40">
+        <div className="glow left-1/2 top-[8%] -translate-x-1/2" aria-hidden="true" />
+        <div className="relative mx-auto max-w-[1280px] px-6">
+          <Reveal className="mx-auto max-w-3xl text-center">
+            <Label>{t.stats.label}</Label>
+            <h2 className="mt-6 font-display text-[clamp(88px,10vw,150px)] font-extrabold italic leading-[0.85] tracking-[-0.06em] text-accent">
+              7x
+            </h2>
+            <p className="mt-6 font-display text-[clamp(22px,2vw,30px)] font-bold leading-[1.15] tracking-[-0.03em]">
+              {t.stats.headline}
+            </p>
+            <p className="mx-auto mt-6 max-w-md text-[17px] leading-[1.6]">
+              {t.stats.body}
+            </p>
+          </Reveal>
 
-        <div className="relative max-w-[1280px] mx-auto px-6">
-          <AnimatedSection>
-            <div className="text-center max-w-3xl mx-auto">
-              <span className="text-sm text-white/60 uppercase tracking-widest font-medium">
-                Por que push
-              </span>
-              <h2 className="mt-6 font-display text-5xl md:text-7xl font-bold tracking-tight text-white">
-                7x
-              </h2>
-              <p className="mt-4 text-xl md:text-2xl text-white/80 font-medium max-w-lg mx-auto">
-                mas engagement que el email
-              </p>
-              <p className="mt-6 text-base text-white/50 max-w-md mx-auto leading-relaxed">
-                Las notificaciones push tienen tasas de apertura promedio del
-                20-30%, comparado con el 2-5% del email marketing tradicional.
-              </p>
-
-              <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
-                {[
-                  { value: "~30%", label: "Tasa de apertura push" },
-                  { value: "~3%", label: "Tasa de apertura email" },
-                  { value: "90%", label: "Entrega instantanea" },
-                ].map((stat, i) => (
-                  <AnimatedSection key={stat.label} delay={i * 0.1}>
-                    <div className="rounded-2xl bg-white/5 border border-white/10 p-6">
-                      <p className="text-3xl font-bold font-display text-white">
-                        {stat.value}
-                      </p>
-                      <p className="text-sm text-white/50 mt-1">{stat.label}</p>
-                    </div>
-                  </AnimatedSection>
-                ))}
-              </div>
-            </div>
-          </AnimatedSection>
+          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 sm:grid-cols-3 md:mt-24">
+            {t.stats.items.map((stat, i) => (
+              <Reveal key={stat.label} delay={i * 0.07}>
+                <div className="border-t border-line-dark py-8 sm:px-6 sm:first:pl-0">
+                  <p className="font-display text-[clamp(40px,4.4vw,64px)] font-extrabold leading-none tracking-[-0.045em]">
+                    {stat.value}
+                  </p>
+                  <p className="mt-3 text-[16px] font-semibold">{stat.label}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Volume by Plan */}
-      <section className="py-24 bg-white">
-        <div className="max-w-[1280px] mx-auto px-6">
-          <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-sm text-gray-400 uppercase tracking-widest font-medium">
-              Volumen
-            </span>
-            <h2 className="mt-4 font-display text-3xl md:text-4xl font-bold tracking-tight text-gray-950">
-              Notificaciones por plan
-            </h2>
-            <p className="mt-4 text-lg text-gray-500">
-              Cada plan incluye un volumen de notificaciones push mensuales.
-              Escala a medida que tu audiencia crece.
-            </p>
-          </AnimatedSection>
+      <section className="section-light grain py-28 md:py-40">
+        <div className="relative mx-auto max-w-[1280px] px-6">
+          <SectionHead
+            label={t.volume.label}
+            title={t.volume.title}
+            subtitle={t.volume.subtitle}
+          />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {volumeByPlan.map((item, i) => (
-              <AnimatedSection key={item.plan} delay={i * 0.1}>
+          <div className="mt-16 border-b border-line-light md:mt-24">
+            {t.volume.items.map((item, i) => (
+              <Reveal key={item.plan} delay={i * 0.07}>
                 <div
-                  className={`relative rounded-2xl p-6 text-center transition-all duration-500 ${
+                  className={`grid grid-cols-2 items-center gap-x-6 gap-y-2 px-6 py-7 md:grid-cols-12 md:px-8 ${
                     item.highlighted
-                      ? "bg-gray-950 text-white shadow-2xl shadow-gray-950/20 scale-[1.02]"
-                      : "bg-white border border-gray-200 hover:border-gray-300 hover:shadow-lg"
+                      ? "rounded-[28px] bg-ink text-white"
+                      : "border-t border-line-light"
                   }`}
                 >
-                  {item.highlighted && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <span className="bg-white text-gray-950 text-xs font-bold px-4 py-1 rounded-lg">
-                        Mas popular
-                      </span>
-                    </div>
-                  )}
-                  <p
-                    className={`text-sm font-medium mb-3 ${
-                      item.highlighted ? "text-white/70" : "text-gray-500"
-                    }`}
-                  >
-                    {item.plan}
-                  </p>
-                  <div className="flex items-center justify-center gap-1.5 mb-2">
-                    <Bell
-                      className={`w-5 h-5 ${
-                        item.highlighted ? "text-white/60" : "text-gray-400"
-                      }`}
-                    />
-                    <p
-                      className={`text-2xl font-bold font-display ${
-                        item.highlighted ? "text-white" : "text-gray-950"
-                      }`}
-                    >
-                      {item.volume}
-                    </p>
+                  <div className="md:col-span-4">
+                    <h3 className="font-display text-[clamp(22px,2vw,30px)] font-bold leading-[1.15] tracking-[-0.03em]">
+                      {item.plan}
+                    </h3>
+                    {item.highlighted && <p className="mt-1 text-[15px] font-semibold">{t.volume.popular}</p>}
                   </div>
-                  <a
-                    href="/precios"
-                    className={`inline-flex text-xs font-medium transition-colors duration-200 ${
-                      item.highlighted
-                        ? "text-white/60 hover:text-white"
-                        : "text-gray-400 hover:text-gray-600"
-                    }`}
-                  >
-                    Ver plan completo
-                  </a>
+                  <p className="text-right font-display text-[clamp(26px,2.8vw,40px)] font-extrabold leading-none tracking-[-0.04em] md:col-span-5 md:text-left">
+                    {item.volume}
+                  </p>
+                  <div className="col-span-2 md:col-span-3 md:text-right">
+                    <ArrowLink href={localePath(locale, "/precios")} weight="medium">
+                      {t.volume.seePlan}
+                    </ArrowLink>
+                  </div>
                 </div>
-              </AnimatedSection>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-32 bg-white">
-        <div className="max-w-[1280px] mx-auto px-6">
-          <AnimatedSection>
-            <div className="relative overflow-hidden rounded-3xl bg-gray-950 px-8 py-20 md:px-20 md:py-28">
-              <div className="absolute inset-0">
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/[0.03] rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
-                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/[0.02] rounded-full blur-3xl translate-y-1/2 -translate-x-1/4" />
-              </div>
-              <div className="absolute inset-0 opacity-[0.03]">
-                <div
-                  className="h-full w-full"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)",
-                    backgroundSize: "40px 40px",
-                  }}
-                />
-              </div>
-
-              <div className="relative text-center max-w-2xl mx-auto">
-                <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-8">
-                  <Bell className="w-7 h-7 text-white" />
-                </div>
-                <h2 className="font-display text-3xl md:text-5xl font-bold tracking-tight text-white">
-                  Empieza a enviar push
-                </h2>
-                <p className="mt-6 text-lg text-white/70 max-w-lg mx-auto">
-                  Crea tu app y llega directo al celular de tus clientes.
-                  Las primeras 1,000 notificaciones estan incluidas en todos los
-                  planes.
-                </p>
-
-                <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <a
-                    href="https://app.saruapps.com/register"
-                    className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-950 text-base font-medium rounded-lg hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:shadow-white/10"
-                  >
-                    Empezar gratis
-                    <svg
-                      className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                  </a>
-                  <a
-                    href="https://calendly.com/saruapps/30min"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-4 text-white/70 text-base font-medium rounded-lg border border-white/20 hover:border-white/40 hover:text-white transition-all duration-300"
-                  >
-                    Agendar una demo
-                  </a>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      <ModuloCTA
+        title={t.cta.title}
+        subtitle={t.cta.subtitle}
+        primary={{ label: t.cta.primary, href: "https://app.saruapps.com/register" }}
+        secondary={{ label: t.cta.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
+      />
 
       <Footer />
     </>

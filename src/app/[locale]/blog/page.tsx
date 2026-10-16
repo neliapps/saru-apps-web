@@ -1,140 +1,97 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { AnimatedSection } from "@/components/AnimatedSection";
-import {
-  Newspaper,
-  BookOpen,
-  HelpCircle,
-  ArrowRight,
-  Mail,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { DocsHero } from "@/components/site/docs-hero";
+import { Reveal } from "@/components/site/blocks";
+import { blogContent } from "@/content/blog";
+import { localePath, toLocale } from "@/i18n/config";
 
-export const metadata = {
-  title: "Blog — Saru Apps",
-  description:
-    "Articulos, guias y recursos para ayudarte a sacar el maximo provecho de tu app movil para Tiendanube con Saru Apps.",
-};
+type Props = { params: Promise<{ locale: string }> };
 
-const links = [
-  {
-    icon: BookOpen,
-    title: "Lee nuestra guia de la plataforma",
-    description:
-      "Todo lo que necesitas saber para crear, personalizar y publicar tu app.",
-    href: "/guia",
-  },
-  {
-    icon: HelpCircle,
-    title: "Consulta las preguntas frecuentes",
-    description:
-      "Respuestas a las dudas mas comunes sobre Saru Apps.",
-    href: "/faq",
-  },
-];
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  return blogContent[toLocale(locale)].metadata;
+}
 
-export default function Blog() {
+export default async function Blog({ params }: Props) {
+  const locale = toLocale((await params).locale);
+  const t = blogContent[locale];
+
   return (
     <>
-      <Navbar />
+      <Navbar variant="dark" />
       <main>
-        {/* Hero */}
-        <section className="pt-32 pb-24 bg-white">
-          <div className="max-w-[1280px] mx-auto px-6">
-            <AnimatedSection className="text-center max-w-3xl mx-auto">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-[13px] font-medium">
-                Blog
-              </span>
-              <h1 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-950">
-                Proximamente
-              </h1>
-              <p className="mt-6 text-lg text-gray-500 max-w-2xl mx-auto">
-                Estamos preparando articulos, guias y recursos para ayudarte a
-                sacar el maximo provecho de tu app movil.
-              </p>
-            </AnimatedSection>
-          </div>
-        </section>
+        <DocsHero
+          label={t.hero.label}
+          title={t.hero.title}
+          subtitle={t.hero.subtitle}
+        />
 
-        {/* Illustration */}
-        <section className="pb-16 bg-white">
-          <div className="max-w-[1280px] mx-auto px-6">
-            <AnimatedSection className="flex justify-center">
-              <div className="w-32 h-32 rounded-full bg-gray-100 flex items-center justify-center">
-                <Newspaper className="w-14 h-14 text-gray-400" />
-              </div>
-            </AnimatedSection>
-          </div>
-        </section>
-
-        {/* Meanwhile links */}
-        <section className="pb-24 bg-white">
-          <div className="max-w-xl mx-auto px-6">
-            <AnimatedSection>
-              <h2 className="text-center font-display text-xl font-semibold text-gray-950 mb-8">
-                Mientras tanto
+        <section className="section-light grain">
+          <div className="relative mx-auto max-w-[760px] px-6 py-20 md:py-28">
+            {/* Meanwhile links: editorial list */}
+            <Reveal>
+              <h2 className="font-display text-[clamp(26px,2.6vw,34px)] font-bold leading-[1.15] tracking-[-0.03em]">
+                {t.meanwhile}
               </h2>
-              <div className="space-y-4">
-                {links.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    className="group flex items-start gap-4 p-5 rounded-2xl border border-gray-100 bg-white hover:border-gray-200 hover:shadow-lg transition-all duration-300"
-                  >
-                    <div className="w-10 h-10 rounded-xl bg-gray-50 group-hover:bg-gray-950 flex items-center justify-center shrink-0 transition-colors duration-300">
-                      <link.icon className="w-[18px] h-[18px] text-gray-500 group-hover:text-white transition-colors duration-300" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-[15px] font-semibold text-gray-950 mb-1">
-                        {link.title}
-                      </h3>
-                      <p className="text-sm text-gray-500 leading-relaxed">
-                        {link.description}
-                      </p>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-gray-950 mt-1 shrink-0 transition-all duration-300 group-hover:translate-x-1" />
-                  </a>
-                ))}
-              </div>
-            </AnimatedSection>
-          </div>
-        </section>
+            </Reveal>
+            <ul className="mt-8 border-t border-line-light">
+              {t.links.map((link, i) => (
+                <li key={link.href} className="border-b border-line-light">
+                  <Reveal delay={i * 0.07}>
+                    <a
+                      href={localePath(locale, link.href)}
+                      className="group flex items-start justify-between gap-6 py-7"
+                    >
+                      <div>
+                        <h3 className="text-[clamp(20px,1.8vw,24px)] font-bold leading-[1.25] tracking-[-0.02em] decoration-accent decoration-2 underline-offset-4 group-hover:underline">
+                          {link.title}
+                        </h3>
+                        <p className="mt-2 text-[17px] leading-[1.7]">
+                          {link.description}
+                        </p>
+                      </div>
+                      <ArrowRight
+                        className="mt-1.5 h-5 w-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1"
+                        strokeWidth={1.75}
+                        aria-hidden="true"
+                      />
+                    </a>
+                  </Reveal>
+                </li>
+              ))}
+            </ul>
 
-        {/* Newsletter CTA */}
-        <section className="pb-32 bg-white">
-          <div className="max-w-[1280px] mx-auto px-6">
-            <AnimatedSection>
-              <div className="text-center bg-gray-50 rounded-2xl border border-gray-100 p-10 md:p-16">
-                <div className="w-12 h-12 rounded-xl bg-gray-200/60 flex items-center justify-center mx-auto mb-6">
-                  <Mail className="w-5 h-5 text-gray-500" />
-                </div>
-                <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-950">
-                  Suscribite para recibir novedades
+            {/* Newsletter */}
+            <Reveal className="mt-20">
+              <div className="rounded-[28px] border border-card-light-border bg-card-light p-8 md:p-12">
+                <h2 className="font-display text-[clamp(26px,2.6vw,34px)] font-bold leading-[1.15] tracking-[-0.03em]">
+                  {t.newsletter.title}
                 </h2>
-                <p className="mt-4 text-gray-500 max-w-md mx-auto">
-                  Se el primero en enterarte cuando publiquemos nuevos
-                  articulos, guias y recursos.
+                <p className="mt-4 max-w-md text-[17px] italic leading-[1.6]">
+                  {t.newsletter.subtitle}
                 </p>
                 <form
                   action="https://app.saruapps.com/register"
-                  className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto"
+                  className="mt-8 flex max-w-md flex-col gap-3 sm:flex-row"
                 >
                   <input
                     type="email"
-                    placeholder="tu@email.com"
-                    className="w-full sm:flex-1 px-5 py-3.5 rounded-full border border-gray-200 bg-white text-[15px] text-gray-950 placeholder:text-gray-400 focus:outline-none focus:border-gray-300 focus:ring-2 focus:ring-gray-100 transition-all duration-300"
+                    placeholder={t.newsletter.placeholder}
+                    className="w-full rounded-lg border border-line-light bg-white px-4 py-3.5 text-[16px] text-ink placeholder:text-ink/50 focus:border-ink focus:outline-none sm:flex-1"
                   />
                   <button
                     type="submit"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-950/25"
+                    className="inline-flex w-full items-center justify-center rounded-lg bg-ink px-6 py-3.5 text-[16px] font-semibold text-white transition-colors duration-300 hover:bg-ink/85 sm:w-auto"
                   >
-                    Suscribirme
+                    {t.newsletter.button}
                   </button>
                 </form>
-                <p className="mt-4 text-xs text-gray-400">
-                  Sin spam. Podes darte de baja en cualquier momento.
+                <p className="mt-4 text-[13px] text-ink/60">
+                  {t.newsletter.note}
                 </p>
               </div>
-            </AnimatedSection>
+            </Reveal>
           </div>
         </section>
       </main>

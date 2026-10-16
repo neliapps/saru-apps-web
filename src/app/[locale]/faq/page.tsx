@@ -1,70 +1,62 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FAQPageContent } from "@/components/FAQPageContent";
+import { PageHero, Reveal } from "@/components/site/blocks";
+import { CtaBand } from "@/components/site/precios-shared";
+import { faqContent } from "@/content/faq";
+import { toLocale } from "@/i18n/config";
 
-export const metadata = {
-  title: "Preguntas Frecuentes — Saru Apps",
-  description:
-    "Todas las respuestas sobre cómo crear tu app móvil para Tiendanube con Saru Apps. Precios, funcionalidades, soporte y más.",
-};
+type Props = { params: Promise<{ locale: string }> };
 
-export default function FAQPage() {
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  return faqContent[toLocale(locale)].metadata;
+}
+
+export default async function FAQPage({ params }: Props) {
+  const locale = toLocale((await params).locale);
+  const t = faqContent[locale];
+
   return (
     <>
-      <Navbar />
-      <main className="pt-32 pb-20">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <span className="text-sm text-gray-400 uppercase tracking-widest font-medium">
-              Centro de ayuda
-            </span>
-            <h1 className="mt-4 font-display text-4xl md:text-5xl font-bold tracking-tight text-gray-950">
-              Preguntas frecuentes
-            </h1>
-            <p className="mt-6 text-lg text-gray-500 max-w-2xl mx-auto">
-              Todo lo que necesitás saber sobre Saru Apps. Si no encontrás tu
-              respuesta,{" "}
+      <Navbar variant="dark" />
+      <main>
+        <PageHero
+          label={t.hero.label}
+          title={t.hero.title}
+          accent={t.hero.accent}
+          subtitle={
+            <>
+              {t.hero.subtitleBefore}{" "}
               <a
                 href="https://calendly.com/saruapps/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-900 underline underline-offset-4 hover:text-gray-600 transition-colors"
+                className="font-semibold not-italic underline decoration-1 underline-offset-4 transition-colors hover:decoration-2"
               >
-                agendá una llamada con nosotros
+                {t.hero.subtitleLink}
               </a>
-              .
-            </p>
-          </div>
+              {t.hero.subtitleAfter}
+            </>
+          }
+        />
 
-          <FAQPageContent />
-
-          {/* CTA */}
-          <div className="mt-20 text-center bg-gray-50 rounded-2xl border border-gray-100 p-10 md:p-14">
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-950">
-              ¿Listo para crear tu app?
-            </h2>
-            <p className="mt-4 text-gray-500 max-w-lg mx-auto">
-              Empezá gratis, diseñá tu app y publicala cuando estés listo. Sin
-              compromiso.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="https://app.saruapps.com/register"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-gray-950 text-white text-[15px] font-medium rounded-lg transition-all duration-300 hover:bg-gray-800 hover:shadow-2xl hover:shadow-gray-950/25"
-              >
-                Empezar gratis
-              </a>
-              <a
-                href="https://calendly.com/saruapps/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-7 py-3.5 text-gray-600 text-[15px] font-medium rounded-lg border border-gray-200 hover:border-gray-300 hover:text-gray-900 transition-all duration-300"
-              >
-                Agendar una demo
-              </a>
-            </div>
+        <section className="section-light grain">
+          <div className="relative mx-auto max-w-[1280px] px-6 py-20 md:py-28">
+            <Reveal>
+              <FAQPageContent />
+            </Reveal>
           </div>
-        </div>
+        </section>
+
+        <CtaBand
+          title={t.cta.title}
+          accent={t.cta.accent}
+          suffix={t.cta.suffix}
+          subtitle={t.cta.subtitle}
+          primary={{ label: t.cta.primary, href: "https://app.saruapps.com/register" }}
+          secondary={{ label: t.cta.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
+        />
       </main>
       <Footer />
     </>

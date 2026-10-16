@@ -1,33 +1,20 @@
 import { GuiaArticleLayout } from "@/components/GuiaArticleLayout";
+import { queEsContent } from "@/content/guia/que-es";
+import { toLocale } from "@/i18n/config";
 
-export const metadata = {
-  title: "Que es Saru Apps — Guia",
-};
+type Props = { params: Promise<{ locale: string }> };
 
-export default function Page() {
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  return queEsContent[toLocale(locale)].metadata;
+}
+
+export default async function Page({ params }: Props) {
+  const locale = toLocale((await params).locale);
+
   return (
-    <GuiaArticleLayout currentSlug="que-es">
-      <h1>Que es Saru Apps</h1>
-      <p>
-        Saru Apps es una plataforma SaaS que permite a comerciantes de
-        Tiendanube crear, personalizar y publicar aplicaciones moviles nativas
-        (iOS y Android) sin programar. La plataforma tiene tres componentes
-        principales:
-      </p>
-      <ol>
-        <li>
-          <strong>Panel de administracion</strong> (Dashboard) — donde el
-          comerciante configura y gestiona su app
-        </li>
-        <li>
-          <strong>Backend API</strong> — maneja la logica de negocio,
-          sincronizacion, notificaciones y generacion de la app
-        </li>
-        <li>
-          <strong>App movil nativa</strong> (React Native) — app para publicar
-          en App Store y Google Play
-        </li>
-      </ol>
+    <GuiaArticleLayout currentSlug="que-es" locale={locale}>
+      {queEsContent[locale].body}
     </GuiaArticleLayout>
   );
 }

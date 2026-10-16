@@ -1,35 +1,20 @@
 import { GuiaArticleLayout } from "@/components/GuiaArticleLayout";
+import { configurarContent } from "@/content/guia/configurar";
+import { toLocale } from "@/i18n/config";
 
-export const metadata = {
-  title: "Configurar la app — Guia Saru Apps",
-};
+type Props = { params: Promise<{ locale: string }> };
 
-export default function Page() {
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  return configurarContent[toLocale(locale)].metadata;
+}
+
+export default async function Page({ params }: Props) {
+  const locale = toLocale((await params).locale);
+
   return (
-    <GuiaArticleLayout currentSlug="configurar">
-      <h1>Configurar la app</h1>
-
-      <h2>Branding</h2>
-      <p>En esta seccion el comerciante define:</p>
-      <ul>
-        <li>
-          <strong>Nombre de la app:</strong> el nombre que ven los clientes
-        </li>
-        <li>
-          <strong>Logo:</strong> imagen PNG o JPG (recomendado 512x512px)
-        </li>
-        <li>
-          <strong>Color primario:</strong> se aplica al header, botones
-          principales y tabs
-        </li>
-        <li>
-          <strong>Color secundario:</strong> acentos y separadores
-        </li>
-      </ul>
-      <p>
-        Hay una vista previa en tiempo real que muestra como se ve la app en un
-        celular.
-      </p>
+    <GuiaArticleLayout currentSlug="configurar" locale={locale}>
+      {configurarContent[locale].body}
     </GuiaArticleLayout>
   );
 }

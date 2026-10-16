@@ -1,28 +1,20 @@
 import { GuiaArticleLayout } from "@/components/GuiaArticleLayout";
+import { panelContent } from "@/content/guia/panel";
+import { toLocale } from "@/i18n/config";
 
-export const metadata = {
-  title: "Panel en Tiendanube — Guia Saru Apps",
-};
+type Props = { params: Promise<{ locale: string }> };
 
-export default function Page() {
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  return panelContent[toLocale(locale)].metadata;
+}
+
+export default async function Page({ params }: Props) {
+  const locale = toLocale((await params).locale);
+
   return (
-    <GuiaArticleLayout currentSlug="panel">
-      <h1>Panel embebido en Tiendanube</h1>
-      <p>
-        Saru Apps se integra directamente en el panel de administracion de
-        Tiendanube. Cuando un comerciante instala la app desde el App Store de
-        Tiendanube, aparece en el menu lateral de su admin.
-      </p>
-      <p>Desde ahi puede ver:</p>
-      <ul>
-        <li>Estado de la app (publicada/borrador)</li>
-        <li>Estadisticas rapidas (productos, paginas, notificaciones)</li>
-        <li>
-          Accesos directos al editor, configuracion, notificaciones y productos
-        </li>
-        <li>Link de la app para compartir</li>
-        <li>Boton para abrir el panel completo de Saru Apps</li>
-      </ul>
+    <GuiaArticleLayout currentSlug="panel" locale={locale}>
+      {panelContent[locale].body}
     </GuiaArticleLayout>
   );
 }
