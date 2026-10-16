@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useTransform, type MotionValue } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import type { ReactNode } from "react";
 
 export const ease = [0.16, 1, 0.3, 1] as const;
@@ -118,28 +118,14 @@ export function HandCircle({ delay = 0.3 }: { delay?: number }) {
   );
 }
 
-/* ─── Sticker with tape ─── */
+/* ─── Step detail: a check and a short fact, under a hairline ─── */
 
-export function Sticker({
-  children,
-  tone = "light",
-  rotate = -4,
-  className = "",
-}: {
-  children: ReactNode;
-  tone?: "light" | "dark" | "blue";
-  rotate?: number;
-  className?: string;
-}) {
-  const tones = {
-    light: "bg-white text-ink",
-    dark: "bg-ink text-white",
-    blue: "bg-accent text-white",
-  };
+export function Detail({ children }: { children: ReactNode }) {
   return (
-    <span className={`sticker ${tones[tone]} ${className}`} style={{ rotate: `${rotate}deg` }}>
+    <p className="flex max-w-md items-center gap-3 border-t border-line-dark pt-5 text-[16px] font-semibold">
+      <Check className="h-5 w-5 shrink-0" strokeWidth={2} aria-hidden="true" />
       {children}
-    </span>
+    </p>
   );
 }
 

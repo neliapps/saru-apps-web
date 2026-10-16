@@ -109,28 +109,6 @@ p {
   stroke-dashoffset: 0;
 }
 
-/* Sticker with tape */
-.sticker {
-  position: relative;
-  display: inline-block;
-  padding: 0.45em 0.9em;
-  font-weight: 700;
-  font-style: italic;
-  line-height: 1.1;
-  box-shadow: 0 10px 30px -12px rgb(0 0 0 / 0.45);
-}
-.sticker::before {
-  content: "";
-  position: absolute;
-  top: -0.55em;
-  left: 50%;
-  width: 2.6em;
-  height: 0.9em;
-  transform: translateX(-50%) rotate(-6deg);
-  background: rgb(236 233 224 / 0.82);
-  box-shadow: 0 1px 2px rgb(0 0 0 / 0.12);
-}
-
 ::-webkit-scrollbar {
   width: 6px;
 }

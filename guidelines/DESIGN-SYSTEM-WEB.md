@@ -213,11 +213,9 @@ De 1 a 2 por sección, no más. Que señalen algo o muestren producto, no que de
   ```
 
 - **Círculo a mano** alrededor de una palabra clave: elipse irregular que no cierra perfecto y se pasa un poco.
-- **Sticker con cinta:**
-  - etiqueta rectangular rotada entre -6° y +6°, texto 700 italic
-  - fondo blanco sobre oscuro, negro sobre claro y azul sólido cuando va encima de un mockup
-  - tira de "cinta" semitransparente arriba
-  - Ejemplos: "Sin tarjeta", "Cero código", "¡Volvió!".
+- **No usar stickers ni etiquetas pegadas con cinta.** Para un dato corto ("Integración en 30
+  segundos") usá una línea con check bajo un divisor fino; para un estado del producto ("App
+  publicada"), un aviso de sistema estilo iOS (tarjeta blanca con ícono de check verde).
 - **Fragmentos de UI real** apoyados sobre el borde de un mockup:
   - switch de iOS verde encendido ("Carrito abandonado")
   - globo rojo de notificación sobre un ícono de app

@@ -9,9 +9,9 @@ import {
   useTransform,
   type MotionValue,
 } from "framer-motion";
-import { Search, ShoppingBag, Star, User } from "lucide-react";
+import { Check, Search, ShoppingBag, Star, User } from "lucide-react";
 import { useDictionary } from "@/i18n/DictionaryProvider";
-import { ArrowLink, Sticker, Underline, ease, useRange } from "./home/primitives";
+import { ArrowLink, Underline, ease, useRange } from "./home/primitives";
 import { HomeScreen, Island, PHONE_H, PHONE_W, PushCard, StatusBar, frameStyle } from "./home/phone";
 
 const WEB_W = 1120;
@@ -132,8 +132,8 @@ function MorphStage() {
   const n1 = { o: useRange(p, [0.58, 0.65], [0, 1]), y: useRange(p, [0.58, 0.65], [-24, 0]) };
   const n2 = { o: useRange(p, [0.66, 0.73], [0, 1]), y: useRange(p, [0.66, 0.73], [-24, 0]) };
   const n3 = { o: useRange(p, [0.74, 0.81], [0, 1]), y: useRange(p, [0.74, 0.81], [-24, 0]) };
-  const stickerO = useRange(p, [0.84, 0.9], [0, 1]);
-  const stickerS = useRange(p, [0.84, 0.9], [1.3, 1]);
+  const toastO = useRange(p, [0.84, 0.9], [0, 1]);
+  const toastY = useRange(p, [0.84, 0.9], [16, 0]);
   const ratingO = useRange(p, [0.88, 0.94], [0, 1]);
   const ratingX = useRange(p, [0.88, 0.94], [-16, 0]);
 
@@ -193,14 +193,18 @@ function MorphStage() {
             ))}
           </div>
 
+          {/* iOS-style system toast: the app just went live */}
           <motion.div
-            className="absolute -right-4 bottom-[18%] z-10 md:-right-16"
-            style={{ opacity: stickerO, scale: stickerS }}
+            className="absolute -right-4 bottom-[16%] z-10 flex items-center gap-3 rounded-[18px] bg-white py-3 pl-3 pr-5 text-ink shadow-[0_18px_40px_-12px_rgba(0,0,0,0.55)] md:-right-20"
+            style={{ opacity: toastO, y: toastY }}
           >
-            <Sticker tone="blue" rotate={6} className="text-[15px]">
-              {t.mockupPublished}
-              <span className="block text-[11px] font-medium not-italic">{t.mockupPublishedTime}</span>
-            </Sticker>
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#34C759]">
+              <Check className="h-4 w-4 text-white" strokeWidth={3} />
+            </span>
+            <span>
+              <b className="block text-[14px] font-bold leading-tight">{t.mockupPublished}</b>
+              <span className="block text-[12px] font-medium leading-tight">{t.mockupPublishedTime}</span>
+            </span>
           </motion.div>
 
           <motion.div
@@ -227,16 +231,17 @@ export function Hero() {
   return (
     <section className="section-dark grain overflow-clip">
       <div className="relative mx-auto max-w-[1280px] px-6 pt-36 md:pt-44">
-        <motion.div
-          initial={{ opacity: 0, y: -16, rotate: -12 }}
-          animate={{ opacity: 1, y: 0, rotate: 0 }}
-          transition={{ duration: 0.7, delay: 0.9, ease }}
-          className="mb-8 inline-block"
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1, ease }}
+          className="mb-8 flex items-center gap-3 text-[16px] font-semibold"
         >
-          <Sticker tone="light" rotate={-4} className="text-[15px]">
-            {t.badge}
-          </Sticker>
-        </motion.div>
+          <span className="flex h-8 w-8 items-center justify-center rounded-[9px] bg-white p-1.5">
+            <img src="/brand/tiendanube-isotipo.png" alt="" className="h-full w-full object-contain" />
+          </span>
+          {t.badge}
+        </motion.p>
 
         <h1 className="font-display text-[clamp(40px,6.2vw,92px)] font-extrabold leading-[0.98] tracking-[-0.045em]">
           <Words text={t.titleLine1} />

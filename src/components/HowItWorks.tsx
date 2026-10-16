@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useReducedMotion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { ArrowRight, RefreshCw } from "lucide-react";
 import { useDictionary } from "@/i18n/DictionaryProvider";
-import { Label, Sticker, ease, useRange } from "./home/primitives";
+import { Detail, Label, ease, useRange } from "./home/primitives";
 import { EditorScreen, LockScreen, ScaledPhone, StoreScreen } from "./home/phone";
 
 type Step = { number: string; title: string; description: string; detail: string };
@@ -28,10 +28,10 @@ function ConnectVisual() {
   return (
     <div className="flex flex-col items-center gap-10">
       <div className="flex items-center gap-4 md:gap-6">
-        <div className="flex h-24 w-24 items-center justify-center rounded-[28px] bg-white p-5 md:h-28 md:w-28">
+        <div className="flex h-20 w-20 items-center justify-center rounded-[24px] bg-white p-4 md:h-28 md:w-28 md:rounded-[28px] md:p-5">
           <img src="/brand/tiendanube-isotipo.png" alt="" className="h-full w-full object-contain" />
         </div>
-        <svg viewBox="0 0 200 60" className="h-14 w-36 md:w-52" aria-hidden="true">
+        <svg viewBox="0 0 200 60" className="h-14 w-28 md:w-52" aria-hidden="true">
           {dots.map((d, i) => (
             <motion.circle
               key={i}
@@ -45,7 +45,7 @@ function ConnectVisual() {
             />
           ))}
         </svg>
-        <div className="flex h-24 w-24 items-center justify-center rounded-[28px] border border-line-dark bg-ink p-6 md:h-28 md:w-28">
+        <div className="flex h-20 w-20 items-center justify-center rounded-[24px] border border-line-dark bg-ink p-5 md:h-28 md:w-28 md:rounded-[28px] md:p-6">
           <img src="/brand/isotipo-white.png" alt="" className="h-full w-full object-contain" />
         </div>
       </div>
@@ -76,7 +76,6 @@ function StepPanel({ step, index, p }: { step: Step; index: number; p: MotionVal
   const center = (index + 1) / 4;
   const numberX = useTransform(p, (v) => Math.max(-1, Math.min(1, (v - center) / 0.25)) * -80);
   const visualY = useTransform(p, (v) => Math.max(-1, Math.min(1, (v - center) / 0.25)) * -40);
-  const rotations = [-4, 3, -3, 5];
 
   return (
     <div className="flex h-full w-screen shrink-0 items-center px-[7vw]">
@@ -94,9 +93,7 @@ function StepPanel({ step, index, p }: { step: Step; index: number; p: MotionVal
           </h3>
           <p className="mt-5 max-w-md text-[17px] leading-[1.6]">{step.description}</p>
           <div className="mt-8">
-            <Sticker tone="light" rotate={rotations[index]} className="text-[15px]">
-              {step.detail}
-            </Sticker>
+            <Detail>{step.detail}</Detail>
           </div>
         </div>
         <motion.div style={{ y: visualY }} className="col-span-6 flex justify-center" aria-hidden="true">
@@ -191,9 +188,7 @@ function Vertical({ steps }: { steps: Step[] }) {
             <h3 className="mt-6 font-display text-[26px] font-bold leading-[1.05] tracking-[-0.035em]">{s.title}</h3>
             <p className="mt-4 text-[17px] leading-[1.6]">{s.description}</p>
             <div className="mt-6">
-              <Sticker tone="light" rotate={i % 2 ? 3 : -3} className="text-[14px]">
-                {s.detail}
-              </Sticker>
+              <Detail>{s.detail}</Detail>
             </div>
             <div
               className="mt-10 flex justify-center"
