@@ -98,7 +98,7 @@ const es = {
       faqs: [
         {
           q: "¿Qué tipo de notificaciones push puedo enviar?",
-          a: "Podés enviar notificaciones push segmentadas: ofertas flash, recordatorios de carrito abandonado, nuevos productos, campañas programadas y más. Cada plan incluye un volumen diferente de envíos mensuales.",
+          a: "Hay dos tipos. Las automáticas (carrito abandonado, vuelta de stock, estado del pedido y bienvenida) salen solas y no cuentan para el límite. Las campañas pueden llevar imagen y programarse; cada plan incluye un volumen distinto por mes.",
         },
         {
           q: "¿Qué herramientas de engagement incluye?",
@@ -114,7 +114,7 @@ const es = {
         },
         {
           q: "¿Soporta múltiples idiomas?",
-          a: "Sí, la funcionalidad de multiidioma está disponible en el plan Scale y superiores.",
+          a: "Tu app sale en español o portugués en todos los planes.",
         },
       ],
     },
@@ -124,7 +124,7 @@ const es = {
       faqs: [
         {
           q: "¿Cuánto cuesta Saru Apps?",
-          a: "Tenemos 4 planes: Starter (USD $49/mes), Growth (USD $149/mes), Scale (USD $349/mes) y Enterprise (precio personalizado). Todos tienen un 20% de descuento en el plan anual. Podés ver el detalle en nuestra sección de precios.",
+          a: "Tenemos 4 planes: Starter (USD $49/mes), Growth (USD $149/mes), Scale (USD $349/mes) y Enterprise (a medida). Todos tienen un 20% de descuento en el plan anual. Podés ver el detalle en nuestra sección de precios.",
         },
         {
           q: "¿Puedo probar gratis?",
@@ -140,7 +140,7 @@ const es = {
         },
         {
           q: "¿Cobran comisión por venta o por notificación?",
-          a: "No. No tomamos comisión sobre tus ventas. Cada plan incluye un volumen de notificaciones push mensuales sin costo adicional.",
+          a: "No. No tomamos comisión sobre tus ventas. Cada plan incluye un volumen de notificaciones de campañas por mes sin costo adicional, y las automáticas no cuentan para el límite.",
         },
         {
           q: "¿Puedo cambiar de plan o cancelar?",
@@ -148,7 +148,7 @@ const es = {
         },
         {
           q: "¿Qué plan me conviene?",
-          a: "Starter es ideal para lanzar tu app nativa con las funcionalidades esenciales. Growth es para marcas que quieren herramientas de venta avanzadas como carrito abandonado, back in stock y white label. Scale es para marcas en expansión que necesitan push segmentados, drops exclusivos y multiidioma. Enterprise es para grandes marcas con necesidades específicas. Si tenés dudas, agendá una demo y te asesoramos.",
+          a: "Si recién lanzás tu app, Starter. Cuando la app ya es un canal de venta y necesitás mandar más campañas, Growth. Si vendés mayorista o hacés lanzamientos seguidos, Scale. Enterprise es para grandes marcas que necesitan notificaciones e integraciones a medida. Si tenés dudas, agendá una demo y te asesoramos.",
         },
       ],
     },
@@ -285,7 +285,7 @@ const pt: typeof es = {
       faqs: [
         {
           q: "Que tipo de notificações push posso enviar?",
-          a: "Você pode enviar notificações push segmentadas: ofertas relâmpago, lembretes de carrinho abandonado, novos produtos, campanhas programadas e mais. Cada plano inclui um volume diferente de envios mensais.",
+          a: "Há dois tipos. As automáticas (carrinho abandonado, volta ao estoque, status do pedido e boas-vindas) saem sozinhas e não contam para o limite. As campanhas podem ter imagem e ser agendadas; cada plano inclui um volume diferente por mês.",
         },
         {
           q: "Quais ferramentas de engajamento estão incluídas?",
@@ -301,7 +301,7 @@ const pt: typeof es = {
         },
         {
           q: "Tem suporte a vários idiomas?",
-          a: "Sim, a funcionalidade multi-idioma está disponível no plano Scale e superiores.",
+          a: "Seu app sai em espanhol ou português em todos os planos.",
         },
       ],
     },
@@ -311,7 +311,7 @@ const pt: typeof es = {
       faqs: [
         {
           q: "Quanto custa a Saru Apps?",
-          a: "Temos 4 planos: Starter (USD $49/mês), Growth (USD $149/mês), Scale (USD $349/mês) e Enterprise (preço personalizado). Todos têm 20% de desconto no plano anual. Você pode ver os detalhes na nossa seção de preços.",
+          a: "Temos 4 planos: Starter (USD $49/mês), Growth (USD $149/mês), Scale (USD $349/mês) e Enterprise (sob medida). Todos têm 20% de desconto no plano anual. Você pode ver os detalhes na nossa seção de preços.",
         },
         {
           q: "Posso testar grátis?",
@@ -327,7 +327,7 @@ const pt: typeof es = {
         },
         {
           q: "Vocês cobram comissão por venda ou por notificação?",
-          a: "Não. Não cobramos comissão sobre suas vendas. Cada plano inclui um volume de notificações push mensais sem custo adicional.",
+          a: "Não. Não cobramos comissão sobre suas vendas. Cada plano inclui um volume mensal de notificações de campanhas sem custo adicional, e as automáticas não contam para o limite.",
         },
         {
           q: "Posso mudar de plano ou cancelar?",
@@ -335,7 +335,7 @@ const pt: typeof es = {
         },
         {
           q: "Qual plano é ideal para mim?",
-          a: "O Starter é ideal para lançar seu app nativo com as funcionalidades essenciais. O Growth é para marcas que querem ferramentas de venda avançadas, como carrinho abandonado, back in stock e white label. O Scale é para marcas em expansão que precisam de push segmentado, drops exclusivos e multi-idioma. O Enterprise é para grandes marcas com necessidades específicas. Se tiver dúvidas, agende uma demo e a gente ajuda você.",
+          a: "Se você está lançando seu app agora, Starter. Quando o app já é um canal de venda e você precisa enviar mais campanhas, Growth. Se você vende no atacado ou faz lançamentos com frequência, Scale. O Enterprise é para grandes marcas que precisam de notificações e integrações sob medida. Se tiver dúvidas, agende uma demo e a gente ajuda você.",
         },
       ],
     },

@@ -6,7 +6,7 @@ import { Check } from "lucide-react";
 import { AnimatedSection } from "./AnimatedSection";
 import { Label, Underline, ease } from "./home/primitives";
 import { SectionHead } from "./site/blocks";
-import { AccordionItem, CtaBand } from "./site/precios-shared";
+import { CtaBand } from "./site/precios-shared";
 import { useDictionary } from "@/i18n/DictionaryProvider";
 import { preciosContent } from "@/content/precios";
 
@@ -71,7 +71,6 @@ export function PreciosContent() {
   const { locale } = useDictionary();
   const t = preciosContent[locale];
   const [isAnnual, setIsAnnual] = useState(false);
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   return (
     <main>
@@ -230,9 +229,17 @@ export function PreciosContent() {
             })}
           </div>
 
-          {/* ─── Additional fees notice ─── */}
+          {/* ─── Notifications note ─── */}
           <AnimatedSection delay={0.2}>
-            <div className="mt-16 grid gap-8 border-t border-line-light pt-10 md:grid-cols-12 md:items-center">
+            <p className="mt-12 text-center text-[15px] leading-[1.55]">
+              <span className="font-bold">{t.notificationsNote.title}</span>{" "}
+              <span className="italic">{t.notificationsNote.example}</span>
+            </p>
+          </AnimatedSection>
+
+          {/* ─── Store fees (Apple / Google) ─── */}
+          <AnimatedSection delay={0.2}>
+            <div className="mt-12 grid gap-8 border-t border-line-light pt-10 md:grid-cols-12 md:items-center">
               <div className="md:col-span-5">
                 <p className="text-[17px] font-bold">
                   {t.fees.title}
@@ -343,15 +350,16 @@ export function PreciosContent() {
             </AnimatedSection>
 
             <AnimatedSection className="border-t border-line-light lg:col-span-8" delay={0.07}>
-              {t.faq.items.map((faq, i) => (
-                <AccordionItem
-                  key={i}
-                  question={faq.question}
-                  answer={faq.answer}
-                  isOpen={openFaq === i}
-                  onToggle={() => setOpenFaq(openFaq === i ? null : i)}
-                />
-              ))}
+              <dl>
+                {t.faq.items.map((faq) => (
+                  <div key={faq.question} className="border-b border-line-light py-7">
+                    <dt className="font-display text-[clamp(18px,1.5vw,21px)] font-bold leading-[1.3] tracking-[-0.02em]">
+                      {faq.question}
+                    </dt>
+                    <dd className="mt-3 max-w-2xl text-[17px] leading-[1.6]">{faq.answer}</dd>
+                  </div>
+                ))}
+              </dl>
             </AnimatedSection>
           </div>
         </div>

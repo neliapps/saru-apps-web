@@ -60,7 +60,7 @@ function Card({ item, wide = false, delay = 0 }: { item: Integration; wide?: boo
       transition={{ duration: 0.5, delay, ease }}
       whileHover={{ y: -2 }}
       className={`rounded-[30px] border border-card-light-border bg-card-light p-8 md:p-10 ${
-        wide ? "md:col-span-3 md:grid md:grid-cols-2 md:items-end md:gap-12" : ""
+        wide ? "md:col-span-2 md:grid md:grid-cols-2 md:items-end md:gap-12" : ""
       }`}
     >
       <div>
@@ -89,7 +89,6 @@ export function Integrations() {
     { name: t.tiendanube, description: t.tiendanubeDesc, features: [t.tiendanubeF1, t.tiendanubeF2, t.tiendanubeF3, t.tiendanubeF4] },
     { name: t.pagonube, description: t.pagonubeDesc, features: [t.pagonubeF1, t.pagonubeF2, t.pagonubeF3, t.pagonubeF4] },
     { name: t.envionube, description: t.envionubeDesc, features: [t.envionubeF1, t.envionubeF2, t.envionubeF3, t.envionubeF4] },
-    { name: t.marketingnube, description: t.marketingnubeDesc, features: [t.marketingnubeF1, t.marketingnubeF2, t.marketingnubeF3, t.marketingnubeF4] },
   ];
 
   return (
@@ -109,7 +108,7 @@ export function Integrations() {
 
         <Connection />
 
-        <div className="mt-16 grid gap-5 md:mt-24 md:grid-cols-3">
+        <div className="mt-16 grid gap-5 md:mt-24 md:grid-cols-2">
           <Card item={main} wide />
           {rest.map((item, i) => (
             <Card key={item.name} item={item} delay={0.07 * (i + 1)} />

@@ -16,10 +16,10 @@ Saru Apps es una plataforma SaaS que permite a comerciantes de Tiendanube crear,
 
 | Plan | Precio | Que incluye |
 |------|--------|-------------|
-| **Starter** | USD $49/mes | App nativa iOS y Android, editor drag & drop, sincronizacion de productos con Tiendanube, push (1.000/mes), buscador, wishlist, cuenta de cliente, seguimiento de pedidos, carrito con cupones, 1 pagina personalizada, banner de instalacion, soporte por email |
-| **Growth** | USD $149/mes | Todo lo de Starter + push (10.000/mes), carrito abandonado, back in stock, bienvenida automatica, repetir pedido, badges, indicador de bajo stock, quick add, historial de visitados, white label, 3 paginas personalizadas |
-| **Scale** | USD $349/mes | Todo lo de Growth + push (50.000/mes), push segmentado, descuento en favoritos, drops exclusivos, productos exclusivos, cross-sell, barra de envio gratis, disenos programados, rich push, precios mayoristas (B2B), multiidioma, deep linking, paginas ilimitadas |
-| **Enterprise** | Personalizado | Todo lo de Scale + push ilimitado, chat en la app, QR banner para desktop, API dedicada, integraciones custom, account manager, SLA garantizado |
+| **Starter** | USD $49/mes | App nativa iPhone y Android publicada por nosotros, sin la marca Saru Apps, editor de todas las pantallas, sincronización automática con Tiendanube, búsqueda, favoritos, cuenta del cliente con pedidos y seguimiento, cupones, notificaciones automáticas (carrito abandonado, vuelta de stock, estado del pedido, bienvenida), 1.500 notificaciones de campañas/mes, 1 drop activo, banner de descarga y link con QR, analítica de 30 días, soporte por email |
+| **Growth** | USD $149/mes | Todo lo de Starter + 10.000 notificaciones de campañas/mes, 3 drops activos, segundo recordatorio de carrito abandonado, aviso de poco stock, agregar rápido, repetir pedido, indicador de poco stock, recomendados en el carrito, barra de envío gratis, analítica de 90 días con ventas por notificación, soporte por WhatsApp |
+| **Scale** | USD $349/mes | Todo lo de Growth + 40.000 notificaciones de campañas/mes, drops ilimitados, precios mayoristas (B2B), login obligatorio, soporte prioritario y puesta en marcha |
+| **Enterprise** | A medida | Todo lo de Scale + notificaciones a medida, account manager, integraciones a medida |
 
 Facturacion anual con 20% de descuento. La cuenta y el diseno de la app son gratis; el cobro empieza al publicar.
 
@@ -145,10 +145,10 @@ Las notificaciones push permiten al comerciante comunicarse directamente con los
 
 ### Limites por plan
 
-- **Starter**: 1.000 push/mes
-- **Growth**: 10.000 push/mes
-- **Scale**: 50.000 push/mes
-- **Enterprise**: ilimitado
+- **Starter**: 1.500 campañas/mes
+- **Growth**: 10.000 campañas/mes
+- **Scale**: 40.000 campañas/mes
+- **Enterprise**: a medida (las notificaciones automáticas no cuentan para el límite)
 
 ### Como llegan las notificaciones
 

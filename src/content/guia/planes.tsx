@@ -20,42 +20,22 @@ export const planesContent: GuiaArticleContent = {
               <tr>
                 <td><strong>Starter</strong></td>
                 <td>USD $49/mes</td>
-                <td>
-                  App nativa iOS &amp; Android, editor drag &amp; drop, sync de
-                  productos, 1.000 push/mes, buscador, wishlist, cuenta cliente,
-                  seguimiento de pedidos, categorías, carrito con cupones, 1
-                  página personalizada, banner de instalación, vista previa,
-                  soporte email
-                </td>
+                <td>App nativa para iPhone y Android publicada por nosotros, sin la marca Saru Apps, editor de todas las pantallas, sincronización automática con Tiendanube, búsqueda, favoritos, cuenta del cliente con pedidos y seguimiento, cupones, notificaciones automáticas (carrito abandonado, vuelta de stock, estado del pedido y bienvenida), 1.500 notificaciones de campañas por mes, 1 drop activo, banner de descarga y link con QR, analítica de 30 días, soporte por email</td>
               </tr>
               <tr>
                 <td><strong>Growth</strong></td>
                 <td>USD $149/mes</td>
-                <td>
-                  Todo lo de Starter + 10.000 push/mes, carrito abandonado, back
-                  in stock, bienvenida automática, repetir pedido, badges, bajo
-                  stock, quick add, historial de visitados, white label, 3
-                  páginas personalizadas
-                </td>
+                <td>Todo lo de Starter + 10.000 notificaciones de campañas por mes, 3 drops activos, segundo recordatorio de carrito abandonado, aviso e indicador de poco stock, agregar rápido, repetir pedido, productos recomendados en el carrito, barra de envío gratis, analítica de 90 días con ventas por cada notificación, soporte por WhatsApp</td>
               </tr>
               <tr>
                 <td><strong>Scale</strong></td>
                 <td>USD $349/mes</td>
-                <td>
-                  Todo lo de Growth + 50.000 push/mes, push segmentado, descuento
-                  favoritos, drops exclusivos, productos exclusivos, cross-sell,
-                  barra envío gratis, diseños programados, rich push, B2B,
-                  multiidioma, deep linking, páginas ilimitadas
-                </td>
+                <td>Todo lo de Growth + 40.000 notificaciones de campañas por mes, drops ilimitados, precios mayoristas (B2B), login obligatorio, soporte prioritario y puesta en marcha</td>
               </tr>
               <tr>
                 <td><strong>Enterprise</strong></td>
-                <td>Personalizado</td>
-                <td>
-                  Todo lo de Scale + push ilimitado, chat en app, QR code banner,
-                  API dedicada, account manager exclusivo, SLA garantizado,
-                  integraciones custom
-                </td>
+                <td>A medida</td>
+                <td>Todo lo de Scale + notificaciones a medida, account manager, integraciones a medida</td>
               </tr>
             </tbody>
           </table>
@@ -64,30 +44,19 @@ export const planesContent: GuiaArticleContent = {
         <h2>Qué incluye cada plan</h2>
         <ul>
           <li>
-            <strong>Starter:</strong> App nativa iOS &amp; Android, editor drag
-            &amp; drop, sync de productos, 1.000 push/mes, buscador, wishlist,
-            cuenta cliente, seguimiento de pedidos, categorías, carrito con
-            cupones, 1 página personalizada, banner de instalación, vista previa,
-            soporte email
+            <strong>Starter:</strong> App nativa para iPhone y Android publicada por nosotros, sin la marca Saru Apps, editor de todas las pantallas, sincronización automática con Tiendanube, búsqueda, favoritos, cuenta del cliente con pedidos y seguimiento, cupones, notificaciones automáticas (carrito abandonado, vuelta de stock, estado del pedido y bienvenida), 1.500 notificaciones de campañas por mes, 1 drop activo, banner de descarga y link con QR, analítica de 30 días, soporte por email
           </li>
           <li>
-            <strong>Growth:</strong> Todo Starter + 10.000 push/mes, carrito
-            abandonado, back in stock, bienvenida automática, repetir pedido,
-            badges, bajo stock, quick add, historial de visitados, white label, 3
-            páginas personalizadas
+            <strong>Growth:</strong> Todo lo de Starter + 10.000 notificaciones de campañas por mes, 3 drops activos, segundo recordatorio de carrito abandonado, aviso e indicador de poco stock, agregar rápido, repetir pedido, productos recomendados en el carrito, barra de envío gratis, analítica de 90 días con ventas por cada notificación, soporte por WhatsApp
           </li>
           <li>
-            <strong>Scale:</strong> Todo Growth + 50.000 push/mes, push
-            segmentado, descuento favoritos, drops exclusivos, productos
-            exclusivos, cross-sell, barra envío gratis, diseños programados, rich
-            push, B2B, multiidioma, deep linking, páginas ilimitadas
+            <strong>Scale:</strong> Todo lo de Growth + 40.000 notificaciones de campañas por mes, drops ilimitados, precios mayoristas (B2B), login obligatorio, soporte prioritario y puesta en marcha
           </li>
           <li>
-            <strong>Enterprise:</strong> Todo Scale + push ilimitado, chat en app,
-            QR code banner, API dedicada, account manager exclusivo, SLA
-            garantizado, integraciones custom
+            <strong>Enterprise:</strong> Todo lo de Scale + notificaciones a medida, account manager, integraciones a medida
           </li>
         </ul>
+        <p>Las notificaciones automáticas no cuentan para el límite de campañas.</p>
       </>
     ),
   },
@@ -110,42 +79,22 @@ export const planesContent: GuiaArticleContent = {
               <tr>
                 <td><strong>Starter</strong></td>
                 <td>USD $49/mês</td>
-                <td>
-                  App nativo iOS &amp; Android, editor drag &amp; drop, sync de
-                  produtos, 1.000 push/mês, busca, wishlist, conta do cliente,
-                  rastreamento de pedidos, categorias, carrinho com cupons, 1
-                  página personalizada, banner de instalação, pré-visualização,
-                  suporte por e-mail
-                </td>
+                <td>App nativo para iPhone e Android publicado por nós, sem a marca Saru Apps, editor de todas as telas, sincronização automática com a Nuvemshop, busca, favoritos, conta do cliente com pedidos e rastreamento, cupons, notificações automáticas (carrinho abandonado, volta ao estoque, status do pedido e boas-vindas), 1.500 notificações de campanhas por mês, 1 drop ativo, banner de download e link com QR, analytics de 30 dias, suporte por e-mail</td>
               </tr>
               <tr>
                 <td><strong>Growth</strong></td>
                 <td>USD $149/mês</td>
-                <td>
-                  Tudo do Starter + 10.000 push/mês, carrinho abandonado, back
-                  in stock, boas-vindas automáticas, repetir pedido, badges,
-                  estoque baixo, quick add, histórico de visualizados, white
-                  label, 3 páginas personalizadas
-                </td>
+                <td>Tudo do Starter + 10.000 notificações de campanhas por mês, 3 drops ativos, segundo lembrete de carrinho abandonado, aviso e indicador de estoque baixo, adicionar rápido, repetir pedido, produtos recomendados no carrinho, barra de frete grátis, analytics de 90 dias com vendas por cada notificação, suporte por WhatsApp</td>
               </tr>
               <tr>
                 <td><strong>Scale</strong></td>
                 <td>USD $349/mês</td>
-                <td>
-                  Tudo do Growth + 50.000 push/mês, push segmentado, desconto em
-                  favoritos, drops exclusivos, produtos exclusivos, cross-sell,
-                  barra de frete grátis, designs programados, rich push, B2B,
-                  multi-idioma, deep linking, páginas ilimitadas
-                </td>
+                <td>Tudo do Growth + 40.000 notificações de campanhas por mês, drops ilimitados, preços de atacado (B2B), login obrigatório, suporte prioritário e implantação assistida</td>
               </tr>
               <tr>
                 <td><strong>Enterprise</strong></td>
-                <td>Personalizado</td>
-                <td>
-                  Tudo do Scale + push ilimitado, chat no app, QR code banner,
-                  API dedicada, account manager exclusivo, SLA garantido,
-                  integrações custom
-                </td>
+                <td>Sob medida</td>
+                <td>Tudo do Scale + notificações sob medida, account manager, integrações sob medida</td>
               </tr>
             </tbody>
           </table>
@@ -154,30 +103,19 @@ export const planesContent: GuiaArticleContent = {
         <h2>O que cada plano inclui</h2>
         <ul>
           <li>
-            <strong>Starter:</strong> App nativo iOS &amp; Android, editor drag
-            &amp; drop, sync de produtos, 1.000 push/mês, busca, wishlist, conta
-            do cliente, rastreamento de pedidos, categorias, carrinho com
-            cupons, 1 página personalizada, banner de instalação,
-            pré-visualização, suporte por e-mail
+            <strong>Starter:</strong> App nativo para iPhone e Android publicado por nós, sem a marca Saru Apps, editor de todas as telas, sincronização automática com a Nuvemshop, busca, favoritos, conta do cliente com pedidos e rastreamento, cupons, notificações automáticas (carrinho abandonado, volta ao estoque, status do pedido e boas-vindas), 1.500 notificações de campanhas por mês, 1 drop ativo, banner de download e link com QR, analytics de 30 dias, suporte por e-mail
           </li>
           <li>
-            <strong>Growth:</strong> Tudo do Starter + 10.000 push/mês, carrinho
-            abandonado, back in stock, boas-vindas automáticas, repetir pedido,
-            badges, estoque baixo, quick add, histórico de visualizados, white
-            label, 3 páginas personalizadas
+            <strong>Growth:</strong> Tudo do Starter + 10.000 notificações de campanhas por mês, 3 drops ativos, segundo lembrete de carrinho abandonado, aviso e indicador de estoque baixo, adicionar rápido, repetir pedido, produtos recomendados no carrinho, barra de frete grátis, analytics de 90 dias com vendas por cada notificação, suporte por WhatsApp
           </li>
           <li>
-            <strong>Scale:</strong> Tudo do Growth + 50.000 push/mês, push
-            segmentado, desconto em favoritos, drops exclusivos, produtos
-            exclusivos, cross-sell, barra de frete grátis, designs programados,
-            rich push, B2B, multi-idioma, deep linking, páginas ilimitadas
+            <strong>Scale:</strong> Tudo do Growth + 40.000 notificações de campanhas por mês, drops ilimitados, preços de atacado (B2B), login obrigatório, suporte prioritário e implantação assistida
           </li>
           <li>
-            <strong>Enterprise:</strong> Tudo do Scale + push ilimitado, chat no
-            app, QR code banner, API dedicada, account manager exclusivo, SLA
-            garantido, integrações custom
+            <strong>Enterprise:</strong> Tudo do Scale + notificações sob medida, account manager, integrações sob medida
           </li>
         </ul>
+        <p>As notificações automáticas não contam para o limite de campanhas.</p>
       </>
     ),
   },

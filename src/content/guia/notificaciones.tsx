@@ -27,10 +27,11 @@ export const notificacionesContent: GuiaArticleContent = {
 
         <h2>Límites por plan</h2>
         <ul>
-          <li><strong>Starter:</strong> 1.000 push/mes</li>
-          <li><strong>Growth:</strong> 10.000 push/mes</li>
-          <li><strong>Scale:</strong> 50.000 push/mes</li>
-          <li><strong>Enterprise:</strong> ilimitado</li>
+          <li><strong>Starter:</strong> 1.500 campañas/mes</li>
+          <li><strong>Growth:</strong> 10.000 campañas/mes</li>
+          <li><strong>Scale:</strong> 40.000 campañas/mes</li>
+          <li><strong>Enterprise:</strong> a medida</li>
+          <li>Las notificaciones automáticas no cuentan para el límite de campañas.</li>
         </ul>
 
         <h2>Cómo llegan las notificaciones</h2>
@@ -73,10 +74,11 @@ export const notificacionesContent: GuiaArticleContent = {
 
         <h2>Limites por plano</h2>
         <ul>
-          <li><strong>Starter:</strong> 1.000 push/mês</li>
-          <li><strong>Growth:</strong> 10.000 push/mês</li>
-          <li><strong>Scale:</strong> 50.000 push/mês</li>
-          <li><strong>Enterprise:</strong> ilimitado</li>
+          <li><strong>Starter:</strong> 1.500 campanhas/mês</li>
+          <li><strong>Growth:</strong> 10.000 campanhas/mês</li>
+          <li><strong>Scale:</strong> 40.000 campanhas/mês</li>
+          <li><strong>Enterprise:</strong> sob medida</li>
+          <li>As notificações automáticas não contam para o limite de campanhas.</li>
         </ul>
 
         <h2>Como as notificações chegam</h2>

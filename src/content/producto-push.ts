@@ -91,20 +91,20 @@ const es = {
     label: "Volumen",
     title: "Notificaciones por plan",
     subtitle:
-      "Cada plan incluye un volumen de notificaciones push mensuales. Escalá a medida que tu audiencia crece.",
+      "Cada plan incluye un volumen de notificaciones de campañas por mes. Las automáticas no cuentan para el límite.",
     popular: "Más popular",
     seePlan: "Ver plan completo",
     items: [
-      { plan: "Starter", volume: "1.000 / mes", highlighted: false },
+      { plan: "Starter", volume: "1.500 / mes", highlighted: false },
       { plan: "Growth", volume: "10.000 / mes", highlighted: true },
-      { plan: "Scale", volume: "50.000 / mes", highlighted: false },
-      { plan: "Enterprise", volume: "Ilimitadas", highlighted: false },
+      { plan: "Scale", volume: "40.000 / mes", highlighted: false },
+      { plan: "Enterprise", volume: "A medida", highlighted: false },
     ],
   },
   cta: {
     title: "Empezá a enviar push",
     subtitle:
-      "Creá tu app y llegá directo al celular de tus clientes. Las primeras 1.000 notificaciones están incluidas en todos los planes.",
+      "Creá tu app y llegá directo al celular de tus clientes. Todos los planes incluyen las notificaciones automáticas y 1.500 campañas por mes como mínimo.",
     primary: "Empezar gratis",
     secondary: "Agendar una demo",
   },
@@ -201,20 +201,20 @@ const pt: typeof es = {
     label: "Volume",
     title: "Notificações por plano",
     subtitle:
-      "Cada plano inclui um volume mensal de notificações push. Escale conforme seu público cresce.",
+      "Cada plano inclui um volume mensal de notificações de campanhas. As automáticas não contam para o limite.",
     popular: "Mais popular",
     seePlan: "Ver plano completo",
     items: [
-      { plan: "Starter", volume: "1.000 / mês", highlighted: false },
+      { plan: "Starter", volume: "1.500 / mês", highlighted: false },
       { plan: "Growth", volume: "10.000 / mês", highlighted: true },
-      { plan: "Scale", volume: "50.000 / mês", highlighted: false },
-      { plan: "Enterprise", volume: "Ilimitadas", highlighted: false },
+      { plan: "Scale", volume: "40.000 / mês", highlighted: false },
+      { plan: "Enterprise", volume: "Sob medida", highlighted: false },
     ],
   },
   cta: {
     title: "Comece a enviar push",
     subtitle:
-      "Crie seu app e chegue direto ao celular dos seus clientes. As primeiras 1.000 notificações estão incluídas em todos os planos.",
+      "Crie seu app e chegue direto ao celular dos seus clientes. Todos os planos incluem as notificações automáticas e no mínimo 1.500 campanhas por mês.",
     primary: "Começar grátis",
     secondary: "Agendar uma demo",
   },

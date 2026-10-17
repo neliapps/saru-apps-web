@@ -53,29 +53,19 @@ const es: LegalContent = {
       <p>Saru Apps ofrece los siguientes planes de suscripción:</p>
       <ul>
         <li>
-          <strong>Starter (USD $49/mes):</strong> App nativa iOS &amp; Android, editor drag
-          &amp; drop, sincronización de productos, 1.000 notificaciones push/mes, buscador,
-          wishlist, cuenta cliente, seguimiento de pedidos, categorías, carrito con cupones, 1
-          página personalizada, banner de instalación, vista previa, soporte por email.
+          <strong>Starter (USD $49/mes):</strong> App nativa para iPhone y Android publicada por nosotros, sin la marca Saru Apps, editor de todas las pantallas, sincronización automática con Tiendanube, búsqueda, favoritos, cuenta del cliente con pedidos y seguimiento, cupones, notificaciones automáticas (carrito abandonado, vuelta de stock, estado del pedido y bienvenida), 1.500 notificaciones de campañas por mes, 1 drop activo, banner de descarga y link con QR, analítica de 30 días, soporte por email.
         </li>
         <li>
-          <strong>Growth (USD $149/mes):</strong> Todo lo de Starter más 10.000 notificaciones
-          push/mes, carrito abandonado, back in stock, bienvenida automática, repetir pedido,
-          badges de producto, indicador de bajo stock, quick add to cart, white label, 3 páginas
-          personalizadas.
+          <strong>Growth (USD $149/mes):</strong> Todo lo de Starter más 10.000 notificaciones de campañas por mes, 3 drops activos, segundo recordatorio de carrito abandonado, aviso e indicador de poco stock, agregar rápido, repetir pedido, productos recomendados en el carrito, barra de envío gratis, analítica de 90 días con ventas por cada notificación, soporte por WhatsApp.
         </li>
         <li>
-          <strong>Scale (USD $349/mes):</strong> Todo lo de Growth más 50.000 notificaciones
-          push/mes, push segmentado, descuento en favoritos, drops exclusivos, productos
-          exclusivos, cross-sell, barra de envío gratis, diseños programados, rich push, B2B,
-          multiidioma, deep linking, páginas personalizadas ilimitadas.
+          <strong>Scale (USD $349/mes):</strong> Todo lo de Growth más 40.000 notificaciones de campañas por mes, drops ilimitados, precios mayoristas (B2B), login obligatorio, soporte prioritario y puesta en marcha.
         </li>
         <li>
-          <strong>Enterprise (personalizado):</strong> Todo lo de Scale más notificaciones push
-          ilimitadas, chat en app, QR code banner desktop, API dedicada, account manager
-          exclusivo, SLA garantizado, integraciones custom.
+          <strong>Enterprise (a medida):</strong> Todo lo de Scale más notificaciones a medida, account manager, integraciones a medida.
         </li>
       </ul>
+      <p>Las notificaciones automáticas no cuentan para el límite de campañas.</p>
       <p>
         Podés crear tu cuenta gratis, diseñar tu app completa y ver una preview. El cobro
         comienza únicamente cuando decidís publicar tu app. Los precios pueden ser actualizados
@@ -206,29 +196,19 @@ const pt: LegalContent = {
       <p>A Saru Apps oferece os seguintes planos de assinatura:</p>
       <ul>
         <li>
-          <strong>Starter (USD $49/mês):</strong> App nativo iOS &amp; Android, editor drag
-          &amp; drop, sincronização de produtos, 1.000 notificações push/mês, busca, wishlist,
-          conta do cliente, rastreamento de pedidos, categorias, carrinho com cupons, 1 página
-          personalizada, banner de instalação, pré-visualização, suporte por e-mail.
+          <strong>Starter (USD $49/mês):</strong> App nativo para iPhone e Android publicado por nós, sem a marca Saru Apps, editor de todas as telas, sincronização automática com a Nuvemshop, busca, favoritos, conta do cliente com pedidos e rastreamento, cupons, notificações automáticas (carrinho abandonado, volta ao estoque, status do pedido e boas-vindas), 1.500 notificações de campanhas por mês, 1 drop ativo, banner de download e link com QR, analytics de 30 dias, suporte por e-mail.
         </li>
         <li>
-          <strong>Growth (USD $149/mês):</strong> Tudo do Starter mais 10.000 notificações
-          push/mês, carrinho abandonado, back in stock, boas-vindas automáticas, repetir pedido,
-          badges de produto, indicador de estoque baixo, quick add to cart, white label, 3
-          páginas personalizadas.
+          <strong>Growth (USD $149/mês):</strong> Tudo do Starter mais 10.000 notificações de campanhas por mês, 3 drops ativos, segundo lembrete de carrinho abandonado, aviso e indicador de estoque baixo, adicionar rápido, repetir pedido, produtos recomendados no carrinho, barra de frete grátis, analytics de 90 dias com vendas por cada notificação, suporte por WhatsApp.
         </li>
         <li>
-          <strong>Scale (USD $349/mês):</strong> Tudo do Growth mais 50.000 notificações
-          push/mês, push segmentado, desconto em favoritos, drops exclusivos, produtos
-          exclusivos, cross-sell, barra de frete grátis, designs programados, rich push, B2B,
-          multi-idioma, deep linking, páginas personalizadas ilimitadas.
+          <strong>Scale (USD $349/mês):</strong> Tudo do Growth mais 40.000 notificações de campanhas por mês, drops ilimitados, preços de atacado (B2B), login obrigatório, suporte prioritário e implantação assistida.
         </li>
         <li>
-          <strong>Enterprise (personalizado):</strong> Tudo do Scale mais notificações push
-          ilimitadas, chat no app, QR code banner desktop, API dedicada, account manager
-          exclusivo, SLA garantido, integrações custom.
+          <strong>Enterprise (sob medida):</strong> Tudo do Scale mais notificações sob medida, account manager, integrações sob medida.
         </li>
       </ul>
+      <p>As notificações automáticas não contam para o limite de campanhas.</p>
       <p>
         Você pode criar sua conta grátis, criar o design completo do seu app e ver uma preview. A
         cobrança começa somente quando você decide publicar seu app. Os preços podem ser
