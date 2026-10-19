@@ -20,6 +20,8 @@
     "appNativaDesc": "Publique na App Store e Google Play",
     "push": "Notificações Push",
     "pushDesc": "Envie mensagens diretas aos seus clientes",
+    "reels": "Reels de produto",
+    "reelsDesc": "Vídeos estilo TikTok para comprar",
     "engagement": "Engajamento e Vendas",
     "engagementDesc": "Ferramentas para converter e reter",
     "sincronizacion": "Sincronização Nuvemshop",
@@ -55,6 +57,8 @@
     "appNativaDesc": "Publicado por nós na App Store e no Google Play, com a sua marca e sem a nossa.",
     "push": "Notificações que vendem sozinhas",
     "pushDesc": "Carrinho abandonado, volta ao estoque, status do pedido e boas-vindas, além de campanhas com imagem e agendadas.",
+    "reels": "Reels de produto",
+    "reelsDesc": "Suba vídeos verticais e associe seus produtos. Seu app ganha uma aba estilo TikTok onde seus clientes assistem, deslizam e compram sem sair do vídeo.",
     "engagement": "Drops e ferramentas de venda",
     "engagementDesc": "Lançamentos com contagem regressiva, badges automáticos (desconto, novo, últimas unidades), recomendados e barra de frete grátis.",
     "sincronizacion": "Sincronização com a Nuvemshop",
@@ -123,6 +127,7 @@
     "editor": "Editor Drag & Drop",
     "appNativa": "App Nativo",
     "push": "Notificações Push",
+    "reels": "Reels de produto",
     "engagement": "Engajamento e Vendas",
     "sincronizacion": "Sincronização",
     "analytics": "Analytics",
@@ -221,6 +226,10 @@
       "D"
     ],
     "abandonedCart": "Carrinho abandonado",
-    "published": "Publicado"
+    "published": "Publicado",
+    "reelsTab": "Reels",
+    "reelOldPrice1": "R$ 559,80",
+    "reelOldPrice2": "R$ 699,80",
+    "reelCounter": "1 de 2"
   }
 }

@@ -10,7 +10,7 @@ La plataforma se compone de:
 
 - **Panel de administración (Dashboard):** donde el comerciante configura y gestiona su app.
 - **Backend API:** maneja la lógica de negocio, sincronización con Tiendanube, notificaciones push y generación de la app.
-- **App móvil nativa (React Native):** app real publicada en App Store y Google Play con la marca del comerciante (white-label).
+- **App móvil nativa (React Native):** app real publicada en App Store y Google Play con la marca del comerciante y sin la marca Saru Apps, en todos los planes.
 
 ## Funcionalidades principales
 
@@ -21,27 +21,30 @@ Editor visual para diseñar cada pantalla de la app arrastrando componentes: ban
 La app se publica en App Store y Google Play. Es una app nativa real (React Native), no un webview empaquetado. Rendimiento superior, animaciones fluidas y acceso a funcionalidades del dispositivo.
 
 ### Notificaciones Push
-Envío de notificaciones push segmentadas: ofertas flash, carritos abandonados, nuevos productos, campañas programadas. Hasta 7x más engagement que el email.
+Notificaciones automáticas (carrito abandonado, vuelta de stock, estado del pedido y bienvenida), que no cuentan para el límite del plan, y campañas con imagen y programadas.
+
+### Reels de producto
+Videos verticales a los que se les asocian productos. La app suma una pestaña tipo TikTok donde el cliente desliza los videos y compra (o guarda en favoritos) los productos de cada uno sin salir del video. Disponible desde Growth (hasta 20 reels publicados); ilimitados en Scale y Enterprise.
 
 ### Engagement y Ventas
-Herramientas de conversión y retención: notificaciones de carrito abandonado, alertas de back in stock, bienvenida automática, repetir pedido con un tap, badges de producto, indicador de bajo stock, quick add to cart, drops exclusivos con cuenta regresiva y productos exclusivos de la app.
+Herramientas de conversión: drops (lanzamientos con cuenta regresiva), badges automáticos (descuento, nuevo, últimas unidades), productos recomendados en el carrito, barra de envío gratis, agregar rápido, repetir pedido e indicador de poco stock.
 
 ### Sincronización con Tiendanube
 Productos, stock, precios, categorías y pedidos se sincronizan automáticamente con la tienda Tiendanube en tiempo real vía webhooks. Los pedidos desde la app aparecen directo en el panel de Tiendanube. Usa el checkout nativo de Tiendanube.
 
 ### Analytics
-Métricas en tiempo real: usuarios activos, tasa de conversión, ingresos por canal, productos más vistos, efectividad de push y comportamiento de compra.
+Ventas desde la app y ventas generadas por cada notificación. Starter muestra los últimos 30 días; Growth y superiores, hasta 90 días.
 
 ## Planes y precios
 
 | Plan | Precio | Incluye |
 |------|--------|---------|
-| Starter | USD $49/mes | App nativa iOS & Android, editor drag & drop, sync productos, 1.000 push/mes, buscador, wishlist, cuenta cliente, seguimiento de pedidos, carrito con cupones, 1 página personalizada, soporte email |
-| Growth | USD $149/mes | Todo Starter + 10.000 push/mes, carrito abandonado, back in stock, bienvenida automática, repetir pedido, badges de producto, bajo stock, quick add, historial visitados, white label, 3 páginas personalizadas |
-| Scale | USD $349/mes | Todo Growth + 50.000 push/mes, push segmentado, descuento en favoritos, drops exclusivos, productos exclusivos, cross-sell, barra envío gratis, diseños programados, rich push, B2B, multiidioma, deep linking, páginas ilimitadas |
-| Enterprise | Personalizado | Todo Scale + push ilimitado, chat en la app, QR code banner desktop, API dedicada, account manager exclusivo, SLA garantizado, integraciones custom |
+| Starter | USD $49/mes | App nativa iPhone y Android publicada por Saru Apps, sin la marca Saru Apps, editor de todas las pantallas, sincronización automática con Tiendanube, búsqueda, favoritos, cuenta del cliente con pedidos y seguimiento, cupones, notificaciones automáticas, 1.500 notificaciones de campañas/mes, 1 drop activo, banner de descarga y link con QR, analítica de 30 días, soporte por email |
+| Growth | USD $149/mes | Todo Starter + 10.000 notificaciones de campañas/mes, 3 drops activos, reels de productos (hasta 20 publicados), segundo recordatorio de carrito abandonado, aviso e indicador de poco stock, agregar rápido, repetir pedido, recomendados en el carrito, barra de envío gratis, analítica de 90 días con ventas por notificación, soporte por WhatsApp |
+| Scale | USD $349/mes | Todo Growth + 40.000 notificaciones de campañas/mes, drops ilimitados, reels de productos ilimitados, precios mayoristas (B2B), login obligatorio, soporte prioritario y puesta en marcha |
+| Enterprise | A medida | Todo Scale + notificaciones a medida, account manager, integraciones a medida |
 
-Facturación anual con 20% de descuento. Se puede crear cuenta gratis, diseñar la app y ver preview. El cobro comienza al publicar.
+Facturación anual con 20% de descuento. Se puede crear cuenta gratis, diseñar la app y ver preview. El cobro comienza al publicar. Sin comisión por venta. Las notificaciones automáticas no cuentan para el límite de campañas.
 
 Costos adicionales externos: Apple Developer Program (USD $99/año) y Google Play Console (USD $25, pago único).
 

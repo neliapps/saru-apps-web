@@ -10,6 +10,8 @@ import {
   ChevronLeft,
   Star,
   RefreshCw,
+  Flame,
+  Volume2,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { useDictionary } from "@/i18n/DictionaryProvider";
@@ -470,6 +472,92 @@ export function AnalyticsScreen() {
       <div className="mt-[22px] flex items-center justify-between rounded-[14px] bg-[#f4f4f5] p-[14px]">
         <p className="text-[11px] font-semibold">{m.abandonedCart}</p>
         <p className="text-[20px] font-extrabold tracking-[-0.03em]">62</p>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Reels: vertical shoppable videos, swiped like TikTok ─── */
+
+const REEL_H = 542; // inner screen (600) minus the tab bar
+
+function Reel({ img, product, oldPrice, counter, position }: {
+  img: string;
+  product: Product;
+  oldPrice: string;
+  counter?: string;
+  position: string;
+}) {
+  const m = useMockups();
+  return (
+    <div className="relative w-full overflow-hidden bg-black" style={{ height: REEL_H }}>
+      {/* Slow push-in stands in for the video */}
+      <motion.img
+        src={img}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover"
+        style={{ objectPosition: position }}
+        animate={{ scale: [1, 1.12] }}
+        transition={{ duration: 6, repeat: Infinity, repeatType: "mirror", ease: "linear" }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-transparent to-black/60" />
+      <b className="absolute left-[14px] top-[46px] text-[15px] font-extrabold italic tracking-[-0.02em] text-white">{m.reelsTab}</b>
+      <span className="absolute right-[12px] top-[42px] flex h-[28px] w-[28px] items-center justify-center rounded-full bg-black/40 text-white">
+        <Volume2 className="h-[14px] w-[14px]" strokeWidth={2} />
+      </span>
+      <div className="absolute inset-x-[10px] bottom-[12px]">
+        <div className="flex items-center gap-[8px] rounded-[14px] bg-black/55 p-[6px] pr-[10px] text-white backdrop-blur-md">
+          <div className="h-[46px] w-[46px] shrink-0 overflow-hidden rounded-[9px] bg-white">
+            <img src={`/brand/${product.img}`} alt="" className="h-full w-full object-cover" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="truncate text-[11px] font-bold uppercase tracking-[0.01em]">{product.name}</p>
+            <p className="text-[11px]">
+              <b className="font-bold">{product.price}</b>{" "}
+              <s className="text-white/55">{oldPrice}</s>
+            </p>
+          </div>
+          <span className="relative flex h-[30px] w-[30px] shrink-0 items-center justify-center rounded-full bg-white text-ink">
+            <motion.i
+              className="absolute inset-0 rounded-full border-2 border-accent"
+              animate={{ scale: [1, 1.5], opacity: [0.9, 0] }}
+              transition={{ duration: 1.6, repeat: Infinity, ease: "easeOut" }}
+            />
+            <ShoppingBag className="h-[14px] w-[14px]" strokeWidth={2} />
+          </span>
+          <Heart className="h-[16px] w-[16px] shrink-0" strokeWidth={2} />
+        </div>
+        {counter && <p className="mt-[6px] text-center text-[10px] font-bold text-white">{counter}</p>}
+      </div>
+    </div>
+  );
+}
+
+export function ReelsScreen() {
+  const m = useMockups();
+  const reels = [
+    { img: "/brand/modelo-sweater.png", product: m.products[3], oldPrice: m.reelOldPrice1, counter: m.reelCounter, position: "50% 20%" },
+    { img: "/brand/modelo-parka.png", product: m.products[1], oldPrice: m.reelOldPrice2, position: "50% 25%" },
+  ];
+  // The first reel is repeated at the end so the loop restarts without a visible jump
+  const track = [...reels, reels[0]];
+  const tabs = [Flame, Home, Search, Heart, ShoppingBag, User];
+  return (
+    <div className="absolute inset-0 bg-black">
+      <div className="absolute inset-x-0 top-0 overflow-hidden" style={{ height: REEL_H }}>
+        <motion.div
+          animate={{ y: [0, 0, -REEL_H, -REEL_H, -REEL_H * 2] }}
+          transition={{ duration: 8, times: [0, 0.42, 0.5, 0.92, 1], repeat: Infinity, ease: [0.65, 0, 0.35, 1] }}
+        >
+          {track.map((r, i) => (
+            <Reel key={i} {...r} />
+          ))}
+        </motion.div>
+      </div>
+      <div className="absolute inset-x-0 bottom-0 flex justify-around border-t border-white/10 bg-black pb-[22px] pt-[10px]">
+        {tabs.map((I, i) => (
+          <I key={i} className={`${icon} ${i === 0 ? "fill-white text-white" : "text-white/45"}`} strokeWidth={i === 0 ? 2.2 : 1.9} />
+        ))}
       </div>
     </div>
   );

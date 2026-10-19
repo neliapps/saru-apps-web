@@ -17,8 +17,8 @@ Saru Apps es una plataforma SaaS que permite a comerciantes de Tiendanube crear,
 | Plan | Precio | Que incluye |
 |------|--------|-------------|
 | **Starter** | USD $49/mes | App nativa iPhone y Android publicada por nosotros, sin la marca Saru Apps, editor de todas las pantallas, sincronización automática con Tiendanube, búsqueda, favoritos, cuenta del cliente con pedidos y seguimiento, cupones, notificaciones automáticas (carrito abandonado, vuelta de stock, estado del pedido, bienvenida), 1.500 notificaciones de campañas/mes, 1 drop activo, banner de descarga y link con QR, analítica de 30 días, soporte por email |
-| **Growth** | USD $149/mes | Todo lo de Starter + 10.000 notificaciones de campañas/mes, 3 drops activos, segundo recordatorio de carrito abandonado, aviso de poco stock, agregar rápido, repetir pedido, indicador de poco stock, recomendados en el carrito, barra de envío gratis, analítica de 90 días con ventas por notificación, soporte por WhatsApp |
-| **Scale** | USD $349/mes | Todo lo de Growth + 40.000 notificaciones de campañas/mes, drops ilimitados, precios mayoristas (B2B), login obligatorio, soporte prioritario y puesta en marcha |
+| **Growth** | USD $149/mes | Todo lo de Starter + 10.000 notificaciones de campañas/mes, 3 drops activos, reels de productos (hasta 20 publicados), segundo recordatorio de carrito abandonado, aviso de poco stock, agregar rápido, repetir pedido, indicador de poco stock, recomendados en el carrito, barra de envío gratis, analítica de 90 días con ventas por notificación, soporte por WhatsApp |
+| **Scale** | USD $349/mes | Todo lo de Growth + 40.000 notificaciones de campañas/mes, drops ilimitados, reels de productos ilimitados, precios mayoristas (B2B), login obligatorio, soporte prioritario y puesta en marcha |
 | **Enterprise** | A medida | Todo lo de Scale + notificaciones a medida, account manager, integraciones a medida |
 
 Facturacion anual con 20% de descuento. La cuenta y el diseno de la app son gratis; el cobro empieza al publicar.

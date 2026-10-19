@@ -52,6 +52,7 @@ const es = {
       features: [
         "10.000 notificaciones de campañas por mes",
         "3 drops activos",
+        "Reels de productos: videos tipo TikTok con tus productos (hasta 20 publicados)",
         "Segundo recordatorio de carrito abandonado y aviso de poco stock",
         "Agregar rápido, repetir pedido e indicador de poco stock",
         "Productos recomendados en el carrito y barra de envío gratis",
@@ -66,6 +67,7 @@ const es = {
       features: [
         "40.000 notificaciones de campañas por mes",
         "Drops ilimitados",
+        "Reels de productos ilimitados",
         "Precios mayoristas (B2B) y login obligatorio",
         "Soporte prioritario y puesta en marcha",
       ],
@@ -109,6 +111,7 @@ const es = {
       // Varía por plan
       { feature: "Notificaciones de campañas por mes", starter: "1.500", growth: "10.000", scale: "40.000", enterprise: "A medida" },
       { feature: "Drops activos", starter: "1", growth: "3", scale: "Ilimitados", enterprise: "Ilimitados" },
+      { feature: "Reels de productos", starter: false, growth: "20", scale: "Ilimitados", enterprise: "Ilimitados" },
       { feature: "Analítica", starter: "30 días", growth: "90 días", scale: "90 días", enterprise: "90 días" },
       // Growth+
       { feature: "Segundo recordatorio de carrito abandonado", starter: false, growth: true, scale: true, enterprise: true },
@@ -228,6 +231,7 @@ const pt: typeof es = {
       features: [
         "10.000 notificações de campanhas por mês",
         "3 drops ativos",
+        "Reels de produtos: vídeos estilo TikTok com seus produtos (até 20 publicados)",
         "Segundo lembrete de carrinho abandonado e aviso de estoque baixo",
         "Adicionar rápido, repetir pedido e indicador de estoque baixo",
         "Produtos recomendados no carrinho e barra de frete grátis",
@@ -242,6 +246,7 @@ const pt: typeof es = {
       features: [
         "40.000 notificações de campanhas por mês",
         "Drops ilimitados",
+        "Reels de produtos ilimitados",
         "Preços de atacado (B2B) e login obrigatório",
         "Suporte prioritário e implantação assistida",
       ],
@@ -283,6 +288,7 @@ const pt: typeof es = {
       { feature: "Banner de download e link com QR", starter: true, growth: true, scale: true, enterprise: true },
       { feature: "Notificações de campanhas por mês", starter: "1.500", growth: "10.000", scale: "40.000", enterprise: "Sob medida" },
       { feature: "Drops ativos", starter: "1", growth: "3", scale: "Ilimitados", enterprise: "Ilimitados" },
+      { feature: "Reels de produtos", starter: false, growth: "20", scale: "Ilimitados", enterprise: "Ilimitados" },
       { feature: "Analytics", starter: "30 dias", growth: "90 dias", scale: "90 dias", enterprise: "90 dias" },
       { feature: "Segundo lembrete de carrinho abandonado", starter: false, growth: true, scale: true, enterprise: true },
       { feature: "Aviso de estoque baixo", starter: false, growth: true, scale: true, enterprise: true },

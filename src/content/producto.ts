@@ -33,6 +33,12 @@ const es = {
       href: "/producto/notificaciones-push",
     },
     {
+      title: "Reels de producto",
+      description:
+        "Videos verticales con tus productos en una pestaña tipo TikTok. Tus clientes miran, deslizan y compran.",
+      href: "/producto/reels",
+    },
+    {
       title: "Engagement y Ventas",
       description:
         "Carrito abandonado, back in stock, drops exclusivos, badges y herramientas de conversión.",
@@ -122,6 +128,12 @@ const pt: typeof es = {
       description:
         "Envie mensagens diretas para o celular dos seus clientes. Ofertas, carrinhos abandonados e muito mais.",
       href: "/producto/notificaciones-push",
+    },
+    {
+      title: "Reels de produto",
+      description:
+        "Vídeos verticais com seus produtos em uma aba estilo TikTok. Seus clientes assistem, deslizam e compram.",
+      href: "/producto/reels",
     },
     {
       title: "Engajamento e Vendas",

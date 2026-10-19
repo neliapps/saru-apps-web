@@ -56,10 +56,10 @@ const es: LegalContent = {
           <strong>Starter (USD $49/mes):</strong> App nativa para iPhone y Android publicada por nosotros, sin la marca Saru Apps, editor de todas las pantallas, sincronización automática con Tiendanube, búsqueda, favoritos, cuenta del cliente con pedidos y seguimiento, cupones, notificaciones automáticas (carrito abandonado, vuelta de stock, estado del pedido y bienvenida), 1.500 notificaciones de campañas por mes, 1 drop activo, banner de descarga y link con QR, analítica de 30 días, soporte por email.
         </li>
         <li>
-          <strong>Growth (USD $149/mes):</strong> Todo lo de Starter más 10.000 notificaciones de campañas por mes, 3 drops activos, segundo recordatorio de carrito abandonado, aviso e indicador de poco stock, agregar rápido, repetir pedido, productos recomendados en el carrito, barra de envío gratis, analítica de 90 días con ventas por cada notificación, soporte por WhatsApp.
+          <strong>Growth (USD $149/mes):</strong> Todo lo de Starter más 10.000 notificaciones de campañas por mes, 3 drops activos, reels de productos (hasta 20 publicados), segundo recordatorio de carrito abandonado, aviso e indicador de poco stock, agregar rápido, repetir pedido, productos recomendados en el carrito, barra de envío gratis, analítica de 90 días con ventas por cada notificación, soporte por WhatsApp.
         </li>
         <li>
-          <strong>Scale (USD $349/mes):</strong> Todo lo de Growth más 40.000 notificaciones de campañas por mes, drops ilimitados, precios mayoristas (B2B), login obligatorio, soporte prioritario y puesta en marcha.
+          <strong>Scale (USD $349/mes):</strong> Todo lo de Growth más 40.000 notificaciones de campañas por mes, drops ilimitados, reels de productos ilimitados, precios mayoristas (B2B), login obligatorio, soporte prioritario y puesta en marcha.
         </li>
         <li>
           <strong>Enterprise (a medida):</strong> Todo lo de Scale más notificaciones a medida, account manager, integraciones a medida.
@@ -199,10 +199,10 @@ const pt: LegalContent = {
           <strong>Starter (USD $49/mês):</strong> App nativo para iPhone e Android publicado por nós, sem a marca Saru Apps, editor de todas as telas, sincronização automática com a Nuvemshop, busca, favoritos, conta do cliente com pedidos e rastreamento, cupons, notificações automáticas (carrinho abandonado, volta ao estoque, status do pedido e boas-vindas), 1.500 notificações de campanhas por mês, 1 drop ativo, banner de download e link com QR, analytics de 30 dias, suporte por e-mail.
         </li>
         <li>
-          <strong>Growth (USD $149/mês):</strong> Tudo do Starter mais 10.000 notificações de campanhas por mês, 3 drops ativos, segundo lembrete de carrinho abandonado, aviso e indicador de estoque baixo, adicionar rápido, repetir pedido, produtos recomendados no carrinho, barra de frete grátis, analytics de 90 dias com vendas por cada notificação, suporte por WhatsApp.
+          <strong>Growth (USD $149/mês):</strong> Tudo do Starter mais 10.000 notificações de campanhas por mês, 3 drops ativos, reels de produtos (até 20 publicados), segundo lembrete de carrinho abandonado, aviso e indicador de estoque baixo, adicionar rápido, repetir pedido, produtos recomendados no carrinho, barra de frete grátis, analytics de 90 dias com vendas por cada notificação, suporte por WhatsApp.
         </li>
         <li>
-          <strong>Scale (USD $349/mês):</strong> Tudo do Growth mais 40.000 notificações de campanhas por mês, drops ilimitados, preços de atacado (B2B), login obrigatório, suporte prioritário e implantação assistida.
+          <strong>Scale (USD $349/mês):</strong> Tudo do Growth mais 40.000 notificações de campanhas por mês, drops ilimitados, reels de produtos ilimitados, preços de atacado (B2B), login obrigatório, suporte prioritário e implantação assistida.
         </li>
         <li>
           <strong>Enterprise (sob medida):</strong> Tudo do Scale mais notificações sob medida, account manager, integrações sob medida.

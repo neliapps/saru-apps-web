@@ -20,6 +20,8 @@
     "appNativaDesc": "Publicá en App Store y Google Play",
     "push": "Notificaciones Push",
     "pushDesc": "Enviá mensajes directos a tus clientes",
+    "reels": "Reels de producto",
+    "reelsDesc": "Videos tipo TikTok para comprar",
     "engagement": "Engagement y Ventas",
     "engagementDesc": "Herramientas para convertir y retener",
     "sincronizacion": "Sincronización Tiendanube",
@@ -55,6 +57,8 @@
     "appNativaDesc": "Publicada por nosotros en App Store y Google Play, con tu marca y sin la nuestra.",
     "push": "Notificaciones que venden solas",
     "pushDesc": "Carrito abandonado, vuelta de stock, estado del pedido y bienvenida, más campañas con imagen y programadas.",
+    "reels": "Reels de producto",
+    "reelsDesc": "Subí videos verticales y asociales tus productos. Tu app suma una pestaña tipo TikTok donde tus clientes miran, deslizan y compran sin salir del video.",
     "engagement": "Drops y herramientas de venta",
     "engagementDesc": "Lanzamientos con cuenta regresiva, badges automáticos (descuento, nuevo, últimas unidades), recomendados y barra de envío gratis.",
     "sincronizacion": "Sincronización con Tiendanube",
@@ -123,6 +127,7 @@
     "editor": "Editor Drag & Drop",
     "appNativa": "App Nativa",
     "push": "Notificaciones Push",
+    "reels": "Reels de producto",
     "engagement": "Engagement y Ventas",
     "sincronizacion": "Sincronización",
     "analytics": "Analytics",
@@ -221,6 +226,10 @@
       "D"
     ],
     "abandonedCart": "Carrito abandonado",
-    "published": "Publicada"
+    "published": "Publicada",
+    "reelsTab": "Reels",
+    "reelOldPrice1": "$ 109.800",
+    "reelOldPrice2": "$ 149.000",
+    "reelCounter": "1 de 2"
   }
 }
