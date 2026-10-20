@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { productoEditorContent } from "@/content/producto-editor";
 import { localePath, toLocale } from "@/i18n/config";
+import { pageAlternates } from "@/i18n/seo";
 
 const blockIcons = [Image, Video, LayoutGrid, LayoutGrid, Circle, Tag, Timer, Minus, Pointer];
 
@@ -23,7 +24,7 @@ type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  return productoEditorContent[toLocale(locale)].metadata;
+  return { ...productoEditorContent[toLocale(locale)].metadata, alternates: pageAlternates(toLocale(locale), "/producto/editor") };
 }
 
 export default async function EditorPage({ params }: Props) {

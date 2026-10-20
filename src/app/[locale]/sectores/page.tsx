@@ -6,12 +6,13 @@ import { CtaBand } from "@/components/site/precios-shared";
 import { HomeScreen, LockScreen, ScaledPhone } from "@/components/home/phone";
 import { sectoresContent } from "@/content/sectores";
 import { toLocale } from "@/i18n/config";
+import { pageAlternates } from "@/i18n/seo";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  return sectoresContent[toLocale(locale)].metadata;
+  return { ...sectoresContent[toLocale(locale)].metadata, alternates: pageAlternates(toLocale(locale), "/sectores") };
 }
 
 export default async function Sectores({ params }: Props) {

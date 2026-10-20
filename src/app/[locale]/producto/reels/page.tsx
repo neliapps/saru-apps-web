@@ -7,6 +7,7 @@ import { Reveal, SectionHead } from "@/components/site/blocks";
 import { HeroPhone, ModuloCTA, ModuloHero } from "@/components/site/producto-modulos";
 import { productoReelsContent } from "@/content/producto-reels";
 import { localePath, toLocale } from "@/i18n/config";
+import { pageAlternates } from "@/i18n/seo";
 
 const detailIcons = [LayoutGrid, ShoppingBag, Layers, Tag, Volume2, Eye];
 
@@ -14,7 +15,7 @@ type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  return productoReelsContent[toLocale(locale)].metadata;
+  return { ...productoReelsContent[toLocale(locale)].metadata, alternates: pageAlternates(toLocale(locale), "/producto/reels") };
 }
 
 export default async function ReelsPage({ params }: Props) {

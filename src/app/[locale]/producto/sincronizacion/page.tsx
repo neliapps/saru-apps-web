@@ -16,6 +16,7 @@ import { Reveal, SectionHead } from "@/components/site/blocks";
 import { HeroPhone, ModuloCTA, ModuloHero, SyncConnection } from "@/components/site/producto-modulos";
 import { productoSincronizacionContent } from "@/content/producto-sincronizacion";
 import { toLocale } from "@/i18n/config";
+import { pageAlternates } from "@/i18n/seo";
 
 const syncIcons = [Package, FolderTree, ClipboardList, DollarSign, CreditCard];
 
@@ -26,7 +27,7 @@ type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  return productoSincronizacionContent[toLocale(locale)].metadata;
+  return { ...productoSincronizacionContent[toLocale(locale)].metadata, alternates: pageAlternates(toLocale(locale), "/producto/sincronizacion") };
 }
 
 export default async function SincronizacionPage({ params }: Props) {

@@ -6,6 +6,7 @@ import { CtaBand, RecurringBars, StepBar } from "@/components/site/precios-share
 import { Building2, User, Settings, Megaphone } from "lucide-react";
 import { partnersContent } from "@/content/partners";
 import { toLocale } from "@/i18n/config";
+import { pageAlternates } from "@/i18n/seo";
 
 const audienceIcons = [Building2, User, Settings, Megaphone];
 
@@ -15,7 +16,7 @@ type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  return partnersContent[toLocale(locale)].metadata;
+  return { ...partnersContent[toLocale(locale)].metadata, alternates: pageAlternates(toLocale(locale), "/partners") };
 }
 
 export default async function Partners({ params }: Props) {

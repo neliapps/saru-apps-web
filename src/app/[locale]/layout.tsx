@@ -6,6 +6,7 @@ import { DictionaryProvider } from "@/i18n/DictionaryProvider";
 import { getDictionary } from "@/i18n/getDictionary";
 import { locales } from "@/i18n/config";
 import type { Locale } from "@/i18n/config";
+import { SITE_URL } from "@/i18n/seo";
 import "../globals.css";
 
 const inter = Inter({
@@ -25,6 +26,7 @@ export async function generateMetadata({
   const m = dict.metadata;
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: m.title,
     description: m.description,
     keywords: [
@@ -40,6 +42,7 @@ export async function generateMetadata({
       title: m.ogTitle,
       description: m.ogDescription,
       type: "website",
+      siteName: "Saru Apps",
       locale: locale === "pt" ? "pt_BR" : "es_AR",
     },
   };

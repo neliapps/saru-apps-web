@@ -3,12 +3,13 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { guiaContent } from "@/content/guia";
 import { localePath, toLocale } from "@/i18n/config";
+import { pageAlternates } from "@/i18n/seo";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  return guiaContent[toLocale(locale)].metadata;
+  return { ...guiaContent[toLocale(locale)].metadata, alternates: pageAlternates(toLocale(locale), "/guia") };
 }
 
 export default async function Guia({ params }: Props) {

@@ -5,12 +5,13 @@ import { ProductoCTA, ProductoLinkRow } from "@/components/site/producto-blocks"
 import { HomeScreen, ScaledPhone } from "@/components/home/phone";
 import { productoContent } from "@/content/producto";
 import { localePath, toLocale } from "@/i18n/config";
+import { pageAlternates } from "@/i18n/seo";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  return productoContent[toLocale(locale)].metadata;
+  return { ...productoContent[toLocale(locale)].metadata, alternates: pageAlternates(toLocale(locale), "/producto") };
 }
 
 export default async function ProductoPage({ params }: Props) {

@@ -5,12 +5,13 @@ import { DocsHero } from "@/components/site/docs-hero";
 import { Reveal } from "@/components/site/blocks";
 import { blogContent } from "@/content/blog";
 import { localePath, toLocale } from "@/i18n/config";
+import { pageAlternates } from "@/i18n/seo";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  return blogContent[toLocale(locale)].metadata;
+  return { ...blogContent[toLocale(locale)].metadata, alternates: pageAlternates(toLocale(locale), "/blog") };
 }
 
 export default async function Blog({ params }: Props) {

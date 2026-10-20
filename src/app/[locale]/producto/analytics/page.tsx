@@ -18,6 +18,7 @@ import { Reveal, SectionHead } from "@/components/site/blocks";
 import { HeroPhone, ModuloCTA, ModuloHero } from "@/components/site/producto-modulos";
 import { productoAnalyticsContent } from "@/content/producto-analytics";
 import { toLocale } from "@/i18n/config";
+import { pageAlternates } from "@/i18n/seo";
 
 const metricIcons = [Users, TrendingUp, DollarSign, Eye, Bell, ShoppingCart];
 const impactIcons = [Target, Search, Route];
@@ -45,7 +46,7 @@ type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  return productoAnalyticsContent[toLocale(locale)].metadata;
+  return { ...productoAnalyticsContent[toLocale(locale)].metadata, alternates: pageAlternates(toLocale(locale), "/producto/analytics") };
 }
 
 export default async function AnalyticsPage({ params }: Props) {

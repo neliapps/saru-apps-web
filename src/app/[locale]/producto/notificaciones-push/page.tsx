@@ -7,6 +7,7 @@ import { Reveal, SectionHead } from "@/components/site/blocks";
 import { HeroPhone, ModuloCTA, ModuloHero } from "@/components/site/producto-modulos";
 import { productoPushContent } from "@/content/producto-push";
 import { localePath, toLocale } from "@/i18n/config";
+import { pageAlternates } from "@/i18n/seo";
 
 const typeIcons = [Zap, ShoppingCart, Sparkles, Calendar, Users];
 
@@ -14,7 +15,7 @@ type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  return productoPushContent[toLocale(locale)].metadata;
+  return { ...productoPushContent[toLocale(locale)].metadata, alternates: pageAlternates(toLocale(locale), "/producto/notificaciones-push") };
 }
 
 export default async function NotificacionesPushPage({ params }: Props) {

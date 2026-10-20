@@ -4,12 +4,13 @@ import { DocsHero } from "@/components/site/docs-hero";
 import { docsProse } from "@/components/site/docs-prose";
 import { terminosContent } from "@/content/terminos";
 import { toLocale } from "@/i18n/config";
+import { pageAlternates } from "@/i18n/seo";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  return terminosContent[toLocale(locale)].metadata;
+  return { ...terminosContent[toLocale(locale)].metadata, alternates: pageAlternates(toLocale(locale), "/terminos") };
 }
 
 export default async function Terminos({ params }: Props) {

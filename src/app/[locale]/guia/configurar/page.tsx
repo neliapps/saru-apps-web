@@ -1,12 +1,13 @@
 import { GuiaArticleLayout } from "@/components/GuiaArticleLayout";
 import { configurarContent } from "@/content/guia/configurar";
 import { toLocale } from "@/i18n/config";
+import { pageAlternates } from "@/i18n/seo";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  return configurarContent[toLocale(locale)].metadata;
+  return { ...configurarContent[toLocale(locale)].metadata, alternates: pageAlternates(toLocale(locale), "/guia/configurar") };
 }
 
 export default async function Page({ params }: Props) {

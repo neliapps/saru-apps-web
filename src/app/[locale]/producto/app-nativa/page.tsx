@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { productoAppNativaContent } from "@/content/producto-app-nativa";
 import { localePath, toLocale } from "@/i18n/config";
+import { pageAlternates } from "@/i18n/seo";
 
 const featureIcons = [Zap, Bell, WifiOff, Link2, Sparkles, ShoppingCart];
 
@@ -23,7 +24,7 @@ type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  return productoAppNativaContent[toLocale(locale)].metadata;
+  return { ...productoAppNativaContent[toLocale(locale)].metadata, alternates: pageAlternates(toLocale(locale), "/producto/app-nativa") };
 }
 
 export default async function AppNativaPage({ params }: Props) {

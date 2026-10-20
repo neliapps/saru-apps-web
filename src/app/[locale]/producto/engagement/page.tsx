@@ -20,6 +20,7 @@ import { Reveal, SectionHead } from "@/components/site/blocks";
 import { HeroPhone, ModuloCTA, ModuloHero } from "@/components/site/producto-modulos";
 import { productoEngagementContent } from "@/content/producto-engagement";
 import { localePath, toLocale } from "@/i18n/config";
+import { pageAlternates } from "@/i18n/seo";
 
 const toolIcons = [ShoppingCart, PackageCheck, HandHeart, Repeat, Badge, AlertTriangle, Zap, Heart, Flame, Lock];
 const impactIcons = [TrendingUp, Users, BarChart3];
@@ -28,7 +29,7 @@ type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  return productoEngagementContent[toLocale(locale)].metadata;
+  return { ...productoEngagementContent[toLocale(locale)].metadata, alternates: pageAlternates(toLocale(locale), "/producto/engagement") };
 }
 
 export default async function EngagementPage({ params }: Props) {

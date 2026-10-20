@@ -4,12 +4,13 @@ import { DocsHero } from "@/components/site/docs-hero";
 import { docsProse } from "@/components/site/docs-prose";
 import { privacidadContent } from "@/content/privacidad";
 import { toLocale } from "@/i18n/config";
+import { pageAlternates } from "@/i18n/seo";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  return privacidadContent[toLocale(locale)].metadata;
+  return { ...privacidadContent[toLocale(locale)].metadata, alternates: pageAlternates(toLocale(locale), "/privacidad") };
 }
 
 export default async function Privacidad({ params }: Props) {
