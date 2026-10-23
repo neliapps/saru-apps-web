@@ -3,10 +3,11 @@
 import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import { useDictionary } from "@/i18n/DictionaryProvider";
+import { signupUrl } from "@/i18n/signup";
 import { ArrowLink, HandCircle, ease, useRange } from "./home/primitives";
 
 export function CTA() {
-  const { dict } = useDictionary();
+  const { dict, locale } = useDictionary();
   const t = dict.cta;
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress: p } = useScroll({ target: ref, offset: ["start end", "center center"] });
@@ -50,7 +51,7 @@ export function CTA() {
           transition={{ duration: 0.5, delay: 0.3, ease }}
           className="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-2"
         >
-          <ArrowLink href="https://app.saruapps.com/register">{t.ctaPrimary}</ArrowLink>
+          <ArrowLink href={signupUrl(locale)}>{t.ctaPrimary}</ArrowLink>
           <ArrowLink href="https://calendly.com/saruapps/30min" external weight="medium">
             {t.ctaSecondary}
           </ArrowLink>

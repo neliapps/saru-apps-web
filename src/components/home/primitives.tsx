@@ -3,6 +3,7 @@
 import { motion, useTransform, type MotionValue } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import type { ReactNode } from "react";
+import { isSignupUrl } from "@/i18n/signup";
 
 export const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -18,6 +19,19 @@ export function useRange(
     const t = Math.min(1, Math.max(0, (x - a) / (b - a)));
     return from + (to - from) * t;
   });
+}
+
+/* ─── Tiendanube tile: marks links that sign up through Tiendanube OAuth ─── */
+
+export function TiendanubeBadge({ className = "h-[22px] w-[22px]" }: { className?: string }) {
+  return (
+    <img
+      src="/brand/tiendanube-isotipo.png"
+      alt=""
+      aria-hidden="true"
+      className={`shrink-0 rounded-[6px] ${className}`}
+    />
+  );
 }
 
 /* ─── Text CTA: bold text + arrow, hand-drawn underline on hover ─── */
@@ -41,6 +55,7 @@ export function ArrowLink({
         weight === "bold" ? "font-bold" : "font-medium"
       }`}
     >
+      {isSignupUrl(href) && <TiendanubeBadge />}
       <span className="relative">
         {children}
         <svg

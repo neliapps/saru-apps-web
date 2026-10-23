@@ -21,6 +21,7 @@ import { HeroPhone, ModuloCTA, ModuloHero } from "@/components/site/producto-mod
 import { productoEngagementContent } from "@/content/producto-engagement";
 import { localePath, toLocale } from "@/i18n/config";
 import { pageAlternates } from "@/i18n/seo";
+import { signupUrl } from "@/i18n/signup";
 
 const toolIcons = [ShoppingCart, PackageCheck, HandHeart, Repeat, Badge, AlertTriangle, Zap, Heart, Flame, Lock];
 const impactIcons = [TrendingUp, Users, BarChart3];
@@ -49,7 +50,7 @@ export default async function EngagementPage({ params }: Props) {
         title={t.hero.title}
         accent={t.hero.accent}
         subtitle={t.hero.subtitle}
-        primary={{ label: t.hero.primary, href: "https://app.saruapps.com/register" }}
+        primary={{ label: t.hero.primary, href: signupUrl(locale) }}
         secondary={{ label: t.hero.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
       >
         <HeroPhone tilt={-3}>
@@ -124,7 +125,7 @@ export default async function EngagementPage({ params }: Props) {
         title={t.cta.title}
         accent={t.cta.accent}
         subtitle={t.cta.subtitle}
-        primary={{ label: t.cta.primary, href: "https://app.saruapps.com/register" }}
+        primary={{ label: t.cta.primary, href: signupUrl(locale) }}
         secondary={{ label: t.cta.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
       />
 

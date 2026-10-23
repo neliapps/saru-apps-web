@@ -20,6 +20,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { useDictionary } from "@/i18n/DictionaryProvider";
+import { signupUrl } from "@/i18n/signup";
+import { TiendanubeBadge } from "./home/primitives";
 import { defaultLocale } from "@/i18n/config";
 
 type DropdownItem = {
@@ -211,11 +213,12 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
               {t.iniciarSesion}
             </a>
             <a
-              href="https://app.saruapps.com/register"
-              className={`text-[15px] font-medium px-5 py-2.5 rounded-lg transition-all duration-300 ${
+              href={signupUrl(locale)}
+              className={`inline-flex items-center gap-2 text-[15px] font-medium pl-3 pr-5 py-2.5 rounded-lg transition-all duration-300 ${
                 dark ? "text-ink bg-white hover:bg-white/90" : "text-white bg-ink hover:bg-ink/85"
               }`}
             >
+              <TiendanubeBadge className="h-5 w-5" />
               {t.comenzarGratis}
             </a>
           </div>
@@ -319,9 +322,10 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
                   {t.iniciarSesion}
                 </a>
                 <a
-                  href="https://app.saruapps.com/register"
-                  className="text-center text-base font-semibold text-white bg-ink py-3.5 rounded-lg"
+                  href={signupUrl(locale)}
+                  className="flex items-center justify-center gap-2.5 text-base font-semibold text-white bg-ink py-3.5 rounded-lg"
                 >
+                  <TiendanubeBadge />
                   {t.comenzarGratis}
                 </a>
               </div>

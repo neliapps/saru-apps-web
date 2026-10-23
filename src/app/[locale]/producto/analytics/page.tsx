@@ -19,6 +19,7 @@ import { HeroPhone, ModuloCTA, ModuloHero } from "@/components/site/producto-mod
 import { productoAnalyticsContent } from "@/content/producto-analytics";
 import { toLocale } from "@/i18n/config";
 import { pageAlternates } from "@/i18n/seo";
+import { signupUrl } from "@/i18n/signup";
 
 const metricIcons = [Users, TrendingUp, DollarSign, Eye, Bell, ShoppingCart];
 const impactIcons = [Target, Search, Route];
@@ -66,7 +67,7 @@ export default async function AnalyticsPage({ params }: Props) {
         title={t.hero.title}
         accent={t.hero.accent}
         subtitle={t.hero.subtitle}
-        primary={{ label: t.hero.primary, href: "https://app.saruapps.com/register" }}
+        primary={{ label: t.hero.primary, href: signupUrl(locale) }}
         secondary={{ label: t.hero.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
       >
         <HeroPhone tilt={-3}>
@@ -250,7 +251,7 @@ export default async function AnalyticsPage({ params }: Props) {
         title={t.cta.title}
         accent={t.cta.accent}
         subtitle={t.cta.subtitle}
-        primary={{ label: t.cta.primary, href: "https://app.saruapps.com/register" }}
+        primary={{ label: t.cta.primary, href: signupUrl(locale) }}
         secondary={{ label: t.cta.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
       />
 

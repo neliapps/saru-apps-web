@@ -7,6 +7,7 @@ import { HomeScreen, LockScreen, ScaledPhone } from "@/components/home/phone";
 import { sectoresContent } from "@/content/sectores";
 import { toLocale } from "@/i18n/config";
 import { pageAlternates } from "@/i18n/seo";
+import { signupUrl } from "@/i18n/signup";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -120,7 +121,7 @@ export default async function Sectores({ params }: Props) {
           accent={t.cta.accent}
           suffix={t.cta.suffix}
           subtitle={t.cta.subtitle}
-          primary={{ label: t.cta.primary, href: "https://app.saruapps.com/register" }}
+          primary={{ label: t.cta.primary, href: signupUrl(locale) }}
           secondary={{ label: t.cta.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
         />
       </main>

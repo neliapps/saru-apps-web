@@ -11,6 +11,7 @@ import {
 } from "framer-motion";
 import { Check, Search, ShoppingBag, Star, User } from "lucide-react";
 import { useDictionary } from "@/i18n/DictionaryProvider";
+import { signupUrl } from "@/i18n/signup";
 import { ArrowLink, Underline, ease, useRange } from "./home/primitives";
 import { HomeScreen, Island, PHONE_H, PHONE_W, PushCard, StatusBar, frameStyle } from "./home/phone";
 
@@ -225,7 +226,7 @@ function MorphStage() {
 }
 
 export function Hero() {
-  const { dict } = useDictionary();
+  const { dict, locale } = useDictionary();
   const t = dict.hero;
 
   return (
@@ -269,7 +270,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.85, ease }}
             className="flex flex-wrap items-center gap-x-10 gap-y-2 md:col-span-6 md:col-start-7"
           >
-            <ArrowLink href="https://app.saruapps.com/register">{t.ctaPrimary}</ArrowLink>
+            <ArrowLink href={signupUrl(locale)}>{t.ctaPrimary}</ArrowLink>
             <ArrowLink href="#como-funciona" weight="medium">
               {t.ctaSecondary}
             </ArrowLink>

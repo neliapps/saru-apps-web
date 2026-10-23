@@ -4,10 +4,11 @@ import { useState, type ReactNode } from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { AnimatedSection } from "./AnimatedSection";
-import { Label, Underline, ease } from "./home/primitives";
+import { Label, TiendanubeBadge, Underline, ease } from "./home/primitives";
 import { SectionHead } from "./site/blocks";
 import { CtaBand } from "./site/precios-shared";
 import { useDictionary } from "@/i18n/DictionaryProvider";
+import { signupUrl } from "@/i18n/signup";
 import { preciosContent } from "@/content/precios";
 
 /* ─── Plan data (text lives in src/content/precios.ts, by index) ─── */
@@ -16,14 +17,15 @@ type PlanMeta = {
   name: string;
   monthlyPrice: number;
   currency: string;
-  href: string;
+  /** Defaults to the Tiendanube signup */
+  href?: string;
   highlighted: boolean;
 };
 
 const planMeta: PlanMeta[] = [
-  { name: "Starter", monthlyPrice: 49, currency: "USD", href: "https://app.saruapps.com/register", highlighted: false },
-  { name: "Growth", monthlyPrice: 149, currency: "USD", href: "https://app.saruapps.com/register", highlighted: true },
-  { name: "Scale", monthlyPrice: 349, currency: "USD", href: "https://app.saruapps.com/register", highlighted: false },
+  { name: "Starter", monthlyPrice: 49, currency: "USD", highlighted: false },
+  { name: "Growth", monthlyPrice: 149, currency: "USD", highlighted: true },
+  { name: "Scale", monthlyPrice: 349, currency: "USD", highlighted: false },
   { name: "Enterprise", monthlyPrice: 0, currency: "", href: "https://calendly.com/saruapps/30min", highlighted: false },
 ];
 
@@ -199,14 +201,15 @@ export function PreciosContent() {
                     </div>
 
                     <a
-                      href={plan.href}
+                      href={plan.href || signupUrl(locale)}
                       {...(plan.name === "Enterprise"
                         ? { target: "_blank", rel: "noopener noreferrer" }
                         : {})}
-                      className={`mt-6 flex min-h-[48px] items-center justify-center rounded-lg text-[15px] font-bold transition-opacity duration-300 hover:opacity-85 ${
+                      className={`mt-6 flex min-h-[48px] items-center justify-center gap-2.5 rounded-lg text-[15px] font-bold transition-opacity duration-300 hover:opacity-85 ${
                         hl ? "bg-white text-ink" : "bg-ink text-white"
                       }`}
                     >
+                      {!plan.href && <TiendanubeBadge />}
                       {copy.cta}
                     </a>
 
@@ -370,7 +373,7 @@ export function PreciosContent() {
         title={t.cta.title}
         accent={t.cta.accent}
         subtitle={t.cta.subtitle}
-        primary={{ label: t.cta.primary, href: "https://app.saruapps.com/register" }}
+        primary={{ label: t.cta.primary, href: signupUrl(locale) }}
         secondary={{ label: t.cta.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
       />
     </main>

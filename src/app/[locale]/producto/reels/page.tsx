@@ -8,6 +8,7 @@ import { HeroPhone, ModuloCTA, ModuloHero } from "@/components/site/producto-mod
 import { productoReelsContent } from "@/content/producto-reels";
 import { localePath, toLocale } from "@/i18n/config";
 import { pageAlternates } from "@/i18n/seo";
+import { signupUrl } from "@/i18n/signup";
 
 const detailIcons = [LayoutGrid, ShoppingBag, Layers, Tag, Volume2, Eye];
 
@@ -34,7 +35,7 @@ export default async function ReelsPage({ params }: Props) {
         title={t.hero.title}
         accent={t.hero.accent}
         subtitle={t.hero.subtitle}
-        primary={{ label: t.hero.primary, href: "https://app.saruapps.com/register" }}
+        primary={{ label: t.hero.primary, href: signupUrl(locale) }}
         secondary={{ label: t.hero.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
       >
         <HeroPhone dark tilt={3}>
@@ -133,7 +134,7 @@ export default async function ReelsPage({ params }: Props) {
         title={t.cta.title}
         accent={t.cta.accent}
         subtitle={t.cta.subtitle}
-        primary={{ label: t.cta.primary, href: "https://app.saruapps.com/register" }}
+        primary={{ label: t.cta.primary, href: signupUrl(locale) }}
         secondary={{ label: t.cta.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
       />
 

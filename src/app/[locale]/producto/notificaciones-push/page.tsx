@@ -8,6 +8,7 @@ import { HeroPhone, ModuloCTA, ModuloHero } from "@/components/site/producto-mod
 import { productoPushContent } from "@/content/producto-push";
 import { localePath, toLocale } from "@/i18n/config";
 import { pageAlternates } from "@/i18n/seo";
+import { signupUrl } from "@/i18n/signup";
 
 const typeIcons = [Zap, ShoppingCart, Sparkles, Calendar, Users];
 
@@ -163,7 +164,7 @@ export default async function NotificacionesPushPage({ params }: Props) {
       <ModuloCTA
         title={t.cta.title}
         subtitle={t.cta.subtitle}
-        primary={{ label: t.cta.primary, href: "https://app.saruapps.com/register" }}
+        primary={{ label: t.cta.primary, href: signupUrl(locale) }}
         secondary={{ label: t.cta.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
       />
 

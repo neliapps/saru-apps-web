@@ -17,6 +17,7 @@ import {
 import { productoEditorContent } from "@/content/producto-editor";
 import { localePath, toLocale } from "@/i18n/config";
 import { pageAlternates } from "@/i18n/seo";
+import { signupUrl } from "@/i18n/signup";
 
 const blockIcons = [Image, Video, LayoutGrid, LayoutGrid, Circle, Tag, Timer, Minus, Pointer];
 
@@ -215,7 +216,7 @@ export default async function EditorPage({ params }: Props) {
         title={t.cta.title}
         accent={t.cta.accent}
         subtitle={t.cta.subtitle}
-        primary={{ label: t.cta.primary, href: "https://app.saruapps.com/register" }}
+        primary={{ label: t.cta.primary, href: signupUrl(locale) }}
         secondary={{ label: t.cta.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
       />
 
