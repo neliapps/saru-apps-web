@@ -15,22 +15,22 @@ const es = {
   meanwhile: "Mientras tanto",
   links: [
     {
-      title: "Leé nuestra guía de la plataforma",
-      description: "Todo lo que necesitás saber para crear, personalizar y publicar tu app.",
+      title: "Lee nuestra guía de la plataforma",
+      description: "Todo lo que necesitas saber para crear, personalizar y publicar tu app.",
       href: "/guia",
     },
     {
-      title: "Consultá las preguntas frecuentes",
+      title: "Consulta las preguntas frecuentes",
       description: "Respuestas a las dudas más comunes sobre Saru Apps.",
       href: "/faq",
     },
   ],
   newsletter: {
-    title: "Suscribite para recibir novedades",
+    title: "Suscríbete para recibir novedades",
     subtitle: "Sé el primero en enterarte cuando publiquemos nuevos artículos, guías y recursos.",
     placeholder: "tu@email.com",
     button: "Suscribirme",
-    note: "Sin spam. Podés darte de baja en cualquier momento.",
+    note: "Sin spam. Puedes darte de baja en cualquier momento.",
   },
 };
 

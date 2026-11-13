@@ -4,12 +4,12 @@ const es = {
   metadata: {
     title: "Engagement y Ventas — Saru Apps",
     description:
-      "Herramientas de engagement y conversión para tu app móvil: carrito abandonado, back in stock, drops exclusivos, badges, quick add y más. Convertí visitantes en clientes recurrentes.",
+      "Herramientas de engagement y conversión para tu app móvil: carrito abandonado, back in stock, drops exclusivos, badges, quick add y más. Convierte visitantes en clientes recurrentes.",
   },
   back: "Producto",
   hero: {
     label: "Producto",
-    title: "Convertí visitantes",
+    title: "Convierte visitantes",
     accent: "en clientes recurrentes",
     subtitle:
       "Herramientas de engagement y conversión pensadas para que cada visita a tu app se transforme en una venta. Automatizaciones, urgencia y exclusividad en un solo lugar.",
@@ -18,7 +18,7 @@ const es = {
   },
   tools: {
     label: "Herramientas",
-    title: "Todo lo que necesitás para",
+    title: "Todo lo que necesitas para",
     italic: "vender más desde tu app",
     subtitle:
       "Desde automatizaciones inteligentes hasta herramientas de urgencia y exclusividad. Cada una pensada para aumentar tus ventas.",
@@ -26,22 +26,22 @@ const es = {
       {
         title: "Carrito abandonado",
         description:
-          "Notificaciones automáticas cuando un cliente deja productos en el carrito. Recuperá ventas que de otra forma se perderían.",
+          "Notificaciones automáticas cuando un cliente deja productos en el carrito. Recupera ventas que de otra forma se perderían.",
       },
       {
         title: "Back in stock",
         description:
-          "Avisá automáticamente a los clientes cuando un producto que les interesaba vuelve a tener stock disponible.",
+          "Avisa automáticamente a los clientes cuando un producto que les interesaba vuelve a tener stock disponible.",
       },
       {
         title: "Bienvenida automática",
         description:
-          "Enviá un mensaje de bienvenida personalizado cuando un nuevo usuario instala tu app. Primera impresión perfecta.",
+          "Envía un mensaje de bienvenida personalizado cuando un nuevo usuario instala tu app. Primera impresión perfecta.",
       },
       {
         title: "Repetir pedido",
         description:
-          "Permití a tus clientes repetir un pedido anterior con un solo toque. Ideal para productos de consumo recurrente.",
+          "Permite a tus clientes repetir un pedido anterior con un solo toque. Ideal para productos de consumo recurrente.",
       },
       {
         title: "Badges de producto",
@@ -51,12 +51,12 @@ const es = {
       {
         title: "Indicador de bajo stock",
         description:
-          "Mostrá cuando quedan pocas unidades de un producto. Genera urgencia real y acelera la decisión de compra.",
+          "Muestra cuando quedan pocas unidades de un producto. Genera urgencia real y acelera la decisión de compra.",
       },
       {
         title: "Quick add to cart",
         description:
-          "Agregá productos al carrito sin salir del listado. Menos fricción, más productos por pedido.",
+          "Agrega productos al carrito sin salir del listado. Menos fricción, más productos por pedido.",
       },
       {
         title: "Wishlist / favoritos",
@@ -66,12 +66,12 @@ const es = {
       {
         title: "Drops exclusivos",
         description:
-          "Lanzá productos con disponibilidad limitada solo para usuarios de tu app. Generá hype y descargas.",
+          "Lanza productos con disponibilidad limitada solo para usuarios de tu app. Genera hype y descargas.",
       },
       {
         title: "Productos exclusivos",
         description:
-          "Ofrecé productos que solo están disponibles dentro de tu app. Un incentivo poderoso para instalar y comprar.",
+          "Ofrece productos que solo están disponibles dentro de tu app. Un incentivo poderoso para instalar y comprar.",
       },
     ],
   },
@@ -100,10 +100,10 @@ const es = {
     ],
   },
   cta: {
-    title: "Activá tus herramientas",
+    title: "Activa tus herramientas",
     accent: "de conversión",
     subtitle:
-      "Creá tu app y empezá a convertir visitantes en clientes recurrentes. Todas las herramientas listas para usar.",
+      "Crea tu app y empieza a convertir visitantes en clientes recurrentes. Todas las herramientas listas para usar.",
     primary: "Empezar gratis",
     secondary: "Agendar una demo",
   },

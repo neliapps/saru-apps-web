@@ -4,19 +4,19 @@ const es = {
   metadata: {
     title: "Editor Drag & Drop — Saru Apps",
     description:
-      "Diseñá cada pantalla de tu app arrastrando componentes visuales. Banner, carrusel, grillas, countdown y más. Sin código, sin límites.",
+      "Diseña cada pantalla de tu app arrastrando componentes visuales. Banner, carrusel, cuadrículas, countdown y más. Sin código, sin límites.",
   },
   back: "Producto",
   hero: {
     label: "Editor Drag & Drop",
-    title: "Diseñá tu app",
+    title: "Diseña tu app",
     accent: "arrastrando componentes",
     subtitle:
-      "Editor visual para armar cada pantalla de tu app. Arrastrá bloques, personalizá estilos y mirá el resultado en tiempo real. Sin escribir una línea de código.",
+      "Editor visual para armar cada pantalla de tu app. Arrastra bloques, personaliza estilos y mira el resultado en tiempo real. Sin escribir una línea de código.",
   },
   mockup: {
     components: "Componentes",
-    componentItems: ["Banner Hero", "Grilla 2x2", "Carrusel", "Countdown", "CTA", "Video", "Categorías"],
+    componentItems: ["Banner Hero", "Cuadrícula 2x2", "Carrusel", "Countdown", "CTA", "Video", "Categorías"],
     style: "Estilo",
     radius: "Radio",
     padding: "Padding",
@@ -34,7 +34,7 @@ const es = {
     title: "Bloques",
     italic: "disponibles",
     subtitle:
-      "Armá cada pantalla combinando los bloques que necesites. Arrastrá, ordená y personalizá.",
+      "Arma cada pantalla combinando los bloques que necesites. Arrastra, ordena y personaliza.",
   },
   blocks: [
     {
@@ -51,9 +51,9 @@ const es = {
       description: "Slider horizontal con productos destacados, ofertas o novedades.",
     },
     {
-      title: "Grilla de productos",
+      title: "Cuadrícula de productos",
       description:
-        "Muestra productos en formato grilla de 2 o 3 columnas con imagen, precio y nombre.",
+        "Muestra productos en formato cuadrícula de 2 o 3 columnas con imagen, precio y nombre.",
     },
     {
       title: "Colecciones en círculo",
@@ -71,7 +71,7 @@ const es = {
     },
     {
       title: "Separadores",
-      description: "Espaciado visual entre secciones. Personalizá grosor, color y margen.",
+      description: "Espaciado visual entre secciones. Personaliza grosor, color y margen.",
     },
     {
       title: "Botones CTA",
@@ -83,24 +83,24 @@ const es = {
     {
       title: "Sin código",
       description:
-        "No necesitás saber programar. Todo se configura visualmente desde el panel.",
+        "No necesitas saber programar. Todo se configura visualmente desde el panel.",
     },
     {
       title: "Vista previa en tiempo real",
       description:
-        "Mirá cómo queda cada cambio al instante en la previsualización del celular.",
+        "Mira cómo queda cada cambio al instante en la previsualización del celular.",
     },
     {
       title: "Componentes ilimitados",
       description:
-        "Agregá todos los bloques que necesites. No hay límites de secciones por pantalla.",
+        "Agrega todos los bloques que necesites. No hay límites de secciones por pantalla.",
     },
   ],
   cta: {
-    title: "Empezá a diseñar",
+    title: "Empieza a diseñar",
     accent: "tu app",
     subtitle:
-      "Abrí el editor, arrastrá componentes y creá la app perfecta para tu tienda. Sin código, sin complicaciones.",
+      "Abre el editor, arrastra componentes y crea la app perfecta para tu tienda. Sin código, sin complicaciones.",
     primary: "Empezar gratis",
     secondary: "Agendar una demo",
   },

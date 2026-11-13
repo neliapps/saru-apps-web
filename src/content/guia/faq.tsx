@@ -20,7 +20,7 @@ export const faqContent: GuiaArticleContent = {
 
         <p><strong>¿Puedo probar antes de pagar?</strong></p>
         <p>
-          Sí, podés crear tu cuenta y configurar tu app gratis. Solo necesitás un
+          Sí, puedes crear tu cuenta y configurar tu app gratis. Solo necesitas un
           plan activo para publicarla.
         </p>
 
@@ -34,7 +34,7 @@ export const faqContent: GuiaArticleContent = {
 
         <p><strong>¿Puedo desconectar mi tienda?</strong></p>
         <p>
-          Sí, podés desconectar en cualquier momento desde la sección de
+          Sí, puedes desconectar en cualquier momento desde la sección de
           Integraciones. Tu app seguirá funcionando con los productos ya
           sincronizados.
         </p>
@@ -55,14 +55,14 @@ export const faqContent: GuiaArticleContent = {
 
         <p><strong>¿Puedo despublicar mi app?</strong></p>
         <p>
-          Sí, podés despublicar en cualquier momento desde la sección Publicar.
+          Sí, puedes despublicar en cualquier momento desde la sección Publicar.
         </p>
 
         <p>
           <strong>¿Qué necesito para publicar en App Store y Google Play?</strong>
         </p>
         <p>
-          Necesitás cualquier plan activo de Saru Apps, una cuenta de Apple
+          Necesitas cualquier plan activo de Saru Apps, una cuenta de Apple
           Developer ($99/año) y una cuenta de Google Play Developer ($25 una vez).
           Nosotros nos encargamos de compilar y subir la app a tus cuentas.
         </p>
@@ -72,12 +72,12 @@ export const faqContent: GuiaArticleContent = {
         <p><strong>¿Cómo reciben las notificaciones mis clientes?</strong></p>
         <p>
           Los clientes que descarguen tu app nativa reciben notificaciones push
-          automáticamente cuando las enviás desde el panel.
+          automáticamente cuando las envías desde el panel.
         </p>
 
         <p><strong>¿Puedo programar notificaciones?</strong></p>
         <p>
-          Sí, podés programar notificaciones para que se envíen en una fecha y
+          Sí, puedes programar notificaciones para que se envíen en una fecha y
           hora específica.
         </p>
 
@@ -92,13 +92,13 @@ export const faqContent: GuiaArticleContent = {
 
         <p><strong>¿Puedo cambiar de plan?</strong></p>
         <p>
-          Sí, podés cambiar de plan en cualquier momento desde la sección Plan en
+          Sí, puedes cambiar de plan en cualquier momento desde la sección Plan en
           el dashboard.
         </p>
 
         <p><strong>¿Cómo cancelo mi suscripción?</strong></p>
         <p>
-          Contactanos a{" "}
+          Contáctanos a{" "}
           <a href="mailto:ventas@saruapps.com" className={linkClass}>
             ventas@saruapps.com
           </a>{" "}

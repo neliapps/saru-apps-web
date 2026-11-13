@@ -8,14 +8,14 @@ const es = {
   metadata: {
     title: "Precios — Saru Apps",
     description:
-      "Planes y precios de Saru Apps. Diseñá y probá tu app gratis: pagás recién cuando la publicamos en App Store y Google Play. Sin contratos, sin comisión por venta.",
+      "Planes y precios de Saru Apps. Diseña y prueba tu app gratis: pagas solo cuando la publicamos en App Store y Google Play. Sin contratos, sin comisión por venta.",
   },
   hero: {
     label: "Precios",
     title: "Tu app, vendiendo desde el",
     accent: "día uno",
     subtitle:
-      "Diseñala y probala gratis. Pagás recién cuando la publicamos en App Store y Google Play. Sin contratos, sin comisión por venta.",
+      "Diséñala y pruébala gratis. Pagas solo cuando la publicamos en App Store y Google Play. Sin contratos, sin comisión por venta.",
   },
   billing: {
     ariaLabel: "Facturación",
@@ -44,10 +44,10 @@ const es = {
         "Analítica de los últimos 30 días",
         "Soporte por email",
       ],
-      cta: "Registrate gratis",
+      cta: "Regístrate gratis",
     },
     {
-      description: "Vendé más a los clientes que ya tienen tu app.",
+      description: "Vende más a los clientes que ya tienen tu app.",
       lead: "Todo lo de Starter, más:" as string | null,
       features: [
         "10.000 notificaciones de campañas por mes",
@@ -59,7 +59,7 @@ const es = {
         "Analítica de hasta 90 días, con ventas por cada notificación",
         "Soporte por WhatsApp",
       ],
-      cta: "Registrate gratis",
+      cta: "Regístrate gratis",
     },
     {
       description: "Exclusividad y venta mayorista.",
@@ -71,7 +71,7 @@ const es = {
         "Precios mayoristas (B2B) y login obligatorio",
         "Soporte prioritario y puesta en marcha",
       ],
-      cta: "Registrate gratis",
+      cta: "Regístrate gratis",
     },
     {
       description: "Para grandes marcas.",
@@ -86,15 +86,15 @@ const es = {
   },
   fees: {
     title: "Costos de Apple y Google (no los cobramos nosotros)",
-    description: "Podés publicar como empresa o como persona física (monotributo).",
+    description: "Puedes publicar como empresa o como persona física (monotributo).",
     apple: "US$99 por año",
     google: "US$25 una sola vez",
   },
   comparison: {
     label: "Comparación",
-    title: "Compará los planes en detalle",
+    title: "Compara los planes en detalle",
     subtitle:
-      "Todas las funciones, plan por plan. Elegí el que mejor se adapte a tu negocio.",
+      "Todas las funciones, plan por plan. Elige el que mejor se adapte a tu negocio.",
     ariaLabel: "Comparación de planes",
     featureHeader: "Función",
     included: "Incluido",
@@ -136,12 +136,12 @@ const es = {
     label: "FAQ",
     title: "Preguntas sobre",
     italic: "precios",
-    notFound: "¿No encontrás tu respuesta?",
-    contact: "Contactanos",
+    notFound: "¿No encuentras tu respuesta?",
+    contact: "Contáctanos",
     items: [
       {
         question: "¿Cobran comisión por venta?",
-        answer: "No. Pagás solo el plan.",
+        answer: "No. Pagas solo el plan.",
       },
       {
         question: "¿Hay costo de configuración o de publicación?",
@@ -154,25 +154,25 @@ const es = {
       {
         question: "¿Qué pasa si cancelo?",
         answer:
-          "Tu app deja de estar disponible para tus clientes al terminar el período pagado. Tu diseño queda guardado por si volvés.",
+          "Tu app deja de estar disponible para tus clientes al terminar el período pagado. Tu diseño queda guardado por si vuelves.",
       },
       {
         question: "¿Qué plan me conviene?",
         answer:
-          "Si recién lanzás tu app, Starter. Cuando la app ya es un canal de venta y necesitás mandar más campañas, Growth. Si vendés mayorista o hacés lanzamientos seguidos, Scale.",
+          "Si acabas de lanzar tu app, Starter. Cuando la app ya es un canal de venta y necesitas mandar más campañas, Growth. Si vendes mayorista o haces lanzamientos seguidos, Scale.",
       },
       {
         question: "¿Qué pasa si llego al límite de notificaciones?",
         answer:
-          "Las automáticas siguen funcionando. Las campañas nuevas quedan en pausa hasta el mes siguiente, o podés mejorar tu plan.",
+          "Las automáticas siguen funcionando. Las campañas nuevas quedan en pausa hasta el mes siguiente, o puedes mejorar tu plan.",
       },
     ] as Faq[],
   },
   cta: {
-    title: "Lanzá tu app",
+    title: "Lanza tu app",
     accent: "hoy",
     subtitle:
-      "Creá la app de tu tienda Tiendanube en minutos. Empezá gratis, sin tarjeta de crédito.",
+      "Crea la app de tu tienda Tiendanube en minutos. Empieza gratis, sin tarjeta de crédito.",
     primary: "Empezar gratis",
     secondary: "Agendar una demo",
   },

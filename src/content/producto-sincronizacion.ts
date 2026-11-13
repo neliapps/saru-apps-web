@@ -11,7 +11,7 @@ const es = {
     title: "Tu tienda y tu app,",
     accent: "siempre sincronizadas",
     subtitle:
-      "Productos, categorías, precios y pedidos se sincronizan automáticamente entre tu tienda Tiendanube y tu app. Editá en un lugar, se actualiza en todos.",
+      "Productos, categorías, precios y pedidos se sincronizan automáticamente entre tu tienda Tiendanube y tu app. Edita en un lugar, se actualiza en todos.",
     primary: "Conectar mi tienda",
     secondary: "Ver cómo funciona",
   },
@@ -20,7 +20,7 @@ const es = {
     title: "Todo lo que se sincroniza",
     italic: "automáticamente",
     subtitle:
-      "No necesitás importar ni exportar nada. La integración con Tiendanube se encarga de mantener todo actualizado.",
+      "No necesitas importar ni exportar nada. La integración con Tiendanube se encarga de mantener todo actualizado.",
     items: [
       {
         title: "Productos",
@@ -40,7 +40,7 @@ const es = {
       {
         title: "Precios y stock",
         description:
-          "Cuando actualizás un precio o el stock en Tiendanube, se refleja en la app en tiempo real. Sin demoras, sin inconsistencias.",
+          "Cuando actualizas un precio o el stock en Tiendanube, se refleja en la app en tiempo real. Sin demoras, sin inconsistencias.",
       },
       {
         title: "Checkout",
@@ -51,19 +51,19 @@ const es = {
   },
   connection: {
     label: "Conexión",
-    title: "Conectá tu tienda",
+    title: "Conecta tu tienda",
     italic: "en 3 simples pasos",
     detail: "Integración en 30 segundos",
     steps: [
       {
         number: "01",
-        title: "Instalá Saru Apps desde Tiendanube",
+        title: "Instala Saru Apps desde Tiendanube",
         description:
-          "Accedé a tu panel de Tiendanube, buscá Saru Apps en la sección de aplicaciones y hacé clic en instalar.",
+          "Accede a tu panel de Tiendanube, busca Saru Apps en la sección de aplicaciones y haz clic en instalar.",
       },
       {
         number: "02",
-        title: "Autorizá los permisos (OAuth)",
+        title: "Autoriza los permisos (OAuth)",
         description:
           "Tiendanube te pide autorizar los permisos necesarios. Saru Apps solo accede a lo que necesita: productos, categorías y pedidos.",
       },
@@ -71,7 +71,7 @@ const es = {
         number: "03",
         title: "Sincronización automática en segundos",
         description:
-          "En cuanto autorizás, todos tus productos, categorías y configuraciones se importan automáticamente. Listo para usar.",
+          "En cuanto autorizas, todos tus productos, categorías y configuraciones se importan automáticamente. Listo para usar.",
       },
     ],
     diagram: {
@@ -94,7 +94,7 @@ const es = {
     label: "Tiempo real",
     title: "Cambios en tiempo real",
     italic: "vía webhooks",
-    p1: "Cuando editás un producto en Tiendanube (cambiás el precio, actualizás el stock, modificás una descripción), el cambio se refleja instantáneamente en tu app.",
+    p1: "Cuando editas un producto en Tiendanube (cambias el precio, actualizas el stock, modificas una descripción), el cambio se refleja instantáneamente en tu app.",
     p2: "Usamos webhooks para recibir notificaciones de cada cambio en tu tienda. No hay polling, no hay demoras. La sincronización es inmediata y bidireccional.",
     bullets: [
       "Actualización instantánea de precios",
@@ -113,13 +113,13 @@ const es = {
   },
   security: {
     title: "Conexión segura vía OAuth 2.0",
-    body: "La integración usa el protocolo OAuth 2.0 de Tiendanube. Nunca almacenamos tus credenciales. Vos controlás los permisos y podés revocar el acceso en cualquier momento desde tu panel de Tiendanube.",
+    body: "La integración usa el protocolo OAuth 2.0 de Tiendanube. Nunca almacenamos tus credenciales. Tú controlas los permisos y puedes revocar el acceso en cualquier momento desde tu panel de Tiendanube.",
   },
   cta: {
-    title: "Conectá tu tienda",
+    title: "Conecta tu tienda",
     accent: "en segundos",
     subtitle:
-      "Instalá Saru Apps desde Tiendanube y tus productos se sincronizan automáticamente. Sin configuración manual.",
+      "Instala Saru Apps desde Tiendanube y tus productos se sincronizan automáticamente. Sin configuración manual.",
     primary: "Empezar gratis",
     secondary: "Agendar una demo",
   },

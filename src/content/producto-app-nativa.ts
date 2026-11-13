@@ -67,14 +67,14 @@ const es = {
     label: "Publicación",
     title: "De tu editor a las tiendas",
     italic: "en 3 pasos",
-    subtitle: "Vos diseñás. Nosotros nos encargamos de publicar.",
+    subtitle: "Tú diseñas. Nosotros nos encargamos de publicar.",
   },
   publishingSteps: [
     {
       number: "01",
-      title: "Diseñá tu app",
+      title: "Diseña tu app",
       description:
-        "Usá el editor drag & drop para armar cada pantalla. Personalizá colores, tipografías y componentes.",
+        "Usa el editor drag & drop para armar cada pantalla. Personaliza colores, tipografías y componentes.",
     },
     {
       number: "02",
@@ -106,7 +106,7 @@ const es = {
     title: "Tu app en",
     accent: "las tiendas",
     subtitle:
-      "Creá tu app y nosotros nos encargamos de publicarla en App Store y Google Play. Sin complicaciones técnicas.",
+      "Crea tu app y nosotros nos encargamos de publicarla en App Store y Google Play. Sin complicaciones técnicas.",
     primary: "Empezar gratis",
     secondary: "Agendar una demo",
   },

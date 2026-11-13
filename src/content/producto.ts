@@ -4,11 +4,11 @@ const es = {
   metadata: {
     title: "Producto — Saru Apps",
     description:
-      "Conocé todas las herramientas de Saru Apps: editor drag & drop, app nativa iOS y Android, notificaciones push, engagement y ventas, sincronización con Tiendanube y analytics en tiempo real.",
+      "Conoce todas las herramientas de Saru Apps: editor drag & drop, app nativa iOS y Android, notificaciones push, engagement y ventas, sincronización con Tiendanube y analytics en tiempo real.",
   },
   hero: {
     label: "Producto",
-    title: "Todo lo que necesitás para vender",
+    title: "Todo lo que necesitas para vender",
     accent: "desde tu app",
     subtitle:
       "Herramientas para crear, personalizar y hacer crecer tu canal de ventas móvil. Sin código, sin complicaciones.",
@@ -17,7 +17,7 @@ const es = {
     {
       title: "Editor Drag & Drop",
       description:
-        "Diseñá cada pantalla de tu app arrastrando componentes visuales. Sin código, sin límites.",
+        "Diseña cada pantalla de tu app arrastrando componentes visuales. Sin código, sin límites.",
       href: "/producto/editor",
     },
     {
@@ -29,7 +29,7 @@ const es = {
     {
       title: "Notificaciones Push",
       description:
-        "Enviá mensajes directos al celular de tus clientes. Ofertas, carritos abandonados y más.",
+        "Envía mensajes directos al celular de tus clientes. Ofertas, carritos abandonados y más.",
       href: "/producto/notificaciones-push",
     },
     {
@@ -63,35 +63,35 @@ const es = {
     title: "De tu tienda a una app",
     italic: "en 4 pasos",
     subtitle:
-      "No necesitás experiencia técnica. Nuestro proceso está diseñado para que lances tu app en minutos.",
+      "No necesitas experiencia técnica. Nuestro proceso está diseñado para que lances tu app en minutos.",
   },
   steps: [
     {
       number: "01",
-      title: "Conectá tu Tiendanube",
-      description: "Instalá Saru Apps y tus productos se importan automáticamente.",
+      title: "Conecta tu Tiendanube",
+      description: "Instala Saru Apps y tus productos se importan automáticamente.",
     },
     {
       number: "02",
-      title: "Diseñá tu app",
-      description: "Usá el editor visual para personalizar cada pantalla sin código.",
+      title: "Diseña tu app",
+      description: "Usa el editor visual para personalizar cada pantalla sin código.",
     },
     {
       number: "03",
-      title: "Activá engagement",
-      description: "Configurá push, engagement y herramientas de conversión para la app.",
+      title: "Activa engagement",
+      description: "Configura push, engagement y herramientas de conversión para la app.",
     },
     {
       number: "04",
-      title: "Publicá y crecé",
+      title: "Publica y crece",
       description: "Nosotros publicamos tu app en App Store y Google Play.",
     },
   ],
   cta: {
-    title: "Lanzá tu app",
+    title: "Lanza tu app",
     accent: "hoy",
     subtitle:
-      "Creá la app de tu tienda Tiendanube en minutos. Empezá gratis, sin tarjeta de crédito.",
+      "Crea la app de tu tienda Tiendanube en minutos. Empieza gratis, sin tarjeta de crédito.",
     primary: "Empezar gratis",
     secondary: "Agendar una demo",
   },

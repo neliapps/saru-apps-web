@@ -25,8 +25,8 @@ const es: LegalContent = {
       <h2>1. Aceptación de los Términos</h2>
       <p>
         Al acceder y utilizar la plataforma Saru Apps (en adelante, “el Servicio”), operada a
-        través de saruapps.com y app.saruapps.com, aceptás estos Términos y Condiciones en su
-        totalidad. Si no estás de acuerdo con alguna parte, no debés utilizar el Servicio.
+        través de saruapps.com y app.saruapps.com, aceptas estos Términos y Condiciones en su
+        totalidad. Si no estás de acuerdo con alguna parte, no debes utilizar el Servicio.
       </p>
 
       <h2>2. Descripción del Servicio</h2>
@@ -44,8 +44,8 @@ const es: LegalContent = {
 
       <h2>3. Registro y Cuenta</h2>
       <p>
-        Para utilizar el Servicio, debés crear una cuenta proporcionando información veraz y
-        actualizada. Sos responsable de mantener la confidencialidad de tus credenciales de
+        Para utilizar el Servicio, debes crear una cuenta proporcionando información veraz y
+        actualizada. Eres responsable de mantener la confidencialidad de tus credenciales de
         acceso y de todas las actividades realizadas bajo tu cuenta.
       </p>
 
@@ -67,12 +67,12 @@ const es: LegalContent = {
       </ul>
       <p>Las notificaciones automáticas no cuentan para el límite de campañas.</p>
       <p>
-        Podés crear tu cuenta gratis, diseñar tu app completa y ver una preview. El cobro
-        comienza únicamente cuando decidís publicar tu app. Los precios pueden ser actualizados
+        Puedes crear tu cuenta gratis, diseñar tu app completa y ver una preview. El cobro
+        comienza únicamente cuando decides publicar tu app. Los precios pueden ser actualizados
         con un aviso previo de 30 días.
       </p>
       <p>
-        Si elegís la facturación anual, se aplica un descuento del 20% sobre el precio mensual.
+        Si eliges la facturación anual, se aplica un descuento del 20% sobre el precio mensual.
       </p>
 
       <h2>5. Facturación y Pagos</h2>
@@ -85,13 +85,13 @@ const es: LegalContent = {
 
       <h2>6. Cancelación</h2>
       <p>
-        Podés cancelar tu suscripción en cualquier momento desde tu panel de control. La
+        Puedes cancelar tu suscripción en cualquier momento desde tu panel de control. La
         cancelación será efectiva al finalizar el período de facturación vigente. No se realizan
         reembolsos proporcionales por el tiempo no utilizado del período en curso.
       </p>
 
       <h2>7. Uso Aceptable</h2>
-      <p>Te comprometés a no utilizar el Servicio para:</p>
+      <p>Te comprometes a no utilizar el Servicio para:</p>
       <ul>
         <li>Actividades ilegales o que violen derechos de terceros</li>
         <li>Distribuir contenido malicioso, fraudulento o engañoso</li>
@@ -104,7 +104,7 @@ const es: LegalContent = {
       <p>
         La plataforma Saru Apps, incluyendo su código, diseño, marca y documentación, es
         propiedad exclusiva de Saru Apps. El contenido que subas a la plataforma (logos,
-        imágenes, textos) sigue siendo de tu propiedad. Nos otorgás una licencia limitada para
+        imágenes, textos) sigue siendo de tu propiedad. Nos otorgas una licencia limitada para
         mostrar dicho contenido dentro de tu app publicada.
       </p>
 
@@ -143,7 +143,7 @@ const es: LegalContent = {
 
       <h2>13. Contacto</h2>
       <p>
-        Para consultas sobre estos Términos, podés contactarnos en{" "}
+        Para consultas sobre estos Términos, puedes contactarnos en{" "}
         <a href="mailto:hola@saruapps.com" className={linkClass}>
           hola@saruapps.com
         </a>

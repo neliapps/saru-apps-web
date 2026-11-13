@@ -4,14 +4,14 @@ const es = {
   metadata: {
     title: "Sectores — Saru Apps",
     description:
-      "No importa qué vendas, Saru Apps se adapta a tu negocio. Descubrí cómo marcas de cada sector usan una app móvil para vender más en Tiendanube.",
+      "No importa qué vendas, Saru Apps se adapta a tu negocio. Descubre cómo marcas de cada sector usan una app móvil para vender más en Tiendanube.",
   },
   hero: {
     label: "Sectores",
     title: "Una app para",
     accent: "cada tipo de tienda",
     subtitle:
-      "No importa qué vendas, Saru Apps se adapta a tu negocio. Descubrí cómo marcas de tu sector usan una app para vender más.",
+      "No importa qué vendas, Saru Apps se adapta a tu negocio. Descubre cómo marcas de tu sector usan una app para vender más.",
   },
   sectors: [
     {
@@ -71,7 +71,7 @@ const es = {
     {
       title: "Comunicación directa",
       description:
-        "Notificaciones push con hasta 7x más engagement que el email. Llegá a tus clientes al instante.",
+        "Notificaciones push con hasta 7x más engagement que el email. Llega a tus clientes al instante.",
     },
   ],
   cta: {
@@ -79,7 +79,7 @@ const es = {
     accent: "la app de tu tienda",
     suffix: "?",
     subtitle:
-      "Empezá gratis, diseñá tu app y publicala cuando estés listo. Sin compromiso, sin tarjeta de crédito.",
+      "Empieza gratis, diseña tu app y publícala cuando estés listo. Sin compromiso, sin tarjeta de crédito.",
     primary: "Empezar gratis",
     secondary: "Agendar una demo",
   },

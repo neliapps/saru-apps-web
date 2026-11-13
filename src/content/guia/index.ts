@@ -32,11 +32,11 @@ const es = {
   metadata: {
     title: "Guía de la Plataforma — Saru Apps",
     description:
-      "Todo lo que necesitás saber sobre Saru Apps: cómo funciona, planes, editor, notificaciones push, publicación y más.",
+      "Todo lo que necesitas saber sobre Saru Apps: cómo funciona, planes, editor, notificaciones push, publicación y más.",
   },
   title: "Guía de la Plataforma",
   subtitle:
-    "Todo lo que necesitás saber para crear, personalizar y publicar la app móvil de tu tienda Tiendanube con Saru Apps.",
+    "Todo lo que necesitas saber para crear, personalizar y publicar la app móvil de tu tienda Tiendanube con Saru Apps.",
   layout: {
     sidebarLabel: "Artículos de la guía",
     back: "Volver a la guía",
@@ -48,12 +48,12 @@ const es = {
     {
       slug: "que-es",
       title: "Qué es Saru Apps",
-      description: "Conocé la plataforma, sus componentes y cómo funciona.",
+      description: "Conoce la plataforma, sus componentes y cómo funciona.",
     },
     {
       slug: "planes",
       title: "Planes y precios",
-      description: "Compará los planes Starter, Growth, Scale y Enterprise.",
+      description: "Compara los planes Starter, Growth, Scale y Enterprise.",
     },
     {
       slug: "registro",
@@ -63,42 +63,42 @@ const es = {
     {
       slug: "tiendanube",
       title: "Conectar Tiendanube",
-      description: "Vinculá tu tienda para sincronizar productos automáticamente.",
+      description: "Vincula tu tienda para sincronizar productos automáticamente.",
     },
     {
       slug: "configurar",
       title: "Configurar la app",
-      description: "Definí el nombre, logo y colores de tu app.",
+      description: "Define el nombre, logo y colores de tu app.",
     },
     {
       slug: "editor",
       title: "Editor de contenido",
-      description: "Usá el editor drag & drop para diseñar las páginas de tu app.",
+      description: "Usa el editor drag & drop para diseñar las páginas de tu app.",
     },
     {
       slug: "productos",
       title: "Productos",
-      description: "Gestioná y visualizá los productos sincronizados desde Tiendanube.",
+      description: "Gestiona y visualiza los productos sincronizados desde Tiendanube.",
     },
     {
       slug: "notificaciones",
       title: "Notificaciones push",
-      description: "Enviá mensajes directos a los clientes que tienen tu app instalada.",
+      description: "Envía mensajes directos a los clientes que tienen tu app instalada.",
     },
     {
       slug: "publicar",
       title: "Publicar la app",
-      description: "Publicá tu app nativa en App Store y Google Play.",
+      description: "Publica tu app nativa en App Store y Google Play.",
     },
     {
       slug: "panel",
       title: "Panel en Tiendanube",
-      description: "Accedé a Saru Apps desde el panel de administración de Tiendanube.",
+      description: "Accede a Saru Apps desde el panel de administración de Tiendanube.",
     },
     {
       slug: "analitica",
       title: "Analítica",
-      description: "Medí visitas, productos más vistos, búsquedas y eventos.",
+      description: "Mide visitas, productos más vistos, búsquedas y eventos.",
     },
     {
       slug: "app-nativa",

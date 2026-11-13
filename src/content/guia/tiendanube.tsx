@@ -11,7 +11,7 @@ export const tiendanubeContent: GuiaArticleContent = {
       <>
         <h1>Conectar Tiendanube</h1>
         <p>
-          Hay dos formas de conectar tu tienda Tiendanube con Saru Apps. Podés
+          Hay dos formas de conectar tu tienda Tiendanube con Saru Apps. Puedes
           instalar la app desde el marketplace de Tiendanube o registrarte
           directamente en nuestra web. En ambos casos, la conexión es automática y
           tus productos se sincronizan en segundos.
@@ -22,8 +22,8 @@ export const tiendanubeContent: GuiaArticleContent = {
 
         <h3>Paso 1 — Encontrar la app en el marketplace</h3>
         <p>
-          Buscá &quot;Saru Apps&quot; en el marketplace de Tiendanube
-          (tiendanube.com/tienda-aplicaciones-nube) y hacé clic en{" "}
+          Busca &quot;Saru Apps&quot; en el marketplace de Tiendanube
+          (tiendanube.com/tienda-aplicaciones-nube) y haz clic en{" "}
           <strong>Instalar</strong>.
         </p>
 
@@ -31,7 +31,7 @@ export const tiendanubeContent: GuiaArticleContent = {
         <p>
           Tiendanube muestra la pantalla de autorización OAuth. Vas a ver los
           permisos que la app solicita (productos, pedidos, clientes, etc.) y
-          hacés clic en <strong>Aceptar</strong>.
+          haces clic en <strong>Aceptar</strong>.
         </p>
         <img
           src="/guia/tiendanube-permisos.png"
@@ -41,7 +41,7 @@ export const tiendanubeContent: GuiaArticleContent = {
 
         <h3>Paso 3 — Crear cuenta</h3>
         <p>
-          Como sos un merchant nuevo, se te muestra una página de confirmación
+          Como eres un merchant nuevo, se te muestra una página de confirmación
           con:
         </p>
         <ul>
@@ -54,7 +54,7 @@ export const tiendanubeContent: GuiaArticleContent = {
           </li>
         </ul>
         <p>
-          Si ya tenés cuenta en Saru Apps, podés hacer clic en &quot;Ya tengo
+          Si ya tienes cuenta en Saru Apps, puedes hacer clic en &quot;Ya tengo
           cuenta — Iniciar sesión&quot; para vincular tu tienda a tu cuenta
           existente.
         </p>
@@ -84,7 +84,7 @@ export const tiendanubeContent: GuiaArticleContent = {
 
         <h3>Paso 1 — Registro</h3>
         <p>
-          Andá a{" "}
+          Ve a{" "}
           <a
             href="https://app.saruapps.com/register"
             target="_blank"
@@ -93,14 +93,14 @@ export const tiendanubeContent: GuiaArticleContent = {
           >
             app.saruapps.com/register
           </a>{" "}
-          y completá el formulario:
+          y completa el formulario:
         </p>
         <ul>
           <li>Nombre</li>
           <li>Email</li>
           <li>Contraseña (mínimo 8 caracteres)</li>
         </ul>
-        <p>Hacé clic en &quot;Crear cuenta&quot; para continuar.</p>
+        <p>Haz clic en &quot;Crear cuenta&quot; para continuar.</p>
 
         <h3>Paso 2 — Onboarding: conectar Tiendanube</h3>
         <p>
@@ -113,7 +113,7 @@ export const tiendanubeContent: GuiaArticleContent = {
           <li>Generar el diseño automáticamente</li>
         </ul>
         <p>
-          Hacé clic en <strong>&quot;Conectar Tiendanube&quot;</strong> para
+          Haz clic en <strong>&quot;Conectar Tiendanube&quot;</strong> para
           continuar.
         </p>
         <img
@@ -126,7 +126,7 @@ export const tiendanubeContent: GuiaArticleContent = {
         <p>Al hacer clic en &quot;Conectar Tiendanube&quot;:</p>
         <ol>
           <li>Se te redirige a Tiendanube para autorizar los permisos</li>
-          <li>Aceptás los permisos (productos, pedidos, clientes, etc.)</li>
+          <li>Aceptas los permisos (productos, pedidos, clientes, etc.)</li>
           <li>Tiendanube te redirige de vuelta a Saru Apps</li>
         </ol>
 
@@ -153,13 +153,13 @@ export const tiendanubeContent: GuiaArticleContent = {
         <h2>Sincronización en tiempo real</h2>
         <p>
           Una vez conectada la tienda, cualquier cambio que hagas en Tiendanube se
-          refleja automáticamente en tu app. Cuando creás, editás o eliminás un
+          refleja automáticamente en tu app. Cuando creas, editas o eliminas un
           producto, un webhook notifica al backend de Saru Apps y la app se
           actualiza sin intervención manual.
         </p>
         <p>
           Esto incluye cambios de precio, stock, imágenes, variantes y
-          categorías. No necesitás hacer nada — la sincronización es continua y
+          categorías. No necesitas hacer nada — la sincronización es continua y
           en tiempo real.
         </p>
       </>

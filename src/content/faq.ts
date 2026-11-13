@@ -12,8 +12,8 @@ const es = {
     label: "Centro de ayuda",
     title: "Preguntas",
     accent: "frecuentes",
-    subtitleBefore: "Todo lo que necesitás saber sobre Saru Apps. Si no encontrás tu respuesta,",
-    subtitleLink: "agendá una llamada con nosotros",
+    subtitleBefore: "Todo lo que necesitas saber sobre Saru Apps. Si no encuentras tu respuesta,",
+    subtitleLink: "agenda una llamada con nosotros",
     subtitleAfter: ".",
   },
   categoriesAriaLabel: "Categorías",
@@ -46,23 +46,23 @@ const es = {
       faqs: [
         {
           q: "¿Necesito saber programar?",
-          a: "No, para nada. La plataforma tiene un editor visual drag & drop que te permite diseñar cada pantalla de tu app arrastrando componentes: banners, grillas de productos, carruseles, timers y más. Es tan fácil como armar una presentación.",
+          a: "No, para nada. La plataforma tiene un editor visual drag & drop que te permite diseñar cada pantalla de tu app arrastrando componentes: banners, cuadrículas de productos, carruseles, timers y más. Es tan fácil como armar una presentación.",
         },
         {
           q: "¿Cuánto tiempo tarda en estar lista mi app?",
-          a: "Podés tener tu app diseñada en cuestión de horas. La conexión con Tiendanube es instantánea. La publicación en las tiendas puede demorar entre 3 y 7 días hábiles por los procesos de revisión de Apple y Google.",
+          a: "Puedes tener tu app diseñada en cuestión de horas. La conexión con Tiendanube es instantánea. La publicación en las tiendas puede demorar entre 3 y 7 días hábiles por los procesos de revisión de Apple y Google.",
         },
         {
           q: "¿Saru Apps se encarga de publicar mi app?",
-          a: "Sí. Nosotros hacemos todo el proceso de envío y publicación tanto en App Store como en Google Play. Vos te enfocás en tu negocio.",
+          a: "Sí. Nosotros hacemos todo el proceso de envío y publicación tanto en App Store como en Google Play. Tú te enfocas en tu negocio.",
         },
         {
           q: "¿Qué necesito antes de lanzar mi app?",
-          a: "Solo necesitás una tienda activa en Tiendanube y cuentas de desarrollador en Apple ($99 USD/año) y Google Play ($25 USD, pago único). Si no las tenés, te ayudamos a crearlas.",
+          a: "Solo necesitas una tienda activa en Tiendanube y cuentas de desarrollador en Apple ($99 USD/año) y Google Play ($25 USD, pago único). Si no las tienes, te ayudamos a crearlas.",
         },
         {
           q: "¿Puedo personalizar el diseño de mi app?",
-          a: "Absolutamente. Podés personalizar colores, tipografías, layouts, banners y la estructura completa de cada pantalla. Tu app va a reflejar la identidad visual de tu marca al 100%.",
+          a: "Absolutamente. Puedes personalizar colores, tipografías, layouts, banners y la estructura completa de cada pantalla. Tu app va a reflejar la identidad visual de tu marca al 100%.",
         },
       ],
     },
@@ -76,19 +76,19 @@ const es = {
         },
         {
           q: "¿Cómo se conecta con mi tienda?",
-          a: "La conexión es instantánea. Instalás Saru Apps desde el panel de Tiendanube y en un clic tus productos, categorías, precios y stock se importan automáticamente. Todo se mantiene sincronizado en tiempo real.",
+          a: "La conexión es instantánea. Instalas Saru Apps desde el panel de Tiendanube y en un clic tus productos, categorías, precios y stock se importan automáticamente. Todo se mantiene sincronizado en tiempo real.",
         },
         {
           q: "¿Los pedidos desde la app aparecen en mi panel de Tiendanube?",
-          a: "Sí. Todos los pedidos se sincronizan automáticamente con tu panel de Tiendanube. Los gestionás exactamente igual que los pedidos de tu tienda web. No hay duplicación ni complejidad adicional.",
+          a: "Sí. Todos los pedidos se sincronizan automáticamente con tu panel de Tiendanube. Los gestionas exactamente igual que los pedidos de tu tienda web. No hay duplicación ni complejidad adicional.",
         },
         {
           q: "¿Tengo que gestionar la app por separado?",
-          a: "No. Saru Apps funciona como una extensión de tu tienda Tiendanube. Cada cambio que hacés en tus productos, precios o stock se refleja automáticamente en la app.",
+          a: "No. Saru Apps funciona como una extensión de tu tienda Tiendanube. Cada cambio que haces en tus productos, precios o stock se refleja automáticamente en la app.",
         },
         {
           q: "¿La app usa el checkout de Tiendanube?",
-          a: "Sí. Tu app usa el checkout nativo de Tiendanube, así que los medios de pago, cupones y configuración de envío que ya tenés funcionan exactamente igual.",
+          a: "Sí. Tu app usa el checkout nativo de Tiendanube, así que los medios de pago, cupones y configuración de envío que ya tienes funcionan exactamente igual.",
         },
       ],
     },
@@ -106,11 +106,11 @@ const es = {
         },
         {
           q: "¿La app tiene analytics?",
-          a: "Sí. Tenés acceso a métricas de usuarios activos, conversiones, ingresos generados por push y más datos clave para tomar decisiones.",
+          a: "Sí. Tienes acceso a métricas de usuarios activos, conversiones, ingresos generados por push y más datos clave para tomar decisiones.",
         },
         {
           q: "¿Puedo enviar cupones exclusivos para la app?",
-          a: "Sí. Podés crear cupones que solo funcionan dentro de la app para incentivar las descargas y compras desde el canal móvil.",
+          a: "Sí. Puedes crear cupones que solo funcionan dentro de la app para incentivar las descargas y compras desde el canal móvil.",
         },
         {
           q: "¿Soporta múltiples idiomas?",
@@ -124,15 +124,15 @@ const es = {
       faqs: [
         {
           q: "¿Cuánto cuesta Saru Apps?",
-          a: "Tenemos 4 planes: Starter (USD $49/mes), Growth (USD $149/mes), Scale (USD $349/mes) y Enterprise (a medida). Todos tienen un 20% de descuento en el plan anual. Podés ver el detalle en nuestra sección de precios.",
+          a: "Tenemos 4 planes: Starter (USD $49/mes), Growth (USD $149/mes), Scale (USD $349/mes) y Enterprise (a medida). Todos tienen un 20% de descuento en el plan anual. Puedes ver el detalle en nuestra sección de precios.",
         },
         {
           q: "¿Puedo probar gratis?",
-          a: "Sí. Podés crear tu cuenta gratis, diseñar tu app completa y ver una preview de cómo se vería. Solo pagás cuando decidís publicarla.",
+          a: "Sí. Puedes crear tu cuenta gratis, diseñar tu app completa y ver una preview de cómo se vería. Solo pagas cuando decides publicarla.",
         },
         {
           q: "¿Hay costos de setup o configuración?",
-          a: "No. No hay costo de setup. Solo pagás el plan mensual o anual que elijas.",
+          a: "No. No hay costo de setup. Solo pagas el plan mensual o anual que elijas.",
         },
         {
           q: "¿Hay costos adicionales?",
@@ -144,11 +144,11 @@ const es = {
         },
         {
           q: "¿Puedo cambiar de plan o cancelar?",
-          a: "Sí, podés cambiar de plan o cancelar cuando quieras. No hay contratos a largo plazo ni permanencia mínima.",
+          a: "Sí, puedes cambiar de plan o cancelar cuando quieras. No hay contratos a largo plazo ni permanencia mínima.",
         },
         {
           q: "¿Qué plan me conviene?",
-          a: "Si recién lanzás tu app, Starter. Cuando la app ya es un canal de venta y necesitás mandar más campañas, Growth. Si vendés mayorista o hacés lanzamientos seguidos, Scale. Enterprise es para grandes marcas que necesitan notificaciones e integraciones a medida. Si tenés dudas, agendá una demo y te asesoramos.",
+          a: "Si acabas de lanzar tu app, Starter. Cuando la app ya es un canal de venta y necesitas mandar más campañas, Growth. Si vendes mayorista o haces lanzamientos seguidos, Scale. Enterprise es para grandes marcas que necesitan notificaciones e integraciones a medida. Si tienes dudas, agenda una demo y te asesoramos.",
         },
       ],
     },
@@ -158,7 +158,7 @@ const es = {
       faqs: [
         {
           q: "¿Saru Apps puede encargarse de todo el lanzamiento?",
-          a: "Sí. Nuestro equipo te acompaña desde la configuración inicial hasta la publicación en las tiendas. Podés agendar una demo y te guiamos paso a paso.",
+          a: "Sí. Nuestro equipo te acompaña desde la configuración inicial hasta la publicación en las tiendas. Puedes agendar una demo y te guiamos paso a paso.",
         },
         {
           q: "¿Qué tipo de soporte ofrecen?",
@@ -166,15 +166,15 @@ const es = {
         },
         {
           q: "¿Cómo puedo promocionar mi app para que mis clientes la descarguen?",
-          a: "Te proporcionamos herramientas de marketing como códigos QR, links de descarga y una página de instalación compartible. También podés crear campañas en Meta y Google para impulsar las descargas.",
+          a: "Te proporcionamos herramientas de marketing como códigos QR, links de descarga y una página de instalación compartible. También puedes crear campañas en Meta y Google para impulsar las descargas.",
         },
         {
           q: "¿Qué pasa si ya tengo una app con otro proveedor?",
-          a: "Podés migrar a Saru Apps. Tu app se publica en tus propias cuentas de desarrollador de Apple y Google, así que si algún día necesitás cambiar de proveedor, no perdés tus descargas.",
+          a: "Puedes migrar a Saru Apps. Tu app se publica en tus propias cuentas de desarrollador de Apple y Google, así que si algún día necesitas cambiar de proveedor, no pierdes tus descargas.",
         },
         {
           q: "¿Qué pasa si necesito una funcionalidad que no tienen?",
-          a: "Contactanos. Todas las funcionalidades que desarrollamos nacen de pedidos de nuestros clientes. Si es algo que beneficia a todos, lo incorporamos sin costo. Si es algo muy específico, lo evaluamos como proyecto custom.",
+          a: "Contáctanos. Todas las funcionalidades que desarrollamos nacen de pedidos de nuestros clientes. Si es algo que beneficia a todos, lo incorporamos sin costo. Si es algo muy específico, lo evaluamos como proyecto custom.",
         },
       ],
     },
@@ -183,7 +183,7 @@ const es = {
     title: "¿Listo para crear",
     accent: "tu app",
     suffix: "?",
-    subtitle: "Empezá gratis, diseñá tu app y publicala cuando estés listo. Sin compromiso.",
+    subtitle: "Empieza gratis, diseña tu app y publícala cuando estés listo. Sin compromiso.",
     primary: "Empezar gratis",
     secondary: "Agendar una demo",
   },

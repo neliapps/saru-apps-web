@@ -10,7 +10,7 @@ const es: HomeJsonLdText = {
   organizationDescription:
     "Plataforma para crear apps móviles nativas para tiendas Tiendanube. Editor drag & drop, notificaciones push y herramientas de engagement sin necesidad de código.",
   softwareDescription:
-    "Transformá tu tienda Tiendanube en una app móvil nativa para iOS y Android sin escribir código. Todos los planes incluyen app nativa publicada en App Store y Google Play, editor drag & drop, sincronización automática de productos, notificaciones push y herramientas de engagement para aumentar las ventas recurrentes.",
+    "Transforma tu tienda Tiendanube en una app móvil nativa para iOS y Android sin escribir código. Todos los planes incluyen app nativa publicada en App Store y Google Play, editor drag & drop, sincronización automática de productos, notificaciones push y herramientas de engagement para aumentar las ventas recurrentes.",
   featureList: [
     "App nativa para iPhone y Android publicada por nosotros en App Store y Google Play (incluida en todos los planes)",
     "Sin la marca Saru Apps en todos los planes",

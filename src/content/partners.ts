@@ -4,20 +4,20 @@ const es = {
   metadata: {
     title: "Partners — Saru Apps",
     description:
-      "Sumá una nueva fuente de ingresos ofreciendo apps móviles a tus clientes de Tiendanube. Programa de partners para agencias, freelancers y consultores.",
+      "Suma una nueva fuente de ingresos ofreciendo apps móviles a tus clientes de Tiendanube. Programa de partners para agencias, freelancers y consultores.",
   },
   hero: {
     label: "Partners",
-    title: "Crecé",
+    title: "Crece",
     accent: "junto a Saru Apps",
     subtitle:
-      "Sumá una nueva fuente de ingresos ofreciendo apps móviles a tus clientes de Tiendanube. Programa de partners para agencias, freelancers y consultores de ecommerce.",
+      "Suma una nueva fuente de ingresos ofreciendo apps móviles a tus clientes de Tiendanube. Programa de partners para agencias, freelancers y consultores de ecommerce.",
   },
   benefits: [
     {
       title: "Comisiones recurrentes",
       description:
-        "Ganás una comisión mensual por cada cliente que refieras mientras mantenga su suscripción activa.",
+        "Ganas una comisión mensual por cada cliente que refieras mientras mantenga su suscripción activa.",
     },
     {
       title: "Soporte dedicado",
@@ -32,25 +32,25 @@ const es = {
   ],
   stepsHead: {
     label: "Cómo funciona",
-    title: "Empezá a ganar en 3 pasos",
+    title: "Empieza a ganar en 3 pasos",
   },
   steps: [
     {
       number: "01",
-      title: "Aplicá al programa",
+      title: "Aplica al programa",
       description:
-        "Completá el formulario y te contactamos en 48 hs para darte acceso al programa.",
+        "Completa el formulario y te contactamos en 48 hs para darte acceso al programa.",
     },
     {
       number: "02",
-      title: "Referí clientes",
+      title: "Refiere clientes",
       description:
-        "Compartí tu link de referido con tus clientes de Tiendanube que necesiten una app.",
+        "Comparte tu link de referido con tus clientes de Tiendanube que necesiten una app.",
     },
     {
       number: "03",
-      title: "Cobrá comisiones",
-      description: "Recibí pagos mensuales por cada cliente activo que hayas referido.",
+      title: "Cobra comisiones",
+      description: "Recibe pagos mensuales por cada cliente activo que hayas referido.",
     },
   ],
   audiencesHead: {
@@ -62,17 +62,17 @@ const es = {
     {
       title: "Agencias de ecommerce",
       description:
-        "Ofrecele a tus clientes un servicio adicional de alto valor y diferenciá a tu agencia de la competencia.",
+        "Ofrécele a tus clientes un servicio adicional de alto valor y diferencia a tu agencia de la competencia.",
     },
     {
       title: "Freelancers y consultores",
       description:
-        "Sumá una nueva línea de ingresos recurrentes a tu portfolio de servicios para Tiendanube.",
+        "Suma una nueva línea de ingresos recurrentes a tu portfolio de servicios para Tiendanube.",
     },
     {
       title: "Implementadores de Tiendanube",
       description:
-        "Complementá tus servicios de implementación con una app móvil nativa para cada tienda.",
+        "Complementa tus servicios de implementación con una app móvil nativa para cada tienda.",
     },
     {
       title: "Agencias de marketing digital",
@@ -84,7 +84,7 @@ const es = {
     title: "Unite al programa de",
     accent: "Partners",
     subtitle:
-      "Empezá a generar ingresos recurrentes ofreciendo apps móviles a tus clientes de Tiendanube.",
+      "Empieza a generar ingresos recurrentes ofreciendo apps móviles a tus clientes de Tiendanube.",
     primary: "Aplicar al programa",
     secondary: "Más información",
   },

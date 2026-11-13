@@ -8,13 +8,13 @@ export const publicarContent: GuiaArticleContent = {
     metadata: {
       title: "Publicar la app — Guía Saru Apps",
       description:
-        "Guía completa para publicar tu app en App Store y Google Play. Creá tus cuentas de desarrollador, invitá a Saru Apps y nosotros nos encargamos del resto.",
+        "Guía completa para publicar tu app en App Store y Google Play. Crea tus cuentas de desarrollador, invita a Saru Apps y nosotros nos encargamos del resto.",
     },
     body: (
       <>
         <h1>Publicar la app</h1>
         <p>
-          Para publicar tu app en App Store y Google Play, necesitás crear tus
+          Para publicar tu app en App Store y Google Play, necesitas crear tus
           cuentas de desarrollador en Apple y Google, darnos acceso y nosotros nos
           encargamos de todo el proceso técnico de compilación y publicación.
         </p>
@@ -54,10 +54,10 @@ export const publicarContent: GuiaArticleContent = {
           empresa u organización.
         </p>
 
-        <h3>Cómo verificar si ya tenés uno</h3>
+        <h3>Cómo verificar si ya tienes uno</h3>
         <ol>
           <li>
-            Visitá la herramienta de búsqueda de Apple en{" "}
+            Visita la herramienta de búsqueda de Apple en{" "}
             <a
               href="https://developer.apple.com/enroll/duns-lookup/"
               target="_blank"
@@ -67,7 +67,7 @@ export const publicarContent: GuiaArticleContent = {
               developer.apple.com/enroll/duns-lookup
             </a>
           </li>
-          <li>Buscá tu organización por nombre</li>
+          <li>Busca tu organización por nombre</li>
           <li>
             Si tu empresa aparece, recibirás un email de Apple con tu número D-U-N-S
             en minutos
@@ -76,20 +76,20 @@ export const publicarContent: GuiaArticleContent = {
 
         <h3>Cómo solicitar uno nuevo (gratis)</h3>
         <p>
-          Si tu organización no aparece en la búsqueda, podés solicitar un número
+          Si tu organización no aparece en la búsqueda, puedes solicitar un número
           D-U-N-S de forma gratuita:
         </p>
         <ol>
-          <li>Completá el formulario con la información de tu empresa</li>
+          <li>Completa el formulario con la información de tu empresa</li>
           <li>
-            Proporcioná: nombre legal de la entidad, dirección, información de
+            Proporciona: nombre legal de la entidad, dirección, información de
             contacto
           </li>
           <li>
             Un representante de Dun &amp; Bradstreet puede contactarte para
             verificar datos adicionales (tipo de negocio, cantidad de empleados)
           </li>
-          <li>Tené a mano tus documentos de registro comercial</li>
+          <li>Ten a mano tus documentos de registro comercial</li>
         </ol>
         <p className="callout">
           <strong>Importante:</strong> si tu negocio opera como persona física o
@@ -107,7 +107,7 @@ export const publicarContent: GuiaArticleContent = {
         <h3>Requisitos previos</h3>
         <ul>
           <li>Número D-U-N-S activo (ver paso anterior)</li>
-          <li>Apple ID (podés crear uno gratis en apple.com)</li>
+          <li>Apple ID (puedes crear uno gratis en apple.com)</li>
           <li>
             Email de trabajo que coincida con el dominio de tu sitio web (ej:
             nombre@tutienda.com)
@@ -117,7 +117,7 @@ export const publicarContent: GuiaArticleContent = {
         <h3>Proceso paso a paso</h3>
         <ol>
           <li>
-            Ingresá a{" "}
+            Ingresa a{" "}
             <a
               href="https://developer.apple.com/programs/enroll/"
               target="_blank"
@@ -127,17 +127,17 @@ export const publicarContent: GuiaArticleContent = {
               developer.apple.com/programs/enroll
             </a>
           </li>
-          <li>Hacé clic en &quot;Start your enrollment&quot;</li>
+          <li>Haz clic en &quot;Start your enrollment&quot;</li>
           <li>
-            Si te lo solicita, seleccioná &quot;Continue enrollment on the
+            Si te lo solicita, selecciona &quot;Continue enrollment on the
             web&quot;
           </li>
           <li>
-            Elegí <strong>Company / Organization</strong> como tipo de cuenta
+            Elige <strong>Company / Organization</strong> como tipo de cuenta
           </li>
-          <li>Ingresá el nombre legal de tu empresa y tu número D-U-N-S</li>
+          <li>Ingresa el nombre legal de tu empresa y tu número D-U-N-S</li>
           <li>
-            Completá la información que se carga automáticamente de tu perfil
+            Completa la información que se carga automáticamente de tu perfil
             D&amp;B: sitio web, teléfono, y confirmación de autoridad para firmar
           </li>
           <li>
@@ -148,7 +148,7 @@ export const publicarContent: GuiaArticleContent = {
             $99) a tu dashboard de Apple Developer
           </li>
           <li>
-            Realizá el pago. El procesamiento puede tardar hasta 24 horas
+            Realiza el pago. El procesamiento puede tardar hasta 24 horas
           </li>
         </ol>
 
@@ -161,7 +161,7 @@ export const publicarContent: GuiaArticleContent = {
 
         <h3>Requisitos previos</h3>
         <ul>
-          <li>Cuenta de Gmail (podés crear una gratis)</li>
+          <li>Cuenta de Gmail (puedes crear una gratis)</li>
           <li>Verificación en 2 pasos activada en tu cuenta de Google</li>
           <li>Número D-U-N-S de tu empresa</li>
         </ul>
@@ -169,7 +169,7 @@ export const publicarContent: GuiaArticleContent = {
         <h3>Proceso paso a paso</h3>
         <ol>
           <li>
-            Ingresá a{" "}
+            Ingresa a{" "}
             <a
               href="https://play.google.com/console/signup"
               target="_blank"
@@ -179,42 +179,42 @@ export const publicarContent: GuiaArticleContent = {
               play.google.com/console/signup
             </a>
           </li>
-          <li>Iniciá sesión con tu cuenta de Gmail</li>
+          <li>Inicia sesión con tu cuenta de Gmail</li>
           <li>
-            Seleccioná <strong>Empresa / Organización</strong> como tipo de cuenta
+            Selecciona <strong>Empresa / Organización</strong> como tipo de cuenta
           </li>
-          <li>Ingresá el nombre de tu empresa como nombre de desarrollador</li>
-          <li>Creá un perfil de pagos y completá los datos de tu organización</li>
+          <li>Ingresa el nombre de tu empresa como nombre de desarrollador</li>
+          <li>Crea un perfil de pagos y completa los datos de tu organización</li>
           <li>
-            Proporcioná la información de D-U-N-S, tamaño de la organización,
+            Proporciona la información de D-U-N-S, tamaño de la organización,
             teléfono y sitio web
           </li>
           <li>
-            Ingresá los datos de contacto del desarrollador (esta información será
+            Ingresa los datos de contacto del desarrollador (esta información será
             pública en Google Play)
           </li>
           <li>
-            En la pregunta sobre apps pagas, seleccioná <strong>No</strong> (Saru
-            Apps no soporta apps pagas, tu app será gratuita y monetizás con tus
+            En la pregunta sobre apps pagas, selecciona <strong>No</strong> (Saru
+            Apps no soporta apps pagas, tu app será gratuita y monetizas con tus
             productos)
           </li>
-          <li>Aceptá los términos y condiciones</li>
-          <li>Realizá el pago de USD $25</li>
+          <li>Acepta los términos y condiciones</li>
+          <li>Realiza el pago de USD $25</li>
           <li>
-            Una vez dentro de la consola, creá tu app: ingresá el nombre,
-            seleccioná tipo &quot;App&quot; (no &quot;Juego&quot;), elegí precio
-            &quot;Gratis&quot; y confirmá las declaraciones
+            Una vez dentro de la consola, crea tu app: ingresa el nombre,
+            selecciona tipo &quot;App&quot; (no &quot;Juego&quot;), elige precio
+            &quot;Gratis&quot; y confirma las declaraciones
           </li>
         </ol>
         <p className="callout">
           <strong>Nota:</strong> Google puede solicitar verificación adicional de
-          tu identidad. Revisá tu email regularmente después de crear la cuenta.
+          tu identidad. Revisa tu email regularmente después de crear la cuenta.
         </p>
 
         {/* ─── Invitar a Saru Apps ─── */}
         <h2>Paso 4: Invitar a Saru Apps a tus cuentas</h2>
         <p>
-          Una vez que tengas ambas cuentas creadas y verificadas, necesitás
+          Una vez que tengas ambas cuentas creadas y verificadas, necesitas
           invitarnos para que podamos compilar y publicar tu app. El proceso es
           simple y tarda menos de 5 minutos.
         </p>
@@ -222,7 +222,7 @@ export const publicarContent: GuiaArticleContent = {
         <h3>Invitar a Saru Apps a Apple Developer</h3>
         <ol>
           <li>
-            Ingresá a{" "}
+            Ingresa a{" "}
             <a
               href="https://appstoreconnect.apple.com"
               target="_blank"
@@ -233,25 +233,25 @@ export const publicarContent: GuiaArticleContent = {
             </a>
           </li>
           <li>
-            Andá a la sección <strong>Usuarios y acceso</strong>
+            Ve a la sección <strong>Usuarios y acceso</strong>
           </li>
           <li>
-            Hacé clic en el botón <strong>+</strong> para agregar un nuevo usuario
+            Haz clic en el botón <strong>+</strong> para agregar un nuevo usuario
           </li>
           <li>
-            Completá los datos que te enviamos por email al iniciar el proceso de
+            Completa los datos que te enviamos por email al iniciar el proceso de
             publicación (nombre, email y rol)
           </li>
           <li>
-            Asigná el rol de <strong>Admin</strong>
+            Asigna el rol de <strong>Admin</strong>
           </li>
           <li>
-            Hacé clic en <strong>Siguiente</strong> para enviar la invitación
+            Haz clic en <strong>Siguiente</strong> para enviar la invitación
           </li>
         </ol>
         <p className="callout">
           <strong>Importante:</strong> si tu cuenta de Apple Developer está
-          registrada como &quot;Individual / Sole Proprietor&quot;, necesitás
+          registrada como &quot;Individual / Sole Proprietor&quot;, necesitas
           convertirla a &quot;Company / Organization&quot; para poder invitar
           usuarios.
         </p>
@@ -259,7 +259,7 @@ export const publicarContent: GuiaArticleContent = {
         <h3>Invitar a Saru Apps a Google Play Console</h3>
         <ol>
           <li>
-            Ingresá a{" "}
+            Ingresa a{" "}
             <a
               href="https://play.google.com/console"
               target="_blank"
@@ -270,24 +270,24 @@ export const publicarContent: GuiaArticleContent = {
             </a>
           </li>
           <li>
-            En el menú lateral, andá a{" "}
+            En el menú lateral, ve a{" "}
             <strong>Usuarios y permisos</strong>
           </li>
           <li>
-            Hacé clic en el ícono de tres puntos y seleccioná{" "}
+            Haz clic en el ícono de tres puntos y selecciona{" "}
             <strong>Invitar nuevos usuarios</strong>
           </li>
           <li>
-            Ingresá el email que te proporcionamos al iniciar el proceso de
+            Ingresa el email que te proporcionamos al iniciar el proceso de
             publicación
           </li>
           <li>
-            Desplazate hacia abajo, hacé clic en <strong>Agregar app</strong>,
-            seleccioná tu app y aplicá los cambios
+            Desplázate hacia abajo, haz clic en <strong>Agregar app</strong>,
+            selecciona tu app y aplica los cambios
           </li>
         </ol>
         <p>
-          Podés invitarnos incluso si tu cuenta aún está en proceso de
+          Puedes invitarnos incluso si tu cuenta aún está en proceso de
           verificación por parte de Google.
         </p>
 
@@ -360,7 +360,7 @@ export const publicarContent: GuiaArticleContent = {
         <p>
           Estos costos son de Apple y Google, no de Saru Apps. Son necesarios para
           que tu app se publique en tus propias cuentas de desarrollador, lo que
-          significa que vos sos el dueño de tu app y tus descargas.
+          significa que tú eres el dueño de tu app y tus descargas.
         </p>
       </>
     ),

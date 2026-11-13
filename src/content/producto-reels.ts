@@ -4,7 +4,7 @@ const es = {
   metadata: {
     title: "Reels de producto — Saru Apps",
     description:
-      "Subí videos verticales, asociales tus productos y sumá a tu app una pestaña tipo TikTok donde tus clientes miran, deslizan y compran. Disponible desde el plan Growth.",
+      "Sube videos verticales, asóciales tus productos y suma a tu app una pestaña tipo TikTok donde tus clientes miran, deslizan y compran. Disponible desde el plan Growth.",
   },
   back: "Producto",
   hero: {
@@ -20,17 +20,17 @@ const es = {
     label: "Cómo funciona",
     title: "Del video a la compra",
     italic: "en tres pasos",
-    subtitle: "Usá los videos que ya grabás para redes. Nosotros los convertimos en una vidriera dentro de tu app.",
+    subtitle: "Usa los videos que ya grabas para redes. Nosotros los convertimos en una vitrina dentro de tu app.",
     items: [
       {
-        title: "Subí un video vertical",
+        title: "Sube un video vertical",
         description:
-          "Desde el panel, cargá tus videos: lanzamientos, outfits, unboxings o lo que ya publicás en Instagram y TikTok.",
+          "Desde el panel, carga tus videos: lanzamientos, outfits, unboxings o lo que ya publicas en Instagram y TikTok.",
       },
       {
-        title: "Asociá tus productos",
+        title: "Asocia tus productos",
         description:
-          "Elegí qué productos aparecen en cada video. El precio, la oferta y el stock salen de tu Tiendanube.",
+          "Elige qué productos aparecen en cada video. El precio, la oferta y el stock salen de tu Tiendanube.",
       },
       {
         title: "Tus clientes compran mirando",
@@ -67,7 +67,7 @@ const es = {
       },
       {
         title: "Lo ves antes de publicar",
-        description: "Probalo en la vista previa del panel o en tu teléfono antes de que llegue a tus clientes.",
+        description: "Pruébalo en la vista previa del panel o en tu teléfono antes de que llegue a tus clientes.",
       },
     ],
   },
@@ -83,9 +83,9 @@ const es = {
     link: "Ver todos los planes",
   },
   cta: {
-    title: "Convertí tus videos en",
+    title: "Convierte tus videos en",
     accent: "ventas",
-    subtitle: "Diseñá tu app gratis y sumá reels de producto cuando la publiques en el plan Growth o superior.",
+    subtitle: "Diseña tu app gratis y suma reels de producto cuando la publiques en el plan Growth o superior.",
     primary: "Empezar gratis",
     secondary: "Agendar una demo",
   },

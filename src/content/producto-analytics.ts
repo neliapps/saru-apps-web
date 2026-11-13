@@ -4,20 +4,20 @@ const es = {
   metadata: {
     title: "Analytics — Saru Apps",
     description:
-      "Medí el rendimiento de tu app en tiempo real. Usuarios activos, conversiones, ingresos por push y más métricas clave para tomar decisiones.",
+      "Mide el rendimiento de tu app en tiempo real. Usuarios activos, conversiones, ingresos por push y más métricas clave para tomar decisiones.",
   },
   hero: {
     label: "Producto",
     title: "Decisiones basadas",
     accent: "en datos reales",
     subtitle:
-      "Medí el rendimiento de tu app en tiempo real. Usuarios activos, conversiones, ingresos y más métricas clave para tomar mejores decisiones de negocio.",
+      "Mide el rendimiento de tu app en tiempo real. Usuarios activos, conversiones, ingresos y más métricas clave para tomar mejores decisiones de negocio.",
     primary: "Empezar gratis",
     secondary: "Ver cómo funciona",
   },
   metrics: {
     label: "Métricas clave",
-    title: "Todo lo que necesitás",
+    title: "Todo lo que necesitas",
     italic: "medir, en un solo lugar",
     subtitle:
       "Métricas claras, accionables y en tiempo real para entender cómo rinde tu app y dónde mejorar.",
@@ -25,27 +25,27 @@ const es = {
       {
         title: "Usuarios activos",
         description:
-          "Cuántos usuarios usan tu app diaria, semanal y mensualmente. Identificá tendencias de crecimiento y retención.",
+          "Cuántos usuarios usan tu app diaria, semanal y mensualmente. Identifica tendencias de crecimiento y retención.",
       },
       {
         title: "Tasa de conversión",
         description:
-          "Qué porcentaje de visitas se convierten en compras. Compará con tu web y medí el impacto real de la app.",
+          "Qué porcentaje de visitas se convierten en compras. Compara con tu web y mide el impacto real de la app.",
       },
       {
         title: "Ingresos por canal",
         description:
-          "Cuánto factura tu app vs. tu web. Mirá el revenue generado por push notifications, engagement y tráfico orgánico.",
+          "Cuánto factura tu app vs. tu web. Mira el revenue generado por push notifications, engagement y tráfico orgánico.",
       },
       {
         title: "Productos más vistos",
         description:
-          "Cuáles son los productos que más ven tus usuarios en la app. Optimizá tu catálogo con datos reales.",
+          "Cuáles son los productos que más ven tus usuarios en la app. Optimiza tu catálogo con datos reales.",
       },
       {
         title: "Efectividad de push",
         description:
-          "Tasa de apertura, clics y conversiones de cada notificación push. Medí qué mensajes funcionan mejor.",
+          "Tasa de apertura, clics y conversiones de cada notificación push. Mide qué mensajes funcionan mejor.",
       },
       {
         title: "Comportamiento de compra",
@@ -91,33 +91,33 @@ const es = {
   },
   impact: {
     label: "Impacto",
-    title: "Medí el impacto",
+    title: "Mide el impacto",
     italic: "de cada acción",
     subtitle:
-      "Cada decisión informada con datos reales. Dejá de adivinar y empezá a optimizar con métricas concretas.",
+      "Cada decisión informada con datos reales. Deja de adivinar y empieza a optimizar con métricas concretas.",
     items: [
       {
-        title: "Optimizá tus campañas push",
+        title: "Optimiza tus campañas push",
         description:
-          "Analizá qué horarios, mensajes y segmentos generan mejores resultados. Ajustá tus campañas en base a datos concretos, no suposiciones.",
+          "Analiza qué horarios, mensajes y segmentos generan mejores resultados. Ajusta tus campañas en base a datos concretos, no suposiciones.",
       },
       {
-        title: "Identificá tus productos estrella",
+        title: "Identifica tus productos estrella",
         description:
-          "Descubrí cuáles son los productos más vistos, más agregados al carrito y más comprados dentro de la app. Impulsá lo que funciona.",
+          "Descubre cuáles son los productos más vistos, más agregados al carrito y más comprados dentro de la app. Impulsa lo que funciona.",
       },
       {
-        title: "Entendé el recorrido del usuario",
+        title: "Entiende el recorrido del usuario",
         description:
-          "Visualizá cómo navegan tus clientes dentro de la app. Desde la home hasta el checkout, identificá dónde se pierden y dónde convierten.",
+          "Visualiza cómo navegan tus clientes dentro de la app. Desde la home hasta el checkout, identifica dónde se pierden y dónde convierten.",
       },
     ],
   },
   cta: {
-    title: "Empezá a medir",
+    title: "Empieza a medir",
     accent: "lo que importa",
     subtitle:
-      "Creá tu app y accedé a métricas en tiempo real desde el primer día. Datos claros para decisiones inteligentes.",
+      "Crea tu app y accede a métricas en tiempo real desde el primer día. Datos claros para decisiones inteligentes.",
     primary: "Empezar gratis",
     secondary: "Agendar una demo",
   },

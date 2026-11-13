@@ -4,12 +4,12 @@ const es = {
   metadata: {
     title: "Notificaciones Push — Saru Apps",
     description:
-      "Enviá notificaciones push a tus clientes desde tu app. Ofertas, carritos abandonados, nuevos productos y campañas programadas. Hasta 7x más engagement que el email.",
+      "Envía notificaciones push a tus clientes desde tu app. Ofertas, carritos abandonados, nuevos productos y campañas programadas. Hasta 7x más engagement que el email.",
   },
   back: "Producto",
   hero: {
     label: "Notificaciones Push",
-    title: "Llegá directo al celular",
+    title: "Llega directo al celular",
     accent: "de tus clientes",
     subtitle:
       "Las notificaciones push aparecen en la pantalla de bloqueo de tus clientes. Sin filtros de spam, sin algoritmos. Comunicación directa con tu audiencia.",
@@ -23,7 +23,7 @@ const es = {
       {
         title: "Ofertas y promociones flash",
         description:
-          "Lanzá ofertas relámpago y llegá al celular de tus clientes al instante. Ideal para liquidaciones y fechas especiales.",
+          "Lanza ofertas relámpago y llega al celular de tus clientes al instante. Ideal para liquidaciones y fechas especiales.",
         example: {
           title: "¡Oferta flash!",
           body: "50% en toda la tienda. Solo por 24 horas.",
@@ -34,7 +34,7 @@ const es = {
       {
         title: "Carrito abandonado",
         description:
-          "Notificaciones automáticas cuando un cliente deja productos en el carrito. Recuperá ventas que de otra forma se perderían.",
+          "Notificaciones automáticas cuando un cliente deja productos en el carrito. Recupera ventas que de otra forma se perderían.",
         example: {
           title: "Olvidaste algo",
           body: "Tu carrito te espera con envío gratis.",
@@ -45,7 +45,7 @@ const es = {
       {
         title: "Nuevos productos / colecciones",
         description:
-          "Notificá a tus clientes cada vez que agregás productos nuevos o lanzás una colección. Generá tráfico instantáneo.",
+          "Notifica a tus clientes cada vez que agregas productos nuevos o lanzas una colección. Genera tráfico instantáneo.",
         example: {
           title: "Nueva colección",
           body: "Llegó lo nuevo de temporada. Sé la primera en verlo.",
@@ -56,10 +56,10 @@ const es = {
       {
         title: "Campañas programadas",
         description:
-          "Programá tus notificaciones para el día y la hora ideal. Planeá con anticipación tus campañas de marketing.",
+          "Programa tus notificaciones para el día y la hora ideal. Planea con anticipación tus campañas de marketing.",
         example: {
           title: "Hot Sale empieza mañana",
-          body: "Descuentos de hasta 60%. Activá las alertas.",
+          body: "Descuentos de hasta 60%. Activa las alertas.",
           time: "Programado",
         },
         tag: "",
@@ -67,7 +67,7 @@ const es = {
       {
         title: "Segmentación por comportamiento",
         description:
-          "Enviá notificaciones a segmentos específicos: compradores frecuentes, inactivos, por ubicación o por historial.",
+          "Envía notificaciones a segmentos específicos: compradores frecuentes, inactivos, por ubicación o por historial.",
         example: {
           title: "Exclusivo para VIPs",
           body: "Acceso anticipado a la nueva colección.",
@@ -102,9 +102,9 @@ const es = {
     ],
   },
   cta: {
-    title: "Empezá a enviar push",
+    title: "Empieza a enviar push",
     subtitle:
-      "Creá tu app y llegá directo al celular de tus clientes. Todos los planes incluyen las notificaciones automáticas y 1.500 campañas por mes como mínimo.",
+      "Crea tu app y llega directo al celular de tus clientes. Todos los planes incluyen las notificaciones automáticas y 1.500 campañas por mes como mínimo.",
     primary: "Empezar gratis",
     secondary: "Agendar una demo",
   },

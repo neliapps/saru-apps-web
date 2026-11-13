@@ -34,7 +34,7 @@ const es: LegalContent = {
         </li>
         <li>
           <strong>Datos de la tienda:</strong> información de tu tienda Tiendanube (nombre,
-          productos, categorías, pedidos) obtenida mediante la integración autorizada por vos.
+          productos, categorías, pedidos) obtenida mediante la integración autorizada por ti.
         </li>
         <li>
           <strong>Datos de uso:</strong> interacciones con la plataforma, páginas visitadas,
@@ -73,13 +73,13 @@ const es: LegalContent = {
       <ul>
         <li>
           <strong>Tiendanube:</strong> para la sincronización de tu tienda (mediante OAuth, con
-          los permisos que vos autorizás).
+          los permisos que tú autorizas).
         </li>
         <li>
           <strong>Firebase (Google):</strong> para el envío de notificaciones push.
         </li>
         <li>
-          <strong>Cloudinary:</strong> para el almacenamiento de imágenes que subís a la
+          <strong>Cloudinary:</strong> para el almacenamiento de imágenes que subes a la
           plataforma.
         </li>
         <li>
@@ -107,7 +107,7 @@ const es: LegalContent = {
         </li>
       </ul>
       <p>
-        Podés gestionar tus preferencias de cookies desde el banner que aparece al visitar el
+        Puedes gestionar tus preferencias de cookies desde el banner que aparece al visitar el
         sitio o desde la configuración de tu navegador.
       </p>
 
@@ -124,13 +124,13 @@ const es: LegalContent = {
 
       <h2>6. Retención de Datos</h2>
       <p>
-        Conservamos tus datos mientras tu cuenta esté activa. Si cancelás tu cuenta,
+        Conservamos tus datos mientras tu cuenta esté activa. Si cancelas tu cuenta,
         eliminaremos tu información personal dentro de los 90 días siguientes, excepto aquella
         que debamos retener por obligaciones legales o fiscales.
       </p>
 
       <h2>7. Tus Derechos</h2>
-      <p>Tenés derecho a:</p>
+      <p>Tienes derecho a:</p>
       <ul>
         <li>Acceder a tus datos personales almacenados</li>
         <li>Solicitar la corrección de datos inexactos</li>
@@ -139,7 +139,7 @@ const es: LegalContent = {
         <li>Revocar el acceso a tu tienda Tiendanube en cualquier momento</li>
       </ul>
       <p>
-        Para ejercer estos derechos, contactanos a{" "}
+        Para ejercer estos derechos, contáctanos a{" "}
         <a href="mailto:hola@saruapps.com" className={linkClass}>
           hola@saruapps.com
         </a>
@@ -148,7 +148,7 @@ const es: LegalContent = {
 
       <h2>8. Usuarios Finales de tu App</h2>
       <p>
-        Como comercio que publica una app a través de Saru Apps, sos responsable de informar a
+        Como comercio que publica una app a través de Saru Apps, eres responsable de informar a
         tus usuarios finales sobre la recopilación de datos (tokens push, datos de compra). Te
         recomendamos incluir tu propia política de privacidad dentro de tu app.
       </p>
@@ -169,7 +169,7 @@ const es: LegalContent = {
 
       <h2>11. Contacto</h2>
       <p>
-        Para consultas sobre privacidad, escribinos a{" "}
+        Para consultas sobre privacidad, escríbenos a{" "}
         <a href="mailto:hola@saruapps.com" className={linkClass}>
           hola@saruapps.com
         </a>
