@@ -5,8 +5,8 @@ import { guiaContent } from "@/content/guia";
 import { localePath, type Locale } from "@/i18n/config";
 
 
-/* Flat documentation typography: ink text, contained scale, 17px body at 1.7 */
-const prose = [
+/* Flat documentation typography: ink text, contained scale, 17px body at 1.7 (also the help articles) */
+export const prose = [
   "text-ink",
   // Headings
   "[&_h1]:font-display [&_h1]:text-[clamp(32px,3.6vw,44px)] [&_h1]:font-extrabold [&_h1]:leading-[1.1] [&_h1]:tracking-[-0.035em] [&_h1]:mb-6",
