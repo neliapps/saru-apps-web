@@ -2,9 +2,9 @@ import { notFound } from "next/navigation";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { prose } from "@/components/GuiaArticleLayout";
-import { helpArticle, helpSlugs } from "@/content/ayuda";
-import { locales } from "@/i18n/config";
-import { SITE_URL } from "@/i18n/seo";
+import { helpArticle, helpHasLocale, helpSlugs } from "@/content/ayuda";
+import { locales, toLocale } from "@/i18n/config";
+import { SITE_URL, pageAlternates } from "@/i18n/seo";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -18,7 +18,7 @@ const markdown = [
   "[&_a[id]]:scroll-mt-[120px]",
 ].join(" ");
 
-// Only in Spanish for now: /pt shows the same article (the dashboard links here in both languages)
+// /pt shows the Portuguese version when the article has one, the Spanish one otherwise
 export function generateStaticParams() {
   return locales.flatMap((locale) => helpSlugs().map((slug) => ({ locale, slug })));
 }
@@ -26,17 +26,22 @@ export function generateStaticParams() {
 export const dynamicParams = false;
 
 export async function generateMetadata({ params }: Props) {
-  const article = helpArticle((await params).slug);
+  const { locale: param, slug } = await params;
+  const locale = toLocale(param);
+  const article = helpArticle(slug, locale);
   if (!article) return {};
+  const path = `/ayuda/${article.slug}`;
   return {
-    title: `${article.title} — Ayuda Saru Apps`,
+    title: `${article.title} — ${article.locale === "pt" ? "Ajuda" : "Ayuda"} Saru Apps`,
     description: article.summary,
-    alternates: { canonical: `${SITE_URL}/ayuda/${article.slug}` },
+    // Both languages only when the Portuguese version exists; otherwise /pt repeats the Spanish one
+    alternates: helpHasLocale(article.slug, "pt") ? pageAlternates(locale, path) : { canonical: `${SITE_URL}${path}` },
   };
 }
 
 export default async function Page({ params }: Props) {
-  const article = helpArticle((await params).slug);
+  const { locale, slug } = await params;
+  const article = helpArticle(slug, toLocale(locale));
   if (!article) notFound();
 
   return (
@@ -44,7 +49,7 @@ export default async function Page({ params }: Props) {
       <Navbar />
       <main className="bg-white pb-24 pt-[120px] text-ink md:pt-[136px]">
         <article
-          lang="es"
+          lang={article.locale === "pt" ? "pt-BR" : "es"}
           className={`mx-auto max-w-[760px] px-6 ${prose} ${markdown}`}
           dangerouslySetInnerHTML={{ __html: article.html }}
         />

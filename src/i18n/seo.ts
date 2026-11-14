@@ -30,7 +30,7 @@ export const PAGE_PATHS = [
   "/guia/notificaciones",
   "/guia/analitica",
   "/guia/app-nativa",
-  "/guia/publicar",
+  "/ayuda/publicar-tu-app",
   "/guia/planes",
   "/guia/seguridad",
   "/guia/faq",

@@ -4,7 +4,7 @@ slug: publicar-tu-app
 url: /ayuda/publicar-tu-app
 category: Publicación
 summary: Paso a paso para publicar tu app con tu marca, desde tus propias cuentas de Apple y Google. Qué tienes que hacer tú, qué hacemos nosotros, cuánto cuesta y cuánto tarda.
-updated: 2026-11-13
+updated: 2026-11-14
 ---
 
 # Cómo publicar tu app en App Store y Google Play
@@ -48,11 +48,11 @@ En el panel, en **Publicar**, lo primero es elegir el tipo de cuenta. Tiene que 
 
 | | Empresa (recomendado) | Persona física |
 |---|---|---|
-| Para quién | SRL, SA, SAS, LTDA, EIRELI u otra sociedad | Monotributistas, autónomos, MEI |
+| Para quién | SRL, SA, SAS, LTDA, SLU u otra sociedad | Monotributistas, autónomos, MEI |
 | Nombre que figura como vendedor | El de tu empresa | Tu nombre personal (en App Store) |
 | Número D-U-N-S | Sí (gratis) | No |
 | Prueba previa en Google | No | Sí: 12 personas durante 14 días |
-| Tiempo total estimado | 1 a 2 semanas | 3 a 4 semanas |
+| Tiempo total estimado | 1 a 2 semanas, si ya tienes el D-U-N-S | 3 a 4 semanas |
 
 **¿Cuál me conviene?** Si tienes una sociedad, elige **Empresa**: es más rápido y en las tiendas figura tu empresa. Si facturas como persona física, elige **Persona física**; funciona igual, solo tarda más por la prueba que exige Google.
 
@@ -248,7 +248,7 @@ Es un código único que identifica tu app en las tiendas, con el formato de tu 
 ### Lo que hacemos por ti
 
 - **Política de privacidad**: la generamos según lo que tu app realmente hace y la publicamos en una página pública. Las dos tiendas la exigen.
-- **Página para borrar la cuenta**: Google exige un link donde tus clientes puedan pedir que se borre su cuenta. Además, desde la app pueden borrarla en *Perfil → Cuenta → Eliminar cuenta*.
+- **Página para borrar la cuenta**: Google exige un link donde tus clientes puedan pedir que se borre su cuenta. Además, desde la app pueden borrarla en *Perfil → Mi cuenta → Eliminar cuenta*.
 - **Formularios de privacidad**: completamos los cuestionarios de datos de Apple ("Privacidad de la app") y de Google ("Seguridad de los datos").
 - **Capturas de pantalla**: las sacamos de tu app real en los tamaños que pide cada tienda. Toca **Generar capturas** y, si después cambias el diseño, genéralas de nuevo.
 - **Acceso para el revisor**: Apple prueba la app antes de aprobarla. Le damos un usuario de prueba para que pueda iniciar sesión sin esperar el código por email.
@@ -299,7 +299,7 @@ Revísala con calma: tus páginas, productos, carrito y notificaciones. Después
 - **Aprobar y enviar a revisión**, si está todo bien.
 - **Pedir cambios**, si quieres ajustar algo. Cuéntanos qué y te mandamos una nueva versión.
 
-> Los cambios de diseño, páginas y productos que hagas en el panel **se ven al instante** en la app, también en la versión de prueba. No hace falta pedir una versión nueva por eso.
+> Los cambios de diseño y páginas que hagas en el panel, y los de productos en Tiendanube, **se ven al instante** en la app, también en la versión de prueba. No hace falta pedir una versión nueva por eso.
 
 <a id="revision"></a>
 ## Paso 8: Revisión de las tiendas
@@ -323,7 +323,7 @@ Cuando la app se aprueba, el estado pasa a **Publicada** y te llega un email. De
 - **Tus cambios se ven al instante.** Páginas, banners, productos, colores y notificaciones se actualizan en la app sin pasar por las tiendas.
 - **Las mejoras de la app las hacemos nosotros.** Cuando sumamos funciones nuevas, actualizamos tu app sin que hagas nada.
 - **Renueva tu cuenta de Apple todos los años.** Si la membresía vence, Apple saca la app de la App Store hasta que la renueves. Te recomendamos activar la renovación automática.
-- **No borres nuestras invitaciones** en Apple, Google Play ni Firebase: las necesitamos para actualizar tu app.
+- **No revoques las claves de Apple ni borres nuestras invitaciones** en Google Play y Firebase: las necesitamos para actualizar tu app.
 - **Cambiar el nombre o el ícono** requiere una versión nueva en las tiendas: escríbenos y la preparamos.
 
 ---
@@ -341,7 +341,7 @@ No. Con Apple usamos una clave de la API que puedes revocar cuando quieras. En G
 Sí. Elige **Persona física** al empezar. En App Store figura tu nombre personal como vendedor, y Google pide una prueba de 14 días con 12 personas antes de publicar.
 
 **¿Cuánto tarda todo?**
-Si ya tienes una empresa con D-U-N-S, alrededor de una semana desde que creas las cuentas. Si empiezas de cero o eres persona física, entre 3 y 4 semanas.
+Si ya tienes una empresa con D-U-N-S, entre 1 y 2 semanas desde que creas las cuentas; si tienes que pedir el D-U-N-S, súmale de unos días a un par de semanas. Como persona física, entre 3 y 4 semanas.
 
 **¿Cuánto cuesta?**
 USD 99 por año a Apple y USD 25 una sola vez a Google. La publicación no tiene costo extra en Saru Apps: solo necesitas tu plan activo.

@@ -17,23 +17,33 @@ export const registroContent: GuiaArticleContent = {
         <h2>Paso 2: Onboarding (4 pasos)</h2>
         <ol>
           <li>
-            <strong>Tu negocio:</strong> País, facturación mensual, pedidos por
-            mes, y si quiere publicar en App Store/Google Play
-          </li>
-          <li>
-            <strong>Objetivos:</strong> Qué busca con la app (más ventas,
-            fidelizar, push, presencia en stores, campañas, imagen de marca)
-          </li>
-          <li>
-            <strong>Plan recomendado:</strong> Basado en las respuestas, el sistema
-            recomienda el plan ideal. Todos los planes incluyen app nativa para
-            iOS y Android
-          </li>
-          <li>
             <strong>Conectar Tiendanube:</strong> Vincula su tienda de Tiendanube
             para sincronizar productos automáticamente
           </li>
+          <li>
+            <strong>Sincronización:</strong> Los productos de la tienda se
+            sincronizan en unos segundos
+          </li>
+          <li>
+            <strong>Elige el estilo de tu app:</strong> La app aparece con el
+            logo, los colores, la tipografía y los banners de la tienda, y el
+            comerciante elige uno de los cuatro estilos (Minimal, Boutique,
+            Moderno o Vibrante)
+          </li>
+          <li>
+            <strong>¡Tu app está lista!:</strong> Vista previa de la app en el
+            teléfono, el nombre de la app y el WhatsApp del comerciante
+            (opcional, para recibir soporte)
+          </li>
         </ol>
+        <p>
+          Si instala Saru Apps desde la Tienda de Aplicaciones de Tiendanube, el
+          comerciante no necesita registrarse ni conectar la tienda: la cuenta y
+          la app se crean al instalar. Al hacer clic en{" "}
+          <strong>Abrir el panel de Saru Apps</strong> en el admin de Tiendanube,
+          el onboarding empieza sin iniciar sesión y salta el paso de conectar
+          Tiendanube.
+        </p>
       </>
     ),
   },
@@ -54,23 +64,32 @@ export const registroContent: GuiaArticleContent = {
         <h2>Passo 2: Onboarding (4 passos)</h2>
         <ol>
           <li>
-            <strong>Seu negócio:</strong> País, faturamento mensal, pedidos por
-            mês e se deseja publicar na App Store/Google Play
-          </li>
-          <li>
-            <strong>Objetivos:</strong> O que busca com o app (mais vendas,
-            fidelizar, push, presença nas lojas, campanhas, imagem de marca)
-          </li>
-          <li>
-            <strong>Plano recomendado:</strong> Com base nas respostas, o sistema
-            recomenda o plano ideal. Todos os planos incluem app nativo para
-            iOS e Android
-          </li>
-          <li>
             <strong>Conectar a Nuvemshop:</strong> Vincula sua loja Nuvemshop
             para sincronizar os produtos automaticamente
           </li>
+          <li>
+            <strong>Sincronização:</strong> Os produtos da loja são
+            sincronizados em alguns segundos
+          </li>
+          <li>
+            <strong>Escolha o estilo do seu app:</strong> O app aparece com o
+            logo, as cores, a tipografia e os banners da loja, e o lojista
+            escolhe um dos quatro estilos (Minimal, Boutique, Moderno ou
+            Vibrante)
+          </li>
+          <li>
+            <strong>Seu app está pronto!:</strong> Pré-visualização do app no
+            celular, o nome do app e o WhatsApp do lojista (opcional, para
+            receber suporte)
+          </li>
         </ol>
+        <p>
+          Se instalar a Saru Apps pela Loja de Aplicativos da Nuvemshop, o
+          lojista não precisa se cadastrar nem conectar a loja: a conta e o app
+          são criados na instalação. Ao clicar em{" "}
+          <strong>Abrir o painel da Saru Apps</strong> no admin da Nuvemshop, o
+          onboarding começa sem login e pula o passo de conectar a Nuvemshop.
+        </p>
       </>
     ),
   },

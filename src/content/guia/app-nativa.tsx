@@ -22,7 +22,8 @@ export const appNativaContent: GuiaArticleContent = {
             <strong>Búsqueda:</strong> búsqueda en tiempo real con sugerencias
           </li>
           <li>
-            <strong>Favoritos:</strong> lista de deseos (almacenada localmente)
+            <strong>Favoritos:</strong> lista de deseos, guardada en el teléfono y
+            también en el servidor, que la usa para los avisos de poco stock
           </li>
           <li>
             <strong>Carrito:</strong> carrito de compras con cantidades y variantes
@@ -34,13 +35,22 @@ export const appNativaContent: GuiaArticleContent = {
             <strong>Detalle de producto:</strong> galería, variantes, agregar al
             carrito
           </li>
+          <li>
+            <strong>Reels:</strong> videos verticales a pantalla completa, con los
+            productos de cada video (si la tienda los usa)
+          </li>
+          <li>
+            <strong>Lanzamientos (Drops):</strong> lanzamientos con cuenta
+            regresiva y el botón &quot;Avísame cuando salga&quot;; cuando salen,
+            muestran sus productos
+          </li>
         </ul>
 
         <h2>Checkout</h2>
         <p>
-          El checkout redirige a la página de checkout nativa de Tiendanube. Esto
-          garantiza compatibilidad con todos los medios de pago configurados por
-          el comerciante.
+          La app crea un pedido borrador y abre el checkout de Tiendanube dentro
+          de la app. El pago va directo a la tienda. Esto garantiza compatibilidad
+          con todos los medios de pago configurados por el comerciante.
         </p>
 
         <h2>Theming dinámico</h2>
@@ -51,7 +61,11 @@ export const appNativaContent: GuiaArticleContent = {
 
         <h2>Notificaciones push en la app nativa</h2>
         <ul>
-          <li>Se registra automáticamente para push al abrir la app</li>
+          <li>
+            La app no pide permiso al abrirse por primera vez: lo pide después de
+            una compra, de guardar un favorito o de tocar &quot;Avísame&quot;, y
+            solo registra el teléfono si el cliente acepta
+          </li>
           <li>
             Soporta deep linking: al tocar la notificación, abre el producto o
             sección correspondiente
@@ -83,7 +97,8 @@ export const appNativaContent: GuiaArticleContent = {
             <strong>Busca:</strong> busca em tempo real com sugestões
           </li>
           <li>
-            <strong>Favoritos:</strong> lista de desejos (armazenada localmente)
+            <strong>Favoritos:</strong> lista de desejos, salva no celular e
+            também no servidor, que a usa para os avisos de estoque baixo
           </li>
           <li>
             <strong>Carrinho:</strong> carrinho de compras com quantidades e variantes
@@ -95,13 +110,22 @@ export const appNativaContent: GuiaArticleContent = {
             <strong>Detalhe do produto:</strong> galeria, variantes, adicionar ao
             carrinho
           </li>
+          <li>
+            <strong>Reels:</strong> vídeos verticais em tela cheia, com os produtos
+            de cada vídeo (se a loja usar)
+          </li>
+          <li>
+            <strong>Lançamentos (Drops):</strong> lançamentos com contagem
+            regressiva e o botão &quot;Avise-me quando sair&quot;; quando saem,
+            mostram seus produtos
+          </li>
         </ul>
 
         <h2>Checkout</h2>
         <p>
-          O checkout redireciona para a página de checkout nativa da Nuvemshop.
-          Isso garante compatibilidade com todos os meios de pagamento
-          configurados pelo lojista.
+          O app cria um pedido em rascunho e abre o checkout da Nuvemshop dentro
+          do app. O pagamento vai direto para a loja. Isso garante compatibilidade
+          com todos os meios de pagamento configurados pelo lojista.
         </p>
 
         <h2>Theming dinâmico</h2>
@@ -112,7 +136,11 @@ export const appNativaContent: GuiaArticleContent = {
 
         <h2>Notificações push no app nativo</h2>
         <ul>
-          <li>Registra-se automaticamente para push ao abrir o app</li>
+          <li>
+            O app não pede permissão ao ser aberto pela primeira vez: pede depois
+            de uma compra, de salvar um favorito ou de tocar em
+            &quot;Avise-me&quot;, e só registra o celular se o cliente aceitar
+          </li>
           <li>
             Suporta deep linking: ao tocar na notificação, abre o produto ou a
             seção correspondente

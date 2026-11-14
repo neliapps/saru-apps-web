@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { guiaContent } from "@/content/guia";
+import { guiaContent, guiaPath } from "@/content/guia";
 import { localePath, toLocale } from "@/i18n/config";
 import { pageAlternates } from "@/i18n/seo";
 
@@ -34,7 +34,7 @@ export default async function Guia({ params }: Props) {
             {t.articles.map((article) => (
               <li key={article.slug} className="border-b border-line-light">
                 <a
-                  href={localePath(locale, `/guia/${article.slug}`)}
+                  href={localePath(locale, guiaPath(article.slug))}
                   className="group flex items-start justify-between gap-6 py-6"
                 >
                   <div>

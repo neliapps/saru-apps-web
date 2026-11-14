@@ -12,7 +12,7 @@ export const productosContent: GuiaArticleContent = {
         </p>
         <ul>
           <li>Lista con imágenes, precios y stock</li>
-          <li>Búsqueda y filtro por categoría</li>
+          <li>Búsqueda por nombre y paginación</li>
           <li>
             Botón &quot;Sincronizar&quot; para forzar una sincronización manual
           </li>
@@ -37,7 +37,7 @@ export const productosContent: GuiaArticleContent = {
         </p>
         <ul>
           <li>Lista com imagens, preços e estoque</li>
-          <li>Busca e filtro por categoria</li>
+          <li>Busca por nome e paginação</li>
           <li>
             Botão &quot;Sincronizar&quot; para forçar uma sincronização manual
           </li>

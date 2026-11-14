@@ -1,7 +1,7 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { guiaContent } from "@/content/guia";
+import { guiaContent, guiaPath } from "@/content/guia";
 import { localePath, type Locale } from "@/i18n/config";
 
 
@@ -60,7 +60,7 @@ export function GuiaArticleLayout({
                   return (
                     <li key={a.slug}>
                       <a
-                        href={localePath(locale, `/guia/${a.slug}`)}
+                        href={localePath(locale, guiaPath(a.slug))}
                         aria-current={active ? "page" : undefined}
                         className={`-ml-px block border-l-2 py-1.5 pl-4 text-[15px] leading-[1.45] transition-colors duration-200 ${
                           active
@@ -99,7 +99,7 @@ export function GuiaArticleLayout({
             >
               {prev ? (
                 <a
-                  href={localePath(locale, `/guia/${prev.slug}`)}
+                  href={localePath(locale, guiaPath(prev.slug))}
                   className="group flex flex-col items-start gap-1 rounded-2xl border border-line-light p-5 transition-colors duration-200 hover:border-ink"
                 >
                   <span className="inline-flex items-center gap-1.5 text-[14px] font-medium">
@@ -113,7 +113,7 @@ export function GuiaArticleLayout({
               )}
               {next ? (
                 <a
-                  href={localePath(locale, `/guia/${next.slug}`)}
+                  href={localePath(locale, guiaPath(next.slug))}
                   className="group flex flex-col items-end gap-1 rounded-2xl border border-line-light p-5 text-right transition-colors duration-200 hover:border-ink"
                 >
                   <span className="inline-flex items-center gap-1.5 text-[14px] font-medium">

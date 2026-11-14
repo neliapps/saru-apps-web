@@ -35,8 +35,9 @@ export const faqContent: GuiaArticleContent = {
         <p><strong>¿Puedo desconectar mi tienda?</strong></p>
         <p>
           Sí, puedes desconectar en cualquier momento desde la sección de
-          Integraciones. Tu app seguirá funcionando con los productos ya
-          sincronizados.
+          Integraciones. Ten en cuenta que, sin la tienda conectada, el catálogo
+          de tu app ya no se actualiza y el checkout deja de funcionar: tus
+          clientes no pueden comprar.
         </p>
 
         <p><strong>¿Funciona con cualquier plan de Tiendanube?</strong></p>
@@ -48,14 +49,27 @@ export const faqContent: GuiaArticleContent = {
 
         <p><strong>¿Cuánto tarda en publicarse mi app?</strong></p>
         <p>
-          El proceso de revisión en App Store puede tardar 3-7 días y en Google
-          Play unas horas. Saru Apps se encarga de todo el proceso técnico de
-          compilación y publicación.
+          Primero construimos la app y te enviamos una versión de prueba (2 a 5
+          días hábiles). Cuando la apruebas, la enviamos a revisión: Apple tarda
+          de 1 a 3 días y Google, de unas horas a 7 días (la primera vez suele
+          tardar más). Si tu cuenta de Google es personal, se suman 14 días de
+          prueba cerrada con 12 personas. Saru Apps se encarga de todo el proceso
+          técnico de compilación y publicación. Más detalles en{" "}
+          <a href="/ayuda/publicar-tu-app" className={linkClass}>
+            Cómo publicar tu app
+          </a>
+          .
         </p>
 
         <p><strong>¿Puedo despublicar mi app?</strong></p>
         <p>
-          Sí, puedes despublicar en cualquier momento desde la sección Publicar.
+          No hay una opción en el panel para despublicarla: una vez que pides la
+          publicación, los cambios se piden escribiéndonos a{" "}
+          <a href="mailto:hola@saruapps.com" className={linkClass}>
+            hola@saruapps.com
+          </a>
+          . Si quieres cerrarla por un tiempo, activa el Modo mantenimiento en
+          Configuración &gt; General.
         </p>
 
         <p>
@@ -63,16 +77,27 @@ export const faqContent: GuiaArticleContent = {
         </p>
         <p>
           Necesitas cualquier plan activo de Saru Apps, una cuenta de Apple
-          Developer ($99/año) y una cuenta de Google Play Developer ($25 una vez).
-          Nosotros nos encargamos de compilar y subir la app a tus cuentas.
+          Developer (USD 99 por año), una cuenta de Google Play Console (USD 25,
+          una sola vez) y un proyecto de Firebase (gratis), que usamos para enviar
+          las notificaciones. Si publicas como empresa, también necesitas un
+          número D-U-N-S (gratis). Si tu cuenta de Google es personal, Google
+          exige una prueba cerrada de 14 días con 12 personas antes de publicar.
+          Nosotros nos encargamos de compilar y subir la app a tus cuentas. Te lo
+          explicamos paso a paso en{" "}
+          <a href="/ayuda/publicar-tu-app" className={linkClass}>
+            Cómo publicar tu app
+          </a>
+          .
         </p>
 
         <h2>Notificaciones</h2>
 
         <p><strong>¿Cómo reciben las notificaciones mis clientes?</strong></p>
         <p>
-          Los clientes que descarguen tu app nativa reciben notificaciones push
-          automáticamente cuando las envías desde el panel.
+          Las reciben los clientes que tienen tu app y aceptaron las
+          notificaciones. La app les pide permiso después de una compra, de
+          guardar un favorito o de tocar &quot;Avísame&quot;, nunca al abrirla por
+          primera vez.
         </p>
 
         <p><strong>¿Puedo programar notificaciones?</strong></p>
@@ -92,17 +117,23 @@ export const faqContent: GuiaArticleContent = {
 
         <p><strong>¿Puedo cambiar de plan?</strong></p>
         <p>
-          Sí, puedes cambiar de plan en cualquier momento desde la sección Plan en
-          el dashboard.
+          Sí, en cualquier momento, desde Cuenta &gt; Planes (con &quot;Gestionar
+          facturación&quot;, que abre el portal de pagos de Stripe) o
+          escribiéndonos a{" "}
+          <a href="mailto:hola@saruapps.com" className={linkClass}>
+            hola@saruapps.com
+          </a>
+          .
         </p>
 
         <p><strong>¿Cómo cancelo mi suscripción?</strong></p>
         <p>
-          Contáctanos a{" "}
-          <a href="mailto:ventas@saruapps.com" className={linkClass}>
-            ventas@saruapps.com
+          Escríbenos a{" "}
+          <a href="mailto:hola@saruapps.com" className={linkClass}>
+            hola@saruapps.com
           </a>{" "}
-          para gestionar la cancelación.
+          o entra a Cuenta &gt; Planes &gt; &quot;Gestionar facturación&quot;, que
+          abre el portal de pagos de Stripe.
         </p>
       </>
     ),
@@ -138,8 +169,9 @@ export const faqContent: GuiaArticleContent = {
         <p><strong>Posso desconectar minha loja?</strong></p>
         <p>
           Sim, você pode desconectar a qualquer momento na seção de
-          Integrações. Seu app continuará funcionando com os produtos já
-          sincronizados.
+          Integrações. Mas, sem a loja conectada, o catálogo do seu app deixa de
+          ser atualizado e o checkout para de funcionar: seus clientes não
+          conseguem comprar.
         </p>
 
         <p><strong>Funciona com qualquer plano da Nuvemshop?</strong></p>
@@ -151,14 +183,27 @@ export const faqContent: GuiaArticleContent = {
 
         <p><strong>Quanto tempo leva para meu app ser publicado?</strong></p>
         <p>
-          O processo de revisão na App Store pode levar de 3 a 7 dias e no Google
-          Play algumas horas. A Saru Apps cuida de todo o processo técnico de
-          compilação e publicação.
+          Primeiro construímos o app e enviamos uma versão de teste para você (2 a
+          5 dias úteis). Quando você aprova, enviamos para revisão: a Apple leva
+          de 1 a 3 dias e o Google, de algumas horas a 7 dias (na primeira vez
+          costuma demorar mais). Se a sua conta do Google for pessoal, somam-se 14
+          dias de teste fechado com 12 pessoas. A Saru Apps cuida de todo o
+          processo técnico de compilação e publicação. Mais detalhes em{" "}
+          <a href="/pt/ayuda/publicar-tu-app" className={linkClass}>
+            Como publicar seu app
+          </a>
+          .
         </p>
 
         <p><strong>Posso despublicar meu app?</strong></p>
         <p>
-          Sim, você pode despublicar a qualquer momento na seção Publicar.
+          Não há uma opção no painel para despublicá-lo: depois que você pede a
+          publicação, as alterações são pedidas pelo e-mail{" "}
+          <a href="mailto:hola@saruapps.com" className={linkClass}>
+            hola@saruapps.com
+          </a>
+          . Se quiser fechá-lo por um tempo, ative o Modo manutenção em
+          Configuração &gt; Geral.
         </p>
 
         <p>
@@ -166,16 +211,27 @@ export const faqContent: GuiaArticleContent = {
         </p>
         <p>
           Você precisa de qualquer plano ativo da Saru Apps, uma conta Apple
-          Developer ($99/ano) e uma conta Google Play Developer ($25 uma vez).
-          Nós cuidamos de compilar e enviar o app para as suas contas.
+          Developer (USD 99 por ano), uma conta no Google Play Console (USD 25,
+          pagamento único) e um projeto do Firebase (grátis), que usamos para
+          enviar as notificações. Se você publica como empresa, também precisa de
+          um número D-U-N-S (grátis). Se a sua conta do Google for pessoal, o
+          Google exige um teste fechado de 14 dias com 12 pessoas antes de
+          publicar. Nós cuidamos de compilar e enviar o app para as suas contas. O
+          passo a passo está em{" "}
+          <a href="/pt/ayuda/publicar-tu-app" className={linkClass}>
+            Como publicar seu app
+          </a>
+          .
         </p>
 
         <h2>Notificações</h2>
 
         <p><strong>Como meus clientes recebem as notificações?</strong></p>
         <p>
-          Os clientes que baixarem seu app nativo recebem notificações push
-          automaticamente quando você as envia pelo painel.
+          As notificações chegam aos clientes que têm seu app e aceitaram
+          recebê-las. O app pede permissão depois de uma compra, de salvar um
+          favorito ou de tocar em &quot;Avise-me&quot;, nunca ao ser aberto pela
+          primeira vez.
         </p>
 
         <p><strong>Posso agendar notificações?</strong></p>
@@ -195,17 +251,23 @@ export const faqContent: GuiaArticleContent = {
 
         <p><strong>Posso mudar de plano?</strong></p>
         <p>
-          Sim, você pode mudar de plano a qualquer momento na seção Plano do
-          dashboard.
+          Sim, a qualquer momento, em Conta &gt; Planos (com &quot;Gerenciar
+          cobrança&quot;, que abre o portal de pagamentos da Stripe) ou pelo
+          e-mail{" "}
+          <a href="mailto:hola@saruapps.com" className={linkClass}>
+            hola@saruapps.com
+          </a>
+          .
         </p>
 
         <p><strong>Como cancelo minha assinatura?</strong></p>
         <p>
-          Fale com a gente em{" "}
-          <a href="mailto:ventas@saruapps.com" className={linkClass}>
-            ventas@saruapps.com
+          Escreva para{" "}
+          <a href="mailto:hola@saruapps.com" className={linkClass}>
+            hola@saruapps.com
           </a>{" "}
-          para fazer o cancelamento.
+          ou acesse Conta &gt; Planos &gt; &quot;Gerenciar cobrança&quot;, que abre
+          o portal de pagamentos da Stripe.
         </p>
       </>
     ),

@@ -28,6 +28,9 @@ export const guiaSlugs = [
 
 export type GuiaSlug = (typeof guiaSlugs)[number];
 
+/** Where a guide lives: "Publicar la app" is the help article, the one the panel links to */
+export const guiaPath = (slug: GuiaSlug) => (slug === "publicar" ? "/ayuda/publicar-tu-app" : `/guia/${slug}`);
+
 const es = {
   metadata: {
     title: "Guía de la Plataforma — Saru Apps",
@@ -72,13 +75,13 @@ const es = {
     },
     {
       slug: "editor",
-      title: "Editor de contenido",
-      description: "Usa el editor drag & drop para diseñar las páginas de tu app.",
+      title: "Diseño",
+      description: "Diseña las páginas de tu app con bloques que arrastras y ordenas.",
     },
     {
       slug: "productos",
       title: "Productos",
-      description: "Gestiona y visualiza los productos sincronizados desde Tiendanube.",
+      description: "Los productos de tu tienda en el panel: se sincronizan solos desde Tiendanube y se editan allí.",
     },
     {
       slug: "notificaciones",
@@ -88,7 +91,7 @@ const es = {
     {
       slug: "publicar",
       title: "Publicar la app",
-      description: "Publica tu app nativa en App Store y Google Play.",
+      description: "Paso a paso para publicar tu app en App Store y Google Play desde tus propias cuentas.",
     },
     {
       slug: "panel",
@@ -98,7 +101,7 @@ const es = {
     {
       slug: "analitica",
       title: "Analítica",
-      description: "Mide visitas, productos más vistos, búsquedas y eventos.",
+      description: "Ventas y pedidos desde la app, conversión, notificaciones, visitas y búsquedas.",
     },
     {
       slug: "app-nativa",
@@ -108,7 +111,7 @@ const es = {
     {
       slug: "seguridad",
       title: "Seguridad y privacidad",
-      description: "Autenticación, protección de datos y cumplimiento GDPR.",
+      description: "Autenticación, protección de datos y los pedidos de privacidad de Tiendanube (LGPD).",
     },
     {
       slug: "faq",
@@ -162,13 +165,13 @@ const pt: typeof es = {
     },
     {
       slug: "editor",
-      title: "Editor de conteúdo",
-      description: "Use o editor drag & drop para criar as páginas do seu app.",
+      title: "Design",
+      description: "Crie as páginas do seu app com blocos que você arrasta e organiza.",
     },
     {
       slug: "productos",
       title: "Produtos",
-      description: "Gerencie e visualize os produtos sincronizados da Nuvemshop.",
+      description: "Os produtos da sua loja no painel: sincronizam sozinhos com a Nuvemshop e são editados lá.",
     },
     {
       slug: "notificaciones",
@@ -178,7 +181,7 @@ const pt: typeof es = {
     {
       slug: "publicar",
       title: "Publicar o app",
-      description: "Publique seu app nativo na App Store e no Google Play.",
+      description: "Passo a passo para publicar seu app na App Store e no Google Play com as suas próprias contas.",
     },
     {
       slug: "panel",
@@ -187,8 +190,8 @@ const pt: typeof es = {
     },
     {
       slug: "analitica",
-      title: "Analytics",
-      description: "Meça visitas, produtos mais vistos, buscas e eventos.",
+      title: "Análises",
+      description: "Vendas e pedidos pelo app, conversão, notificações, visitas e buscas.",
     },
     {
       slug: "app-nativa",
@@ -198,7 +201,7 @@ const pt: typeof es = {
     {
       slug: "seguridad",
       title: "Segurança e privacidade",
-      description: "Autenticação, proteção de dados e conformidade com o GDPR.",
+      description: "Autenticação, proteção de dados e as solicitações de privacidade da Nuvemshop (LGPD).",
     },
     {
       slug: "faq",
