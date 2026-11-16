@@ -24,6 +24,8 @@
     "reelsDesc": "Videos tipo TikTok para comprar",
     "engagement": "Engagement y Ventas",
     "engagementDesc": "Herramientas para convertir y retener",
+    "puntos": "Programa de puntos",
+    "puntosDesc": "Clientes que vuelven a comprar",
     "sincronizacion": "Sincronización Tiendanube",
     "sincronizacionDesc": "Productos y pedidos siempre actualizados",
     "analytics": "Analytics",
@@ -129,6 +131,7 @@
     "push": "Notificaciones Push",
     "reels": "Reels de producto",
     "engagement": "Engagement y Ventas",
+    "puntos": "Programa de puntos",
     "sincronizacion": "Sincronización",
     "analytics": "Analytics",
     "precios": "Precios",
@@ -230,6 +233,42 @@
     "reelsTab": "Reels",
     "reelOldPrice1": "$ 109.800",
     "reelOldPrice2": "$ 149.000",
-    "reelCounter": "1 de 2"
+    "reelCounter": "1 de 2",
+    "pointsTitle": "Mis puntos",
+    "pointsBalanceLabel": "Tu saldo",
+    "pointsBalance": "2.450",
+    "pointsUnit": "puntos",
+    "pointsValue": "Valen $ 2.450 en tu próxima compra",
+    "pointsExpiry": "Vencen si pasan 12 meses sin compras",
+    "pointsMovements": "Movimientos",
+    "pointsRows": [
+      {
+        "label": "Compra #1043",
+        "date": "12 oct",
+        "points": "+1.078"
+      },
+      {
+        "label": "Canje en compra #1043",
+        "date": "12 oct",
+        "points": "−800"
+      },
+      {
+        "label": "Compra #1031",
+        "date": "28 sep",
+        "points": "+1.322"
+      },
+      {
+        "label": "Compra #1020 · web",
+        "date": "3 sep",
+        "points": "+650"
+      },
+      {
+        "label": "Regalo de bienvenida",
+        "date": "1 sep",
+        "points": "+200"
+      }
+    ],
+    "usePoints": "Usar mis puntos",
+    "usePointsValue": "−$ 2.450 en este pedido"
   }
 }

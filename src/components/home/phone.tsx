@@ -12,6 +12,7 @@ import {
   RefreshCw,
   Flame,
   Volume2,
+  Clock,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { useDictionary } from "@/i18n/DictionaryProvider";
@@ -560,5 +561,76 @@ export function ReelsScreen() {
         ))}
       </div>
     </div>
+  );
+}
+
+/* ─── Points: the shopper's balance and its movements ─── */
+
+type PointsRow = { label: string; date: string; points: string };
+
+export function PointsScreen() {
+  const m = useMockups();
+  return (
+    <>
+      <AppHeader title={m.pointsTitle} />
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2, ease }}
+        className="mx-[14px] rounded-[16px] bg-ink px-[16px] py-[15px] text-white"
+      >
+        <p className="text-[11px] font-semibold">{m.pointsBalanceLabel}</p>
+        <p className="mt-[4px] flex items-baseline gap-[6px]">
+          <span className="text-[40px] font-extrabold leading-none tracking-[-0.04em]">{m.pointsBalance}</span>
+          <span className="text-[13px] font-semibold">{m.pointsUnit}</span>
+        </p>
+        <p className="mt-[8px] text-[11px] font-medium">{m.pointsValue}</p>
+      </motion.div>
+      <p className="mx-[18px] mt-[10px] flex items-center gap-[6px] text-[10.5px] font-medium">
+        <Clock className="h-[12px] w-[12px]" strokeWidth={2} />
+        {m.pointsExpiry}
+      </p>
+      <p className="mx-[18px] mt-[16px] text-[13px] font-bold">{m.pointsMovements}</p>
+      <div className="mt-[4px]">
+        {(m.pointsRows as PointsRow[]).map((row, i) => (
+          <motion.div
+            key={row.label}
+            initial={{ opacity: 0, x: -8 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.4, delay: 0.45 + i * 0.12, ease }}
+            className="flex items-center justify-between gap-[10px] border-b border-black/[0.06] px-[18px] py-[9px]"
+          >
+            <span className="min-w-0">
+              <span className="block truncate text-[12px] font-semibold">{row.label}</span>
+              <span className="block text-[10.5px]">{row.date}</span>
+            </span>
+            <span className="shrink-0 text-[13px] font-bold">{row.points}</span>
+          </motion.div>
+        ))}
+      </div>
+      <TabBar active={3} />
+    </>
+  );
+}
+
+/* ─── The cart's points switch, resting on the edge of the phone ─── */
+
+export function PointsRedeemCard() {
+  const m = useMockups();
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.55, delay: 1.1, ease }}
+      className="absolute -left-5 bottom-[7%] z-10 flex items-center gap-4 rounded-[18px] bg-white py-3 pl-4 pr-3 text-ink shadow-[0_18px_40px_-12px_rgba(0,0,0,0.55)] md:-left-20"
+    >
+      <span>
+        <b className="block text-[14px] font-bold leading-tight">{m.usePoints}</b>
+        <span className="block text-[12px] font-medium leading-tight">{m.usePointsValue}</span>
+      </span>
+      <span className="relative block h-[31px] w-[51px] shrink-0 rounded-full bg-[#34C759]">
+        <span className="absolute right-[2px] top-[2px] block h-[27px] w-[27px] rounded-full bg-white shadow-[0_3px_8px_rgba(0,0,0,0.15)]" />
+      </span>
+    </motion.div>
   );
 }

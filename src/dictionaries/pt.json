@@ -24,6 +24,8 @@
     "reelsDesc": "Vídeos estilo TikTok para comprar",
     "engagement": "Engajamento e Vendas",
     "engagementDesc": "Ferramentas para converter e reter",
+    "puntos": "Programa de pontos",
+    "puntosDesc": "Clientes que voltam a comprar",
     "sincronizacion": "Sincronização Nuvemshop",
     "sincronizacionDesc": "Produtos e pedidos sempre atualizados",
     "analytics": "Analytics",
@@ -129,6 +131,7 @@
     "push": "Notificações Push",
     "reels": "Reels de produto",
     "engagement": "Engajamento e Vendas",
+    "puntos": "Programa de pontos",
     "sincronizacion": "Sincronização",
     "analytics": "Analytics",
     "precios": "Preços",
@@ -230,6 +233,42 @@
     "reelsTab": "Reels",
     "reelOldPrice1": "R$ 559,80",
     "reelOldPrice2": "R$ 699,80",
-    "reelCounter": "1 de 2"
+    "reelCounter": "1 de 2",
+    "pointsTitle": "Meus pontos",
+    "pointsBalanceLabel": "Seu saldo",
+    "pointsBalance": "2.450",
+    "pointsUnit": "pontos",
+    "pointsValue": "Valem R$ 24,50 na sua próxima compra",
+    "pointsExpiry": "Vencem após 12 meses sem compras",
+    "pointsMovements": "Movimentações",
+    "pointsRows": [
+      {
+        "label": "Compra #1043",
+        "date": "12 out",
+        "points": "+1.078"
+      },
+      {
+        "label": "Troca na compra #1043",
+        "date": "12 out",
+        "points": "−800"
+      },
+      {
+        "label": "Compra #1031",
+        "date": "28 set",
+        "points": "+1.322"
+      },
+      {
+        "label": "Compra #1020 · loja on-line",
+        "date": "3 set",
+        "points": "+650"
+      },
+      {
+        "label": "Presente de boas-vindas",
+        "date": "1 set",
+        "points": "+200"
+      }
+    ],
+    "usePoints": "Usar meus pontos",
+    "usePointsValue": "−R$ 24,50 neste pedido"
   }
 }

@@ -13,6 +13,7 @@ export const PAGE_PATHS = [
   "/producto/notificaciones-push",
   "/producto/reels",
   "/producto/engagement",
+  "/producto/programa-de-puntos",
   "/producto/sincronizacion",
   "/producto/analytics",
   "/sectores",

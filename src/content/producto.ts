@@ -4,7 +4,7 @@ const es = {
   metadata: {
     title: "Producto — Saru Apps",
     description:
-      "Conoce todas las herramientas de Saru Apps: editor drag & drop, app nativa iOS y Android, notificaciones push, engagement y ventas, sincronización con Tiendanube y analytics en tiempo real.",
+      "Conoce todas las herramientas de Saru Apps: editor drag & drop, app nativa iOS y Android, notificaciones push, engagement y ventas, programa de puntos, sincronización con Tiendanube y analytics en tiempo real.",
   },
   hero: {
     label: "Producto",
@@ -43,6 +43,12 @@ const es = {
       description:
         "Carrito abandonado, back in stock, drops exclusivos, badges y herramientas de conversión.",
       href: "/producto/engagement",
+    },
+    {
+      title: "Programa de puntos",
+      description:
+        "Tus clientes suman puntos en cada compra, en la web y en la app, y los canjean como descuento en la app.",
+      href: "/producto/programa-de-puntos",
     },
     {
       title: "Sincronización Tiendanube",
@@ -101,7 +107,7 @@ const pt: typeof es = {
   metadata: {
     title: "Produto — Saru Apps",
     description:
-      "Conheça todas as ferramentas da Saru Apps: editor drag & drop, app nativo iOS e Android, notificações push, engajamento e vendas, sincronização com a Nuvemshop e analytics em tempo real.",
+      "Conheça todas as ferramentas da Saru Apps: editor drag & drop, app nativo iOS e Android, notificações push, engajamento e vendas, programa de pontos, sincronização com a Nuvemshop e analytics em tempo real.",
   },
   hero: {
     label: "Produto",
@@ -140,6 +146,12 @@ const pt: typeof es = {
       description:
         "Carrinho abandonado, back in stock, drops exclusivos, badges e ferramentas de conversão.",
       href: "/producto/engagement",
+    },
+    {
+      title: "Programa de pontos",
+      description:
+        "Seus clientes ganham pontos em cada compra, na loja on-line e no app, e trocam por desconto no app.",
+      href: "/producto/programa-de-puntos",
     },
     {
       title: "Sincronização Nuvemshop",

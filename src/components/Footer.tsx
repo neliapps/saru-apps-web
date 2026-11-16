@@ -14,6 +14,7 @@ export function Footer() {
       { label: t.push, href: localePath("/producto/notificaciones-push") },
       { label: t.reels, href: localePath("/producto/reels") },
       { label: t.engagement, href: localePath("/producto/engagement") },
+      { label: t.puntos, href: localePath("/producto/programa-de-puntos") },
       { label: t.sincronizacion, href: localePath("/producto/sincronizacion") },
       { label: t.analytics, href: localePath("/producto/analytics") },
     ],
