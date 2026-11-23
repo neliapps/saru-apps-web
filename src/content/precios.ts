@@ -63,10 +63,11 @@ const es = {
       cta: "Regístrate gratis",
     },
     {
-      description: "Exclusividad y venta mayorista.",
+      description: "Segmentación, exclusividad y venta mayorista.",
       lead: "Todo lo de Growth, más:" as string | null,
       features: [
         "40.000 notificaciones de campañas por mes",
+        "Notificaciones segmentadas por compras, carrito, favoritos y actividad",
         "Drops ilimitados",
         "Reels de productos ilimitados",
         "Precios mayoristas (B2B) y login obligatorio",
@@ -124,6 +125,7 @@ const es = {
       { feature: "Barra de envío gratis", starter: false, growth: true, scale: true, enterprise: true },
       { feature: "Ventas por cada notificación", starter: false, growth: true, scale: true, enterprise: true },
       // Scale+
+      { feature: "Notificaciones segmentadas", starter: false, growth: false, scale: true, enterprise: true },
       { feature: "Precios mayoristas (B2B)", starter: false, growth: false, scale: true, enterprise: true },
       { feature: "Login obligatorio", starter: false, growth: false, scale: true, enterprise: true },
       { feature: "Puesta en marcha", starter: false, growth: false, scale: true, enterprise: true },
@@ -161,7 +163,7 @@ const es = {
       {
         question: "¿Qué plan me conviene?",
         answer:
-          "Si acabas de lanzar tu app, Starter. Cuando la app ya es un canal de venta y necesitas mandar más campañas, Growth. Si vendes mayorista o haces lanzamientos seguidos, Scale.",
+          "Si acabas de lanzar tu app, Starter. Cuando la app ya es un canal de venta y necesitas mandar más campañas, Growth. Si quieres segmentar tus campañas, vendes mayorista o haces lanzamientos seguidos, Scale.",
       },
       {
         question: "¿Qué pasa si llego al límite de notificaciones?",
@@ -244,10 +246,11 @@ const pt: typeof es = {
       cta: "Cadastre-se grátis",
     },
     {
-      description: "Exclusividade e venda no atacado.",
+      description: "Segmentação, exclusividade e venda no atacado.",
       lead: "Tudo do Growth, mais:",
       features: [
         "40.000 notificações de campanhas por mês",
+        "Notificações segmentadas por compras, carrinho, favoritos e atividade",
         "Drops ilimitados",
         "Reels de produtos ilimitados",
         "Preços de atacado (B2B) e login obrigatório",
@@ -301,6 +304,7 @@ const pt: typeof es = {
       { feature: "Produtos recomendados no carrinho", starter: false, growth: true, scale: true, enterprise: true },
       { feature: "Barra de frete grátis", starter: false, growth: true, scale: true, enterprise: true },
       { feature: "Vendas por cada notificação", starter: false, growth: true, scale: true, enterprise: true },
+      { feature: "Notificações segmentadas", starter: false, growth: false, scale: true, enterprise: true },
       { feature: "Preços de atacado (B2B)", starter: false, growth: false, scale: true, enterprise: true },
       { feature: "Login obrigatório", starter: false, growth: false, scale: true, enterprise: true },
       { feature: "Implantação assistida", starter: false, growth: false, scale: true, enterprise: true },
@@ -336,7 +340,7 @@ const pt: typeof es = {
       {
         question: "Qual plano é ideal para mim?",
         answer:
-          "Se você está lançando seu app agora, Starter. Quando o app já é um canal de venda e você precisa enviar mais campanhas, Growth. Se você vende no atacado ou faz lançamentos com frequência, Scale.",
+          "Se você está lançando seu app agora, Starter. Quando o app já é um canal de venda e você precisa enviar mais campanhas, Growth. Se você quer segmentar suas campanhas, vende no atacado ou faz lançamentos com frequência, Scale.",
       },
       {
         question: "O que acontece se eu chegar ao limite de notificações?",

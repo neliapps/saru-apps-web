@@ -4,7 +4,7 @@ const es = {
   metadata: {
     title: "Notificaciones Push — Saru Apps",
     description:
-      "Envía notificaciones push a tus clientes desde tu app. Ofertas, carritos abandonados, nuevos productos y campañas programadas. Hasta 7x más engagement que el email.",
+      "Envía notificaciones push a tus clientes desde tu app. Ofertas, carritos abandonados, nuevos productos y campañas programadas o segmentadas. Hasta 7x más engagement que el email.",
   },
   back: "Producto",
   hero: {
@@ -65,17 +65,59 @@ const es = {
         tag: "",
       },
       {
-        title: "Segmentación por comportamiento",
+        title: "Notificaciones segmentadas",
         description:
-          "Envía notificaciones a segmentos específicos: compradores frecuentes, inactivos, por ubicación o por historial.",
+          "Envía cada campaña a quien le sirve: quienes nunca compraron, quienes no compran hace meses, tus mejores clientes o quienes tienen productos en el carrito.",
         example: {
-          title: "Exclusivo para VIPs",
-          body: "Acceso anticipado a la nueva colección.",
+          title: "Te extrañamos",
+          body: "15 % en tu próxima compra con el código VUELVE15.",
           time: "Segmentado",
         },
-        tag: "",
+        tag: "Plan Scale",
       },
     ],
+  },
+  segments: {
+    label: "Notificaciones segmentadas",
+    title: "Cada campaña,",
+    italic: "a quien le sirve",
+    subtitle:
+      "Elige a quién le llega combinando condiciones, y mira cuántas personas son antes de enviarla. Del cupo del mes solo se descuentan ellas.",
+    groups: [
+      {
+        title: "Compras",
+        items: [
+          "Compraron alguna vez o nunca",
+          "Su última compra fue hace menos o más de N días",
+          "Compraron al menos N veces",
+          "Gastaron al menos un monto",
+          "Compraron productos de una categoría",
+        ],
+      },
+      {
+        title: "Interés",
+        items: [
+          "Tienen productos en el carrito, de cualquier categoría o de una",
+          "Tienen productos en favoritos, de cualquier categoría o de una",
+        ],
+      },
+      {
+        title: "Actividad",
+        items: [
+          "Abrieron la app hace menos o más de N días",
+          "Instalaron la app hace poco",
+          "Con o sin sesión iniciada",
+          "iPhone o Android",
+        ],
+      },
+      {
+        title: "Puntos y mayoristas",
+        items: ["Tienen al menos N puntos para usar", "Con o sin precios mayoristas"],
+      },
+    ],
+    note: "Las compras se traen de Tiendanube para quienes iniciaron sesión en la app. Una campaña programada le llega a quienes cumplen las condiciones al momento de enviarse.",
+    plan: "En el plan Scale.",
+    link: "Ver precios",
   },
   stats: {
     label: "Por qué push",
@@ -91,7 +133,7 @@ const es = {
     label: "Volumen",
     title: "Notificaciones por plan",
     subtitle:
-      "Cada plan incluye un volumen de notificaciones de campañas por mes. Las automáticas no cuentan para el límite.",
+      "Cada plan incluye un volumen de notificaciones de campañas por mes. Las automáticas no cuentan para el límite, y una campaña segmentada cuenta solo a las personas que alcanza.",
     popular: "Más popular",
     seePlan: "Ver plan completo",
     items: [
@@ -114,7 +156,7 @@ const pt: typeof es = {
   metadata: {
     title: "Notificações Push — Saru Apps",
     description:
-      "Envie notificações push para seus clientes direto do seu app. Ofertas, carrinhos abandonados, novos produtos e campanhas agendadas. Até 7x mais engajamento que o e-mail.",
+      "Envie notificações push para seus clientes direto do seu app. Ofertas, carrinhos abandonados, novos produtos e campanhas agendadas ou segmentadas. Até 7x mais engajamento que o e-mail.",
   },
   back: "Produto",
   hero: {
@@ -175,17 +217,59 @@ const pt: typeof es = {
         tag: "",
       },
       {
-        title: "Segmentação por comportamento",
+        title: "Notificações segmentadas",
         description:
-          "Envie notificações para segmentos específicos: compradores frequentes, inativos, por localização ou por histórico.",
+          "Envie cada campanha para quem ela serve: quem nunca comprou, quem não compra há meses, seus melhores clientes ou quem tem produtos no carrinho.",
         example: {
-          title: "Exclusivo para VIPs",
-          body: "Acesso antecipado à nova coleção.",
+          title: "Sentimos sua falta",
+          body: "15% na sua próxima compra com o cupom VOLTA15.",
           time: "Segmentado",
         },
-        tag: "",
+        tag: "Plano Scale",
       },
     ],
+  },
+  segments: {
+    label: "Notificações segmentadas",
+    title: "Cada campanha",
+    italic: "para quem ela serve",
+    subtitle:
+      "Escolha para quem ela chega combinando condições e veja quantas pessoas são antes de enviar. Só elas contam no limite do mês.",
+    groups: [
+      {
+        title: "Compras",
+        items: [
+          "Compraram alguma vez ou nunca",
+          "A última compra foi há menos ou mais de N dias",
+          "Compraram pelo menos N vezes",
+          "Gastaram pelo menos um valor",
+          "Compraram produtos de uma categoria",
+        ],
+      },
+      {
+        title: "Interesse",
+        items: [
+          "Têm produtos no carrinho, de qualquer categoria ou de uma",
+          "Têm produtos nos favoritos, de qualquer categoria ou de uma",
+        ],
+      },
+      {
+        title: "Atividade",
+        items: [
+          "Abriram o app há menos ou mais de N dias",
+          "Instalaram o app recentemente",
+          "Com ou sem login",
+          "iPhone ou Android",
+        ],
+      },
+      {
+        title: "Pontos e atacado",
+        items: ["Têm pelo menos N pontos para usar", "Com ou sem preços de atacado"],
+      },
+    ],
+    note: "As compras vêm da Nuvemshop para quem fez login no app. Uma campanha agendada chega para quem cumpre as condições no momento do envio.",
+    plan: "No plano Scale.",
+    link: "Ver preços",
   },
   stats: {
     label: "Por que push",
@@ -201,7 +285,7 @@ const pt: typeof es = {
     label: "Volume",
     title: "Notificações por plano",
     subtitle:
-      "Cada plano inclui um volume mensal de notificações de campanhas. As automáticas não contam para o limite.",
+      "Cada plano inclui um volume mensal de notificações de campanhas. As automáticas não contam para o limite, e uma campanha segmentada conta só as pessoas que alcança.",
     popular: "Mais popular",
     seePlan: "Ver plano completo",
     items: [

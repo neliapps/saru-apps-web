@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { Zap, ShoppingCart, Sparkles, Calendar, Users, Check } from "lucide-react";
+import { Zap, ShoppingCart, Sparkles, Calendar, Users, Check, ShoppingBag, Heart, Smartphone, Coins } from "lucide-react";
 import { LockScreen, PushCard } from "@/components/home/phone";
 import { ArrowLink, Label } from "@/components/home/primitives";
 import { Reveal, SectionHead } from "@/components/site/blocks";
@@ -11,6 +11,8 @@ import { pageAlternates } from "@/i18n/seo";
 import { signupUrl } from "@/i18n/signup";
 
 const typeIcons = [Zap, ShoppingCart, Sparkles, Calendar, Users];
+// Segment conditions: purchases, interest, activity, points and wholesale
+const segmentIcons = [ShoppingBag, Heart, Smartphone, Coins];
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -23,6 +25,7 @@ export default async function NotificacionesPushPage({ params }: Props) {
   const locale = toLocale((await params).locale);
   const t = productoPushContent[locale];
   const notificationTypes = t.types.items.map((item, i) => ({ ...item, icon: typeIcons[i] }));
+  const segmentGroups = t.segments.groups.map((group, i) => ({ ...group, icon: segmentIcons[i] }));
 
   return (
     <>
@@ -84,6 +87,45 @@ export default async function NotificacionesPushPage({ params }: Props) {
                 </div>
               </Reveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Segmented campaigns (Scale): the conditions they combine, by group */}
+      <section className="section-light grain pb-28 md:pb-40">
+        <div className="relative mx-auto max-w-[1280px] px-6">
+          <SectionHead
+            label={t.segments.label}
+            title={t.segments.title}
+            italic={t.segments.italic}
+            subtitle={t.segments.subtitle}
+          />
+
+          <div className="mt-16 grid gap-x-12 md:mt-24 md:grid-cols-2 lg:grid-cols-4">
+            {segmentGroups.map((group, i) => (
+              <Reveal key={group.title} delay={(i % 4) * 0.07}>
+                <div className="h-full border-t border-line-light py-9">
+                  <group.icon className="h-7 w-7" strokeWidth={1.75} aria-hidden="true" />
+                  <h3 className="mt-5 font-display text-[clamp(22px,2vw,30px)] font-bold leading-[1.15] tracking-[-0.03em]">
+                    {group.title}
+                  </h3>
+                  <ul className="mt-4 space-y-2.5">
+                    {group.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2.5 text-[17px] leading-[1.5]">
+                        <Check className="mt-1 h-4 w-4 shrink-0" strokeWidth={2} aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <p className="mt-6 max-w-3xl text-[17px] leading-[1.6]">{t.segments.note}</p>
+          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-1 border-t border-line-light pt-8">
+            <p className="text-[17px] font-semibold">{t.segments.plan}</p>
+            <ArrowLink href={localePath(locale, "/precios")}>{t.segments.link}</ArrowLink>
           </div>
         </div>
       </section>
