@@ -32,6 +32,7 @@ export const PAGE_PATHS = [
   "/guia/analitica",
   "/guia/app-nativa",
   "/ayuda/publicar-tu-app",
+  "/ayuda/conexiones-con-ia",
   "/guia/planes",
   "/guia/seguridad",
   "/guia/faq",

@@ -35,6 +35,9 @@ Productos, stock, precios, categorías y pedidos se sincronizan automáticamente
 ### Analytics
 Ventas desde la app y ventas generadas por cada notificación. Starter muestra los últimos 30 días; Growth y superiores, hasta 90 días.
 
+### Conexión con Claude y ChatGPT
+El comerciante conecta su cuenta a Claude o a ChatGPT (un conector MCP en https://api.saruapps.com/mcp, con OAuth) y maneja la app conversando: consulta métricas, campañas, productos y configuración, programa campañas, prepara páginas en borrador y cambia la configuración. La IA no envía campañas al instante, no publica páginas y no ve datos personales de los compradores. Sin costo extra, en todos los planes. Guía: https://saruapps.com/ayuda/conexiones-con-ia
+
 ## Planes y precios
 
 | Plan | Precio | Incluye |

@@ -110,7 +110,14 @@
     "envionubeF1": "Métodos de envío heredados",
     "envionubeF2": "Cálculo de costos automático",
     "envionubeF3": "Seguimiento de envíos",
-    "envionubeF4": "Puntos de retiro"
+    "envionubeF4": "Puntos de retiro",
+    "ai": "Claude y ChatGPT",
+    "aiDesc": "Maneja tu app conversando con tu IA. Pregúntale cómo le va o pídele que programe una campaña o que prepare una página en borrador. Enviar al instante y publicar quedan siempre en tus manos.",
+    "aiF1": "Métricas en el chat",
+    "aiF2": "Campañas programadas",
+    "aiF3": "Páginas en borrador",
+    "aiF4": "Sin costo extra",
+    "aiCta": "Cómo conectarla"
   },
   "cta": {
     "title": "Lanza tu app",

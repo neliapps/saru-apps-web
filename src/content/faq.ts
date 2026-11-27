@@ -116,6 +116,10 @@ const es = {
           q: "¿Soporta múltiples idiomas?",
           a: "Tu app sale en español o portugués en todos los planes.",
         },
+        {
+          q: "¿Puedo manejar mi app desde Claude o ChatGPT?",
+          a: "Sí. Conectas tu cuenta de Saru Apps a Claude o a ChatGPT y le pides cosas en el chat: cómo le va a tu app, que programe una campaña o que prepare una página en borrador. La IA consulta y prepara; enviar una campaña al instante y publicar una página lo haces tú desde el panel. No tiene costo extra y funciona en todos los planes. Los pasos están en saruapps.com/ayuda/conexiones-con-ia.",
+        },
       ],
     },
     {
@@ -302,6 +306,10 @@ const pt: typeof es = {
         {
           q: "Tem suporte a vários idiomas?",
           a: "Seu app sai em espanhol ou português em todos os planos.",
+        },
+        {
+          q: "Posso gerenciar meu app pelo Claude ou pelo ChatGPT?",
+          a: "Sim. Você conecta sua conta da Saru Apps ao Claude ou ao ChatGPT e pede coisas no chat: como seu app está indo, agendar uma campanha ou preparar uma página em rascunho. A IA consulta e prepara; enviar uma campanha na hora e publicar uma página é você quem faz, pelo painel. Não tem custo extra e funciona em todos os planos. O passo a passo está em saruapps.com/pt/ayuda/conexiones-con-ia.",
         },
       ],
     },

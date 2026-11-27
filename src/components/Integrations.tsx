@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
-import { Check } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { useDictionary } from "@/i18n/DictionaryProvider";
 import { Label, ease, useRange } from "./home/primitives";
 
@@ -49,7 +49,7 @@ function Connection() {
   );
 }
 
-type Integration = { name: string; description: string; features: string[] };
+type Integration = { name: string; description: string; features: string[]; link?: { href: string; label: string } };
 
 function Card({ item, wide = false, delay = 0 }: { item: Integration; wide?: boolean; delay?: number }) {
   return (
@@ -68,6 +68,12 @@ function Card({ item, wide = false, delay = 0 }: { item: Integration; wide?: boo
           {item.name}
         </h3>
         <p className="mt-4 max-w-md text-[17px] leading-[1.6]">{item.description}</p>
+        {item.link && (
+          <a href={item.link.href} className="mt-6 inline-flex items-center gap-2 text-[15px] font-semibold underline-offset-4 hover:underline">
+            {item.link.label}
+            <ArrowRight className="h-4 w-4" strokeWidth={2} />
+          </a>
+        )}
       </div>
       <ul className={`mt-8 grid gap-3 ${wide ? "sm:grid-cols-2 md:mt-0" : ""}`}>
         {item.features.map((f) => (
@@ -82,7 +88,7 @@ function Card({ item, wide = false, delay = 0 }: { item: Integration; wide?: boo
 }
 
 export function Integrations() {
-  const { dict } = useDictionary();
+  const { dict, localePath } = useDictionary();
   const t = dict.integrations;
 
   const [main, ...rest]: Integration[] = [
@@ -90,6 +96,13 @@ export function Integrations() {
     { name: t.pagonube, description: t.pagonubeDesc, features: [t.pagonubeF1, t.pagonubeF2, t.pagonubeF3, t.pagonubeF4] },
     { name: t.envionube, description: t.envionubeDesc, features: [t.envionubeF1, t.envionubeF2, t.envionubeF3, t.envionubeF4] },
   ];
+  // The merchant runs the app from a chat with their AI (Saru's MCP connector)
+  const ai: Integration = {
+    name: t.ai,
+    description: t.aiDesc,
+    features: [t.aiF1, t.aiF2, t.aiF3, t.aiF4],
+    link: { href: localePath("/ayuda/conexiones-con-ia"), label: t.aiCta },
+  };
 
   return (
     <section className="section-light grain overflow-hidden py-28 md:py-40">
@@ -113,6 +126,7 @@ export function Integrations() {
           {rest.map((item, i) => (
             <Card key={item.name} item={item} delay={0.07 * (i + 1)} />
           ))}
+          <Card item={ai} wide delay={0.07 * (rest.length + 1)} />
         </div>
       </div>
     </section>
