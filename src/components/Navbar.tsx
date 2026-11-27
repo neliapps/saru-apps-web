@@ -18,6 +18,7 @@ import {
   BookOpen,
   HelpCircle,
   FileText,
+  Plug,
 } from "lucide-react";
 import Image from "next/image";
 import { useDictionary } from "@/i18n/DictionaryProvider";
@@ -88,10 +89,10 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
         { label: t.puntos, description: t.puntosDesc, href: localePath("/producto/programa-de-puntos"), icon: Star },
         { label: t.sincronizacion, description: t.sincronizacionDesc, href: localePath("/producto/sincronizacion"), icon: ShoppingBag },
         { label: t.analytics, description: t.analyticsDesc, href: localePath("/producto/analytics"), icon: BarChart3 },
+        { label: t.integraciones, description: t.integracionesDesc, href: localePath("/integraciones"), icon: Plug },
       ],
     },
-    { label: t.integraciones, href: localePath("/integraciones") },
-    { label: t.sectores, href: localePath("/sectores"), wideOnly: true },
+    { label: t.sectores, href: localePath("/sectores") },
     { label: t.precios, href: localePath("/precios") },
     {
       label: t.recursos,
