@@ -19,7 +19,7 @@ export function PageHero({
 }: {
   label?: string;
   title: string;
-  /** Final phrase of the title, rendered italic blue with a hand-drawn underline */
+  /** Final phrase of the title, rendered italic blue */
   accent?: string;
   subtitle?: ReactNode;
   primary?: Cta;
@@ -36,12 +36,8 @@ export function PageHero({
           withVisual ? "grid items-center gap-14 lg:grid-cols-12" : ""
         }`}
       >
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease }}
-          className={withVisual ? "lg:col-span-7" : "max-w-4xl"}
-        >
+        {/* CSS entrance (globals.css): visible from the first paint instead of after the JavaScript loads */}
+        <div className={`hero-rise ${withVisual ? "lg:col-span-7" : "max-w-4xl"}`}>
           {label && <Label>{label}</Label>}
           <h1 className="mt-5 font-display text-[clamp(38px,5.4vw,76px)] font-extrabold leading-[1] tracking-[-0.045em]">
             {title}
@@ -71,17 +67,8 @@ export function PageHero({
               )}
             </div>
           )}
-        </motion.div>
-        {withVisual && (
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.15, ease }}
-            className="relative flex justify-center lg:col-span-5"
-          >
-            {children}
-          </motion.div>
-        )}
+        </div>
+        {withVisual && <div className="hero-visual relative flex justify-center lg:col-span-5">{children}</div>}
       </div>
     </section>
   );

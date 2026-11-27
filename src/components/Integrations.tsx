@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import { useDictionary } from "@/i18n/DictionaryProvider";
-import { Label, ease, useRange } from "./home/primitives";
+import { ArrowLink, Label, ease, useRange } from "./home/primitives";
 
 const DOTS = 22;
 
@@ -117,6 +117,9 @@ export function Integrations() {
           <Label>{t.label}</Label>
           <h2 className="mt-4 font-display text-[clamp(34px,4.4vw,64px)] font-bold leading-[1.04] tracking-[-0.04em]">{t.title}</h2>
           <p className="mx-auto mt-6 max-w-xl text-[clamp(17px,1.4vw,20px)] italic leading-[1.5]">{t.subtitle}</p>
+          <div className="mt-6 flex justify-center">
+            <ArrowLink href={localePath("/integraciones")}>{t.seeAll}</ArrowLink>
+          </div>
         </motion.div>
 
         <Connection />

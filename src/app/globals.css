@@ -149,6 +149,13 @@ p {
   }
 }
 
+@keyframes hero-visual {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+}
+
 @keyframes stage-in {
   from {
     opacity: 0;
@@ -165,6 +172,10 @@ p {
 
 .stage-in {
   animation: stage-in 0.5s ease-out both;
+}
+
+.hero-visual {
+  animation: hero-visual 0.8s 0.15s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -29,6 +29,7 @@ Planes, en dólares por mes (con facturación anual, 20 % de descuento):
 - [Programa de puntos](https://saruapps.com/producto/programa-de-puntos): los clientes suman puntos en cada compra, en la web y en la app, y los canjean como descuento en la app.
 - [Sincronización con Tiendanube](https://saruapps.com/producto/sincronizacion): productos, stock, precios, categorías y pedidos al día por webhooks.
 - [Analítica](https://saruapps.com/producto/analytics): ventas desde la app y ventas de cada notificación.
+- [Integraciones](https://saruapps.com/integraciones): lo de Tiendanube que funciona en la app (catálogo, checkout, Pago Nube, Envío Nube, Marketing Nube, Punto de Venta), el programa de puntos, Claude y ChatGPT, y las integraciones que vienen.
 - [Precios](https://saruapps.com/precios): los planes, su comparación y los costos de Apple y Google.
 
 ## Ayuda

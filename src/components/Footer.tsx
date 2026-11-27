@@ -17,6 +17,7 @@ export function Footer() {
       { label: t.puntos, href: localePath("/producto/programa-de-puntos") },
       { label: t.sincronizacion, href: localePath("/producto/sincronizacion") },
       { label: t.analytics, href: localePath("/producto/analytics") },
+      { label: t.integraciones, href: localePath("/integraciones") },
     ],
     [t.empresa]: [
       { label: t.precios, href: localePath("/precios") },

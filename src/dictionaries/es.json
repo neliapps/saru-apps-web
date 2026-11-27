@@ -7,6 +7,7 @@
   },
   "navbar": {
     "producto": "Producto",
+    "integraciones": "Integraciones",
     "sectores": "Sectores",
     "precios": "Precios",
     "recursos": "Recursos",
@@ -93,6 +94,7 @@
     "label": "Integraciones",
     "title": "Conecta con tu ecosistema",
     "subtitle": "Saru Apps se integra de forma nativa con las herramientas que ya usas para gestionar tu negocio.",
+    "seeAll": "Ver todas las integraciones",
     "tiendanube": "Tiendanube",
     "tiendanubeDesc": "Productos, stock y pedidos sincronizados, y el checkout de tu tienda. Conectas tu tienda en un clic.",
     "tiendanubeF1": "Productos y categorías",
@@ -141,6 +143,7 @@
     "puntos": "Programa de puntos",
     "sincronizacion": "Sincronización",
     "analytics": "Analytics",
+    "integraciones": "Integraciones",
     "precios": "Precios",
     "sectores": "Sectores",
     "partners": "Partners",

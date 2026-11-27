@@ -16,6 +16,7 @@ export const PAGE_PATHS = [
   "/producto/programa-de-puntos",
   "/producto/sincronizacion",
   "/producto/analytics",
+  "/integraciones",
   "/sectores",
   "/partners",
   "/faq",

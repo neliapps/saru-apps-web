@@ -36,6 +36,8 @@ type NavItem = {
   label: string;
   href: string;
   dropdown?: DropdownItem[];
+  /** Only in the desktop bar from 1280 px: between 1024 and 1280 the bar doesn't fit every item */
+  wideOnly?: boolean;
 };
 
 export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {}) {
@@ -88,7 +90,8 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
         { label: t.analytics, description: t.analyticsDesc, href: localePath("/producto/analytics"), icon: BarChart3 },
       ],
     },
-    { label: t.sectores, href: localePath("/sectores") },
+    { label: t.integraciones, href: localePath("/integraciones") },
+    { label: t.sectores, href: localePath("/sectores"), wideOnly: true },
     { label: t.precios, href: localePath("/precios") },
     {
       label: t.recursos,
@@ -99,7 +102,7 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
         { label: t.blog, description: t.blogDesc, href: localePath("/blog"), icon: FileText },
       ],
     },
-    { label: t.partners, href: localePath("/partners") },
+    { label: t.partners, href: localePath("/partners"), wideOnly: true },
   ];
 
   return (
@@ -132,7 +135,7 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
             {navItems.map((item) => (
               <div
                 key={item.label}
-                className="relative"
+                className={item.wideOnly ? "relative hidden xl:block" : "relative"}
                 onMouseEnter={() =>
                   item.dropdown && handleMouseEnter(item.label)
                 }
@@ -143,7 +146,7 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
                   onClick={(e) => {
                     if (item.href === "#") e.preventDefault();
                   }}
-                  className={`flex items-center gap-1 px-4 py-2 text-[15px] font-medium transition-colors duration-200 rounded-lg ${
+                  className={`flex items-center gap-1 px-3 py-2 text-[15px] font-medium transition-colors duration-200 rounded-lg xl:px-4 ${
                     dark
                       ? activeDropdown === item.label
                         ? "text-white bg-white/10"
@@ -208,7 +211,7 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
             </a>
             <a
               href="https://app.saruapps.com/login"
-              className={`text-[15px] font-medium px-5 py-2.5 rounded-lg border transition-all duration-300 ${
+              className={`whitespace-nowrap text-[15px] font-medium px-5 py-2.5 rounded-lg border transition-all duration-300 ${
                 dark ? "text-white border-line-dark hover:border-white/40" : "text-ink border-line-light hover:border-ink/40"
               }`}
             >
@@ -216,7 +219,7 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
             </a>
             <a
               href={signupUrl(locale)}
-              className={`inline-flex items-center gap-2 text-[15px] font-medium pl-3 pr-5 py-2.5 rounded-lg transition-all duration-300 ${
+              className={`inline-flex items-center gap-2 whitespace-nowrap text-[15px] font-medium pl-3 pr-5 py-2.5 rounded-lg transition-all duration-300 ${
                 dark ? "text-ink bg-white hover:bg-white/90" : "text-white bg-ink hover:bg-ink/85"
               }`}
             >
