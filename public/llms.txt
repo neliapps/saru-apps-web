@@ -1,80 +1,66 @@
 # Saru Apps
 
-> Plataforma SaaS para crear apps móviles para tiendas Tiendanube. Sin código, sin complicaciones.
+> Saru Apps crea la app móvil nativa (iPhone y Android) de una tienda Tiendanube o Nuvemshop, sin programar. La app lleva la marca de la tienda, se sincroniza sola con Tiendanube y se publica en App Store y Google Play desde las cuentas del comerciante.
 
-## Qué es Saru Apps
+Datos clave:
 
-Saru Apps es una plataforma no-code que permite a comerciantes con tiendas en Tiendanube crear, personalizar y publicar aplicaciones móviles nativas (iOS y Android) sin necesidad de programar.
+- Exclusivo para Tiendanube (Nuvemshop en Brasil). La tienda se conecta en un clic: el catálogo, el stock, los precios y los pedidos se sincronizan solos, y la compra se hace con el checkout de la tienda.
+- Es una app nativa real (React Native), no un webview. Lleva la marca de la tienda y no la de Saru Apps, en todos los planes.
+- La app se diseña y se prueba gratis. El plan se paga cuando la app se publica en las tiendas. No hay comisión por venta.
+- El comerciante puede manejar su app desde Claude o ChatGPT con el conector de Saru Apps (MCP, con OAuth), sin costo extra.
+- Idiomas: español y portugués.
 
-La plataforma se compone de:
+Planes, en dólares por mes (con facturación anual, 20 % de descuento):
 
-- **Panel de administración (Dashboard):** donde el comerciante configura y gestiona su app.
-- **Backend API:** maneja la lógica de negocio, sincronización con Tiendanube, notificaciones push y generación de la app.
-- **App móvil nativa (React Native):** app real publicada en App Store y Google Play con la marca del comerciante y sin la marca Saru Apps, en todos los planes.
+- Starter, USD 49: app nativa publicada por Saru Apps, editor de todas las pantallas, sincronización con Tiendanube, búsqueda, favoritos, cuenta del cliente con sus pedidos, cupones, notificaciones automáticas, 1.500 notificaciones de campañas por mes, 1 drop activo, banner y link de descarga con QR, analítica de 30 días y soporte por email.
+- Growth, USD 149: todo lo de Starter, 10.000 notificaciones de campañas por mes, 3 drops activos, reels de productos (hasta 20), programa de puntos, segundo recordatorio de carrito abandonado, aviso de poco stock, agregar rápido, repetir pedido, recomendados en el carrito, barra de envío gratis, analítica de 90 días con ventas por notificación y soporte por WhatsApp.
+- Scale, USD 349: todo lo de Growth, 40.000 notificaciones de campañas por mes, notificaciones segmentadas, drops y reels ilimitados, precios mayoristas (B2B), login obligatorio, soporte prioritario y puesta en marcha.
+- Enterprise, a medida: todo lo de Scale, notificaciones a medida, account manager e integraciones a medida.
+- Las notificaciones automáticas no cuentan para el límite. Las cuentas de desarrollador las cobran Apple (USD 99 por año) y Google (USD 25 una sola vez).
 
-## Funcionalidades principales
+## Producto
 
-### Editor Drag & Drop
-Editor visual para diseñar cada pantalla de la app arrastrando componentes: banners, grillas de productos, carruseles, timers, videos, categorías y más. Sin escribir código.
+- [Producto](https://saruapps.com/producto): todas las herramientas de Saru Apps.
+- [Editor de páginas](https://saruapps.com/producto/editor): cada pantalla de la app se arma con bloques que se arrastran, como banners, grillas y carruseles de productos, cuentas regresivas, videos y categorías.
+- [App nativa iOS y Android](https://saruapps.com/producto/app-nativa): la app real en App Store y Google Play, con la marca de la tienda.
+- [Notificaciones push](https://saruapps.com/producto/notificaciones-push): las automáticas (carrito abandonado, vuelta de stock, estado del pedido y bienvenida) y las campañas con imagen, programadas o, en Scale, segmentadas.
+- [Reels de producto](https://saruapps.com/producto/reels): videos verticales con productos que se compran sin salir del video.
+- [Engagement y ventas](https://saruapps.com/producto/engagement): drops con cuenta regresiva, badges, recomendados en el carrito, barra de envío gratis, agregar rápido, repetir pedido y poco stock.
+- [Programa de puntos](https://saruapps.com/producto/programa-de-puntos): los clientes suman puntos en cada compra, en la web y en la app, y los canjean como descuento en la app.
+- [Sincronización con Tiendanube](https://saruapps.com/producto/sincronizacion): productos, stock, precios, categorías y pedidos al día por webhooks.
+- [Analítica](https://saruapps.com/producto/analytics): ventas desde la app y ventas de cada notificación.
+- [Precios](https://saruapps.com/precios): los planes, su comparación y los costos de Apple y Google.
 
-### App Nativa iOS & Android
-La app se publica en App Store y Google Play. Es una app nativa real (React Native), no un webview empaquetado. Rendimiento superior, animaciones fluidas y acceso a funcionalidades del dispositivo.
+## Ayuda
 
-### Notificaciones Push
-Notificaciones automáticas (carrito abandonado, vuelta de stock, estado del pedido y bienvenida), que no cuentan para el límite del plan, y campañas con imagen y programadas.
+- [Cómo publicar tu app en App Store y Google Play](https://saruapps.com/ayuda/publicar-tu-app): las cuentas que crea el comerciante, los pasos, los tiempos y los costos.
+- [Cómo manejar tu app desde Claude o ChatGPT](https://saruapps.com/ayuda/conexiones-con-ia): cómo agregar el conector (`https://api.saruapps.com/mcp`), qué puede hacer la IA y qué no.
 
-### Reels de producto
-Videos verticales a los que se les asocian productos. La app suma una pestaña tipo TikTok donde el cliente desliza los videos y compra (o guarda en favoritos) los productos de cada uno sin salir del video. Disponible desde Growth (hasta 20 reels publicados); ilimitados en Scale y Enterprise.
+## Guías
 
-### Engagement y Ventas
-Herramientas de conversión: drops (lanzamientos con cuenta regresiva), badges automáticos (descuento, nuevo, últimas unidades), productos recomendados en el carrito, barra de envío gratis, agregar rápido, repetir pedido e indicador de poco stock.
+- [Guía de la plataforma](https://saruapps.com/guia): todas las guías.
+- [Qué es Saru Apps](https://saruapps.com/guia/que-es): la plataforma, sus partes y cómo funciona.
+- [Planes y precios](https://saruapps.com/guia/planes): Starter, Growth, Scale y Enterprise.
+- [Registro y onboarding](https://saruapps.com/guia/registro): crear la cuenta y la configuración inicial.
+- [Conectar Tiendanube](https://saruapps.com/guia/tiendanube): vincular la tienda para sincronizar los productos.
+- [Configurar la app](https://saruapps.com/guia/configurar): nombre, logo, colores y funciones.
+- [Diseño](https://saruapps.com/guia/editor): las páginas de la app con bloques.
+- [Productos](https://saruapps.com/guia/productos): se sincronizan desde Tiendanube y se editan allí.
+- [Notificaciones push](https://saruapps.com/guia/notificaciones): mensajes a los clientes que tienen la app.
+- [Panel en Tiendanube](https://saruapps.com/guia/panel): Saru Apps dentro del administrador de Tiendanube.
+- [Analítica](https://saruapps.com/guia/analitica): ventas, pedidos, conversión, notificaciones, visitas y búsquedas.
+- [App nativa](https://saruapps.com/guia/app-nativa): pantallas, checkout y apariencia de la app.
+- [Seguridad y privacidad](https://saruapps.com/guia/seguridad): autenticación, protección de datos y pedidos de privacidad (LGPD).
 
-### Sincronización con Tiendanube
-Productos, stock, precios, categorías y pedidos se sincronizan automáticamente con la tienda Tiendanube en tiempo real vía webhooks. Los pedidos desde la app aparecen directo en el panel de Tiendanube. Usa el checkout nativo de Tiendanube.
+## Optional
 
-### Analytics
-Ventas desde la app y ventas generadas por cada notificación. Starter muestra los últimos 30 días; Growth y superiores, hasta 90 días.
-
-### Conexión con Claude y ChatGPT
-El comerciante conecta su cuenta a Claude o a ChatGPT (un conector MCP en https://api.saruapps.com/mcp, con OAuth) y maneja la app conversando: consulta métricas, campañas, productos y configuración, programa campañas, prepara páginas en borrador y cambia la configuración. La IA no envía campañas al instante, no publica páginas y no ve datos personales de los compradores. Sin costo extra, en todos los planes. Guía: https://saruapps.com/ayuda/conexiones-con-ia
-
-## Planes y precios
-
-| Plan | Precio | Incluye |
-|------|--------|---------|
-| Starter | USD $49/mes | App nativa iPhone y Android publicada por Saru Apps, sin la marca Saru Apps, editor de todas las pantallas, sincronización automática con Tiendanube, búsqueda, favoritos, cuenta del cliente con pedidos y seguimiento, cupones, notificaciones automáticas, 1.500 notificaciones de campañas/mes, 1 drop activo, banner de descarga y link con QR, analítica de 30 días, soporte por email |
-| Growth | USD $149/mes | Todo Starter + 10.000 notificaciones de campañas/mes, 3 drops activos, reels de productos (hasta 20 publicados), segundo recordatorio de carrito abandonado, aviso e indicador de poco stock, agregar rápido, repetir pedido, recomendados en el carrito, barra de envío gratis, analítica de 90 días con ventas por notificación, soporte por WhatsApp |
-| Scale | USD $349/mes | Todo Growth + 40.000 notificaciones de campañas/mes, drops ilimitados, reels de productos ilimitados, precios mayoristas (B2B), login obligatorio, soporte prioritario y puesta en marcha |
-| Enterprise | A medida | Todo Scale + notificaciones a medida, account manager, integraciones a medida |
-
-Facturación anual con 20% de descuento. Se puede crear cuenta gratis, diseñar la app y ver preview. El cobro comienza al publicar. Sin comisión por venta. Las notificaciones automáticas no cuentan para el límite de campañas.
-
-Costos adicionales externos: Apple Developer Program (USD $99/año) y Google Play Console (USD $25, pago único).
-
-## Sectores
-
-Saru Apps se adapta a múltiples industrias de ecommerce:
-
-- Moda e Indumentaria
-- Accesorios y Joyería
-- Belleza y Cosmética
-- Deportes y Fitness
-- Hogar y Decoración
-- Alimentos y Bebidas
-- Electrónica y Tecnología
-- Mascotas
-
-## Programa de Partners
-
-Programa para agencias de ecommerce, freelancers, consultores e implementadores de Tiendanube. Comisiones recurrentes mensuales por cada cliente referido activo, soporte dedicado y material de ventas.
-
-## Integración exclusiva con Tiendanube
-
-Saru Apps está diseñado exclusivamente para tiendas Tiendanube. La conexión es instantánea: se instala desde el panel de Tiendanube, se autorizan los permisos vía OAuth y los productos se importan automáticamente. Los cambios en la tienda se reflejan en la app en tiempo real.
-
-## Contacto
-
-- Web: https://saruapps.com
-- App: https://app.saruapps.com
-- Email: hola@saruapps.com
-- Demo: https://calendly.com/saruapps/30min
+- [Preguntas frecuentes](https://saruapps.com/faq)
+- [Sectores](https://saruapps.com/sectores): moda, accesorios, belleza, deportes, hogar, alimentos, electrónica y mascotas.
+- [Partners](https://saruapps.com/partners): programa para agencias, freelancers e implementadores de Tiendanube, con comisiones recurrentes.
+- [Blog](https://saruapps.com/blog)
+- [Panel de Saru Apps](https://app.saruapps.com): donde el comerciante crea y maneja su app.
+- [Agendar una demo](https://calendly.com/saruapps/30min)
+- [Escribir a hola@saruapps.com](mailto:hola@saruapps.com)
+- [Términos y condiciones](https://saruapps.com/terminos)
+- [Política de privacidad](https://saruapps.com/privacidad)
+- [Sitio en portugués](https://saruapps.com/pt)

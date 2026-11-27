@@ -123,7 +123,7 @@ export function ProductCard({ p }: { p: Product }) {
   return (
     <div>
       <div className="aspect-square overflow-hidden rounded-[12px] bg-[#f4f4f5]">
-        <img src={`/brand/${p.img}`} alt="" className="h-full w-full object-cover" />
+        <img loading="lazy" decoding="async" src={`/brand/${p.img}`} alt="" className="h-full w-full object-cover" />
       </div>
       <p className="mt-[6px] truncate text-[11px] font-medium">{p.name}</p>
       <p className="text-[11px] font-bold">{p.price}</p>
@@ -139,7 +139,7 @@ export function HomeScreen() {
     <>
       <AppHeader />
       <div className="relative mx-[14px] h-[150px] overflow-hidden rounded-[16px] bg-ink">
-        <img src="/brand/modelo-parka.png" alt="" className="absolute inset-0 h-full w-full object-cover object-top opacity-90" />
+        <img loading="lazy" decoding="async" src="/brand/modelo-parka.webp" alt="" className="absolute inset-0 h-full w-full object-cover object-top opacity-90" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
         <div className="absolute bottom-[12px] left-[14px] text-white">
           <small className="block text-[9px] font-medium">{m.season}</small>
@@ -172,7 +172,7 @@ export function ProductScreen() {
   return (
     <>
       <div className="relative h-[330px] bg-[#f4f4f5]">
-        <img src={`/brand/${p.img}`} alt="" className="h-full w-full object-cover object-[50%_20%]" />
+        <img loading="lazy" decoding="async" src={`/brand/${p.img}`} alt="" className="h-full w-full object-cover object-[50%_20%]" />
         <span className="absolute left-[14px] top-[48px] flex h-[30px] w-[30px] items-center justify-center rounded-full bg-white">
           <ChevronLeft className="h-[16px] w-[16px]" strokeWidth={2} />
         </span>
@@ -289,7 +289,7 @@ export function EditorScreen() {
     <>
       <AppHeader />
       <div className="relative mx-[14px] h-[110px] overflow-hidden rounded-[16px] bg-ink">
-        <img src="/brand/modelo-parka.png" alt="" className="absolute inset-0 h-full w-full object-cover object-[50%_30%] opacity-90" />
+        <img loading="lazy" decoding="async" src="/brand/modelo-parka.webp" alt="" className="absolute inset-0 h-full w-full object-cover object-[50%_30%] opacity-90" />
         <b className="absolute bottom-[10px] left-[12px] text-[15px] font-extrabold text-white">{m.newCollection}</b>
       </div>
       <div className="relative mx-[14px] mt-[10px] flex h-[96px] items-center justify-center rounded-[14px] border-2 border-dashed border-accent bg-accent/[0.06]">
@@ -301,7 +301,7 @@ export function EditorScreen() {
         >
           {m.products.slice(0, 3).map((p) => (
             <div key={p.name} className="overflow-hidden rounded-[8px] bg-[#f4f4f5]">
-              <img src={`/brand/${p.img}`} alt="" className="h-full w-full object-cover" />
+              <img loading="lazy" decoding="async" src={`/brand/${p.img}`} alt="" className="h-full w-full object-cover" />
             </div>
           ))}
         </motion.div>
@@ -388,7 +388,7 @@ export function StoreScreen() {
             transition={{ duration: 0.5, delay: 0.5 + i * 0.12, ease }}
             className="relative h-[250px] overflow-hidden rounded-[16px] border border-black/[0.08] bg-[#f4f4f5]"
           >
-            <img src={i === 0 ? "/brand/modelo-parka.png" : "/brand/modelo-sweater.png"} alt="" className="h-full w-full object-cover" />
+            <img loading="lazy" decoding="async" src={i === 0 ? "/brand/modelo-parka.webp" : "/brand/modelo-sweater.webp"} alt="" className="h-full w-full object-cover" />
             <b className="absolute bottom-[8px] left-[8px] text-[10px] font-bold text-white">{i === 0 ? m.newCollection : p.name}</b>
           </motion.div>
         ))}
@@ -412,7 +412,7 @@ export function SyncScreen() {
         className="mx-[14px] flex items-center gap-[8px] rounded-[12px] bg-ink px-[12px] py-[9px] text-[11px] font-semibold text-white"
       >
         <span className="flex h-[22px] w-[22px] items-center justify-center rounded-[6px] bg-white p-[3px]">
-          <img src="/brand/tiendanube-isotipo.png" alt="" className="h-full w-full object-contain" />
+          <img loading="lazy" decoding="async" src="/brand/tiendanube-isotipo.webp" alt="" className="h-full w-full object-contain" />
         </span>
         {m.stockSynced}
         <motion.span className="ml-auto" animate={{ rotate: 360 }} transition={{ duration: 2.4, repeat: Infinity, ease: "linear" }}>
@@ -423,7 +423,7 @@ export function SyncScreen() {
         {m.products.map((p, i) => (
           <div key={p.name} className="flex items-center gap-[10px] border-b border-black/[0.06] px-[14px] py-[10px]">
             <div className="h-[52px] w-[52px] shrink-0 overflow-hidden rounded-[10px] bg-[#f4f4f5]">
-              <img src={`/brand/${p.img}`} alt="" className="h-full w-full object-cover" />
+              <img loading="lazy" decoding="async" src={`/brand/${p.img}`} alt="" className="h-full w-full object-cover" />
             </div>
             <div className="min-w-0 flex-1">
               <p className="truncate text-[12px] font-semibold">{p.name}</p>
@@ -509,7 +509,7 @@ function Reel({ img, product, oldPrice, counter, position }: {
       <div className="absolute inset-x-[10px] bottom-[12px]">
         <div className="flex items-center gap-[8px] rounded-[14px] bg-black/55 p-[6px] pr-[10px] text-white backdrop-blur-md">
           <div className="h-[46px] w-[46px] shrink-0 overflow-hidden rounded-[9px] bg-white">
-            <img src={`/brand/${product.img}`} alt="" className="h-full w-full object-cover" />
+            <img loading="lazy" decoding="async" src={`/brand/${product.img}`} alt="" className="h-full w-full object-cover" />
           </div>
           <div className="min-w-0 flex-1">
             <p className="truncate text-[11px] font-bold uppercase tracking-[0.01em]">{product.name}</p>
@@ -537,8 +537,8 @@ function Reel({ img, product, oldPrice, counter, position }: {
 export function ReelsScreen() {
   const m = useMockups();
   const reels = [
-    { img: "/brand/modelo-sweater.png", product: m.products[3], oldPrice: m.reelOldPrice1, counter: m.reelCounter, position: "50% 20%" },
-    { img: "/brand/modelo-parka.png", product: m.products[1], oldPrice: m.reelOldPrice2, position: "50% 25%" },
+    { img: "/brand/modelo-sweater.webp", product: m.products[3], oldPrice: m.reelOldPrice1, counter: m.reelCounter, position: "50% 20%" },
+    { img: "/brand/modelo-parka.webp", product: m.products[1], oldPrice: m.reelOldPrice2, position: "50% 25%" },
   ];
   // The first reel is repeated at the end so the loop restarts without a visible jump
   const track = [...reels, reels[0]];

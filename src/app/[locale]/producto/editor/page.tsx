@@ -34,6 +34,7 @@ export default async function EditorPage({ params }: Props) {
   return (
     <>
       <Navbar variant="dark" />
+      <main>
 
       {/* Hero */}
       <ProductoSubHero
@@ -220,6 +221,7 @@ export default async function EditorPage({ params }: Props) {
         secondary={{ label: t.cta.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
       />
 
+      </main>
       <Footer />
     </>
   );

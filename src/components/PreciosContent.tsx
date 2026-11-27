@@ -4,7 +4,7 @@ import { useState, type ReactNode } from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { AnimatedSection } from "./AnimatedSection";
-import { Label, TiendanubeBadge, Underline, ease } from "./home/primitives";
+import { Label, TiendanubeBadge, ease } from "./home/primitives";
 import { SectionHead } from "./site/blocks";
 import { CtaBand } from "./site/precios-shared";
 import { useDictionary } from "@/i18n/DictionaryProvider";
@@ -90,9 +90,8 @@ export function PreciosContent() {
               <Label>{t.hero.label}</Label>
               <h1 className="mt-5 font-display text-[clamp(38px,5.4vw,76px)] font-extrabold leading-[1] tracking-[-0.045em]">
                 {t.hero.title}{" "}
-                <span className="relative inline-block">
+                <span className="inline-block">
                   <em className="accent pr-[0.04em]">{t.hero.accent}</em>
-                  <Underline delay={0.5} />
                 </span>
               </h1>
             </div>

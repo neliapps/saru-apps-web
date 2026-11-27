@@ -172,22 +172,22 @@
       {
         "name": "Camisa rayada",
         "price": "$ 32.900",
-        "img": "camisa-rayada.png"
+        "img": "camisa-rayada.webp"
       },
       {
         "name": "Campera de jean",
         "price": "$ 74.500",
-        "img": "campera-jean.png"
+        "img": "campera-jean.webp"
       },
       {
         "name": "Camisa celeste",
         "price": "$ 34.900",
-        "img": "camisa-celeste.png"
+        "img": "camisa-celeste.webp"
       },
       {
         "name": "Sweater trenzado",
         "price": "$ 54.900",
-        "img": "modelo-sweater.png"
+        "img": "modelo-sweater.webp"
       }
     ],
     "webMenu": [

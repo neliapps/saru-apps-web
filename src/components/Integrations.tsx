@@ -32,7 +32,7 @@ function Connection() {
   return (
     <div ref={ref} className="mx-auto mt-16 flex max-w-4xl items-center justify-between gap-2 md:mt-24" aria-hidden="true">
       <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-[24px] border border-card-light-border bg-white p-4 md:h-32 md:w-32 md:rounded-[32px] md:p-6">
-        <img src="/brand/tiendanube-isotipo.png" alt="" className="h-full w-full object-contain" />
+        <img loading="lazy" decoding="async" src="/brand/tiendanube-isotipo.webp" alt="" className="h-full w-full object-contain" />
       </div>
       <svg viewBox="0 0 600 80" className="h-auto min-w-0 flex-1">
         {Array.from({ length: DOTS }, (_, i) => (
@@ -43,7 +43,7 @@ function Connection() {
         style={{ scale: rightScale }}
         className="flex h-20 w-20 shrink-0 items-center justify-center rounded-[24px] bg-ink p-5 md:h-32 md:w-32 md:rounded-[32px] md:p-8"
       >
-        <img src="/brand/isotipo-white.png" alt="" className="h-full w-full object-contain" />
+        <img loading="lazy" decoding="async" src="/brand/isotipo-white.png" alt="" className="h-full w-full object-contain" />
       </motion.div>
     </div>
   );

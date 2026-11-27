@@ -120,8 +120,8 @@ export function Navbar({ variant = "light" }: { variant?: "light" | "dark" } = {
             <Image
               src={dark ? "/logo-white.png" : "/logo.png"}
               alt="Saru Apps"
-              width={500}
-              height={115}
+              width={137}
+              height={36}
               className="h-9 w-auto"
               priority
             />

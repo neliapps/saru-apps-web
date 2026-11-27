@@ -43,8 +43,8 @@ export function Footer() {
               <Image
                 src="/logo-white.png"
                 alt="Saru Apps"
-                width={500}
-                height={115}
+                width={137}
+                height={36}
                 className="h-9 w-auto"
               />
             </a>
@@ -52,9 +52,9 @@ export function Footer() {
               {t.description}
             </p>
             <div className="mt-6">
-              <h4 className="text-sm font-semibold text-white mb-3">
+              <h2 className="text-sm font-semibold text-white mb-3">
                 {t.contacto}
-              </h4>
+              </h2>
               <ul className="space-y-2">
                 <li>
                   <a
@@ -80,9 +80,9 @@ export function Footer() {
 
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="text-sm font-semibold text-white mb-4">
+              <h2 className="text-sm font-semibold text-white mb-4">
                 {category}
-              </h4>
+              </h2>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.label}>

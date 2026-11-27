@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import { useDictionary } from "@/i18n/DictionaryProvider";
 import { signupUrl } from "@/i18n/signup";
-import { ArrowLink, HandCircle, ease, useRange } from "./home/primitives";
+import { ArrowLink, ease, useRange } from "./home/primitives";
 
 export function CTA() {
   const { dict, locale } = useDictionary();
@@ -28,9 +28,8 @@ export function CTA() {
           className="font-display text-[clamp(52px,9vw,140px)] font-extrabold leading-[0.92] tracking-[-0.055em]"
         >
           {t.title}{" "}
-          <span className="relative inline-block">
+          <span className="inline-block">
             <em className="accent pr-[0.06em]">{t.titleAccent}</em>
-            <HandCircle delay={0.2} />
           </span>
         </motion.h2>
 

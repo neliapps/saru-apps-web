@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useTransform, type MotionValue } from "framer-motion";
+import { useTransform, type MotionValue } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import type { ReactNode } from "react";
 import { isSignupUrl } from "@/i18n/signup";
@@ -26,7 +26,7 @@ export function useRange(
 export function TiendanubeBadge({ className = "h-[22px] w-[22px]" }: { className?: string }) {
   return (
     <img
-      src="/brand/tiendanube-isotipo.png"
+      src="/brand/tiendanube-isotipo.webp"
       alt=""
       aria-hidden="true"
       className={`shrink-0 rounded-[6px] ${className}`}
@@ -69,67 +69,6 @@ export function ArrowLink({
       </span>
       <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={2.25} aria-hidden="true" />
     </a>
-  );
-}
-
-/* ─── Hand-drawn underline that draws itself ─── */
-
-export function Underline({ delay = 0.6 }: { delay?: number }) {
-  return (
-    <svg
-      viewBox="0 0 300 24"
-      preserveAspectRatio="none"
-      className="pointer-events-none absolute -bottom-[0.12em] left-0 h-[0.22em] w-full"
-      aria-hidden="true"
-    >
-      <motion.path
-        d="M2 14 C 80 6, 180 20, 298 9"
-        stroke="#2F6BFF"
-        strokeWidth="6"
-        fill="none"
-        strokeLinecap="round"
-        initial={{ pathLength: 0 }}
-        whileInView={{ pathLength: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7, delay, ease }}
-      />
-      <motion.path
-        d="M40 20 C 120 16, 200 22, 270 17"
-        stroke="#2F6BFF"
-        strokeWidth="4"
-        fill="none"
-        strokeLinecap="round"
-        initial={{ pathLength: 0 }}
-        whileInView={{ pathLength: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: delay + 0.45, ease }}
-      />
-    </svg>
-  );
-}
-
-/* ─── Hand-drawn circle around a word (does not close perfectly) ─── */
-
-export function HandCircle({ delay = 0.3 }: { delay?: number }) {
-  return (
-    <svg
-      viewBox="0 0 300 120"
-      preserveAspectRatio="none"
-      className="pointer-events-none absolute -left-[9%] -top-[14%] h-[128%] w-[118%]"
-      aria-hidden="true"
-    >
-      <motion.path
-        d="M42 34 C 90 6, 230 2, 280 36 C 306 58, 268 104, 160 110 C 60 114, 6 92, 14 58 C 20 34, 70 18, 118 14"
-        stroke="#2F6BFF"
-        strokeWidth="5"
-        fill="none"
-        strokeLinecap="round"
-        initial={{ pathLength: 0 }}
-        whileInView={{ pathLength: 1 }}
-        viewport={{ once: true, margin: "-20%" }}
-        transition={{ duration: 0.9, delay, ease }}
-      />
-    </svg>
   );
 }
 

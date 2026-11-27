@@ -21,6 +21,7 @@ export default async function ProductoPage({ params }: Props) {
   return (
     <>
       <Navbar variant="dark" />
+      <main>
 
       {/* Hero */}
       <PageHero
@@ -46,6 +47,8 @@ export default async function ProductoPage({ params }: Props) {
       {/* Features: editorial numbered list */}
       <section className="section-light grain overflow-x-clip py-24 md:py-32">
         <div className="relative mx-auto max-w-[1280px] px-6">
+          {/* For screen readers: the list's titles are h3, so they need a section title */}
+          <h2 className="sr-only">{t.featuresTitle}</h2>
           <ul>
             {t.features.map((feature, i) => (
               <ProductoLinkRow
@@ -111,6 +114,7 @@ export default async function ProductoPage({ params }: Props) {
         secondary={{ label: t.cta.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
       />
 
+      </main>
       <Footer />
     </>
   );

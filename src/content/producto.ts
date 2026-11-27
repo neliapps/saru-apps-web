@@ -64,6 +64,7 @@ const es = {
     },
   ],
   featureCta: "Conocer más",
+  featuresTitle: "Todas las herramientas",
   howItWorks: {
     label: "Cómo funciona",
     title: "De tu tienda a una app",
@@ -167,6 +168,7 @@ const pt: typeof es = {
     },
   ],
   featureCta: "Saiba mais",
+  featuresTitle: "Todas as ferramentas",
   howItWorks: {
     label: "Como funciona",
     title: "Da sua loja a um app",

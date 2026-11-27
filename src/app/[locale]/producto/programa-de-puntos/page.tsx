@@ -32,6 +32,7 @@ export default async function ProgramaDePuntosPage({ params }: Props) {
   return (
     <>
       <Navbar variant="dark" />
+      <main>
 
       {/* Hero: the shopper's points in the app, and the cart switch that spends them */}
       <ModuloHero
@@ -166,6 +167,7 @@ export default async function ProgramaDePuntosPage({ params }: Props) {
         secondary={{ label: t.cta.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
       />
 
+      </main>
       <Footer />
     </>
   );

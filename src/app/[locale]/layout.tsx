@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Inter } from "next/font/google";
+import { BrevoChat } from "@/components/BrevoChat";
 import { CookieBanner } from "@/components/CookieBanner";
 import { DictionaryProvider } from "@/i18n/DictionaryProvider";
 import { getDictionary } from "@/i18n/getDictionary";
@@ -69,18 +69,7 @@ export default async function LocaleLayout({
           {children}
           <CookieBanner />
         </DictionaryProvider>
-        <Script id="brevo-conversations" strategy="afterInteractive">{`
-          (function(d, w, c) {
-            w.BrevoConversationsID = '6a59f1d9f62a55a5c908887c';
-            w[c] = w[c] || function() {
-              (w[c].q = w[c].q || []).push(arguments);
-            };
-            var s = d.createElement('script');
-            s.async = true;
-            s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
-            if (d.head) d.head.appendChild(s);
-          })(document, window, 'BrevoConversations');
-        `}</Script>
+        <BrevoChat />
       </body>
     </html>
   );

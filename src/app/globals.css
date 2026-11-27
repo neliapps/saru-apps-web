@@ -135,6 +135,38 @@ p {
   }
 }
 
+/* Home hero: its entrance runs with the first paint, without waiting for the JavaScript. The subtitle and the
+   buttons stay visible while they rise, so the page's largest text paints at once */
+@keyframes hero-word {
+  from {
+    transform: translateY(110%);
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    transform: translateY(14px);
+  }
+}
+
+@keyframes stage-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.hero-word {
+  animation: hero-word 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-rise {
+  animation: hero-rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.stage-in {
+  animation: stage-in 0.5s ease-out both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

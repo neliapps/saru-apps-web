@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
-import { ArrowLink, Label, Underline, ease } from "../home/primitives";
+import { ArrowLink, Label, ease } from "../home/primitives";
 
 type Cta = { label: string; href: string; external?: boolean };
 
@@ -48,9 +48,8 @@ export function PageHero({
             {accent && (
               <>
                 {" "}
-                <span className="relative inline-block">
+                <span className="inline-block">
                   <em className="accent">{accent}</em>
-                  <Underline delay={0.5} />
                 </span>
               </>
             )}

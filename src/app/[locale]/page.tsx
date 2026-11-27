@@ -25,11 +25,13 @@ export default async function Home({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navbar variant="dark" />
+      <main>
       <Hero />
       <FeaturesPreview />
       <HowItWorks />
       <Integrations />
       <CTA />
+      </main>
       <Footer />
     </>
   );

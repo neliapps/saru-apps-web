@@ -12,27 +12,24 @@ import {
 import { Check, Search, ShoppingBag, Star, User } from "lucide-react";
 import { useDictionary } from "@/i18n/DictionaryProvider";
 import { signupUrl } from "@/i18n/signup";
-import { ArrowLink, Underline, ease, useRange } from "./home/primitives";
+import { ArrowLink, useRange } from "./home/primitives";
 import { HomeScreen, Island, PHONE_H, PHONE_W, PushCard, StatusBar, frameStyle } from "./home/phone";
 
 const WEB_W = 1120;
 
 /* ─── Headline: words rise out of a mask, one by one ─── */
 
+// The hero's entrance is CSS (globals.css), not framer-motion: it starts with the first paint instead of
+// waiting for the JavaScript, so the text shows up at once on a slow phone (Largest Contentful Paint)
 function Words({ text, start = 0, className = "" }: { text: string; start?: number; className?: string }) {
   return (
     <>
       {text.split(" ").map((w, i) => (
         <span key={`${w}-${i}`} className="inline-block overflow-hidden pb-[0.08em] align-bottom">
-          <motion.span
-            className={`inline-block ${className}`}
-            initial={{ y: "110%" }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.8, delay: start + i * 0.06, ease }}
-          >
+          <span className={`hero-word inline-block ${className}`} style={{ animationDelay: `${start + i * 0.06}s` }}>
             {w}
             {" "}
-          </motion.span>
+          </span>
         </span>
       ))}
     </>
@@ -61,7 +58,7 @@ function WebStore() {
       </div>
       <div className="grid grid-cols-2 gap-6 px-10 pt-6">
         <div className="relative h-[250px] overflow-hidden rounded-[18px] bg-ink">
-          <img src="/brand/modelo-parka.png" alt="" className="h-full w-full object-cover object-[50%_25%] opacity-90" />
+          <img src="/brand/modelo-parka.webp" alt="" className="h-full w-full object-cover object-[50%_25%] opacity-90" />
         </div>
         <div className="flex flex-col justify-center">
           <small className="text-[13px] font-medium">{m.season}</small>
@@ -87,7 +84,7 @@ function WebStore() {
 /* ─── Scroll stage: the browser becomes an iPhone ─── */
 
 function useViewport() {
-  const [vp, setVp] = useState({ w: 1280, h: 800 });
+  const [vp, setVp] = useState<{ w: number; h: number } | null>(null);
   useEffect(() => {
     const update = () => setVp({ w: window.innerWidth, h: window.innerHeight });
     update();
@@ -97,17 +94,25 @@ function useViewport() {
   return vp;
 }
 
+// The frame's size depends on the screen, which the server doesn't know: drawing it at a guessed size and
+// resizing it once the page loaded moved the page (Cumulative Layout Shift). The stage keeps its height and
+// the frame appears once the screen is known.
 function MorphStage() {
+  const reduce = useReducedMotion();
+  const vp = useViewport();
+  if (!vp) return <div className={reduce ? "relative" : "relative h-[240vh] md:h-[260vh]"} aria-hidden="true" />;
+  return <Stage vp={vp} reduce={!!reduce} />;
+}
+
+function Stage({ vp, reduce }: { vp: { w: number; h: number }; reduce: boolean }) {
   const { dict } = useDictionary();
   const t = dict.hero;
   const m = dict.mockups;
   const ref = useRef<HTMLDivElement>(null);
-  const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
   const done = useMotionValue(1);
   const p: MotionValue<number> = reduce ? done : scrollYProgress;
 
-  const vp = useViewport();
   const mobile = vp.w < 768;
   const wideW = Math.min(WEB_W, vp.w - (mobile ? 32 : 96));
   const wideH = Math.min(640, vp.h - (mobile ? 200 : 140));
@@ -140,7 +145,7 @@ function MorphStage() {
 
   return (
     <div ref={ref} className={reduce ? "relative" : "relative h-[240vh] md:h-[260vh]"}>
-      <div className={`${reduce ? "py-16" : "sticky top-0 h-[100svh]"} flex items-center justify-center overflow-hidden`}>
+      <div className={`${reduce ? "py-16" : "sticky top-0 h-[100svh]"} stage-in flex items-center justify-center overflow-hidden`}>
         <motion.div className="glow left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" style={{ opacity: glowO }} aria-hidden="true" />
 
         <div className="relative" aria-hidden="true">
@@ -232,49 +237,40 @@ export function Hero() {
   return (
     <section className="section-dark grain overflow-clip">
       <div className="relative mx-auto max-w-[1280px] px-6 pt-36 md:pt-44">
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1, ease }}
-          className="mb-8 flex items-center gap-3 text-[16px] font-semibold"
-        >
+        <p className="hero-rise mb-8 flex items-center gap-3 text-[16px] font-semibold" style={{ animationDelay: "0.1s" }}>
           <span className="flex h-8 w-8 items-center justify-center rounded-[9px] bg-white p-1.5">
-            <img src="/brand/tiendanube-isotipo.png" alt="" className="h-full w-full object-contain" />
+            <img src="/brand/tiendanube-isotipo.webp" alt="" className="h-full w-full object-contain" />
           </span>
           {t.badge}
-        </motion.p>
+        </p>
 
         <h1 className="font-display text-[clamp(40px,6.2vw,92px)] font-extrabold leading-[0.98] tracking-[-0.045em]">
           <Words text={t.titleLine1} />
           <br />
-          <span className="relative inline-block">
+          <span className="inline-block">
             <em className="accent">
               <Words text={t.titleAccent} start={0.3} />
             </em>
-            <Underline delay={1.1} />
           </span>
         </h1>
 
         <div className="mt-10 grid gap-6 md:mt-12 md:grid-cols-12">
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7, ease }}
-            className="max-w-xl text-[clamp(17px,1.4vw,20px)] italic leading-[1.5] md:col-span-6 md:col-start-7"
+          {/* Visible from the first paint (the page's largest text): they only rise into place */}
+          <p
+            className="hero-rise max-w-xl text-[clamp(17px,1.4vw,20px)] italic leading-[1.5] md:col-span-6 md:col-start-7"
+            style={{ animationDelay: "0.5s" }}
           >
             {t.subtitle}
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.85, ease }}
-            className="flex flex-wrap items-center gap-x-10 gap-y-2 md:col-span-6 md:col-start-7"
+          </p>
+          <div
+            className="hero-rise flex flex-wrap items-center gap-x-10 gap-y-2 md:col-span-6 md:col-start-7"
+            style={{ animationDelay: "0.6s" }}
           >
             <ArrowLink href={signupUrl(locale)}>{t.ctaPrimary}</ArrowLink>
             <ArrowLink href="#como-funciona" weight="medium">
               {t.ctaSecondary}
             </ArrowLink>
-          </motion.div>
+          </div>
         </div>
       </div>
 

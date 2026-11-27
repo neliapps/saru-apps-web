@@ -172,22 +172,22 @@
       {
         "name": "Camisa listrada",
         "price": "R$ 189,90",
-        "img": "camisa-rayada.png"
+        "img": "camisa-rayada.webp"
       },
       {
         "name": "Jaqueta jeans",
         "price": "R$ 349,90",
-        "img": "campera-jean.png"
+        "img": "campera-jean.webp"
       },
       {
         "name": "Camisa azul-clara",
         "price": "R$ 199,90",
-        "img": "camisa-celeste.png"
+        "img": "camisa-celeste.webp"
       },
       {
         "name": "Suéter trançado",
         "price": "R$ 279,90",
-        "img": "modelo-sweater.png"
+        "img": "modelo-sweater.webp"
       }
     ],
     "webMenu": [

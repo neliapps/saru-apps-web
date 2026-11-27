@@ -41,6 +41,7 @@ export default async function SincronizacionPage({ params }: Props) {
   return (
     <>
       <Navbar variant="dark" />
+      <main>
 
       {/* Hero */}
       <ModuloHero
@@ -121,7 +122,7 @@ export default async function SincronizacionPage({ params }: Props) {
           {/* Sync visual diagram */}
           <div className="mt-16 md:mt-24">
             <SyncConnection
-              left={{ img: "/brand/tiendanube-isotipo.png", ...t.connection.diagram.left }}
+              left={{ img: "/brand/tiendanube-isotipo.webp", ...t.connection.diagram.left }}
               right={{ img: "/brand/isotipo-white.png", ...t.connection.diagram.right }}
               middle={t.connection.diagram.middle}
             />
@@ -211,6 +212,7 @@ export default async function SincronizacionPage({ params }: Props) {
         secondary={{ label: t.cta.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
       />
 
+      </main>
       <Footer />
     </>
   );

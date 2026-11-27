@@ -34,6 +34,7 @@ export default async function AppNativaPage({ params }: Props) {
   return (
     <>
       <Navbar variant="dark" />
+      <main>
 
       {/* Hero */}
       <ProductoSubHero
@@ -234,6 +235,7 @@ export default async function AppNativaPage({ params }: Props) {
         secondary={{ label: t.cta.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
       />
 
+      </main>
       <Footer />
     </>
   );

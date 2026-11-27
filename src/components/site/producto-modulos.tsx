@@ -3,7 +3,7 @@
 import { useRef, type ReactNode } from "react";
 import { motion, useScroll, type MotionValue } from "framer-motion";
 import { ArrowLeft, Check } from "lucide-react";
-import { ArrowLink, Label, Underline, ease, useRange } from "../home/primitives";
+import { ArrowLink, Label, ease, useRange } from "../home/primitives";
 import { PhoneFrame } from "../home/phone";
 
 type Cta = { label: string; href: string; external?: boolean };
@@ -58,9 +58,8 @@ export function ModuloHero({
             {accent && (
               <>
                 {" "}
-                <span className="relative inline-block">
+                <span className="inline-block">
                   <em className="accent">{accent}</em>
-                  <Underline delay={0.5} />
                 </span>
               </>
             )}
@@ -141,9 +140,8 @@ export function ModuloCTA({
           {accent && (
             <>
               {" "}
-              <span className="relative inline-block">
+              <span className="inline-block">
                 <em className="accent pr-[0.06em]">{accent}</em>
-                <Underline delay={0.3} />
               </span>
             </>
           )}

@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import type { ReactNode } from "react";
-import { ArrowLink, Underline, ease } from "../home/primitives";
+import { ArrowLink, ease } from "../home/primitives";
 
 /* ─── Accordion row: question 700, answer regular, hairline dividers, +/− indicator ─── */
 
@@ -97,9 +97,8 @@ export function CtaBand({
           {accent && (
             <>
               {" "}
-              <span className="relative inline-block">
+              <span className="inline-block">
                 <em className="accent pr-[0.04em]">{accent}</em>
-                <Underline delay={0.3} />
               </span>
             </>
           )}

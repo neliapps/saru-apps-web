@@ -27,6 +27,7 @@ export default async function ReelsPage({ params }: Props) {
   return (
     <>
       <Navbar variant="dark" />
+      <main>
 
       {/* Hero */}
       <ModuloHero
@@ -138,6 +139,7 @@ export default async function ReelsPage({ params }: Props) {
         secondary={{ label: t.cta.secondary, href: "https://calendly.com/saruapps/30min", external: true }}
       />
 
+      </main>
       <Footer />
     </>
   );
